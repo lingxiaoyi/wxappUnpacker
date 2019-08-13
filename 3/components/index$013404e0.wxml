@@ -1,0 +1,24 @@
+<template name="index$013404e0">
+    <view class="_div data-v-60b48a08 index-page-sos-container {{hasBottomBar?'active':''}}">
+        <view bindtap="handleProxy" class="_div data-v-60b48a08 my-miniapp-container" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{isShowMyMiniApp}}"></view>
+        <template is="index$6efb9d41" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <template is="nav-footer$b5e559b8" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+        <template is="share-dialog$7e4ac255" data="{{...$root[$kk+'2'],$root:$root}}" wx:if="{{currentShowModalKey===popUpKeysObj.POPUP_SHOW_SHARE_KEY}}"></template>
+        <view bindtap="handleProxy" class="_div data-v-60b48a08 new-user-model" data-comkey="{{$k}}" data-eventid="{{'5'}}" wx:if="{{currentShowModalKey===popUpKeysObj.POPUP_NEW_USER_KEY}}">
+            <view class="_div data-v-60b48a08 box">
+                <view class="_div data-v-60b48a08 content">
+                    <image alt catchtap="handleProxy" class="_img data-v-60b48a08 banner" data-comkey="{{$k}}" data-eventid="{{'1'}}" src="{{newUserCouponInfo.imageUrl}}"></image>
+                    <view bindtap="handleProxy" class="_div data-v-60b48a08" data-comkey="{{$k}}" data-eventid="{{'2'}}">一键领取</view>
+                    <view catchtap="handleProxy" class="_p data-v-60b48a08" data-comkey="{{$k}}" data-eventid="{{'3'}}" wx:if="{{newUserCouponInfo.tips}}">{{newUserCouponInfo.tips}}</view>
+                </view>
+                <image alt bindtap="handleProxy" class="_img data-v-60b48a08 close" data-comkey="{{$k}}" data-eventid="{{'4'}}" src="https://sr.aihuishou.com/miniapps/earth/index/dialog_close.png"></image>
+            </view>
+        </view>
+        <template is="popup$75653946" data="{{...$root[$kk+'3'],$root:$root}}" wx:if="{{currentShowModalKey===popUpKeysObj.POPUP_SOS_KEY}}"></template>
+        <image bindtap="handleProxy" class="_img data-v-60b48a08 fixedRight" data-comkey="{{$k}}" data-eventid="{{'6'}}" mode="widthFix" src="{{floatInfo.iconUrl}}" wx:if="{{floatInfo}}"></image>
+    </view>
+</template>
+<import src="index$6efb9d41"></import>
+<import src="nav-footer$b5e559b8"></import>
+<import src="share-dialog$7e4ac255"></import>
+<import src="popup$75653946"></import>

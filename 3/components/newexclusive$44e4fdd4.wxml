@@ -1,0 +1,72 @@
+<template name="newexclusive$44e4fdd4">
+    <view class="_div data-v-298e122a max-container">
+        <template is="header$627858a8" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <view class="_div data-v-298e122a exclusive-container" style=" {{'background-image:'+'url('+banner+')'+';'}}">
+            <view class="_header data-v-298e122a" wx:if="{{isShowPopup}}">
+                <template is="newexclusive$1478cf5f" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+            </view>
+            <view class="_div data-v-298e122a status">
+                <button bindgetphonenumber="handleProxy" class="_button data-v-298e122a" data-comkey="{{$k}}" data-eventid="{{'1'}}" openType="getPhoneNumber" wx:if="{{!isLogin&&!isSuccess&&!isNew&&!isReceive&&!isError}}">一键领取</button>
+                <block wx:if="{{isLogin}}">
+                    <button bindtap="handleProxy" class="_button data-v-298e122a" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{!isSuccess&&!isNew&&!isReceive&&!isError}}">一键领取</button>
+                    <button class="_button data-v-298e122a disable-click" wx:if="{{isNew}}">新用户才可领取</button>
+                    <button class="_button data-v-298e122a disable-click" wx:if="{{isReceive||isSuccess&&!isNew&&!isReceive&&!isError}}">已领取</button>
+                    <button class="_button data-v-298e122a disable-click" wx:if="{{isError}}">您的券被外星人领走了</button>
+                </block>
+                <view class="_p data-v-298e122a">领取后7日有效</view>
+            </view>
+            <view class="_div data-v-298e122a main">
+                <view class="_div data-v-298e122a single-content" wx:if="{{oldCoupon.length}}">
+                    <view class="_p data-v-298e122a title">回收加价券</view>
+                    <view class="_div data-v-298e122a" wx:if="{{packageInfo}}">
+                        <view class="_div data-v-298e122a" key="{{index}}" wx:for="{{oldCoupon}}" wx:key="index">
+                            <view class="_p data-v-298e122a">¥<label class="_span data-v-298e122a">{{item.price/100}}</label>
+                            </view>
+                            <view class="_div data-v-298e122a">满{{item.minPriceLimit/100}}元可用</view>
+                        </view>
+                    </view>
+                    <view bindtap="handleProxy" class="_p data-v-298e122a jump" data-comkey="{{$k}}" data-eventid="{{'3'}}">免费估价</view>
+                </view>
+                <view class="_div data-v-298e122a single-content active" wx:if="{{newCoupon.length}}">
+                    <view class="_p data-v-298e122a title">换新优惠券</view>
+                    <view class="_div data-v-298e122a" wx:if="{{packageInfo}}">
+                        <view class="_div data-v-298e122a active" key="{{index}}" wx:for="{{newCoupon}}" wx:key="index">
+                            <view class="_p data-v-298e122a">¥<label class="_span data-v-298e122a">{{item.price/100}}</label>
+                            </view>
+                            <view class="_div data-v-298e122a">{{item.name}}</view>
+                        </view>
+                    </view>
+                    <view bindtap="handleProxy" class="_p data-v-298e122a jump" data-comkey="{{$k}}" data-eventid="{{'4'}}">去换新</view>
+                </view>
+            </view>
+            <view class="_p data-v-298e122a use-tag" wx:if="{{packageInfo}}">
+                <label bindtap="handleProxy" class="_span data-v-298e122a" data-comkey="{{$k}}" data-eventid="{{'5'}}">使用条件<view class="_u data-v-298e122a">!</view>
+                </label>
+            </view>
+            <view class="_footer data-v-298e122a">
+                <view class="_dl data-v-298e122a">
+                    <view class="_dt data-v-298e122a">
+                        <image alt class="_img data-v-298e122a {{productInfo?'':'padding25'}}" mode="aspectFit" src="{{productInfo?productInfo.imgUrl:defaultPhoneImg}}"></image>
+                    </view>
+                    <view class="_dd data-v-298e122a">
+                        <view class="_ul data-v-298e122a" wx:if="{{productInfo}}">
+                            <view class="_li data-v-298e122a product-title">{{productInfo.name}}</view>
+                            <view class="_li data-v-298e122a">最高回收价</view>
+                            <view class="_li data-v-298e122a product-price">¥{{productInfo.topPrice}}</view>
+                        </view>
+                        <view class="_ul data-v-298e122a" wx:if="{{!productInfo}}">
+                            <view class="_li data-v-298e122a product-none">挑选机型立即估价</view>
+                        </view>
+                    </view>
+                    <view bindtap="handleProxy" class="_dd data-v-298e122a product-valuation" data-comkey="{{$k}}" data-eventid="{{'6'}}">立即估价</view>
+                    <view bindtap="handleProxy" class="_dd data-v-298e122a product-tag" data-comkey="{{$k}}" data-eventid="{{'7'}}"></view>
+                </view>
+                <navigator appId="{{navigatorInfo.appId}}" class="_navigator data-v-298e122a foot-banner" extraData="{{navigatorInfo.extraData}}" openType="navigate" path="{{navigatorInfo.path}}" target="miniProgram">
+                    <image alt src class="_img data-v-298e122a"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="header$627858a8"></import>
+<import src="newexclusive$1478cf5f"></import>

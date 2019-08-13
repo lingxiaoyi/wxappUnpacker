@@ -1,0 +1,5 @@
+<template name="form$7e8ea023">
+    <form bindsubmit="handleProxy" class="_form data-v-1836c88f" data-comkey="{{$k}}" data-eventid="{{'0'}}" reportSubmit="{{true}}">
+        <button class="_button data-v-1836c88f" formType="submit"></button>
+    </form>
+</template>

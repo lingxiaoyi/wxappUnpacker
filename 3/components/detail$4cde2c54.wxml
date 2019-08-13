@@ -1,0 +1,19 @@
+<template name="detail$4cde2c54">
+    <view class="_div data-v-0307062c captch-popup-container" style=" {{show?'':'display: none'}}">
+        <view class="_dl data-v-0307062c">
+            <view class="_dt data-v-0307062c">
+                <view class="_p data-v-0307062c title">查看了这么多次定价，我也来问问你吧</view>
+                <view class="_div data-v-0307062c {{isRight?'':'wrong'}}">
+                    <input bindinput="handleProxy" class="_input data-v-0307062c" data-comkey="{{$k}}" data-eventid="{{'0'}}" placeholder="请输入右侧验证码" placeholderStyle="color: #bababa" type="number" value="{{strCaptch}}"></input>
+                    <image bindtap="handleProxy" class="_img data-v-0307062c" data-comkey="{{$k}}" data-eventid="{{'1'}}" mode="aspectFit" src="{{imgSrc}}"></image>
+                </view>
+                <view class="_p data-v-0307062c tips" wx:if="{{!isRight}}">验证码输入有误</view>
+            </view>
+            <view class="_dd data-v-0307062c">
+                <form bindsubmit="handleProxy" class="_form data-v-0307062c" data-comkey="{{$k}}" data-eventid="{{'2'}}" reportSubmit="{{true}}">
+                    <button class="_button data-v-0307062c" formType="submit">提交验证</button>
+                </form>
+            </view>
+        </view>
+    </view>
+</template>

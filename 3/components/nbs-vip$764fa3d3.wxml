@@ -1,0 +1,22 @@
+<template name="nbs-vip$764fa3d3">
+    <view class="_div data-v-4bdc15e7 type1-com" wx:if="{{item}}">
+        <image bindtap="handleProxy" class="_img data-v-4bdc15e7 qr" data-comkey="{{$k}}" data-eventid="{{'0'}}" src="https://sr.aihuishou.com/miniapps/earth/nbs-vip/qr1.png" wx:if="{{item.isOpen}}"></image>
+        <view class="_div data-v-4bdc15e7 before-open" wx:if="{{!item.isOpen}}">
+            <view class="_p data-v-4bdc15e7 text">{{item.validPeriod}}</view>
+            <view class="_div data-v-4bdc15e7 open">
+                <button bindgetphonenumber="handleProxy" class="_button data-v-4bdc15e7" data-comkey="{{$k}}" data-eventid="{{'1'}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">免费开通</button>
+                <button bindtap="handleProxy" class="_button data-v-4bdc15e7" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{userInfo.mobile}}">免费开通</button>
+            </view>
+        </view>
+        <view class="_div data-v-4bdc15e7 opened" wx:if="{{item.isOpen}}">
+            <view class="_div data-v-4bdc15e7 time">
+                <view class="_p data-v-4bdc15e7">到期时间:</view>
+                <view class="_p data-v-4bdc15e7">{{item.endTime}}</view>
+            </view>
+            <button class="_button data-v-4bdc15e7">已开通</button>
+        </view>
+        <view class="_div data-v-4bdc15e7 icons">
+            <image alt bindtap="handleProxy" class="_img data-v-4bdc15e7" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}" key="{{index}}" src="{{item.src}}" wx:for="{{icons}}" wx:key="index"></image>
+        </view>
+    </view>
+</template>

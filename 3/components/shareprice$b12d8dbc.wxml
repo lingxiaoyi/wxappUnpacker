@@ -1,0 +1,85 @@
+<template name="shareprice$b12d8dbc">
+    <view class="_div data-v-62c2ff36 shareprice-container">
+        <view class="_header data-v-62c2ff36">
+            <navigator class="_navigator data-v-62c2ff36 rules" url="{{navigateUrl.rules}}">活动规则</navigator>
+            <view class="_div data-v-62c2ff36 card-item" wx:if="{{!isLoading}}">
+                <view class="_ul data-v-62c2ff36" wx:if="{{activityInfo}}">
+                    <view class="_li data-v-62c2ff36 marginright10">
+                        <image alt class="_img data-v-62c2ff36" mode="aspectFit" src="{{activityInfo.productImageUrl}}" wx:if="{{!isEnd}}"></image>
+                        <image alt class="_img data-v-62c2ff36 endImg" src="{{endImg}}" wx:if="{{isEnd}}"></image>
+                    </view>
+                    <view class="_li data-v-62c2ff36">
+                        <view class="_dl data-v-62c2ff36 {{isEnd?'dl-end':''}}">
+                            <block wx:if="{{!isEnd}}">
+                                <view class="_dt data-v-62c2ff36">{{activityInfo.productName}}<label class="_span data-v-62c2ff36">高价回收中</label>
+                                </view>
+                                <view class="_dd data-v-62c2ff36 time-container" wx:if="{{countDown}}">
+                                    <view class="_u data-v-62c2ff36">{{countDown.h.time1}}</view>
+                                    <view class="_u data-v-62c2ff36">{{countDown.h.time2}}</view>时<view class="_u data-v-62c2ff36 time-center">{{countDown.m.time1}}</view>
+                                    <view class="_u data-v-62c2ff36 time-center">{{countDown.m.time2}}</view>分<view class="_u data-v-62c2ff36">{{countDown.s.time1}}</view>
+                                    <view class="_u data-v-62c2ff36">{{countDown.s.time2}}</view>秒
+              </view>
+                                <view class="_dd data-v-62c2ff36" wx:if="{{!countDown}}"></view>
+                            </block>
+                            <block wx:if="{{isEnd}}">
+                                <view class="_dt data-v-62c2ff36">助力时间已结束</view>
+                                <view class="_dd data-v-62c2ff36">
+                                    <view class="_p data-v-62c2ff36">提交回收订单</view>
+                                    <view class="_p data-v-62c2ff36">即可畅享加价福利</view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <template is="shareprice$2eedd7d3" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{popupInfo.isShow}}"></template>
+        </view>
+        <view class="_main data-v-62c2ff36">
+            <view class="_div data-v-62c2ff36" wx:if="{{!isEnd&&activityInfo}}">
+                <view class="_p data-v-62c2ff36">当前已加价：<label class="_span data-v-62c2ff36">{{activityInfo.totalAmount}}元</label>
+                </view>
+                <view class="_p data-v-62c2ff36 active">邀请好友：<label class="_span data-v-62c2ff36">{{activityInfo.inviteCount}}人</label>
+                </view>
+                <view class="_div data-v-62c2ff36 progress-container">
+                    <view class="_u data-v-62c2ff36"></view>
+                    <view class="_i data-v-62c2ff36" style=" {{'width: '+progress+'px'}}">
+                        <view class="_s data-v-62c2ff36"></view>
+                    </view>
+                </view>
+                <view class="_dl data-v-62c2ff36">
+                    <view class="_dt data-v-62c2ff36" wx:if="{{!isOwner}}">
+                        <block wx:if="{{!isHelped}}">
+                            <button bindgetphonenumber="handleProxy" class="_button data-v-62c2ff36" data-comkey="{{$k}}" data-eventid="{{'1'}}" openType="getPhoneNumber" wx:if="{{!loginInfo}}">帮ta加价</button>
+                        </block>
+                        <navigator class="_navigator data-v-62c2ff36" url="{{navigateUrl.category}}" wx:if="{{isHelped||!isNew&&!isHelped}}">测测我的手机值多少钱</navigator>
+                    </view>
+                    <view class="_dt data-v-62c2ff36" wx:if="{{isOwner}}">
+                        <button bindtap="handleProxy" class="_button data-v-62c2ff36" data-comkey="{{$k}}" data-eventid="{{'2'}}" openType="share">邀请好友</button>
+                    </view>
+                    <view class="_dd data-v-62c2ff36" wx:if="{{countDown}}">
+                        <navigator bindtap="handleProxy" class="_navigator data-v-62c2ff36" data-comkey="{{$k}}" data-eventid="{{'3'}}" url="{{navigateUrl.category}}" wx:if="{{isOwner}}">继续回收</navigator>
+                        <button bindtap="handleProxy" class="_button data-v-62c2ff36 share-btn" data-comkey="{{$k}}" data-eventid="{{'4'}}" openType="share" wx:if="{{!isOwner}}">帮他分享</button>
+                    </view>
+                </view>
+                <template is="shareprice$bfa7875e" data="{{...$root[$kk+'1'],$root:$root}}" wx:if="{{helpList}}"></template>
+            </view>
+        </view>
+        <view class="_footer data-v-62c2ff36" wx:if="{{!isOwner&&!isEnd}}">
+            <view class="_p data-v-62c2ff36">我也要加价</view>
+            <view class="_div data-v-62c2ff36 add-price">
+                <view class="_u data-v-62c2ff36">回收任意数码产品，即可邀请好友加价</view>
+                <image alt src class="_img data-v-62c2ff36 course"></image>
+                <view bindtap="handleProxy" class="_dl data-v-62c2ff36 coupon" data-comkey="{{$k}}" data-eventid="{{'5'}}" style=" {{'background:'+'url('+activityInfo.promotion.backgroundImgUrl+')'+';'+'background-size:'+'100% 100%'+';'}}" wx:if="{{activityInfo&&activityInfo.promotion}}">
+                    <view class="_dt data-v-62c2ff36">{{activityInfo.promotion.title}}</view>
+                    <view class="_dd data-v-62c2ff36">{{activityInfo.promotion.subtitle}}</view>
+                </view>
+            </view>
+            <navigator bindtap="handleProxy" class="_navigator data-v-62c2ff36" data-comkey="{{$k}}" data-eventid="{{'6'}}" url="{{navigateUrl.category}}">免费估价</navigator>
+        </view>
+        <view class="_div data-v-62c2ff36 end-container" wx:if="{{isEnd}}">
+            <navigator class="_navigator data-v-62c2ff36 immediately" url="{{navigateUrl.category}}" wx:if="{{!isLoading}}">立即回收</navigator>
+        </view>
+    </view>
+</template>
+<import src="shareprice$2eedd7d3"></import>
+<import src="shareprice$bfa7875e"></import>

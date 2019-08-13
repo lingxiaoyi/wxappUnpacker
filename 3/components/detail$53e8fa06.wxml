@@ -1,0 +1,19 @@
+<template name="detail$53e8fa06">
+    <view class="_dl data-v-36b85f72 checkbox-container" id="view-checkbox">
+        <view class="_dt data-v-36b85f72">
+            <label class="_span data-v-36b85f72">{{index}}. 功能情况</label>
+            <label class="_span data-v-36b85f72">（可多选，若无问题点击查看定价）</label>
+        </view>
+        <view class="_dd data-v-36b85f72">
+            <view class="_ul data-v-36b85f72">
+                <view bindtap="handleProxy" class="_li data-v-36b85f72 {{[index===arr.length-1?'no-border':'']}}" data-comkey="{{$k}}" data-eventid="{{'1-'+index}}" key="{{item.id}}" wx:if="{{item&&item.arr&&item.arr.length!==1}}" wx:for="{{arr}}" wx:key="item.id">
+                    <view class="_i data-v-36b85f72 {{[item.selected?'active':'']}}"></view>
+                    <view class="_p data-v-36b85f72">
+                        <label class="_span data-v-36b85f72">{{item.title}}</label>
+                        <image catchtap="handleProxy" class="_img data-v-36b85f72" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" src="https://sr.aihuishou.com/miniapps/earth/public/question-gray.png" wx:if="{{item.content}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

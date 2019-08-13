@@ -1,0 +1,44 @@
+<template name="invite-coupon$6b5f9cdc">
+    <view class="_div data-v-451f7d70 progress-com" wx:if="{{info}}">
+        <view class="_div data-v-451f7d70 inner">
+            <view class="_div data-v-451f7d70 progress-box" wx:if="{{isActive}}">
+                <view class="_p data-v-451f7d70 count">
+        已助力好友：<label class="_span data-v-451f7d70">{{info.count||0}}</label>人
+      </view>
+                <view class="_div data-v-451f7d70 progress">
+                    <view class="_div data-v-451f7d70 progress-background"></view>
+                    <view class="_div data-v-451f7d70 progress-current" style="width: 8.5px; {{'width:'+width+';'}}"></view>
+                </view>
+                <view class="_div data-v-451f7d70 scale">
+                    <view class="_div data-v-451f7d70 step">
+                        <view class="_p data-v-451f7d70">0人</view>
+                        <view class="_p data-v-451f7d70">助力越多</view>
+                        <view class="_p data-v-451f7d70">券额越大</view>
+                        <view class="_p data-v-451f7d70"></view>
+                    </view>
+                    <view class="_div data-v-451f7d70 step">
+                        <view class="_p data-v-451f7d70">5人</view>
+                        <view class="_p data-v-451f7d70">
+                            <label class="_span data-v-451f7d70">270</label>助力礼包</view>
+                        <view class="_p data-v-451f7d70 status" wx:if="{{info.count>=5}}">(已发放)</view>
+                    </view>
+                    <view class="_div data-v-451f7d70 step">
+                        <view class="_p data-v-451f7d70">10人</view>
+                        <view class="_p data-v-451f7d70">
+                            <label class="_span data-v-451f7d70">450</label>助力礼包</view>
+                        <view class="_p data-v-451f7d70 status" wx:if="{{info.count>=10}}">(已发放)</view>
+                    </view>
+                    <view class="_div data-v-451f7d70 step">
+                        <view class="_p data-v-451f7d70">15人</view>
+                        <view class="_p data-v-451f7d70">
+                            <label class="_span data-v-451f7d70">700</label>助力礼包</view>
+                        <view class="_p data-v-451f7d70 status" wx:if="{{info.count>=15}}">(已发放)</view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-451f7d70 closed" wx:else>
+      抱歉，当前活动已结束
+    </view>
+        </view>
+    </view>
+</template>

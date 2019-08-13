@@ -1,0 +1,24 @@
+<template name="detail$4721c669">
+    <view class="_div data-v-7ed9b67d inquire-procress-container">
+        <template is="detail$65fdfb22" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <scroll-view class="_scroll-view data-v-7ed9b67d" enableBackToTop="{{true}}" scrollIntoView="{{viewId}}" scrollWithAnimation="{{true}}" scrollY="{{true}}" style=" {{showSubmitContainer?'padding-bottom: 140rpx':''}}">
+            <template is="detail$e4bef40e" data="{{...$root[$kk+'1-'+index],$root:$root}}" wx:for="{{arrRadios}}" wx:key="item.id"></template>
+            <template is="detail$53e8fa06" data="{{...$root[$kk+'2'],$root:$root}}" wx:if="{{showCheckBoxContainer}}"></template>
+        </scroll-view>
+        <form bindsubmit="handleProxy" class="_form data-v-7ed9b67d" data-comkey="{{$k}}" data-eventid="{{'2'}}" reportSubmit="{{true}}" wx:if="{{showSubmitContainer&&userInfo.mobileLoginToken}}">
+            <button class="_button data-v-7ed9b67d" formType="submit">查看定价</button>
+        </form>
+        <button bindgetphonenumber="handleProxy" class="_button data-v-7ed9b67d noLogin" data-comkey="{{$k}}" data-eventid="{{'3'}}" openType="getPhoneNumber" wx:if="{{showSubmitContainer&&!userInfo.mobileLoginToken}}">
+    查看定价
+  </button>
+        <template is="detail$a6c2aca6" data="{{...$root[$kk+'3'],$root:$root}}"></template>
+        <template is="share-dialog$7e4ac255" data="{{...$root[$kk+'4'],$root:$root}}" wx:if="{{showShareModel}}"></template>
+        <template is="detail$4cde2c54" data="{{...$root[$kk+'5'],$root:$root}}"></template>
+    </view>
+</template>
+<import src="detail$65fdfb22"></import>
+<import src="detail$e4bef40e"></import>
+<import src="detail$53e8fa06"></import>
+<import src="detail$a6c2aca6"></import>
+<import src="share-dialog$7e4ac255"></import>
+<import src="detail$4cde2c54"></import>

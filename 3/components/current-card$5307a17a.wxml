@@ -1,0 +1,26 @@
+<template name="current-card$5307a17a">
+    <view class="_div data-v-f349a8a2 current-card-container index-box">
+        <view class="_div data-v-f349a8a2 title">{{objCurrent.inquiryKey?'待提交订单':'本机估价'}}</view>
+        <view class="_dl data-v-f349a8a2 index-box-container">
+            <view bindtap="handleProxy" class="_dt data-v-f349a8a2 nav-enter" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                <view class="_div data-v-f349a8a2">
+                    <image class="_img data-v-f349a8a2" mode="scaleToFill" src="{{objCurrent.productImg}}"></image>
+                    <view class="_div data-v-f349a8a2 device-info">
+                        <view class="_p data-v-f349a8a2 device-name">{{objCurrent.productName}}</view>
+                        <view class="_p data-v-f349a8a2 top-price">
+            {{objCurrent.inquiryKey?'上次估价':'最高回收价'}} <label class="_span data-v-f349a8a2">¥<label class="_span data-v-f349a8a2">{{objCurrent.price}}</label>
+                            </label>
+                        </view>
+                    </view>
+                </view>
+                <label class="_span data-v-f349a8a2 check-span">立即回收</label>
+            </view>
+            <view class="_dd data-v-f349a8a2">
+                <button catchtap="stop" class="_button data-v-f349a8a2 share" openType="share">
+                    <view class="_p data-v-f349a8a2">{{objCurrent.topPrice&&objCurrent.topPrice>=3000?'点我邀请好友来PK，谁的手机更值钱':'旧机交给爱回收，邀请好友，一起助力环保'}}</view>
+                    <view class="_i data-v-f349a8a2"></view>
+                </button>
+            </view>
+        </view>
+    </view>
+</template>

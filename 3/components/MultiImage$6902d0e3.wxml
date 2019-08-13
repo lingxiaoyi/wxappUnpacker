@@ -1,0 +1,9 @@
+<template name="MultiImage$6902d0e3">
+    <view class="_div data-v-54e2e962 multi-image-container">
+        <view bindtap="handleProxy" class="_div data-v-54e2e962 multi-content" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{index}}" wx:for="{{multiImageInfo}}" wx:key="index">
+            <template is="form$7e8ea023" data="{{...$root[$kk+'0-'+index],$root:$root}}"></template>
+            <image alt lazyLoad class="_img data-v-54e2e962" mode="widthFix" src="{{item.imageUrl}}"></image>
+        </view>
+    </view>
+</template>
+<import src="form$7e8ea023"></import>

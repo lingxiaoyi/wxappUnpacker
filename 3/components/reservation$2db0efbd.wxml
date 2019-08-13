@@ -1,0 +1,14 @@
+<template name="reservation$2db0efbd">
+    <view bindtap="handleProxy" class="_div data-v-2dea945e reservation-comp  {{className}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+        <view class="_div data-v-2dea945e left">
+            <image alt class="_img data-v-2dea945e" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/resver%402x.png"></image>
+        </view>
+        <view class="_div data-v-2dea945e right">
+            <view class="_p data-v-2dea945e">找不到型号？</view>
+            <view class="_p data-v-2dea945e">门店提供一对一的服务 还能当场拿钱哟~</view>
+        </view>
+        <view class="_div data-v-2dea945e btn">
+    预约
+  </view>
+    </view>
+</template>

@@ -1,0 +1,2 @@
+<import src="../../components/nbs-category$4d46fc64"></import>
+<template is="nbs-category$4d46fc64" data="{{...$root['0'],$root:$root}}"></template>

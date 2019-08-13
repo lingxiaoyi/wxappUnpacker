@@ -1,0 +1,137 @@
+<template name="nbs-vip$37313e4d">
+    <scroll-view scrollWithAnimation class="_scroll-view data-v-13115e8e vip-page" scrollIntoView="{{'floor'+(currentFloor||0)}}" scrollY="{{style}}">
+        <swiper class="_swiper data-v-13115e8e swiper" nextMargin="36px" previousMargin="16px" wx:if="{{vipInfo.dubaiVipDetailList&&vipInfo.dubaiVipDetailList.length}}">
+            <swiper-item class="_swiper-item data-v-13115e8e item" key="{{index}}" wx:for="{{vipInfo.dubaiVipDetailList}}" wx:key="index">
+                <template is="nbs-vip$764fa3d3" data="{{...$root[$kk+'0-'+index],$root:$root}}" wx:if="{{item.memberType===1}}"></template>
+                <template is="nbs-vip$765dbb54" data="{{...$root[$kk+'1-'+index],$root:$root}}" wx:if="{{item.memberType===2}}"></template>
+            </swiper-item>
+        </swiper>
+        <view class="_div data-v-13115e8e coupon-list">
+            <view class="_div data-v-13115e8e box floor1" id="floor1" wx:if="{{vipInfo.dubaiAddPricePercentCouponList&&vipInfo.dubaiAddPricePercentCouponList.length}}">
+                <view class="_div data-v-13115e8e title">
+                    <label class="_span data-v-13115e8e">每月回收加价券</label>
+                    <label bindtap="handleProxy" class="_span data-v-13115e8e arrow" data-comkey="{{$k}}" data-eventid="{{'2'}}">权益详情</label>
+                </view>
+                <view class="_p data-v-13115e8e tips" wx:if="{{!vipDetail.memberType}}">
+        立即开通会员 领取专享回收加价券
+      </view>
+                <view class="_p data-v-13115e8e tips" wx:elif="{{vipDetail.memberType&&vipDetail.isValidTime}}">
+        每月可领1次 每月1日刷新
+      </view>
+                <view class="_div data-v-13115e8e content">
+                    <view class="_div data-v-13115e8e {{[item.memberType===1?'type1':'type2',item.status===2?'active':'',vipDetail.memberType===2?'type3':'']}}" key="{{index}}" wx:for="{{vipInfo.dubaiAddPricePercentCouponList}}" wx:key="index">
+                        <view class="_p data-v-13115e8e">{{item.percent||0}}%</view>
+                        <view class="_p data-v-13115e8e">满{{item.minPriceLimit}}元可用 最高加价{{item.maxPriceLimit||0}}元</view>
+                        <button bindgetphonenumber="handleProxy" class="_button data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile&&item.memberType===1}}">开通体验客领取
+          </button>
+                        <view bindtap="handleProxy" class="_p data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'4-'+index}}" wx:if="{{userInfo.mobile&&item.memberType===1&&item.status===0}}">开通体验客领取</view>
+                        <view bindtap="handleProxy" class="_p data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'5-'+index}}" wx:if="{{item.memberType===2&&item.status===0}}">开通发烧友领取</view>
+                        <view bindtap="handleProxy" class="_p data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'6-'+index}}" wx:if="{{item.status===1}}">领取</view>
+                        <view class="_p data-v-13115e8e" wx:if="{{item.status===2}}">已领取</view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-13115e8e box floor2" id="floor2" wx:if="{{vipInfo.dubaiChangeNewCouponList&&vipInfo.dubaiChangeNewCouponList.length}}">
+                <view class="_div data-v-13115e8e title">
+                    <label class="_span data-v-13115e8e">每月换新优惠券</label>
+                    <label bindtap="handleProxy" class="_span data-v-13115e8e arrow" data-comkey="{{$k}}" data-eventid="{{'7'}}">权益详情</label>
+                </view>
+                <view class="_p data-v-13115e8e tips" wx:if="{{vipDetail.memberType!==2}}">
+        开通发烧友 立享每月100元优惠券
+      </view>
+                <view class="_p data-v-13115e8e tips" wx:elif="{{vipDetail.memberType===2&&vipDetail.isValidTime}}">
+        每月可领1次 每月1日刷新
+      </view>
+                <view class="_div data-v-13115e8e content" key="{{i}}" wx:for="{{vipInfo.dubaiChangeNewCouponList}}" wx:for-index="i" wx:for-item="ele" wx:key="i">
+                    <view class="_div data-v-13115e8e coupons {{[ele.status===2?'received-coupon':'']}}">
+                        <view class="_div data-v-13115e8e" key="{{index}}" wx:for="{{ele.promotionList}}" wx:key="index">
+                            <label class="_span data-v-13115e8e">{{item.amount}}</label>
+                            <label class="_span data-v-13115e8e">{{item.name}}</label>
+                        </view>
+                    </view>
+                    <view bindtap="handleProxy" class="_p data-v-13115e8e btn" data-comkey="{{$k}}" data-eventid="{{'9-'+i}}" wx:if="{{vipDetail.memberType!==2}}">开通发烧友领取</view>
+                    <view bindtap="handleProxy" class="_p data-v-13115e8e btn" data-comkey="{{$k}}" data-eventid="{{'8-'+i}}" wx:elif="{{vipDetail.memberType===2&&ele.status===1}}">立即领取</view>
+                    <view class="_p data-v-13115e8e btn received-btn" wx:elif="{{vipDetail.memberType===2&&ele.status===2}}">已领取</view>
+                </view>
+            </view>
+            <view class="_div data-v-13115e8e box floor3" id="floor3" wx:if="{{vipInfo.dubaiJikexiuCouponList&&vipInfo.dubaiJikexiuCouponList.length}}">
+                <view class="_div data-v-13115e8e title">
+                    <label class="_span data-v-13115e8e">每月维修优惠券</label>
+                    <label bindtap="handleProxy" class="_span data-v-13115e8e arrow" data-comkey="{{$k}}" data-eventid="{{'10'}}">权益详情</label>
+                </view>
+                <view class="_p data-v-13115e8e tips" wx:if="{{vipDetail.memberType!==2}}">
+        开通发烧友 立享每月100元优惠券
+      </view>
+                <view class="_p data-v-13115e8e tips" wx:elif="{{vipDetail.memberType===2&&vipDetail.isValidTime}}">
+        每月可领1次 每月1日刷新
+      </view>
+                <view class="_div data-v-13115e8e content">
+                    <view class="_div data-v-13115e8e coupons {{vipDetail.memberType===2?'active':''}}">
+                        <view class="_div data-v-13115e8e {{item.status===2&&'checked'}}" key="{{index}}" wx:for="{{vipInfo.dubaiJikexiuCouponList}}" wx:key="index">
+                            <view class="_p data-v-13115e8e">{{item.amount||0}}</view>
+                            <view class="_p data-v-13115e8e">{{item.name}}</view>
+                            <view bindtap="handleProxy" class="_p data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'11-'+index}}" wx:if="{{item.status===1}}">立即领取</view>
+                            <view class="_p data-v-13115e8e" wx:if="{{item.status===2}}">已领取</view>
+                        </view>
+                    </view>
+                    <view bindtap="handleProxy" class="_p data-v-13115e8e btn" data-comkey="{{$k}}" data-eventid="{{'12'}}" wx:if="{{vipDetail.memberType!==2}}">开通发烧友领取</view>
+                </view>
+            </view>
+            <view class="_div data-v-13115e8e box floor4" id="floor4" wx:if="{{vipInfo.dubaiFittingCouponList&&vipInfo.dubaiFittingCouponList.length}}">
+                <view class="_div data-v-13115e8e title">
+                    <label class="_span data-v-13115e8e">配件权益</label>
+                    <label bindtap="handleProxy" class="_span data-v-13115e8e arrow" data-comkey="{{$k}}" data-eventid="{{'13'}}">权益详情</label>
+                </view>
+                <view class="_div data-v-13115e8e content">
+                    <view class="_div data-v-13115e8e {{item.status===2?'active':''}}" key="{{index}}" wx:for="{{vipInfo.dubaiFittingCouponList}}" wx:key="index">
+                        <label class="_span data-v-13115e8e">{{item.name}}</label>
+                        <label bindtap="handleProxy" class="_span data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'14-'+index}}" wx:if="{{item.status===0}}">开通发烧友领取</label>
+                        <label bindtap="handleProxy" class="_span data-v-13115e8e" data-comkey="{{$k}}" data-eventid="{{'15-'+index}}" wx:if="{{item.status===1}}">领取</label>
+                        <label class="_span data-v-13115e8e" wx:if="{{item.status===2}}">已领取</label>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-13115e8e box floor5" id="floor5" wx:if="{{vipInfo.dubaiServiceRightList&&vipInfo.dubaiServiceRightList.length}}">
+                <view class="_div data-v-13115e8e title">
+                    <label class="_span data-v-13115e8e">服务权益</label>
+                    <label bindtap="handleProxy" class="_span data-v-13115e8e arrow" data-comkey="{{$k}}" data-eventid="{{'16'}}">权益详情</label>
+                </view>
+                <view class="_div data-v-13115e8e content {{[vipDetail.memberType===2?'level2':'level1']}}">
+                    <block wx:for="{{vipInfo.dubaiServiceRightList}}" wx:key="index">
+                        <view class="_div data-v-13115e8e {{['type'+index%3+1,item.status===2?'checked':'']}}">
+                            <view class="_p data-v-13115e8e val1">{{item.name}}</view>
+                            <view class="_div data-v-13115e8e val2">
+                                <view class="_p data-v-13115e8e" wx:if="{{item.type===2}}">不限次数</view>
+                                <view class="_p data-v-13115e8e" wx:elif="{{item.type===1&&!vipDetail.memberType}}">{{item.totalCount}}次</view>
+                                <view class="_p data-v-13115e8e" wx:else>
+                                    <label class="_span data-v-13115e8e">{{item.totalCount-item.usedCount}}</label>/<label class="_span data-v-13115e8e">{{item.totalCount}}</label>次</view>
+                            </view>
+                            <button bindgetphonenumber="handleProxy" class="_button data-v-13115e8e val3 free" data-comkey="{{$k}}" data-eventid="{{'19-'+index}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">开通体验客领取
+            </button>
+                            <button bindtap="handleProxy" class="_button data-v-13115e8e val3 free" data-comkey="{{$k}}" data-eventid="{{'17-'+index}}" wx:elif="{{userInfo.mobile&&!vipDetail.memberType}}">
+              开通体验客领取
+            </button>
+                            <button bindtap="handleProxy" class="_button data-v-13115e8e val3" data-comkey="{{$k}}" data-eventid="{{'18-'+index}}" wx:elif="{{item.status===1||item.type===2||item.usedCount<item.totalCount}}">使用
+            </button>
+                            <button class="_button data-v-13115e8e val3 used" wx:elif="{{item.usedCount===item.totalCount}}">已用完</button>
+                        </view>
+                        <view class="_div data-v-13115e8e fsy" wx:if="{{vipDetail.memberType!==2&&item.memberType===1&&item.type===1}}">
+                            <view class="_p data-v-13115e8e val1">开通发烧友升级至</view>
+                            <view class="_p data-v-13115e8e val2">
+                                <label class="_span data-v-13115e8e">{{item.maxCount}}</label>次</view>
+                            <button bindtap="handleProxy" class="_button data-v-13115e8e val3" data-comkey="{{$k}}" data-eventid="{{'20-'+index}}">开通发烧友领取</button>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-13115e8e" id="floor6"></view>
+        <view class="_div data-v-13115e8e" id="floor7"></view>
+        <template is="nbs-vip$3bcd0476" data="{{...$root[$kk+'3'],$root:$root}}"></template>
+        <template is="nbs-vip$4cb92a35" data="{{...$root[$kk+'4'],$root:$root}}" wx:if="{{encryptString}}"></template>
+    </scroll-view>
+</template>
+<import src="nbs-vip$764fa3d3"></import>
+<import src="nbs-vip$765dbb54"></import>
+<import src="nbs-vip$3bcd0476"></import>
+<import src="nbs-vip$4cb92a35"></import>

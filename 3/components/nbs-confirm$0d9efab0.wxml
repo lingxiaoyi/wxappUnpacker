@@ -1,0 +1,73 @@
+<template name="nbs-confirm$0d9efab0">
+    <view class="_div data-v-850411c8 maintain-confirm {{isIphoneX&&'isIphoneX'}}">
+        <view class="_div data-v-850411c8 step">
+            <image alt class="_img data-v-850411c8" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/nbs/step.png"></image>
+        </view>
+        <view class="_div data-v-850411c8 repair-info">
+            <view class="_div data-v-850411c8 phone-name global-line">{{repairInfo.model}}</view>
+            <view class="_ul data-v-850411c8 repair-list">
+                <view class="_li data-v-850411c8" key="{{index}}" wx:for="{{checkedOptions}}" wx:key="index">
+                    <view class="_div data-v-850411c8 left">
+                        <view class="_p data-v-850411c8 name">{{item.name}}</view>
+                        <view class="_p data-v-850411c8 desc">{{item.solution}}</view>
+                    </view>
+                    <view class="_div data-v-850411c8 right">
+                        <view class="_p data-v-850411c8 price">{{item.price>0?item.price:'待检测'}}</view>
+                        <view bindtap="handleProxy" class="_p data-v-850411c8 delete" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" wx:if="{{checkedOptions.length>1}}">
+                            <image alt class="_img data-v-850411c8" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/nbs/delete.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-850411c8 store-info">
+            <view bindtap="handleProxy" class="_div data-v-850411c8 store" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                <view class="_p data-v-850411c8 name">{{storeInfo.name||'请选择维修服务站'}}</view>
+                <view class="_p data-v-850411c8 address">{{storeInfo.address||'选择服务站 >'}}</view>
+            </view>
+            <view class="_div data-v-850411c8 date">
+                <view class="_div data-v-850411c8">
+                    <label class="_span data-v-850411c8">预约时间</label>
+                    <picker bindchange="handleProxy" class="_picker data-v-850411c8 picker-box" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{actionList}}" value="{{actionIndex}}">
+                        <view class="_view data-v-850411c8 picker">
+                            <label class="_span data-v-850411c8 date-str" wx:if="{{actionList[actionIndex]}}">{{actionList[actionIndex]}}</label>
+                            <label class="_span data-v-850411c8" wx:if="{{!actionList[actionIndex]}}">请选择时间</label>
+                        </view>
+                    </picker>
+                </view>
+                <image alt class="_img data-v-850411c8" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/new-index/arrow.png"></image>
+            </view>
+        </view>
+        <view class="_div data-v-850411c8 ticket-info" key="{{index}}" wx:if="{{!item.disabled}}" wx:for="{{couponList}}" wx:key="index">
+            <view class="_div data-v-850411c8 left global-line">
+                <label class="_span data-v-850411c8 img"></label>
+                <label class="_span data-v-850411c8 name">{{item.name}}</label>
+                <label class="_span data-v-850411c8 tip">(维修成功后使用)</label>
+            </view>
+            <label bindtap="handleProxy" class="_span data-v-850411c8 {{item.checked&&'isTicket'}}" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}" wx:if="{{userInfo.mobile}}">{{item.checked?'已领取':'领取'}}</label>
+            <button bindgetphonenumber="handleProxy" class="_button data-v-850411c8" data-comkey="{{$k}}" data-eventid="{{'4-'+index}}" data-item="{{item}}" data-type="receiveTicket" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">领取
+    </button>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-850411c8 treaty-info" data-comkey="{{$k}}" data-eventid="{{'6'}}">
+            <image alt class="_img data-v-850411c8" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/maintain/default.png" wx:if="{{!isProtocol}}"></image>
+            <image alt class="_img data-v-850411c8" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/maintain/checked.png" wx:if="{{isProtocol}}"></image>
+    我已阅读并同意
+    <label bindtap="handleProxy" class="_span data-v-850411c8" data-comkey="{{$k}}" data-eventid="{{'5'}}">极客修服务协议</label>
+        </view>
+        <view class="_div data-v-850411c8 footer {{isIphoneX&&'isIphoneX'}}">
+            <view class="_div data-v-850411c8 left">
+                <view class="_p data-v-850411c8 price">
+                    <label class="_span data-v-850411c8">合计: </label>
+                    <label class="_span data-v-850411c8">{{totalPrice>0?totalPrice:'待检测'}}</label>
+                </view>
+                <view class="_p data-v-850411c8">维修成功后支付</view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-850411c8 right {{canSubmit&&'active'}}" data-comkey="{{$k}}" data-eventid="{{'7'}}" wx:if="{{userInfo.mobile||!canSubmit}}">
+      确认下单
+    </view>
+            <button bindgetphonenumber="handleProxy" class="_button data-v-850411c8 right {{canSubmit&&'active'}}" data-comkey="{{$k}}" data-eventid="{{'8'}}" data-item="1" data-type="submit" openType="getPhoneNumber" wx:if="{{!userInfo.mobile&&canSubmit}}">
+      确认下单
+    </button>
+        </view>
+    </view>
+</template>

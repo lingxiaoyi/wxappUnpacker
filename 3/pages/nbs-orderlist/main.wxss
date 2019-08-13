@@ -1,0 +1,169 @@
+@import "../activity/private/private.wxss";
+
+.orderlist-box.data-v-7dddde08 {
+    background: #f8f8f8;
+    padding-top: 16rpx;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.orderlist-box scroll-view.data-v-7dddde08 {
+    height: calc(100vh - 204rpx);
+}
+
+.orderlist-box .coupon.data-v-7dddde08 {
+    height: 104rpx;
+    line-height: 104rpx;
+    background-color: #fff;
+    font-size: 30rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    box-sizing: border-box;
+    padding-left: 88rpx;
+    position: relative;
+}
+
+.orderlist-box .coupon.data-v-7dddde08:before {
+    content: "";
+    position: absolute;
+    width: 36rpx;
+    height: 20rpx;
+    top: 42rpx;
+    left: 32rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs/coupon.png") no-repeat 50%/cover;
+}
+
+.orderlist-box .coupon.data-v-7dddde08:after {
+    content: "";
+    position: absolute;
+    width: 28rpx;
+    height: 28rpx;
+    top: 38rpx;
+    right: 32rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs/arrow_right2.png") no-repeat 50%/cover;
+}
+
+.orderlist-box .content.data-v-7dddde08 {
+    padding-bottom: 40rpx;
+}
+
+.orderlist-box .sub-title.data-v-7dddde08 {
+    height: 84rpx;
+    box-sizing: border-box;
+    padding: 32rpx 0 16rpx 32rpx;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    line-height: 36rpx;
+}
+
+.orderlist-box .info.data-v-7dddde08 {
+    margin-bottom: 16rpx;
+    background-color: #fff;
+}
+
+.orderlist-box .info .time.data-v-7dddde08 {
+    height: 84rpx;
+    line-height: 84rpx;
+    box-sizing: border-box;
+    padding: 0 32rpx;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    color: #999;
+}
+
+.orderlist-box .info .time ._span.data-v-7dddde08 {
+    float: right;
+    color: #333;
+}
+
+.orderlist-box .info .time ._span.success.data-v-7dddde08 {
+    color: #fc6232;
+}
+
+.orderlist-box .info .time ._span.done.data-v-7dddde08 {
+    color: #45d0b1;
+}
+
+.orderlist-box .info .detail.data-v-7dddde08 {
+    padding: 32rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.orderlist-box .info .detail .name.data-v-7dddde08 {
+    font-size: 32rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    line-height: 36rpx;
+}
+
+.orderlist-box .info .detail .desc.data-v-7dddde08 {
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    color: #777;
+    line-height: 36rpx;
+    margin-top: 8rpx;
+}
+
+.orderlist-box .info .detail .date.data-v-7dddde08,.orderlist-box .info .detail .shop.data-v-7dddde08 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    line-height: 32rpx;
+    margin-top: 24rpx;
+}
+
+.orderlist-box .info .total.data-v-7dddde08 {
+    height: 88rpx;
+    line-height: 88rpx;
+    box-sizing: border-box;
+    padding-right: 32rpx;
+}
+
+.orderlist-box .info .total ._span.data-v-7dddde08 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    float: right;
+}
+
+.orderlist-box .info .total .price.data-v-7dddde08 {
+    font-size: 40rpx;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #fc6232;
+    margin-left: 10rpx;
+}
+
+.orderlist-box .info .total .price.data-v-7dddde08:before {
+    content: "\A5";
+    font-size: 32rpx;
+    margin-right: 4rpx;
+}
+
+.orderlist-box .empty.data-v-7dddde08 {
+    padding-top: 200rpx;
+    overflow: hidden;
+}
+
+.orderlist-box .empty ._img.data-v-7dddde08 {
+    display: block;
+    width: 360rpx;
+    height: 278rpx;
+    margin: 0 auto;
+}
+
+.orderlist-box .empty ._p.data-v-7dddde08 {
+    margin: 72rpx auto 400rpx;
+    width: 540rpx;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    background: linear-gradient(180deg,#ffdf0d,#f9e72c);
+    border-radius: 8rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+}

@@ -1,0 +1,2 @@
+<import src="../../components/sharepricerules$41a981ab"></import>
+<template is="sharepricerules$41a981ab" data="{{...$root['0'],$root:$root}}"></template>

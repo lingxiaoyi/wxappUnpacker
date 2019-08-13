@@ -1,0 +1,34 @@
+<template name="nbs-orderlist$49cc4c9c">
+    <view class="_div data-v-7dddde08 orderlist-box" wx:if="{{hasFinish}}">
+        <view bindtap="handleProxy" class="_div data-v-7dddde08 coupon" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+    维修优惠券
+  </view>
+        <view class="_div data-v-7dddde08 content" wx:if="{{orderList.length}}">
+            <view class="_div data-v-7dddde08 sub-title">维修订单</view>
+            <scroll-view scrollY bindscrolltolower="handleProxy" class="_scroll-view data-v-7dddde08" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+                <view bindtap="handleProxy" class="_div data-v-7dddde08 info" data-comkey="{{$k}}" data-eventid="{{'1-'+index}}" key="{{index}}" wx:for="{{orderList}}" wx:key="index">
+                    <view class="_div data-v-7dddde08 time">
+          {{item.createDateStr}}
+          <label class="_span data-v-7dddde08 success" wx:if="{{item.status===1}}">下单成功，敬请到店</label>
+                        <label class="_span data-v-7dddde08 done" wx:if="{{item.status===2}}">订单成功</label>
+                        <label class="_span data-v-7dddde08" wx:if="{{item.status===3}}">订单取消</label>
+                    </view>
+                    <view class="_div data-v-7dddde08 detail">
+                        <view class="_p data-v-7dddde08 name">{{item.productName}}</view>
+                        <view class="_p data-v-7dddde08 desc">{{item.showTip}}</view>
+                        <view class="_p data-v-7dddde08 date">{{item.appointmentTimeStr}}</view>
+                        <view class="_p data-v-7dddde08 shop">{{item.shop.name}}</view>
+                    </view>
+                    <view class="_div data-v-7dddde08 total">
+                        <label class="_span data-v-7dddde08 price">{{item.amount>0?item.amount:'待检测'}}</label>
+                        <label class="_span data-v-7dddde08 title">合计:</label>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-7dddde08 empty" data-comkey="{{$k}}" data-eventid="{{'3'}}" wx:else>
+            <image alt class="_img data-v-7dddde08" src="https://sr.aihuishou.com/miniapps/earth/nbs/empty.png"></image>
+            <view class="_p data-v-7dddde08">预约维修</view>
+        </view>
+    </view>
+</template>

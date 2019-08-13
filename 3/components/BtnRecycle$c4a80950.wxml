@@ -1,0 +1,5 @@
+<template name="BtnRecycle$c4a80950">
+    <view bindtap="handleProxy" class="_div data-v-0a37b5c4 recycle-btn-container" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+  免费估价
+</view>
+</template>

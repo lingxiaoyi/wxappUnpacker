@@ -1,0 +1,195 @@
+<template name="order$24a5710c">
+    <view class="_div data-v-1635a310 order-page">
+        <view class="_div data-v-1635a310 section-inquiry">
+            <image class="_img data-v-1635a310 order-success-icon" src="{{okIcon}}"></image>
+            <view class="_div data-v-1635a310 product-name ">订单提交成功
+      <label class="_span data-v-1635a310 product-money">{{orderInfo.amount}} 元</label>
+            </view>
+            <view class="_div data-v-1635a310 order-tip">
+      请使用订单关联手机
+      <label bindtap="handleProxy" class="_span data-v-1635a310 user-phone" data-comkey="{{$k}}" data-eventid="{{'0'}}">{{phonenumber}}</label>
+      登录爱回收账户
+    </view>
+        </view>
+        <view class="_div data-v-1635a310 friendAssistance" wx:if="{{helpInfo.isShowBanner}}">
+            <navigator class="_navigator data-v-1635a310" url="{{helpInfo.url}}">
+                <image class="_img data-v-1635a310" src="{{helpInfo.bannerImage}}"></image>
+            </navigator>
+        </view>
+        <view class="_div data-v-1635a310 friend-popup" wx:if="{{helpInfo.isShowPopup}}">
+            <view bindtap="handleProxy" class="_div data-v-1635a310 mask-layer" data-comkey="{{$k}}" data-eventid="{{'1'}}"></view>
+            <view class="_div data-v-1635a310 friend-popup-container">
+                <button bindtap="handleProxy" class="_button data-v-1635a310" data-comkey="{{$k}}" data-eventid="{{'2'}}"></button>
+            </view>
+        </view>
+        <view class="_div data-v-1635a310" wx:if="{{orderInfo.expressType===2}}">
+            <view class="_div data-v-1635a310 cabinet-container">
+                <view class="_div data-v-1635a310 cabinet-title">邮寄信息</view>
+                <view class="_div data-v-1635a310">前往快递柜，点击柜机屏幕【寄包裹】并输入寄件码</view>
+                <view class="_div data-v-1635a310 cabinet-tips">投入前请进行妥善包装，以防物品损坏</view>
+                <view class="_div data-v-1635a310">寄件码：</view>
+                <view class="_div data-v-1635a310 cabinet-code">{{orderInfo.expressCabinet.boxCode}}</view>
+                <view class="_div data-v-1635a310">寄件码有效期至：{{orderInfo.expressCabinet.boxCodeExpireTime}}</view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-1635a310 cabinet-tips-container" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                <view class="_div data-v-1635a310 cabinet-left">
+                    <view class="_div data-v-1635a310" wx:if="{{nearestCabinetDistance&&nearestCabinetDistance>0}}">最近的快递柜距您{{nearestCabinetDistance}}米
+        </view>
+                    <view class="_div data-v-1635a310" wx:else>无法获取定位</view>
+                    <view class="_div data-v-1635a310 color1380ff">
+                        <view class="_i data-v-1635a310"></view>
+                        <label class="_span data-v-1635a310">{{nearestCabinetDistance&&nearestCabinetDistance>0?'查看附近快递柜>>':'点击获取定位授权'}}</label>
+                    </view>
+                </view>
+                <view class="_div data-v-1635a310 cabinet-right">
+                    <image class="_img data-v-1635a310" src="https://sr.aihuishou.com/miniapps/earth/cabinet/bitmap.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-1635a310" wx:if="{{tradetype==='store'}}">
+            <view class="_div data-v-1635a310 section">
+                <view class="_div data-v-1635a310 section-title">
+                    <label class="_span data-v-1635a310">回收须知</label>
+                </view>
+                <view class="_div data-v-1635a310 foot-note-group">
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-idcard" src="{{iconIdcard}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            准备好身份证
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note foot-note_question">
+                        <image class="_img data-v-1635a310 icon-questions" src="{{iconQuestion}}"></image>
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-clock" src="{{iconClock}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            手动解除{{identity}}账户
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-power" src="{{iconPower}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            充电至50%以上
+          </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-1635a310 section-ondoor-tips">
+                <text class="_text data-v-1635a310">门店信息已发至您的手机，请3天内前往门店交易</text>
+                <text class="_text data-v-1635a310">交易成功，当面支付现金</text>
+            </view>
+        </view>
+        <view class="_div data-v-1635a310" wx:if="{{tradetype==='express'}}">
+            <view class="_div data-v-1635a310 section">
+                <view class="_div data-v-1635a310 section-title">
+                    <label class="_span data-v-1635a310">回收须知</label>
+                </view>
+                <view class="_div data-v-1635a310 foot-note-group" wx:if="{{expressType=='sf'}}">
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-idcard" src="{{iconIdcard}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            准备好身份证
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note foot-note_question">
+                        <image class="_img data-v-1635a310 icon-questions" src="{{iconQuestion}}"></image>
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-clock" src="{{iconClock}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            手动解除{{identity}}账户
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-power" src="{{iconPower}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            充电至50%以上
+          </view>
+                    </view>
+                </view>
+                <view class="_div data-v-1635a310 foot-note-group" wx:else>
+                    <view class="_div data-v-1635a310 foot-note foot-note_question">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-clock" src="{{iconClock}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            手动解除{{identity}}账户
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-power" src="{{iconPower}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            充电至50%以上
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-express" src="{{iconExpress}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            联系快递
+          </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-1635a310 section-ondoor-tips">
+                <label class="_span data-v-1635a310" wx:if="{{expressType==='sf'}}">顺丰上门人员信息稍后短信至您的手机</label>
+                <label class="_span data-v-1635a310" wx:elif="{{expressType==='sdy'}}">寄件码已发至您的手机</label>
+                <label class="_span data-v-1635a310" wx:else>快递地址已发至您的手机</label>
+                <label class="_span data-v-1635a310">如验货无误，收到机器后48小时放款</label>
+            </view>
+        </view>
+        <view class="_div data-v-1635a310" wx:if="{{tradetype==='ondoor'||tradetype==='metro'}}">
+            <view class="_div data-v-1635a310 section">
+                <view class="_div data-v-1635a310 section-title">
+                    <label class="_span data-v-1635a310">回收须知</label>
+                </view>
+                <view class="_div data-v-1635a310 foot-note-group">
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-idcard" src="{{iconIdcard}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            准备好身份证
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note foot-note_question">
+                        <image class="_img data-v-1635a310 icon-questions" src="{{iconQuestion}}"></image>
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-clock" src="{{iconClock}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            手动解除{{identity}}账户
+          </view>
+                    </view>
+                    <view class="_div data-v-1635a310 foot-note">
+                        <view class="_div data-v-1635a310 foot-note_icon">
+                            <image class="_img data-v-1635a310 icon-power" src="{{iconPower}}"></image>
+                        </view>
+                        <view class="_div data-v-1635a310 foot-note_text">
+            充电至80%以上
+          </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-1635a310 section-ondoor-tips">
+                <label class="_span data-v-1635a310">工作人员将会致电联系您</label>
+                <label class="_span data-v-1635a310">回收成功，现场支付现金</label>
+            </view>
+        </view>
+        <view class="_div data-v-1635a310 bottom-button">
+            <button bindtap="handleProxy" class="_button data-v-1635a310" data-comkey="{{$k}}" data-eventid="{{'4'}}" type="primary">查看订单</button>
+        </view>
+    </view>
+</template>

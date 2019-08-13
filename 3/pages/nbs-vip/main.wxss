@@ -1,0 +1,926 @@
+@import "../activity/private/private.wxss";
+
+.vip-page.data-v-13115e8e {
+    width: auto;
+    height: 100vh;
+}
+
+.vip-page .swiper.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 684rpx;
+    white-space: nowrap;
+    margin-top: 40rpx;
+}
+
+.vip-page .swiper .item.data-v-13115e8e {
+    display: inline-block;
+    width: 646rpx;
+    height: 684rpx;
+    box-sizing: border-box;
+}
+
+.vip-page .swiper .item.data-v-13115e8e:first-child {
+    margin-right: 32rpx;
+}
+
+.vip-page .swiper .item.data-v-13115e8e:last-child {
+    margin-left: 24rpx;
+    margin-right: 32rpx;
+}
+
+.vip-page .coupon-list.data-v-13115e8e {
+    padding: 0 32rpx;
+}
+
+.vip-page .coupon-list .box.data-v-13115e8e {
+    background: #fff;
+    box-shadow: 0 8rpx 28rpx 0 hsla(195,9%,83%,.3);
+    border-radius: 20rpx;
+    margin-top: 32rpx;
+}
+
+.vip-page .coupon-list .box .title.data-v-13115e8e {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28rpx 28rpx 0 20rpx;
+}
+
+.vip-page .coupon-list .box .title ._span.data-v-13115e8e {
+    font-size: 34rpx;
+    font-weight: 600;
+    color: #333;
+}
+
+.vip-page .coupon-list .box .title .arrow.data-v-13115e8e {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #666;
+}
+
+.vip-page .coupon-list .box .title .arrow.data-v-13115e8e:after {
+    content: "";
+    display: inline-block;
+    width: 14rpx;
+    height: 24rpx;
+    margin-left: 8rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/arrow.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .box .tips.data-v-13115e8e {
+    width: auto;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    padding-left: 20rpx;
+    color: #666;
+}
+
+.vip-page .coupon-list .box .content.data-v-13115e8e {
+    margin-top: 32rpx;
+    padding: 0 24rpx 32rpx;
+}
+
+.vip-page .coupon-list .floor1 .content.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.data-v-13115e8e {
+    position: relative;
+    height: 224rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.active.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor1-3.png") no-repeat!important;
+    background-size: 100% 100%!important;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.active ._p.data-v-13115e8e:first-child,.vip-page .coupon-list .floor1 .content ._div.active ._p.data-v-13115e8e:nth-child(2) {
+    color: #998c38!important;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.active ._p.data-v-13115e8e:nth-child(3) {
+    color: #fedb41;
+    background: linear-gradient(180deg,#433b32,#212129);
+    opacity: .5;
+}
+
+.vip-page .coupon-list .floor1 .content ._div ._p.data-v-13115e8e:first-child {
+    font-size: 88rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-family: DINAlternate-Bold;
+    font-weight: 700;
+    color: #333;
+}
+
+.vip-page .coupon-list .floor1 .content ._div ._p.data-v-13115e8e:nth-child(2) {
+    font-size: 20rpx;
+    font-weight: 400;
+    margin-top: 8rpx;
+}
+
+.vip-page .coupon-list .floor1 .content ._div ._button.data-v-13115e8e,.vip-page .coupon-list .floor1 .content ._div ._p.data-v-13115e8e:nth-child(3) {
+    margin: 20rpx auto 0;
+    width: 248rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    background: linear-gradient(180deg,#433b32,#212129);
+    border-radius: 40rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #fff;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.type1.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor1-1.png") no-repeat;
+    background-size: 100% 100%;
+    margin-right: 14rpx;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.type2.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor1-2.png") no-repeat!important;
+    background-size: 100% 100%!important;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.type2 ._p.data-v-13115e8e:first-child,.vip-page .coupon-list .floor1 .content ._div.type2 ._p.data-v-13115e8e:nth-child(2) {
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.type2 ._p.data-v-13115e8e:nth-child(3) {
+    color: #333;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+}
+
+.vip-page .coupon-list .floor1 .content ._div.type3.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor1-4.png") no-repeat!important;
+    background-size: 100% 100%!important;
+}
+
+.vip-page .coupon-list .floor1 .content ._div.type3.data-v-13115e8e:first-child {
+    display: none;
+}
+
+.vip-page .coupon-list .floor2 .content .coupons.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vip-page .coupon-list .floor2 .content .coupons ._div.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 312rpx;
+    height: 110rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor2.png") no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 14rpx;
+    padding: 0 16rpx;
+    box-sizing: border-box;
+}
+
+.vip-page .coupon-list .floor2 .content .coupons ._div.data-v-13115e8e:nth-child(2n) {
+    margin-left: 14rpx;
+}
+
+.vip-page .coupon-list .floor2 .content .coupons ._div ._span.data-v-13115e8e:first-child {
+    position: relative;
+    font-size: 80rpx;
+    font-family: DINAlternate-Bold;
+    font-weight: 700;
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor2 .content .coupons ._div ._span.data-v-13115e8e:first-child:before {
+    content: "\FFE5";
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor2 .content .coupons ._div ._span.data-v-13115e8e:nth-child(2) {
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    color: #ffebb0;
+    width: 140rpx;
+    text-align: center;
+}
+
+.vip-page .coupon-list .floor2 .content .btn.data-v-13115e8e {
+    width: 634rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    text-align: center;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 40rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    margin-top: 18rpx;
+}
+
+.vip-page .coupon-list .floor2 .content .received-coupon ._div.data-v-13115e8e {
+    position: relative;
+}
+
+.vip-page .coupon-list .floor2 .content .received-coupon ._div.data-v-13115e8e:before {
+    content: "";
+    position: absolute;
+    left: 2rpx;
+    right: 2rpx;
+    top: 0;
+    bottom: 0;
+    background: rgba(58,52,48,.5);
+    z-index: 100;
+}
+
+.vip-page .coupon-list .floor2 .content .received-btn.data-v-13115e8e {
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 40rpx;
+    opacity: .3;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons.active ._div.data-v-13115e8e {
+    width: 202rpx;
+    height: 206rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor3-2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons.active ._div ._p.data-v-13115e8e:nth-child(3) {
+    margin: 10rpx auto 0;
+    display: block;
+    width: 146rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 40rpx;
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #333;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div.data-v-13115e8e {
+    position: relative;
+    width: 202rpx;
+    height: 150rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor3-1.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 28rpx;
+    box-sizing: border-box;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div.checked.data-v-13115e8e:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor3-3.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div.data-v-13115e8e:not(:first-child) {
+    margin-left: 16rpx;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div ._p.data-v-13115e8e:first-child {
+    position: relative;
+    font-size: 80rpx;
+    font-family: DINAlternate-Bold;
+    font-weight: 700;
+    color: #ffebb0;
+    line-height: 1;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div ._p.data-v-13115e8e:first-child:before {
+    content: "\FFE5";
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div ._p.data-v-13115e8e:nth-child(2) {
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor3 .content .coupons ._div ._p.data-v-13115e8e:nth-child(3) {
+    display: none;
+}
+
+.vip-page .coupon-list .floor3 .content .btn.data-v-13115e8e {
+    width: 634rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    text-align: center;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 40rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    margin-top: 32rpx;
+}
+
+.vip-page .coupon-list .floor4 .content ._div.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 638rpx;
+    height: 148rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor4-1.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 0 40rpx 0 48rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.vip-page .coupon-list .floor4 .content ._div.data-v-13115e8e:not(:first-child) {
+    margin-top: 20rpx;
+}
+
+.vip-page .coupon-list .floor4 .content ._div.active.data-v-13115e8e:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor4-2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor4 .content ._div ._span.data-v-13115e8e:first-child {
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor4 .content ._div ._span.data-v-13115e8e:last-child {
+    width: 248rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    text-align: center;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+}
+
+.vip-page .coupon-list .floor5.data-v-13115e8e {
+    margin-bottom: 40rpx;
+}
+
+.vip-page .coupon-list .floor5 .content>._div.data-v-13115e8e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 638rpx;
+    height: 148rpx;
+    margin-top: 20rpx;
+    padding: 0 32rpx 0 48rpx;
+    box-sizing: border-box;
+}
+
+.vip-page .coupon-list .floor5 .content>._div .val1.data-v-13115e8e {
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #443b32;
+}
+
+.vip-page .coupon-list .floor5 .content>._div .val2.data-v-13115e8e {
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #333;
+}
+
+.vip-page .coupon-list .floor5 .content>._div .val2 ._span.data-v-13115e8e {
+    font-size: 32rpx;
+}
+
+.vip-page .coupon-list .floor5 .content>._div .val3.data-v-13115e8e {
+    position: relative;
+    width: 248rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    background: linear-gradient(180deg,#433b32,#212129);
+    border-radius: 30rpx;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    font-size: 24rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #fff;
+}
+
+.vip-page .coupon-list .floor5 .content>._div .val3.free.data-v-13115e8e:before {
+    content: "";
+    position: absolute;
+    top: -24rpx;
+    right: 4rpx;
+    width: 60rpx;
+    height: 32rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/free.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .type1.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor5-1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .type2.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor5-2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .type3.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor5-3.png") no-repeat;
+    background-size: 100% 100%;
+    height: 128rpx;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .used.data-v-13115e8e {
+    position: relative;
+    color: #fedb41!important;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .used.data-v-13115e8e:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,#f9e29f,#eac863)!important;
+    border-radius: 40rpx!important;
+    opacity: .5!important;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .fsy.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor5-4.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0;
+    height: 128rpx;
+    padding-left: 32rpx;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .fsy .val1.data-v-13115e8e,.vip-page .coupon-list .floor5 .content.level1 .fsy .val2.data-v-13115e8e {
+    font-size: 24rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .fsy .val2.data-v-13115e8e {
+    margin-left: -44rpx;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .fsy .val2 ._span.data-v-13115e8e {
+    font-size: 32rpx;
+}
+
+.vip-page .coupon-list .floor5 .content.level1 .fsy .val3.data-v-13115e8e {
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    font-size: 24rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .checked.data-v-13115e8e {
+    position: relative;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .checked.data-v-13115e8e:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor4-2.png") no-repeat!important;
+    background-size: 100% 100%!important;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .val1.data-v-13115e8e,.vip-page .coupon-list .floor5 .content.level2 .val2.data-v-13115e8e {
+    color: #ffebb0;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .val3.data-v-13115e8e {
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    color: #333;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .val3.used.data-v-13115e8e {
+    position: relative;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .val3.used.data-v-13115e8e:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,#f9e29f,#eac863)!important;
+    border-radius: 40rpx!important;
+    opacity: .5;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .type1.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor6-1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .type2.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor6-2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .type3.data-v-13115e8e {
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/floor6-3.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.vip-page .coupon-list .floor5 .content.level2 .type4.data-v-13115e8e {
+    display: none;
+}
+
+.type1-com.data-v-4bdc15e7 {
+    position: relative;
+    width: 646rpx;
+    height: 684rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/header1x.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 110rpx 20rpx 0;
+    box-sizing: border-box;
+    box-shadow: 0 16rpx 16rpx 0 rgba(255,214,62,.2);
+}
+
+.type1-com .text.data-v-4bdc15e7 {
+    font-size: 26rpx;
+    color: #333;
+    margin-left: 20rpx;
+}
+
+.type1-com .open ._button.data-v-4bdc15e7 {
+    width: 566rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background: linear-gradient(180deg,#433b32,#212129);
+    border-radius: 40rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: #fff;
+    margin: 40rpx 20rpx 0;
+}
+
+.type1-com .before-open.data-v-4bdc15e7,.type1-com .opened.data-v-4bdc15e7 {
+    width: auto;
+    height: 152rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.type1-com .opened.data-v-4bdc15e7 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 84rpx;
+    padding-left: 20rpx;
+}
+
+.type1-com .opened .time.data-v-4bdc15e7 {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #333;
+}
+
+.type1-com .opened ._button.data-v-4bdc15e7 {
+    width: 164rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    background: linear-gradient(180deg,#433b32,#212129);
+    border-radius: 40rpx;
+    opacity: .5;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #fedb41;
+    margin: 0 20rpx;
+}
+
+.type1-com .qr.data-v-4bdc15e7 {
+    position: absolute;
+    top: 40rpx;
+    right: 40rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.type1-com .icons.data-v-4bdc15e7 {
+    margin-top: 38rpx;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 606rpx;
+    height: 366rpx;
+    padding: 32rpx 12rpx;
+    box-sizing: border-box;
+}
+
+.type1-com .icons ._img.data-v-4bdc15e7 {
+    display: block;
+    width: 132rpx;
+    height: 130rpx;
+    line-height: 1;
+}
+
+.type1-com .icons ._img.data-v-4bdc15e7:not(:nth-child(4n)) {
+    margin-right: 16rpx;
+}
+
+.type2-com.data-v-4bea2d68 {
+    position: relative;
+    width: 646rpx;
+    height: 684rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/header2x.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 110rpx 20rpx 0;
+    box-sizing: border-box;
+    box-shadow: 0 20rpx 20rpx 0 rgba(0,0,0,.05);
+}
+
+.type2-com .text.data-v-4bea2d68 {
+    font-size: 26rpx;
+    color: #ffebb0;
+    margin-left: 20rpx;
+}
+
+.type2-com .open ._button.data-v-4bea2d68 {
+    width: 566rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 40rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+    margin: 40rpx 20rpx 0;
+    color: #333;
+}
+
+.type2-com .before-open.data-v-4bea2d68,.type2-com .opened.data-v-4bea2d68 {
+    width: auto;
+    height: 152rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.type2-com .opened.data-v-4bea2d68 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 84rpx;
+    padding-left: 20rpx;
+}
+
+.type2-com .opened .time.data-v-4bea2d68 {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #ffebb0;
+}
+
+.type2-com .opened ._button.data-v-4bea2d68 {
+    width: 164rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    background: linear-gradient(180deg,#f9e29f,#eac863);
+    border-radius: 40rpx;
+    opacity: .5;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.type2-com .qr.data-v-4bea2d68 {
+    position: absolute;
+    top: 40rpx;
+    right: 40rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.type2-com .icons.data-v-4bea2d68 {
+    margin-top: 38rpx;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 606rpx;
+    height: 366rpx;
+    padding: 32rpx 12rpx;
+    box-sizing: border-box;
+}
+
+.type2-com .icons ._img.data-v-4bea2d68 {
+    display: block;
+    width: 132rpx;
+    height: 130rpx;
+    line-height: 1;
+}
+
+.type2-com .icons ._img.data-v-4bea2d68:not(:nth-child(4n)) {
+    margin-right: 16rpx;
+}
+
+.model.data-v-90b4204e {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 100;
+}
+
+.model .inner_box.data-v-90b4204e {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300rpx;
+    margin-top: -240rpx;
+    width: 600rpx;
+    height: 480rpx;
+    background-color: #fff;
+    border-radius: 8rpx;
+    padding: 40rpx 30rpx;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.model .inner_box .close.data-v-90b4204e {
+    position: absolute;
+    right: 26rpx;
+    top: 26rpx;
+    width: 36rpx;
+    height: 36rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/close.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.model .inner_box .title.data-v-90b4204e {
+    font-size: 36rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 40rpx;
+}
+
+.model .inner_box .content.data-v-90b4204e {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #666;
+    line-height: 42rpx;
+}
+
+.model .inner_box .content ._p.data-v-90b4204e {
+    margin-bottom: 20rpx;
+}
+
+.model .inner_box .footer.data-v-90b4204e {
+    display: block;
+    width: 540rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    background: linear-gradient(90deg,#fff03b,#ffd629);
+    border-radius: 8rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    margin-top: 40rpx;
+}
+
+.model.data-v-7aa7debe {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 100;
+}
+
+.model .inner_box.data-v-7aa7debe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300rpx;
+    margin-top: -240rpx;
+    width: 600rpx;
+    height: 480rpx;
+    background-color: #fff;
+    border-radius: 8rpx;
+    padding: 40rpx 30rpx;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.model .inner_box .close.data-v-7aa7debe {
+    position: absolute;
+    right: 26rpx;
+    top: 26rpx;
+    width: 36rpx;
+    height: 36rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/nbs-vip/close.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.model .inner_box .title.data-v-7aa7debe {
+    font-size: 36rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 40rpx;
+}
+
+.model .inner_box .content.data-v-7aa7debe {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #666;
+    line-height: 42rpx;
+}
+
+.model .inner_box .content .qr.data-v-7aa7debe {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 32rpx;
+}
+
+.model .inner_box .content .qr .canvas.data-v-7aa7debe {
+    width: 240rpx;
+    height: 240rpx;
+}
+
+.model .inner_box .content ._p.data-v-7aa7debe {
+    margin-bottom: 20rpx;
+}
+
+.model .inner_box .footer.data-v-7aa7debe {
+    display: block;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #666;
+}

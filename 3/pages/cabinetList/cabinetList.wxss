@@ -1,0 +1,205 @@
+@import "../activity/private/private.wxss";
+
+.cabinetlist-container.data-v-bd56fe00 {
+    width: 100%;
+    height: 100%;
+}
+
+.cabinetlist-container ._header.data-v-bd56fe00 {
+    width: 100%;
+}
+
+.cabinetlist-container ._header ._dl.data-v-bd56fe00 {
+    width: 100%;
+    height: 128rpx;
+    padding: 20rpx 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.cabinetlist-container ._header ._dl ._dt.data-v-bd56fe00 {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 8rpx;
+}
+
+.cabinetlist-container ._header ._dl ._dt ._span.data-v-bd56fe00 {
+    width: 100%;
+    height: 100%;
+    color: #999;
+    font-size: 28rpx;
+    padding-left: 60rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabinetlist-container ._header ._dl ._dt .span-justify.data-v-bd56fe00 {
+    justify-content: flex-start;
+}
+
+.cabinetlist-container ._header ._dl ._dt ._u.data-v-bd56fe00 {
+    position: absolute;
+    left: 158rpx;
+    top: 50rpx;
+    width: 26rpx;
+    height: 26rpx;
+    display: block;
+    transform: scale(.7);
+}
+
+.cabinetlist-container ._header ._dl ._dt .left50.data-v-bd56fe00 {
+    left: 50rpx;
+}
+
+.cabinetlist-container ._header ._dl ._dt .input-placeholder.data-v-bd56fe00 {
+    text-align: center;
+    color: #999;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    line-height: 36rpx;
+}
+
+.cabinetlist-container ._header ._dl ._i.data-v-bd56fe00 {
+    width: 40rpx;
+    height: 37rpx;
+    display: block;
+    margin-left: 36rpx;
+    margin-right: 4rpx;
+    background-image: url("https://sr.aihuishou.com/miniapps/earth/cabinet/mappoint.png");
+    background-size: 100% 100%;
+    background-repeat: no-repect;
+}
+
+.cabinetlist-container ._header ._p.data-v-bd56fe00 {
+    height: 76rpx;
+    width: 100%;
+    font-size: 26rpx;
+    color: #9b9da2;
+    line-height: 76rpx;
+    padding-left: 30rpx;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.cabinetlist-container ._header ._p ._span.data-v-bd56fe00 {
+    color: #333;
+}
+
+.cabinetlist-container ._header ._p ._i.data-v-bd56fe00 {
+    width: 28rpx;
+    height: 22rpx;
+    display: inline-block;
+    margin-left: 10rpx;
+    background-image: url("https://sr.aihuishou.com/miniapps/earth/cabinet/update.png");
+    background-size: 100% 100%;
+    background-repeat: no-repect;
+}
+
+._footer ._ul ._li.data-v-bd56fe00 {
+    padding: 32rpx 44rpx 30rpx 32rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #ebebeb;
+}
+
+._footer ._ul ._li .item-left.data-v-bd56fe00 {
+    display: flex;
+    flex-direction: columns;
+    justify-content: flex-start;
+    algin-items: left;
+}
+
+._footer ._ul ._li .item-left ._dl ._dd.data-v-bd56fe00 {
+    color: #333;
+    font-size: 30rpx;
+    font-family: PingFangSC-Medium;
+    line-height: 42rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+._footer ._ul ._li .item-left ._dl ._dd ._span.data-v-bd56fe00 {
+    width: 52rpx;
+    height: 32rpx;
+    display: inline-block;
+    border-radius: 4rpx;
+    font-size: 22rpx;
+    color: #ff7831;
+    font-family: PingFangSC-Regular;
+    background-color: #fff1ea;
+    text-align: center;
+    line-height: 32rpx;
+    margin-left: 24rpx;
+}
+
+._footer ._ul ._li .item-left ._dl ._dt.data-v-bd56fe00 {
+    color: #9b9da2;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    line-height: 34rpx;
+    max-width: 532rpx;
+    margin-top: 10rpx;
+}
+
+._footer ._ul ._li .item-left ._dl .tips.data-v-bd56fe00 {
+    color: #999;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    line-height: 40rpx;
+    margin-top: 10rpx;
+}
+
+._footer ._ul ._li .item-right.data-v-bd56fe00 {
+    margin-left: 24rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+._footer ._ul ._li .item-right.data-v-bd56fe00:before {
+    content: "";
+    height: 200rpx;
+    width: 2rpx;
+    background-color: #ebebeb;
+    border-radius: 1rpx;
+    position: absolute;
+    right: 160rpx;
+}
+
+._footer ._ul ._li .item-right ._i.data-v-bd56fe00 {
+    width: 38rpx;
+    height: 48rpx;
+    display: block;
+    background-image: url("https://sr.aihuishou.com/miniapps/earth/cabinet/redmark.png");
+    background-size: 100% 100%;
+    background-repeat: no-repect;
+}
+
+._footer ._ul ._li .item-right ._span.data-v-bd56fe00 {
+    color: #5c626d;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    margin-top: 28rpx;
+    text-align: center;
+    max-width: 100rpx;
+}
+
+.input-placeholder.data-v-bd56fe00 {
+    text-align: center;
+    color: #999;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    line-height: 36rpx;
+}

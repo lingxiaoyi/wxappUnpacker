@@ -1,0 +1,52 @@
+@import "../activity/private/private.wxss";
+
+._button {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+._button,._button:after,._button:before {
+    border-radius: none;
+    outline: none;
+    border: none;
+}
+
+.login.data-v-37509f0a {
+    background-color: #fff;
+    padding-top: 60rpx;
+    text-align: center;
+}
+
+.login ._img.data-v-37509f0a {
+    width: 340rpx;
+    height: 340rpx;
+}
+
+.login ._p.data-v-37509f0a {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #333;
+    line-height: 40rpx;
+    margin: 66rpx auto 36rpx;
+}
+
+.login .confirm.data-v-37509f0a {
+    width: 686rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    background: linear-gradient(90deg,#fff03b,#ffd629);
+    border-radius: 8rpx;
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    margin: 0 auto 32rpx;
+}
+
+.login .tips.data-v-37509f0a {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #999;
+    line-height: 40rpx;
+}

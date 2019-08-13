@@ -1,0 +1,8 @@
+<template name="nbs-shops$7e0c5da6">
+    <view class="_div data-v-71f60ece nbs-shops">
+        <view bindtap="handleProxy" class="_div data-v-71f60ece shop-item" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" wx:for="{{list}}">
+            <view class="_p data-v-71f60ece title">{{item.name}}</view>
+            <view class="_p data-v-71f60ece address">{{item.address}}</view>
+        </view>
+    </view>
+</template>

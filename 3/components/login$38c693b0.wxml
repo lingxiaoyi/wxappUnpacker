@@ -1,0 +1,12 @@
+<template name="login$38c693b0">
+    <view class="_div data-v-af209cd8 cancel-box">
+        <view class="_div data-v-af209cd8 cancel-mask"></view>
+        <view class="_div data-v-af209cd8 cancel">
+            <view class="_p data-v-af209cd8 title">该账号已被注销</view>
+            <view class="_p data-v-af209cd8 content">您的爱回收账号已注销账号，无法注册或登录。</view>
+            <view bindtap="handleProxy" class="_p data-v-af209cd8 btn" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                <label class="_span data-v-af209cd8">我知道了</label>
+            </view>
+        </view>
+    </view>
+</template>

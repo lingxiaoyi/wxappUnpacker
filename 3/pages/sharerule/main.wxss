@@ -1,0 +1,25 @@
+@import "../activity/private/private.wxss";
+
+.share-price-rule.data-v-78d18a76 {
+    width: 750rpx;
+    height: 2154rpx;
+    position: relative;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/bg_big.png") no-repeat 50%/cover;
+}
+
+.inquiry-buttton.data-v-78d18a76 {
+    position: absolute;
+    left: 50%;
+    top: 39%;
+    margin: 0 0 0 -346rpx;
+    width: 692rpx;
+    height: 102rpx;
+    line-height: 102rpx;
+    background: linear-gradient(0deg,#ffe637,#fd802a);
+    box-shadow: 0 10rpx 30rpx 0 #fc3939;
+    border-radius: 102rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}

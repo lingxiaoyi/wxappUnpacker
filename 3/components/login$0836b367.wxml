@@ -1,0 +1,42 @@
+<template name="login$0836b367">
+    <view class="_div data-v-4f131e5a login-page">
+        <view class="_div data-v-4f131e5a header-banner">
+            <image alt class="_img data-v-4f131e5a" src="{{cover}}"></image>
+        </view>
+        <form class="_form data-v-4f131e5a form">
+            <view class="_div data-v-4f131e5a input-comp">
+                <input bindinput="handleProxy" class="_input data-v-4f131e5a info-phonenumber" data-comkey="{{$k}}" data-eventid="{{'0'}}" maxlength="11" name="phoneNumber" placeholder="请输入手机号码" type="number" value="{{phoneNumber}}"></input>
+                <image bindtap="handleProxy" class="_img data-v-4f131e5a clearAll" data-comkey="{{$k}}" data-eventid="{{'1'}}" src="https://sr.aihuishou.com/miniapps/earth/public/icon-cancel.png" wx:if="{{phoneNumber.length}}"></image>
+                <view bindtap="handleProxy" class="_div data-v-4f131e5a info-getcaptch {{isSendingCode?'':isPhoneFinish?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+                    <text class="_text data-v-4f131e5a">{{getCode}}</text>
+                </view>
+            </view>
+            <view class="_div data-v-4f131e5a input-comp">
+                <input bindinput="handleProxy" class="_input data-v-4f131e5a info-phonenumber" data-comkey="{{$k}}" data-eventid="{{'3'}}" maxlength="6" name="codeNumber" placeholder="请输入短信验证码" type="number" value="{{smsCode}}"></input>
+            </view>
+            <view class="_div data-v-4f131e5a">
+                <label bindtap="handleProxy" class="_span data-v-4f131e5a setphone-btn {{isSmsCodeFinish&&isPhoneFinish?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'4'}}">登录</label>
+            </view>
+            <text bindtap="handleProxy" class="_text data-v-4f131e5a desc" data-comkey="{{$k}}" data-eventid="{{'5'}}">未注册过的手机号将自动创建爱回收账户</text>
+        </form>
+        <view bindcatchtouchmove="handleProxy" class="_div data-v-4f131e5a captch-popup-wrap {{isShowCaptchPopup?'show':''}}" data-comkey="{{$k}}" data-eventid="{{'9'}}">
+            <view class="_div data-v-4f131e5a captch-popup">
+                <form bindsubmit="handleProxy" class="_form data-v-4f131e5a" data-comkey="{{$k}}" data-eventid="{{'8'}}">
+                    <view class="_div data-v-4f131e5a captch-content">
+                        <view class="_div data-v-4f131e5a captch-input-wrap {{isImgCaptchError?'error':''}}">
+                            <input bindinput="handleProxy" class="_input data-v-4f131e5a captch-input" data-comkey="{{$k}}" data-eventid="{{'6'}}" maxlength="4" name="captch" placeholder="请输入右侧验证码" placeholderStyle="color:#BABABA" type="number" value="{{imgCaptchText}}"></input>
+                            <image bindtap="handleProxy" class="_image data-v-4f131e5a captch-img" data-comkey="{{$k}}" data-eventid="{{'7'}}" mode="aspectFit" src="{{captchImgUrl}}"></image>
+                        </view>
+                        <view class="_div data-v-4f131e5a captch-error {{isImgCaptchError?'show':''}}">验证码输入有误</view>
+                    </view>
+                    <view class="_div data-v-4f131e5a captch-bottom">
+                        <button class="_button data-v-4f131e5a check-captch" formType="submit">提交验证</button>
+                    </view>
+                </form>
+            </view>
+        </view>
+        <image class="_image data-v-4f131e5a piwik-image-placeholder" src="{{piwikSource}}"></image>
+        <template is="login$38c693b0" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{showCancel}}"></template>
+    </view>
+</template>
+<import src="login$38c693b0"></import>

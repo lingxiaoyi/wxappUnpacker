@@ -1,0 +1,20 @@
+<template name="detail$e4bef40e">
+    <view class="_dl data-v-706feb65 radio-box-container" id="{{viewId}}">
+        <view bindtap="handleProxy" class="_dt data-v-706feb65" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+            <label class="_span data-v-706feb65">{{index+1}}{{'.'}}  {{objInfo.name}}</label>
+            <image class="_img data-v-706feb65" src="https://sr.aihuishou.com/miniapps/earth/public/question-white.png" wx:if="{{showDesc}}"></image>
+        </view>
+        <view class="_dd data-v-706feb65">
+            <view class="_ul data-v-706feb65">
+                <view bindtap="handleProxy" class="_li data-v-706feb65 {{[i===objInfo.values.length-1?'no-border':'',item.isEnvironmentalRecycling?'no-additional':'']}}" data-comkey="{{$k}}" data-eventid="{{'2-'+i}}" key="{{item.id}}" wx:for="{{objInfo.values}}" wx:for-index="i" wx:key="item.id">
+                    <view class="_i data-v-706feb65 {{[item.selected?'active':'']}}"></view>
+                    <view class="_p data-v-706feb65 item-line">
+                        <label class="_span data-v-706feb65 value">{{item.value}}</label>
+                        <label class="_span data-v-706feb65 tips" wx:if="{{item.isEnvironmentalRecycling}}">因隐私安全，仅支持环保回收</label>
+                        <image catchtap="handleProxy" class="_img data-v-706feb65" data-comkey="{{$k}}" data-eventid="{{'1-'+i}}" src="https://sr.aihuishou.com/miniapps/earth/public/question-gray.png" wx:if="{{item.text&&item.text.length||item.imgs&&item.imgs.length}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

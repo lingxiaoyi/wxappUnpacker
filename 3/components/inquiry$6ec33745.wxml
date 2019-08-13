@@ -1,0 +1,21 @@
+<template name="inquiry$6ec33745">
+    <view class="_div data-v-444fa959 store-container" hidden="{{!show}}" wx:if="{{storeDateList&&storeDateList.length}}">
+        <view class="_div data-v-444fa959 info-item">
+            <label class="_span data-v-444fa959">{{selectShop.name}}</label>
+            <label bindtap="handleProxy" class="_span data-v-444fa959 change" data-comkey="{{$k}}" data-eventid="{{'0'}}">更改</label>
+        </view>
+        <view class="_div data-v-444fa959 info-item">
+            <label bindtap="handleProxy" class="_span data-v-444fa959 address" data-comkey="{{$k}}" data-eventid="{{'1'}}">{{selectShop.address}}</label>
+            <label bindtap="handleProxy" class="_span data-v-444fa959 phone" data-comkey="{{$k}}" data-eventid="{{'2'}}"></label>
+        </view>
+        <view class="_div data-v-444fa959 info-item">
+            <picker bindchange="handleProxy" bindcolumnchange="handleProxy" class="_picker data-v-444fa959 date-select" data-comkey="{{$k}}" data-eventid="{{'3'}}" mode="multiSelector" range="{{storeDateList}}" rangeKey="name" value="{{[dateStoreColumnIndex,timeStoreColumnIndex]}}" wx:if="{{storeDateList.length}}">
+                <label class="_span data-v-444fa959 time">预约时间:</label>
+                <label class="_span data-v-444fa959" wx:if="{{formartedStoreDate&&formartedStoreDate.length}}">
+          {{formartedStoreDate[dateStoreColumnIndex].name}}-{{formartedStoreTime[dateStoreColumnIndex][timeStoreColumnIndex].name}}
+        </label>
+                <label class="_span data-v-444fa959 change">更改</label>
+            </picker>
+        </view>
+    </view>
+</template>

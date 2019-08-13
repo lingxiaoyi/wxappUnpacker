@@ -1,0 +1,68 @@
+<add-to-my-miniapps language="{{language}}"></add-to-my-miniapps>
+<view id="fakeSearchWrapper">
+    <view bindtap="startSearch" id="fakeSearch">
+        <text>{{i18n.searchPlaceholder}}</text>
+    </view>
+    <image id="magnifier" src="{{magnifierSrc}}"></image>
+</view>
+<view id="side">
+    <view bindtap="switchSection" class="cat{{activeSectionId==index?' active':''}}{{language==='en'?' en':''}}" id="cat{{index}}" wx:for="{{config.cities[city].cats}}" wx:for-item="cat">
+        <view class="cat-bg" style="background-color: rgba({{config.cats[cat].color.r}}, {{config.cats[cat].color.g}}, {{config.cats[cat].color.b}}, 1);"></view>
+        <text>{{config.cats[cat].name[language]}}</text>
+    </view>
+    <image bindtap="showQr" id="qrCode" src="{{qrBSrc}}"></image>
+    <view bindtap="showTips" id="tipsBtn">{{i18n.friendlyReminder}}</view>
+</view>
+<view class="list-wrapper" style="bottom: {{withAd?'200rpx':'0rpx'}};">
+    <scroll-view bindscrolltolower="loadMoreItems" class="list" enableBackToTop="true" scrollWithAnimation="true" scrollY="true" style="display: {{activeSectionId==sectionIndex?'block':'none'}};" wx:for="{{data}}" wx:for-index="sectionIndex" wx:for-item="section">
+        <view class="section" id="section{{sectionIndex}}">
+            <view class="cat-intro-wrapper" style="background-color: rgba({{config.cats[ config.cities[city].cats[sectionIndex] ].color.r}}, {{config.cats[ config.cities[city].cats[sectionIndex] ].color.g}}, {{config.cats[ config.cities[city].cats[sectionIndex] ].color.b}}, 0.1);">
+                <image class="section-icon" src="{{config.cats[ config.cities[city].cats[sectionIndex] ].imageSrc}}"></image>
+                <view class="cat-intro" wx:if="{{sectionIndex===0}}">
+                    <view class="cat-description">
+                        <text class="b">{{config.cats[ config.cities[city].cats[0] ].name[language]}}</text> {{config.cats[ config.cities[city].cats[0] ].intro[language]}}</view>
+                    <text class="throw-tips-title">{{i18n.throwingRequirements}}</text>
+                    <text class="throw-tip" wx:for="{{config.cats[ config.cities[city].cats[0] ].requirements[language]}}">{{item}}</text>
+                </view>
+                <view class="cat-intro" wx:elif="{{sectionIndex===1}}">
+                    <view class="cat-description">
+                        <text class="b">{{config.cats[ config.cities[city].cats[1] ].name[language]}}</text> {{config.cats[ config.cities[city].cats[1] ].intro[language]}}</view>
+                    <text class="throw-tips-title">{{i18n.throwingRequirements}}</text>
+                    <text class="throw-tip" wx:for="{{config.cats[ config.cities[city].cats[1] ].requirements[language]}}">{{item}}</text>
+                </view>
+                <view class="cat-intro" wx:elif="{{sectionIndex===2}}">
+                    <view class="cat-description">
+                        <text class="b">{{config.cats[ config.cities[city].cats[2] ].name[language]}}</text> {{config.cats[ config.cities[city].cats[2] ].intro[language]}}</view>
+                    <text class="throw-tips-title">{{i18n.throwingRequirements}}</text>
+                    <text class="throw-tip" wx:for="{{config.cats[ config.cities[city].cats[2] ].requirements[language]}}">{{item}}</text>
+                </view>
+                <view class="cat-intro" wx:else>
+                    <view class="cat-description">
+                        <text class="b">{{config.cats[ config.cities[city].cats[3] ].name[language]}}</text> {{config.cats[ config.cities[city].cats[3] ].intro[language]}}</view>
+                    <text class="throw-tips-title">{{i18n.throwingRequirements}}</text>
+                    <text class="throw-tip" wx:for="{{config.cats[ config.cities[city].cats[3] ].requirements[language]}}">{{item}}</text>
+                </view>
+            </view>
+            <view class="item" data-cat-index="{{sectionIndex}}" data-item-name="{{item.n}}" hoverClass="item-hover" wx:if="{{itemIndex<loadedItems[sectionIndex]}}" wx:for="{{section}}" wx:for-index="itemIndex">{{item.n}}</view>
+        </view>
+    </scroll-view>
+</view>
+<view bindtap="hideDetail" id="detailOverlay" style="display: {{showingDetail?'block':'none'}};">
+    <view class="detail-{{detailCatIndex}}" id="detail" style="display: {{showingDetail?'block':'none'}};">
+        <text id="detailItemName">{{detailItemName}}</text>
+        <text id="detailBelongToText">{{i18n.belong}}</text>
+        <image id="detailCatIcon" src="{{cats[detailCatIndex].imageSrc}}"></image>
+    </view>
+</view>
+<view bindtap="hideTips" id="tipsOverlay" style="display: {{showingTips?'block':'none'}};"></view>
+<view id="tips" style="display: {{showingTips?'block':'none'}};">{{i18n.reminder}}</view>
+<actions language="{{language}}" page="{{page}}"></actions>
+<view bindtap="hideQr" id="qrDownloadOverlay" style="display: {{showQr?'block':'none'}};"></view>
+<view id="qrDownloadWrapper" style="display: {{showQr?'block':'none'}};">
+    <image src="{{wsgQrSrc}}"></image>
+    <button bindtap="authorizeWritePhotosAlbum" wx:if="{{writePhotosAlbumStatus===0}}">{{i18n.authorizeSaveQrCodeToAlbum}}</button>
+    <button bindtap="saveQrToAlbum" wx:elif="{{writePhotosAlbumStatus===1}}">{{i18n.saveQrCodeToAlbum}}</button>
+    <button bindopensetting="openSetting" openType="openSetting" wx:elif="{{writePhotosAlbumStatus===2}}">{{i18n.allowSaveQrCodeToAlbum}}</button>
+    <button disabled="true" wx:else>{{i18n.savedSuccessfully}}</button>
+    <view bindtap="hideQr" id="hideQr"></view>
+</view>

@@ -1,0 +1,34 @@
+<view id="wrapper">
+    <add-to-my-miniapps language="{{language}}"></add-to-my-miniapps>
+    <view id="quizzes">
+        <view class="quiz{{currentQ===quizIndex?' active':currentQ>quizIndex?' out':' in'}}" wx:for="{{quizzes}}" wx:for-index="quizIndex" wx:for-item="quiz">
+            <view class="quiz-index">{{quizIndex<9?'0'+quizIndex+1:quizIndex+1}} <text>/ {{totalQuizzes}}</text>
+            </view>
+            <text class="quiz-q" src="{{quiz.q}}">{{quiz.n}}</text>
+            <view class="quiz-options">
+                <view bindtap="select" class="quiz-option quiz-option-{{[ config.cities[city].cats[catIndex] ]}}{{answers[quizIndex]===catIndex?' selected':''}}" data-option-index="{{catIndex}}" data-quiz-index="{{quizIndex}}" wx:for="cats" wx:for-index="catIndex" wx:for-item="cat">
+                    <text class="{{language==='en'?' en':''}}">{{config.cats[ config.cities[city].cats[catIndex] ].name[language]}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="{{currentQ>totalQuizzes-1?'in':''}}" id="quizResult">
+            <text id="score">{{score}}{{i18n.points}}</text>
+            <view id="resultSheet">
+                <view class="result-row" wx:for="{{answers}}" wx:for-item="answer">
+                    <view class="result-quiz-name">{{quizzes[index].n}}</view>
+                    <view class="result-my-answer">{{config.cats[ config.cities[city].cats[answer] ].name[language]}}</view>
+                    <view class="result-right-answer{{answer===quizzes[index].c-1?' right-answer':''}}">{{answer===quizzes[index].c-1?'':config.cats[ config.cities[city].cats[quizzes[index].c-1] ].name[language]}}</view>
+                </view>
+                <view id="actions">
+                    <view bindtap="restart">{{i18n.testAgain}}</view>
+                    <button bindtap="share" openType="share">{{i18n.testFriends}}</button>
+                </view>
+                <text bindtap="toIndex" id="viewMore">{{i18n.viewMore}}</text>
+            </view>
+        </view>
+    </view>
+    <actions language="{{language}}" page="{{page}}"></actions>
+    <view id="adWrapper">
+        <ad bindclose="closeAd" binderror="withoutAd" bindload="withAd" unitId="adunit-7e79fb8e9ceabea0"></ad>
+    </view>
+</view>

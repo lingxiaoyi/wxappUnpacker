@@ -1,0 +1,24 @@
+<template name="detail$a6c2aca6">
+    <view bindtap="handleProxy" class="_div data-v-7171a519 modal-container" data-comkey="{{$k}}" data-eventid="{{'1'}}" style=" {{show?'':'display: none'}}">
+        <view class="_div data-v-7171a519 inner">
+            <view catchtap="handleProxy" class="_dl data-v-7171a519" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                <view class="_dt data-v-7171a519" wx:if="{{!!(imgs&&imgs.length>1)}}">
+                    <swiper class="_swiper data-v-7171a519" indicatorActiveColor="rgba(249,231,44,1)" indicatorColor="rgba(0, 0, 0, .25)" indicatorDots="{{imgs.length>1}}">
+                        <swiper-item class="_swiper-item data-v-7171a519 swiper-item" key="{{img}}" wx:for="{{imgs}}" wx:for-item="img" wx:key="img">
+                            <image class="_img data-v-7171a519" mode="widthFix" src="{{img}}"></image>
+                        </swiper-item>
+                    </swiper>
+                </view>
+                <view class="_dt data-v-7171a519 imageOnly" wx:if="{{!!(imgs&&imgs.length<2)}}">
+                    <image class="_img data-v-7171a519" mode="widthFix" src="{{imgs[0]}}"></image>
+                </view>
+                <view class="_dd data-v-7171a519" wx:if="{{arrContent&&arrContent.length}}">
+                    <text class="_text data-v-7171a519" key="{{index}}" wx:for="{{arrContent}}" wx:key="index">
+          {{item}}
+        </text>
+                </view>
+            </view>
+            <view class="_div data-v-7171a519 close icon-close"></view>
+        </view>
+    </view>
+</template>

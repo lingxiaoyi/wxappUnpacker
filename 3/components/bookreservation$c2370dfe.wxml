@@ -1,0 +1,51 @@
+<template name="bookreservation$c2370dfe">
+    <view class="_div data-v-14d75f6d shop-container {{computedShopList.length?'':'empty-shop-box'}}">
+        <view class="_div data-v-14d75f6d have-shop" wx:if="{{computedShopList.length}}">
+            <view class="_div data-v-14d75f6d top">
+                <view class="_p data-v-14d75f6d title">预约门店</view>
+                <view class="_div data-v-14d75f6d info">
+                    <image alt class="_img data-v-14d75f6d" src="{{nowSelectShop.imgUrl?nowSelectShop.imgUrl:'https://static.aihuishou.com/image?file=5aec066bb4efb26c180000e1'}}"></image>
+                    <label class="_span data-v-14d75f6d tag" wx:if="{{isNearest}}">离你最近</label>
+                    <label class="_span data-v-14d75f6d name">{{nowSelectShop.name}}</label>
+                    <label class="_span data-v-14d75f6d distance" wx:if="{{nowSelectShop.disStr}}">距您{{nowSelectShop.disStr}}</label>
+                    <label bindtap="handleProxy" class="_span data-v-14d75f6d change" data-comkey="{{$k}}" data-eventid="{{'0'}}">更换门店</label>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-14d75f6d address" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+                    <view class="_p data-v-14d75f6d detail">
+          {{nowSelectShop.address}}
+        </view>
+                    <label class="_span data-v-14d75f6d line"></label>
+                    <label catchtap="handleProxy" class="_span data-v-14d75f6d call" data-comkey="{{$k}}" data-eventid="{{'1'}}"></label>
+                </view>
+            </view>
+            <view class="_div data-v-14d75f6d submit-box">
+                <view class="_div data-v-14d75f6d single">
+                    <label class="_span data-v-14d75f6d desc">手机号</label>
+                    <label class="_span data-v-14d75f6d" wx:if="{{userInfo.mobile}}">{{userInfo.mobile}}</label>
+                    <button bindgetphonenumber="handleProxy" class="_button data-v-14d75f6d no-login" data-comkey="{{$k}}" data-eventid="{{'3'}}" openType="getPhoneNumber" wx:else>
+          点击授权
+        </button>
+                </view>
+                <view class="_div data-v-14d75f6d single">
+                    <label class="_span data-v-14d75f6d desc time-check">预约时间(必选)</label>
+                    <picker bindchange="handleProxy" bindcolumnchange="handleProxy" class="_picker data-v-14d75f6d date-select" data-comkey="{{$k}}" data-eventid="{{'4'}}" mode="multiSelector" range="{{storeDateList}}" rangeKey="name" value="{{[dateStoreColumnIndex,timeStoreColumnIndex]}}" wx:if="{{storeDateList.length}}">
+                        <label class="_span data-v-14d75f6d" wx:if="{{formartedStoreDate&&formartedStoreDate.length&&pickerStatus}}">
+          {{formartedStoreDate[dateStoreColumnIndex].name}}-{{formartedStoreTime[dateStoreColumnIndex][timeStoreColumnIndex].name}}
+        </label>
+                        <label class="_span data-v-14d75f6d empty-text" wx:if="{{!pickerStatus}}">请选择></label>
+                    </picker>
+                </view>
+            </view>
+            <image alt class="_img data-v-14d75f6d banner" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/pic%402x.png"></image>
+            <form bindsubmit="handleProxy" class="_form data-v-14d75f6d" data-comkey="{{$k}}" data-eventid="{{'5'}}" reportSubmit="{{true}}">
+                <button class="_button data-v-14d75f6d submit-btn" formType="submit">立即预约</button>
+            </form>
+        </view>
+        <view class="_div data-v-14d75f6d empty-shop" wx:if="{{!computedShopList.length}}">
+            <view class="_p data-v-14d75f6d">
+                <image alt class="_img data-v-14d75f6d" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/empty-shop.png"></image>
+            </view>
+            <view class="_p data-v-14d75f6d">当前城市暂无可预约门店</view>
+        </view>
+    </view>
+</template>

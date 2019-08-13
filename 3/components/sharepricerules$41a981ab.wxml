@@ -1,0 +1,21 @@
+<template name="sharepricerules$41a981ab">
+    <view class="_div data-v-90c72fd2 rules-container">
+        <view class="_dl data-v-90c72fd2">
+            <view class="_dt data-v-90c72fd2">1、什么样的订单可以参与分享活动？</view>
+            <view class="_dd data-v-90c72fd2">在爱回收官网渠道提交的订单均可参与活动。</view>
+            <view class="_dt data-v-90c72fd2">2、好友如何助力?</view>
+            <view class="_dd data-v-90c72fd2">用户提交订单后，分享活动给好友，好友进入页面点击“帮ta加价”并授权登录，即算完成助力；</view>
+            <view class="_dd data-v-90c72fd2">有效助力时间为订单提交后的24小时内；</view>
+            <view class="_dd data-v-90c72fd2">仅新用户可帮好友助力，每位新用户只能助力一次。</view>
+            <view class="_dt data-v-90c72fd2">3、如何获得助力红包？</view>
+            <view class="_dd data-v-90c72fd2">邀请好友即可获得助力红包，每位好友助力的金额随机，不同梯度内加价金额不同；</view>
+            <view class="_dd data-v-90c72fd2">邀请人数分别到达5人、10 人、18 、28人时，即可解锁阶梯「大红包」。</view>
+            <view class="_dt data-v-90c72fd2">4、助力奖励何时到账？</view>
+            <view class="_dd data-v-90c72fd2">订单成交前获得的助力红包会在订单成交时打入爱回收钱包；</view>
+            <view class="_dd data-v-90c72fd2">订单成交后若仍在助力有效期内，获得的助力红包即时到账。</view>
+            <view class="_dt data-v-90c72fd2">5、分享之后去哪里查看进度？</view>
+            <view class="_dd data-v-90c72fd2">助力活动进度可在爱回收订单中心查看。</view>
+            <view class="_dt data-v-90c72fd2">6、如遇到问题，可拨打爱回收客服电话咨询：400- 161-6365。</view>
+        </view>
+    </view>
+</template>

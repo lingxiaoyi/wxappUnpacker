@@ -1,0 +1,28 @@
+<template name="nbs-coupon$0a483c4c">
+    <view class="_div data-v-74bbfb40 coupon-list" wx:if="{{hasFinish}}">
+        <view class="_div data-v-74bbfb40 text" wx:if="{{list.length}}">
+      * 如需使用优惠券，需在维修完成后，<label class="_span data-v-74bbfb40">付款前</label>告知门店工作人员
+    </view>
+        <view class="_div data-v-74bbfb40 coupon-item {{item.status!==1&&'disabled'}}" wx:if="{{list.length}}" wx:for="{{list}}">
+            <view class="_div data-v-74bbfb40 coupon-info">
+                <view class="_div data-v-74bbfb40 disabled-text">
+          {{item.status===3?'已使用':item.status===4?'已过期':''}}
+        </view>
+                <view class="_div data-v-74bbfb40 left {{item.discountType===0||item.discountType===1?'yuan':'discount'}}">
+          {{item.discount}}
+        </view>
+                <view class="_div data-v-74bbfb40 right">
+                    <view class="_p data-v-74bbfb40 condition">{{item.name}}</view>
+                    <view class="_p data-v-74bbfb40 date">截止时间: {{item.endTime}}</view>
+                </view>
+            </view>
+            <view class="_div data-v-74bbfb40 coupon-code"></view>
+        </view>
+        <view class="_div data-v-74bbfb40 empty" wx:if="{{!list.length}}">
+            <view class="_p data-v-74bbfb40">
+                <image alt class="_img data-v-74bbfb40" src="https://sr.aihuishou.com/miniapps/earth/nbs/empty.png"></image>
+            </view>
+            <view class="_p data-v-74bbfb40">暂无优惠券</view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,15 @@
+<template name="nosku$0bb603fa">
+    <view class="_div data-v-48147d34 no-sku-container">
+        <view class="_div data-v-48147d34 sku-wrapper">
+            <image class="_img data-v-48147d34" src="{{noResult}}"></image>
+            <label class="_span data-v-48147d34">暂无报价</label>
+            <label class="_span data-v-48147d34">是不是物品描述出错了？</label>
+            <view bindtap="handleProxy" class="_div data-v-48147d34 try-again" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+      重新询价
+    </view>
+            <view bindtap="handleProxy" class="_div data-v-48147d34 back-home" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+      返回首页
+    </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,5 @@
+<view id="wrapper">
+    <scroll-view class="list" enableBackToTop="true" scrollWithAnimation="true" scrollY="true">
+        <view bindtap="tapItem" class="admin-menu-item" data-path="{{item.path}}" wx:for="{{menu}}">{{item.title}}</view>
+    </scroll-view>
+</view>

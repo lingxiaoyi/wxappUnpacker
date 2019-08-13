@@ -1,0 +1,11 @@
+<template name="rule$e057634a">
+    <view bindtap="handleProxy" class="_div data-v-297c76c7 common-model" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{showRule}}">
+        <view class="_div data-v-297c76c7 container-box">
+            <view catchtap="handleProxy" class="_div data-v-297c76c7 title" data-comkey="{{$k}}" data-eventid="{{'0'}}">{{title}}</view>
+            <label class="_span data-v-297c76c7 close"></label>
+            <scroll-view scrollY catchtap="handleProxy" class="_scroll-view data-v-297c76c7 content" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                <text class="_text data-v-297c76c7 desc">{{rules}}</text>
+            </scroll-view>
+        </view>
+    </view>
+</template>

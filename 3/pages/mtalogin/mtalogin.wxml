@@ -1,0 +1,2 @@
+<import src="../../components/mtalogin$8a491532"></import>
+<template is="mtalogin$8a491532" data="{{...$root['0'],$root:$root}}"></template>

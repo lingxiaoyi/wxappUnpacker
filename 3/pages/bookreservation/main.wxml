@@ -1,0 +1,2 @@
+<import src="../../components/bookreservation$c2370dfe"></import>
+<template is="bookreservation$c2370dfe" data="{{...$root['0'],$root:$root}}"></template>

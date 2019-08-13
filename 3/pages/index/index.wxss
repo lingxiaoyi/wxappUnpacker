@@ -1,0 +1,132 @@
+@import "../activity/private/private.wxss";
+
+._button {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+._button,._button:after,._button:before {
+    border-radius: none;
+    outline: none;
+    border: none;
+}
+
+.fixedRight.data-v-60b48a08 {
+    position: fixed;
+    right: 10rpx;
+    bottom: 200rpx;
+    width: 140rpx;
+    z-index: 100;
+}
+
+.index-page-sos-container.data-v-60b48a08 {
+    background-color: #fdfdfd;
+    padding-bottom: 140rpx;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.index-page-sos-container.active.data-v-60b48a08 {
+    padding-bottom: 200rpx;
+}
+
+.index-page-sos-container .my-miniapp-container.data-v-60b48a08 {
+    width: 263rpx;
+    height: 70rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/myminiapp1.png");
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    right: 30rpx;
+    z-index: 2;
+}
+
+.index-page-sos-container .new-user-model.data-v-60b48a08 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 101;
+}
+
+.index-page-sos-container .new-user-model .box.data-v-60b48a08 {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 600rpx;
+    text-align: center;
+}
+
+.index-page-sos-container .new-user-model .box .close.data-v-60b48a08 {
+    width: 56rpx;
+    height: 56rpx;
+    margin-top: 46rpx;
+}
+
+.index-page-sos-container .new-user-model .content.data-v-60b48a08 {
+    background: #fff;
+    text-align: center;
+    padding-bottom: 50rpx;
+}
+
+.index-page-sos-container .new-user-model .content .banner.data-v-60b48a08 {
+    width: 600rpx;
+    height: 272rpx;
+}
+
+.index-page-sos-container .new-user-model .content ._div.data-v-60b48a08 {
+    font-size: 32rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #fff;
+    width: 462rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    background: linear-gradient(90deg,#ffa401,#f84d0d);
+    border-radius: 40rpx;
+    margin: 60rpx auto 0;
+}
+
+.index-page-sos-container .new-user-model .content ._p.data-v-60b48a08 {
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    line-height: 34rpx;
+    margin-top: 20rpx;
+}
+
+.popup-modal.data-v-60aa4871 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 101;
+}
+
+.popup-modal .content.data-v-60aa4871 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup-modal .content ._img.data-v-60aa4871 {
+    display: block;
+    width: 600rpx;
+    max-height: 720rpx;
+    margin: 0 auto;
+}
+
+.popup-modal .content .close.data-v-60aa4871 {
+    display: block;
+    width: 64rpx;
+    height: 64rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/index/icon-close.png") no-repeat 50%/cover;
+    margin: 30rpx auto;
+}

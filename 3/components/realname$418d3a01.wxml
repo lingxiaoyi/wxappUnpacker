@@ -1,0 +1,21 @@
+<template name="realname$418d3a01">
+    <view class="_div data-v-6b097515 realname-container">
+        <view class="_dl data-v-6b097515">
+            <view class="_dd data-v-6b097515">
+                <view class="_p data-v-6b097515">为了保障资金安全，请先进行实名认证</view>
+                <view class="_p data-v-6b097515">认证后，交易钱款只能打入该实名信息的微信钱包与银行卡，有效防止他人盗取</view>
+            </view>
+            <view class="_dt data-v-6b097515">
+                <label class="_span data-v-6b097515">真实姓名</label>
+                <input bindinput="handleProxy" class="_input data-v-6b097515" data-comkey="{{$k}}" data-eventid="{{'0'}}" placeholder="请输入真实姓名" type="text" value="{{inputName}}"></input>
+            </view>
+            <view class="_dt data-v-6b097515">
+                <label class="_span data-v-6b097515">身份证号</label>
+                <input bindinput="handleProxy" class="_input data-v-6b097515" data-comkey="{{$k}}" data-eventid="{{'1'}}" placeholder="请输入身份证号" type="idcard" value="{{inputIdCard}}"></input>
+            </view>
+            <view class="_dt data-v-6b097515 realname-tips">特别提示：请填写本人真实信息 审核后不可修改</view>
+        </view>
+        <button bindtap="handleProxy" class="_button data-v-6b097515 {{isPass?'btn-light':''}}" data-comkey="{{$k}}" data-eventid="{{'2'}}">确认</button>
+        <view class="_div data-v-6b097515 problem-tips">身份验证遇到问题，请联系爱回收在线客服</view>
+    </view>
+</template>

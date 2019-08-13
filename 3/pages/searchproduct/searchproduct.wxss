@@ -1,0 +1,132 @@
+@import "../activity/private/private.wxss";
+
+.index-container .empty-list.data-v-dd05819e {
+    display: none;
+    text-align: center;
+}
+
+.index-container .empty-list.show.data-v-dd05819e {
+    display: block;
+}
+
+.index-container .empty-list .empty-icon.data-v-dd05819e {
+    margin-top: 160rpx;
+    margin-bottom: 80rpx;
+}
+
+.index-container .empty-list .empty-icon ._img.data-v-dd05819e {
+    width: 278rpx;
+    height: 158rpx;
+}
+
+.index-container .empty-list .text1.data-v-dd05819e {
+    height: 40rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #333;
+    line-height: 40rpx;
+    text-align: center;
+    margin-bottom: 10rpx;
+}
+
+.index-container .empty-list .text2.data-v-dd05819e {
+    height: 32rpx;
+    font-size: 22rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #aaa;
+    line-height: 32rpx;
+    margin-bottom: 40rpx;
+}
+
+.index-container .empty-list .btn ._button.data-v-dd05819e {
+    width: 300rpx;
+    height: 80rpx;
+    background: #f9e72c;
+    border-radius: 8rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #111;
+    line-height: 80rpx;
+}
+
+.index-container ._header.data-v-dd05819e {
+    background-color: #fff;
+}
+
+.index-container ._header .search-container.data-v-dd05819e {
+    background-color: #f3f2f9;
+    margin: 12rpx 0rpx 12rpx 32rpx;
+    width: 599rpx;
+    height: 64rpx;
+    display: inline-block;
+    border-radius: 10rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.index-container ._header .search-container .search.data-v-dd05819e {
+    display: inline-block;
+    margin: 15rpx 6.5rpx 13rpx 17rpx;
+    transform: .65;
+    vertical-align: middle;
+}
+
+.index-container ._header .search-container ._input.data-v-dd05819e {
+    width: 486rpx;
+    height: 32rpx;
+    background-color: #f3f2f9;
+    display: inline-block;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    vertical-align: middle;
+}
+
+.index-container ._header .search-container .clear.data-v-dd05819e {
+    display: inline-block;
+    height: 30rpx;
+    width: 30rpx;
+    vertical-align: middle;
+    margin: 15rpx 10rpx;
+    background-image: url("https://sr.aihuishou.com/miniapps/earth/public/icon-clear.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.index-container ._header .search-canel.data-v-dd05819e {
+    width: 64rpx;
+    margin: 0 27rpx;
+    color: #fb0;
+    font-size: 32rpx;
+    position: relative;
+    background: #fff;
+    display: inline-block;
+    padding: 17rpx 0;
+    vertical-align: middle;
+    border: 0;
+}
+
+.list-container.data-v-7761de34 {
+    margin: 0 30rpx;
+}
+
+.list-container .list-item.data-v-7761de34 {
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #eee;
+}
+
+.list-container .list-item ._p.data-v-7761de34 {
+    font-size: 30rpx;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.list-container .list-item ._span.data-v-7761de34 {
+    font-size: 22rpx;
+    color: #f14307;
+    line-height: 30rpx;
+    padding-left: 16rpx;
+    word-break: normal;
+    display: inline-block;
+}

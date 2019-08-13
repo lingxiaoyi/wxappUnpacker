@@ -1,0 +1,9 @@
+<template name="Slider$015ee1bc">
+    <view class="_div data-v-495b40e4 slider-container">
+        <swiper autoplay="{{true}}" circular="{{true}}" class="_swiper data-v-495b40e4">
+            <swiper-item bindtap="handleProxy" class="_swiper-item data-v-495b40e4" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{index}}" wx:for="{{sliderInfo}}" wx:key="index">
+                <image class="_img data-v-495b40e4" mode="scaleToFill" src="{{item.imageUrl}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+</template>

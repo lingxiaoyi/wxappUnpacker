@@ -1,0 +1,11 @@
+<add-to-my-miniapps language="{{language}}"></add-to-my-miniapps>
+<scroll-view enableBackToTop="true" id="downloads" scrollWithAnimation="true" scrollY="true">
+    <view class="download-wrapper" wx:for="{{downloads}}" wx:for-index="downloadIndex" wx:for-item="download">
+        <image mode="widthFix" src="{{download}}"></image>
+        <button bindtap="authorizeWritePhotosAlbum" data-download-index="{{downloadIndex}}" wx:if="{{writePhotosAlbumStatus===0}}">{{i18n.authorizeSaveImageToAlbum}}</button>
+        <button bindtap="saveImageToAlbum" data-download-index="{{downloadIndex}}" wx:elif="{{writePhotosAlbumStatus===1}}">{{i18n.saveImageToAlbum}}</button>
+        <button bindopensetting="openSetting" data-download-index="{{downloadIndex}}" openType="openSetting" wx:elif="{{writePhotosAlbumStatus===2}}">{{i18n.allowSaveImageToAlbum}}</button>
+        <button disabled="true" wx:else>{{i18n.savedSuccessfully}}</button>
+    </view>
+</scroll-view>
+<actions language="{{language}}" page="download"></actions>

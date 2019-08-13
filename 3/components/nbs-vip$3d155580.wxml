@@ -1,0 +1,24 @@
+<template name="nbs-vip$3d155580">
+    <view bindtap="handleProxy" class="_div data-v-74cd4594 nbs-vip {{vipInfo.memberType===2?'type2':'type1'}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+        <view class="_div data-v-74cd4594 left">
+            <view class="_p data-v-74cd4594 name">
+                <label class="_span data-v-74cd4594 icon"></label>
+      {{vipInfo.memberType===1?'体验客':'发烧友'}}
+    </view>
+            <view class="_p data-v-74cd4594 time" wx:if="{{vipInfo.isVip}}">
+      {{vipInfo.endTime}}失效
+    </view>
+        </view>
+        <view class="_div data-v-74cd4594 right">
+            <view class="_div data-v-74cd4594 marquee-list" wx:if="{{marqueeList&&marqueeList.length}}">
+                <view class="_ul data-v-74cd4594 text-list {{[animate?'animate':'']}}">
+                    <view class="_li data-v-74cd4594 text-item global-line" key="{{index}}" wx:for="{{marqueeList}}" wx:key="index">{{item}}</view>
+                </view>
+            </view>
+            <view class="_p data-v-74cd4594" wx:if="{{!vipInfo.isVip}}">
+                <button class="_button data-v-74cd4594">立即开通</button>
+            </view>
+            <view class="_p data-v-74cd4594 arrow" wx:else></view>
+        </view>
+    </view>
+</template>

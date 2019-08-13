@@ -1,0 +1,16 @@
+<template name="header$627858a8">
+    <view class="_div data-v-c1f8ddd0 header" wx:if="{{canShowNav}}">
+        <view class="_div data-v-c1f8ddd0" style=" {{'padding-top:'+systemInfo.statusBarHeight+'px'+';'}}">
+            <view class="_div data-v-c1f8ddd0 icon-box">
+                <view bindtap="handleProxy" class="_div data-v-c1f8ddd0 back" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{showBack}}">
+                    <image alt class="_img data-v-c1f8ddd0" src="https://sr.aihuishou.com/miniapps/earth/icon_back.png"></image>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-c1f8ddd0 home" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                    <image alt class="_img data-v-c1f8ddd0" src="https://sr.aihuishou.com/miniapps/earth/icon_home.png"></image>
+                </view>
+            </view>
+    {{title}}
+  </view>
+        <view class="_p data-v-c1f8ddd0" style=" {{'margin-bottom:'+systemInfo.statusBarHeight+44+'px'+';'}}"></view>
+    </view>
+</template>

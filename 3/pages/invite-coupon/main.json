@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "好友助力领神券",
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
+}

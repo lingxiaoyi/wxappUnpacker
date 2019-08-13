@@ -1,0 +1,55 @@
+<template name="category$699d1b96">
+    <view class="_div data-v-d9cd52ac category-page">
+        <view class="_div data-v-d9cd52ac">
+            <view class="_div data-v-d9cd52ac top-searchbar">
+                <view class="_div data-v-d9cd52ac view-searchbar">
+                    <view bindtap="handleProxy" class="_div data-v-d9cd52ac nav-serchbar" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                        <text class="_text data-v-d9cd52ac icon-search"></text>
+                        <view class="_div data-v-d9cd52ac text-searchbar">搜索您要卖的品牌、机型</view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-d9cd52ac page-container">
+                <view class="_div data-v-d9cd52ac top-scroll-view" wx:if="{{!isSuDiYiPage}}">
+                    <scroll-view scrollWithAnimation scrollX class="_scroll-view data-v-d9cd52ac top-container" scrollLeft="{{scroll_left}}">
+                        <view bindtap="handleProxy" class="_div data-v-d9cd52ac top-item {{item.id===categoryId?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'1-'+index}}" data-id="{{item.id}}" data-value="{{item.value}}" key="{{index}}" wx:for="{{categorys}}" wx:key="index">
+            {{item.alias||item.value}}
+          </view>
+                    </scroll-view>
+                </view>
+                <view class="_div data-v-d9cd52ac {{isSuDiYiPage?'bottom-container bottom-container-hidden-title':'bottom-container'}}">
+                    <scroll-view scrollY bindscrolltolower="handleProxy" class="_scroll-view data-v-d9cd52ac left-container" data-comkey="{{$k}}" data-eventid="{{'3'}}" scrollIntoView="{{intoView}}" scrollTop="0">
+                        <view bindtap="handleProxy" class="_div data-v-d9cd52ac left-item global-line {{item.checked?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'2-'+index}}" id="{{'brand_'+index}}" key="{{item.id}}" scrollIntoView="{{intoView}}" wx:for="{{brands}}" wx:key="item.id">
+            {{item.name}}
+          </view>
+                    </scroll-view>
+                    <scroll-view scrollY bindscroll="handleProxy" bindscrolltolower="handleProxy" class="_scroll-view data-v-d9cd52ac right-container" data-comkey="{{$k}}" data-eventid="{{'6'}}" lowerThreshold="{{120}}" scrollIntoView="{{rightIntoView}}">
+                        <view class="_div data-v-d9cd52ac" id="{{rightIntoView}}"></view>
+                        <view class="_div data-v-d9cd52ac right-item {{[lessFlag?'less':'']}}" hoverClass="hover-active" key="{{item.id}}" wx:if="{{item.id}}" wx:for="{{products}}" wx:key="item.id">
+                            <view bindtap="handleProxy" class="_div data-v-d9cd52ac my-own-device-container" data-comkey="{{$k}}" data-eventid="{{'5-'+index}}" data-item="{{item}}" data-url="{{'../detail/detail?isfromcategory=true&productId='+item.id+'&categoryId='+categoryId}}" wx:if="{{!!item.isMyOwn}}">
+                                <view class="_div data-v-d9cd52ac info-container">
+                                    <image class="_image data-v-d9cd52ac my-own-image" src="{{item.imgUrl}}"></image>
+                                    <view class="_div data-v-d9cd52ac my-intro-container">
+                                        <text class="_text data-v-d9cd52ac tip-title">本机机型</text>
+                                        <view class="_div data-v-d9cd52ac right-top-container">立即估价</view>
+                                        <view class="_div data-v-d9cd52ac device-name">{{item.name}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                            <label bindtap="handleProxy" class="_span data-v-d9cd52ac {{[products[0].isMyOwn===true&&index===1?'main-icon-before first':'',products[0].isMyOwn===true&&index===2?'main-icon-before second':'',products[0].isMyOwn===true&&index===3?'main-icon-before third':'',!products[0].isMyOwn&&index===0?'main-icon-before first':'',!products[0].isMyOwn&&index===1?'main-icon-before second':'',!products[0].isMyOwn&&index===2?'main-icon-before third':'']}}" data-comkey="{{$k}}" data-eventid="{{'4-'+index}}" data-item="{{item}}" data-url="{{'../detail/detail?isfromcategory=true&productId='+item.id+'&categoryId='+categoryId}}" wx:else>
+                              {{item.name}}
+                          </label>
+                        </view>
+                        <view class="_div data-v-d9cd52ac bottom" wx:if="{{showBottom}}">
+                            <label class="_span data-v-d9cd52ac">
+              已经到底啦
+            </label>
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+        <template is="reservation$2db0efbd" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{isShowReservation&&cityInfo.supportShop}}"></template>
+    </view>
+</template>
+<import src="reservation$2db0efbd"></import>

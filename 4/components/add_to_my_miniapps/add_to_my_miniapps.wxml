@@ -1,0 +1,4 @@
+<view class="fav-hint{{language==='en'?' en':''}}" style="display: {{showFavHint?'block':'none'}};">
+    <text>{{i18n[language].addToMyMiniPrograms}}</text>
+    <view bindtap="hideFavHint" class="close-fav-hint"></view>
+</view>

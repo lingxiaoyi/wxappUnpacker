@@ -1,0 +1,2 @@
+<import src="../../components/nbs-coupon$0a483c4c"></import>
+<template is="nbs-coupon$0a483c4c" data="{{...$root['0'],$root:$root}}"></template>

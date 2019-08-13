@@ -1,0 +1,59 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/search/search",
+        "pages/test/test",
+        "pages/features/features",
+        "pages/feature/feature",
+        "pages/download/download",
+        "pages/admin/index/index",
+        "pages/admin/new_trash/new_trash",
+        "pages/admin/trash_list/trash_list",
+        "pages/admin/submit_list/submit_list",
+        "pages/settings/settings",
+        "pages/settings/cities/cities"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#ffffff"
+    },
+    "tabBar": {
+        "selectedColor": "#ffb600",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "指南",
+                "iconPath": "images/book.png",
+                "selectedIconPath": "images/book_active.png"
+            },
+            {
+                "pagePath": "pages/test/test",
+                "text": "测试",
+                "iconPath": "images/100.png",
+                "selectedIconPath": "images/100_active.png"
+            },
+            {
+                "pagePath": "pages/features/features",
+                "text": "专题",
+                "iconPath": "images/feature.png",
+                "selectedIconPath": "images/feature_active.png"
+            },
+            {
+                "pagePath": "pages/download/download",
+                "text": "下载",
+                "iconPath": "images/download.png",
+                "selectedIconPath": "images/download_active.png"
+            },
+            {
+                "pagePath": "pages/settings/settings",
+                "text": "设置",
+                "iconPath": "images/settings.png",
+                "selectedIconPath": "images/settings_active.png"
+            }
+        ]
+    },
+    "navigateToMiniProgramAppIdList": [
+        "wx91d27dbf599dff74"
+    ]
+}

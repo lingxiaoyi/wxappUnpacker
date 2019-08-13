@@ -1,0 +1,23 @@
+<template name="choosecity$5d804a5a">
+    <view class="_div data-v-18da106e choosecity-container">
+        <view class="_header data-v-18da106e">
+            <view class="_h1 data-v-18da106e">当前定位城市</view>
+            <view class="_p data-v-18da106e" wx:if="{{isLoading}}">加载中...</view>
+            <view class="_p data-v-18da106e" wx:if="{{!cityInfo&&!isLoading}}">定位失败</view>
+            <view bindtap="handleProxy" class="_p data-v-18da106e" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{cityInfo&&!isLoading}}">{{!!cityInfo&&cityInfo.name}}</view>
+        </view>
+        <view class="_main data-v-18da106e">
+            <view class="_p data-v-18da106e">服务开通城市</view>
+            <scroll-view scrollY class="_scroll-view data-v-18da106e" scrollIntoView="{{scrollToView}}">
+                <view class="_dl data-v-18da106e" key="{{item.name}}" wx:if="{{cityLetterList&&cityLetterList.length>0}}" wx:for="{{cityLetterList}}" wx:key="item.name">
+                    <view class="_dt data-v-18da106e" id="{{item.name}}">{{item.name}}</view>
+                    <view bindtap="handleProxy" class="_dd data-v-18da106e" data-comkey="{{$k}}" data-eventid="{{'1-'+index+'-'+listIndex}}" key="{{listIndex}}" wx:for="{{item.list}}" wx:for-index="listIndex" wx:for-item="listItem" wx:key="listIndex">{{listItem.name}}</view>
+                </view>
+            </scroll-view>
+            <view class="_ul data-v-18da106e">
+                <view bindtouchend="handleProxy" bindtouchstart="handleProxy" class="_li data-v-18da106e" data-comkey="{{$k}}" data-eventid="{{'2-'+index}}" key="{{item.name}}" wx:for="{{cityLetterList}}" wx:key="item.name">{{item.name}}</view>
+            </view>
+            <view class="_div data-v-18da106e index-letter" wx:if="{{isShowLetterTag}}">{{scrollToView}}</view>
+        </view>
+    </view>
+</template>

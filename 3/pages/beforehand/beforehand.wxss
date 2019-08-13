@@ -1,0 +1,94 @@
+@import "../activity/private/private.wxss";
+
+.beforehand-page .header.data-v-e453144c {
+    width: auto;
+    height: 354rpx;
+    background: url("https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/header%403x.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.beforehand-page .list.data-v-e453144c {
+    width: auto;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.beforehand-page .list .item.data-v-e453144c {
+    position: relative;
+    width: auto;
+    height: 244rpx;
+    background: #fff;
+    box-shadow: 0 4rpx 40rpx 0 hsla(195,9%,83%,.3);
+    border-radius: 4rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+}
+
+.beforehand-page .list .item ._p.data-v-e453144c:not(:last-child) {
+    position: relative;
+}
+
+.beforehand-page .list .item ._p.data-v-e453144c:not(:last-child):after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 2rpx;
+    background-color: #e1e1e1;
+}
+
+.beforehand-page .list .item .title.data-v-e453144c {
+    width: auto;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #111;
+}
+
+.beforehand-page .list .item .store.data-v-e453144c,.beforehand-page .list .item .time.data-v-e453144c {
+    width: auto;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.beforehand-page .list .item .store .label.data-v-e453144c,.beforehand-page .list .item .time .label.data-v-e453144c {
+    float: left;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #0e0e0f;
+}
+
+.beforehand-page .list .item .store .value.data-v-e453144c,.beforehand-page .list .item .time .value.data-v-e453144c {
+    float: right;
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #0e0e0f;
+}
+
+.beforehand-page .list .item .store .value ._img.data-v-e453144c,.beforehand-page .list .item .time .value ._img.data-v-e453144c {
+    width: 14rpx;
+    height: 22rpx;
+    vertical-align: middle;
+}
+
+.beforehand-page .empty.data-v-e453144c {
+    margin-top: 100rpx;
+    text-align: center;
+}
+
+.beforehand-page .empty .img ._img.data-v-e453144c {
+    width: 140rpx;
+    height: 188rpx;
+}
+
+.beforehand-page .empty .text.data-v-e453144c {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #777;
+    line-height: 28rpx;
+}

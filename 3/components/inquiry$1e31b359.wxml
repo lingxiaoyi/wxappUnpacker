@@ -1,0 +1,58 @@
+<template name="inquiry$1e31b359">
+    <view class="_div data-v-0b98f876 ondoor-container" hidden="{{!show}}">
+        <view class="_main data-v-0b98f876">
+            <view class="_ul data-v-0b98f876">
+                <view class="_li data-v-0b98f876" hidden="{{!(cityInfo&&cityInfo.supportOnDoor)}}">
+                    <view class="_dl data-v-0b98f876">
+                        <view bindtap="handleProxy" class="_dt data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                            <view class="_div data-v-0b98f876 left">
+                                <view class="_i data-v-0b98f876 {{isShowOnDoorItem?'icon-select':'icon-unselect'}}"></view>上门交易</view>
+                            <label bindtap="handleProxy" class="_span data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{isShowSfItem}}">运费说明</label>
+                        </view>
+                        <block wx:if="{{isShowOnDoorItem}}">
+                            <view bindtap="handleProxy" class="_dd data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                                <view class="_div data-v-0b98f876 left">
+                                    <input bindinput="handleProxy" class="_input data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'2'}}" disabled="{{true}}" placeholder="请点击选择地址" type="text" value="{{onDoorInfo.street}}"></input>
+                                    <view class="_p data-v-0b98f876 err-tag" wx:if="{{!onDoorInfo.isDispatcherConditional}}">* 该地址不支持上门回收，请选择其它地址</view>
+                                </view>
+                                <label class="_span data-v-0b98f876">更改</label>
+                            </view>
+                            <view class="_dd data-v-0b98f876">
+                                <view class="_div data-v-0b98f876 left">
+                                    <input bindinput="handleProxy" class="_input data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'4'}}" placeholder="请输入详细地址" type="text" value="{{onDoorInfo.building}}"></input>
+                                </view>
+                            </view>
+                            <view class="_dd data-v-0b98f876" wx:if="{{ondoorDateList&&ondoorDateList.length}}">
+                                <picker bindchange="handleProxy" class="_picker data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'5'}}" range="{{ondoorDateList}}" value="{{ondoorDateIndex}}">
+                                    <view class="_p data-v-0b98f876">预约时间</view>
+                {{ondoorDateList[ondoorDateIndex]}}<label class="_span data-v-0b98f876">更改</label>
+                                </picker>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="_li data-v-0b98f876" hidden="{{!(cityInfo&&cityInfo.supportMetro)}}">
+                    <view class="_dl data-v-0b98f876">
+                        <view catchtap="handleProxy" class="_dt data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'6'}}">
+                            <view class="_div data-v-0b98f876 left">
+                                <view class="_i data-v-0b98f876 {{isShowMetroItem?'icon-select':'icon-unselect'}}"></view>地铁站交易</view>
+                        </view>
+                        <block wx:if="{{isShowMetroItem}}">
+                            <view class="_dd data-v-0b98f876" wx:if="{{multiArray&&multiArray.length>1}}">
+                                <picker bindchange="handleProxy" bindcolumnchange="handleProxy" class="_picker data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'7'}}" mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" wx:if="{{multiArray&&multiArray.length>0}}">
+                {{metroInfo.line.name&&metroInfo.site.name?metroInfo.line.name+' '+metroInfo.site.name:'选择地铁站'}}<label class="_span data-v-0b98f876">更改</label>
+                                </picker>
+                            </view>
+                            <view class="_dd data-v-0b98f876">
+                                <picker bindchange="handleProxy" class="_picker data-v-0b98f876" data-comkey="{{$k}}" data-eventid="{{'8'}}" range="{{ondoorDateList}}" value="{{metroDateIndex}}">
+                                    <view class="_p data-v-0b98f876">预约时间</view>
+                {{ondoorDateList[metroDateIndex]}}<label class="_span data-v-0b98f876">更改</label>
+                                </picker>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

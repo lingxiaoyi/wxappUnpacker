@@ -1,0 +1,29 @@
+<template name="searchproduct$5d6badc5">
+    <view class="_div data-v-dd05819e index-container">
+        <view class="_header data-v-dd05819e">
+            <view class="_div data-v-dd05819e search-container">
+                <view class="_i data-v-dd05819e icon-search search"></view>
+                <input focus bindconfirm="handleProxy" bindinput="handleProxy" class="_input data-v-dd05819e" data-comkey="{{$k}}" data-eventid="{{'0'}}" placeholder="搜索您要卖的品牌、机型" value="{{input_keywords}}"></input>
+                <view bindtap="handleProxy" class="_i data-v-dd05819e clear-btn clear" data-comkey="{{$k}}" data-eventid="{{'1'}}"></view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-dd05819e search-canel" data-comkey="{{$k}}" data-eventid="{{'2'}}">取消
+    </view>
+        </view>
+        <template is="searchproduct$ff5d6070" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{search_results.length}}"></template>
+        <view class="_div data-v-dd05819e empty-list {{[resultFlag&&!search_results.length?'show':'']}}">
+            <view class="_p data-v-dd05819e empty-icon">
+                <image alt class="_img data-v-dd05819e" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/search%402x.png"></image>
+            </view>
+            <view class="_p data-v-dd05819e text1">
+      很抱歉，没有找到与“{{input_keywords}}”相关的机型
+    </view>
+            <view class="_p data-v-dd05819e text2">
+      找不到型号？门店提供一对一的服务，还能当场拿钱哟~
+    </view>
+            <view class="_p data-v-dd05819e btn">
+                <button bindtap="handleProxy" class="_button data-v-dd05819e" data-comkey="{{$k}}" data-eventid="{{'3'}}">点我预约</button>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="searchproduct$ff5d6070"></import>

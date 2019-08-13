@@ -1,0 +1,9 @@
+<template name="sharecoupon$310b40fa">
+    <view class="_div data-v-d14d4822 sharem-container">
+        <view class="_div data-v-d14d4822 before-model">
+            <button bindgetphonenumber="handleProxy" class="_button data-v-d14d4822 to-Mini" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getPhoneNumber" wx:if="{{!isLogin}}"></button>
+            <button bindtap="handleProxy" class="_button data-v-d14d4822 to-Mini" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{isLogin}}"></button>
+            <button bindtap="handleProxy" class="_button data-v-d14d4822 to-Main" data-comkey="{{$k}}" data-eventid="{{'2'}}"></button>
+        </view>
+    </view>
+</template>

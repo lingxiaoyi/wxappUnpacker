@@ -1,0 +1,21 @@
+<template name="nbs-vip$765dbb54">
+    <view class="_div data-v-4bea2d68 type2-com">
+        <image bindtap="handleProxy" class="_img data-v-4bea2d68 qr" data-comkey="{{$k}}" data-eventid="{{'0'}}" src="https://sr.aihuishou.com/miniapps/earth/nbs-vip/qr2.png" wx:if="{{item.isOpen}}"></image>
+        <view class="_div data-v-4bea2d68 before-open" wx:if="{{!item.isOpen}}">
+            <view class="_p data-v-4bea2d68 text">{{item.validPeriod}}</view>
+            <view class="_div data-v-4bea2d68 open">
+                <button bindtap="handleProxy" class="_button data-v-4bea2d68" data-comkey="{{$k}}" data-eventid="{{'1'}}">仅限门店开通 /￥{{item.price||0}}</button>
+            </view>
+        </view>
+        <view class="_div data-v-4bea2d68 opened" wx:if="{{item.isOpen}}">
+            <view class="_div data-v-4bea2d68 time">
+                <view class="_p data-v-4bea2d68">到期时间:</view>
+                <view class="_p data-v-4bea2d68">{{item.endTime}}</view>
+            </view>
+            <button class="_button data-v-4bea2d68">已开通</button>
+        </view>
+        <view class="_div data-v-4bea2d68 icons">
+            <image alt bindtap="handleProxy" class="_img data-v-4bea2d68" data-comkey="{{$k}}" data-eventid="{{'2-'+index}}" key="{{index}}" src="{{item.src}}" wx:for="{{icons}}" wx:key="index"></image>
+        </view>
+    </view>
+</template>

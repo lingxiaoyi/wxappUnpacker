@@ -1,0 +1,645 @@
+@import "../activity/private/private.wxss";
+
+._button.data-v-62c2ff36,navigator.data-v-62c2ff36 {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    border: 0;
+}
+
+._button.data-v-62c2ff36:after,navigator.data-v-62c2ff36:after {
+    border: 0;
+}
+
+.shareprice-container.data-v-62c2ff36 {
+    width: 100%;
+}
+
+.shareprice-container ._header.data-v-62c2ff36 {
+    width: 100%;
+    height: 820rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/header22.png");
+    background-size: 100% auto;
+    position: relative;
+}
+
+.shareprice-container ._header .rules.data-v-62c2ff36 {
+    width: 74rpx;
+    position: absolute;
+    top: 0;
+    right: 30rpx;
+    font-size: 24rpx;
+    font-weight: 200;
+    background-color: #fd7d36;
+    border-bottom-left-radius: 38rpx;
+    border-bottom-right-radius: 38rpx;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 16rpx 8rpx 24rpx;
+    box-sizing: border-box;
+    line-height: 28rpx;
+    border: 0;
+}
+
+.shareprice-container ._header .card-item.data-v-62c2ff36 {
+    height: 282rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/card-item.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 520rpx;
+    left: 40rpx;
+    right: 40rpx;
+    display: flex;
+    align-items: center;
+}
+
+.shareprice-container ._header .card-item ._ul.data-v-62c2ff36 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.shareprice-container ._header .card-item ._ul .marginright10.data-v-62c2ff36 {
+    margin-right: 20rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._img.data-v-62c2ff36 {
+    width: 156rpx;
+    height: 156rpx;
+    margin-left: 56rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li .endImg.data-v-62c2ff36 {
+    width: 180rpx;
+    height: 206rpx;
+    margin-left: 82rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._dl.data-v-62c2ff36 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._dl ._dt.data-v-62c2ff36 {
+    color: #fc652c;
+    font-family: PingFangSC-Semibold;
+    font-size: 28rpx;
+    font-weight: 700;
+    margin-bottom: 20rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._dl ._dt ._span.data-v-62c2ff36 {
+    color: #000;
+    font-size: 24rpx;
+    font-weight: 400;
+    font-family: PingFangSC-Regular;
+    margin-left: 8rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._dl ._dd.data-v-62c2ff36 {
+    width: 368rpx;
+    height: 94rpx;
+    color: #000;
+    font-size: 30rpx;
+    font-weight: 400;
+    font-family: PingFangSC-Regular;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._dl .time-container.data-v-62c2ff36 {
+    padding: 28rpx 74rpx 0 82rpx;
+    font-size: 18rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #fff;
+    box-sizing: border-box;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/card-time1.png");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shareprice-container ._header .card-item ._ul ._li ._dl .time-container ._u.data-v-62c2ff36 {
+    width: 22rpx;
+    height: 34rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 30rpx;
+    color: #000;
+    border-radius: 2rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li .dl-end.data-v-62c2ff36 {
+    width: 242rpx;
+}
+
+.shareprice-container ._header .card-item ._ul ._li .dl-end ._dt.data-v-62c2ff36 {
+    font-size: 34rpx;
+    font-family: PingFangSC-Semibold;
+    font-weight: 700;
+}
+
+.shareprice-container ._header .card-item ._ul ._li .dl-end ._dd.data-v-62c2ff36 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: Regular;
+    line-height: 36rpx;
+    color: #4f4f4f;
+}
+
+.shareprice-container ._header ._i.data-v-62c2ff36 {
+    position: absolute;
+    font-size: 28rpx;
+    font-family: FZLTXHK--GBK1-0;
+    top: 362rpx;
+    left: 174rpx;
+    color: #a1a1a1;
+}
+
+.shareprice-container ._header ._p.data-v-62c2ff36 {
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #4f4f4f;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+}
+
+.shareprice-container ._header .help-end.data-v-62c2ff36 {
+    left: 228rpx;
+    top: 394rpx;
+    font-size: 40rpx;
+    color: #ff5d4e;
+}
+
+.shareprice-container ._main.data-v-62c2ff36 {
+    padding: 0 28rpx 82rpx;
+    background: linear-gradient(180deg,#fd6337,#fc3839);
+}
+
+.shareprice-container ._main ._h1.data-v-62c2ff36 {
+    color: #bbb;
+    font-size: 36rpx;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 100rpx;
+}
+
+.shareprice-container ._main ._p.data-v-62c2ff36 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1;
+}
+
+.shareprice-container ._main ._p.active.data-v-62c2ff36 {
+    margin-top: 16rpx;
+}
+
+.shareprice-container ._main ._p ._span.data-v-62c2ff36 {
+    color: #fff;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+}
+
+.shareprice-container ._main .progress-container.data-v-62c2ff36 {
+    width: 100%;
+    height: 134rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/progress5.png");
+    background-size: 100% 100%;
+    position: relative;
+    margin-top: 32rpx;
+}
+
+.shareprice-container ._main .progress-container ._u.data-v-62c2ff36 {
+    width: 180rpx;
+    height: 48rpx;
+    position: absolute;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/progress-tag.png");
+    background-size: 100% 100%;
+    top: -60rpx;
+    right: 0;
+}
+
+.shareprice-container ._main .progress-container ._i.data-v-62c2ff36 {
+    width: 326rpx;
+    height: 28rpx;
+    background: linear-gradient(90deg,#ffe529,#ffa800);
+    position: absolute;
+    border-radius: 12rpx;
+}
+
+.shareprice-container ._main .progress-container ._i ._s.data-v-62c2ff36 {
+    width: 48rpx;
+    height: 46rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/icon-money.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: -8rpx;
+    right: -24rpx;
+}
+
+.shareprice-container ._main .progress-container ._ul.data-v-62c2ff36 {
+    position: absolute;
+    width: 100%;
+    top: 88rpx;
+    left: 0;
+    display: flex;
+    algin-items: center;
+}
+
+.shareprice-container ._main .progress-container ._ul ._li.data-v-62c2ff36 {
+    width: 82rpx;
+    color: #a1a1a1;
+    font-size: 20rpx;
+    font-weight: 600;
+    line-height: 24rpx;
+    margin-right: 116rpx;
+}
+
+.shareprice-container ._main .progress-container ._ul ._li.data-v-62c2ff36:nth-of-type(4) {
+    margin-right: 0;
+    margin-left: 20rpx;
+}
+
+.shareprice-container ._main ._dl.data-v-62c2ff36 {
+    width: 100%;
+    margin-top: 30rpx;
+    margin-bottom: 50rpx;
+}
+
+.shareprice-container ._main ._dl ._button.data-v-62c2ff36,.shareprice-container ._main ._dl ._dt.data-v-62c2ff36 {
+    width: 692rpx;
+    height: 102rpx;
+    background: linear-gradient(180deg,#ffe637,#fd802a);
+    font-size: 32rpx;
+    font-weight: 600;
+    font-family: FZLTZHK--GBK1-0;
+    text-align: center;
+    line-height: 102rpx;
+    color: #fff;
+    border-radius: 52rpx;
+    border: 0;
+    box-shadow: 0 6rpx 16rpx 0 #fc3939;
+}
+
+.shareprice-container ._main ._dl ._dd.data-v-62c2ff36 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+    color: #a1a1a1;
+    margin-top: 28rpx;
+}
+
+.shareprice-container ._main ._dl ._dd ._button.data-v-62c2ff36,.shareprice-container ._main ._dl ._dd navigator.data-v-62c2ff36 {
+    width: 160rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    border-radius: 16rpx;
+    font-size: 28rpx;
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+    text-decoration: underline;
+    opacity: .9;
+    color: #fff;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.shareprice-container ._main ._dl ._dd .share-btn.data-v-62c2ff36,.shareprice-container ._main ._dl ._dd .share-btn.data-v-62c2ff36:after,.shareprice-container ._main ._dl ._dd .share-btn.data-v-62c2ff36:before {
+    border: 0;
+}
+
+.shareprice-container ._footer.data-v-62c2ff36 {
+    padding: 0 28rpx 84rpx;
+    background: #fc3839;
+}
+
+.shareprice-container ._footer ._p.data-v-62c2ff36 {
+    font-size: 30rpx;
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    margin-bottom: 28rpx;
+}
+
+.shareprice-container ._footer ._p.data-v-62c2ff36:before {
+    width: 56rpx;
+    height: 2rpx;
+    border-top: 1rpx solid #fff;
+    content: "";
+    position: absolute;
+    left: 184rpx;
+    top: 16rpx;
+}
+
+.shareprice-container ._footer ._p.data-v-62c2ff36:after {
+    width: 56rpx;
+    border-top: 1rpx solid #fff;
+    content: "";
+    position: absolute;
+    right: 184rpx;
+    top: 16rpx;
+}
+
+.shareprice-container ._footer .add-price.data-v-62c2ff36 {
+    padding: 36rpx 0 68rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    text-align: center;
+}
+
+.shareprice-container ._footer .add-price ._u.data-v-62c2ff36 {
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+    font-size: 28rpx;
+    color: #fc3839;
+    text-align: center;
+}
+
+.shareprice-container ._footer .add-price ._img.data-v-62c2ff36 {
+    width: 100%;
+    height: 218rpx;
+}
+
+.shareprice-container ._footer .add-price .course.data-v-62c2ff36 {
+    width: 628rpx;
+    height: 88rpx;
+    margin-top: 28rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/course20.png");
+    background-size: 100% 100%;
+}
+
+.shareprice-container ._footer .add-price .coupon.data-v-62c2ff36 {
+    height: 154rpx;
+    margin: 64rpx 20rpx 0;
+    background-size: 100% 100%;
+    border-radius: 16rpx;
+    font-family: FZLTXHK--GBK1-0;
+    position: relative;
+}
+
+.shareprice-container ._footer .add-price .coupon ._dt.data-v-62c2ff36 {
+    font-size: 36rpx;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 30rpx;
+    left: 184rpx;
+}
+
+.shareprice-container ._footer .add-price .coupon ._dd.data-v-62c2ff36 {
+    color: #fbddba;
+    font-size: 28rpx;
+    font-weight: 200;
+    position: absolute;
+    top: 80rpx;
+    left: 184rpx;
+}
+
+.shareprice-container ._footer navigator.data-v-62c2ff36 {
+    width: 100%;
+    height: 102rpx;
+    border-radius: 52rpx;
+    background: linear-gradient(180deg,#ffe637,#fd802a);
+    box-shadow: 0 6rpx 16rpx 0 #fc3939;
+    margin: 68rpx 0 0;
+    color: #fff;
+    line-height: 102rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border: 0;
+    font-weight: 600;
+}
+
+.shareprice-container .end-container.data-v-62c2ff36 {
+    position: absolute;
+    bottom: 0;
+    top: 840rpx;
+    left: 0;
+    right: 0;
+    padding-top: 40rpx;
+    background: linear-gradient(180deg,#fd6337,#fc3839);
+}
+
+.shareprice-container .end-container .immediately.data-v-62c2ff36 {
+    width: 692rpx;
+    height: 102rpx;
+    background: linear-gradient(#ffe637,#fd802a);
+    box-shadow: 0 6rpx 16rpx 0 #fc3939;
+    margin: 0 auto;
+    font-size: 32rpx;
+    font-weight: 600;
+    font-family: FZLTZHK--GBK1-0;
+    border: 0;
+    text-align: center;
+    line-height: 102rpx;
+    color: #fff;
+    border-radius: 52rpx;
+}
+
+.friend-help-container.data-v-18b30bbd {
+    background: #fff;
+    border-radius: 10rpx;
+    padding-top: 20rpx;
+}
+
+.friend-help-container ._p.data-v-18b30bbd {
+    font-size: 30rpx;
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+    color: #181818;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20rpx;
+    height: 72rpx;
+}
+
+.friend-help-container ._p ._img.data-v-18b30bbd {
+    width: 348rpx;
+    height: 100%;
+}
+
+.friend-help-container scroll-view.data-v-18b30bbd {
+    overflow: hidden;
+}
+
+.friend-help-container scroll-view ._dl.data-v-18b30bbd {
+    height: 100rpx;
+    font-size: 24rpx;
+    color: #fdb649;
+    line-height: 100rpx;
+}
+
+.friend-help-container scroll-view ._dl ._dt.data-v-18b30bbd {
+    text-align: center;
+}
+
+.friend-help-container scroll-view ._ul ._li.data-v-18b30bbd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 52rpx 24rpx;
+    font-size: 26rpx;
+    color: #181818;
+    font-weight: 600;
+}
+
+.friend-help-container scroll-view ._ul ._li.data-v-18b30bbd:first-of-type {
+    padding: 24rpx 52rpx;
+}
+
+.friend-help-container scroll-view ._ul ._li ._div.data-v-18b30bbd {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: FZLTZHK--GBK1-0;
+}
+
+.friend-help-container scroll-view ._ul ._li ._div ._i.data-v-18b30bbd {
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 24rpx;
+    background-color: #d5d5d5;
+    border-radius: 28rpx;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16rpx;
+    font-weight: 600;
+    color: #fff;
+}
+
+.friend-help-container scroll-view ._ul ._li:first-child ._i.data-v-18b30bbd {
+    width: 28rpx;
+    height: 36rpx;
+    border-radius: 0;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/icon1.png");
+}
+
+.friend-help-container scroll-view ._ul ._li:nth-child(2) ._i.data-v-18b30bbd {
+    width: 28rpx;
+    height: 36rpx;
+    border-radius: 0;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/icon2.png");
+}
+
+.friend-help-container scroll-view ._ul ._li:nth-child(3) ._i.data-v-18b30bbd {
+    width: 28rpx;
+    height: 36rpx;
+    border-radius: 0;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/icon3.png");
+}
+
+.friend-help-container scroll-view ._ul ._li ._span.data-v-18b30bbd {
+    font-size: 26rpx;
+    font-weight: 600;
+    color: #ff411b;
+}
+
+.height300.data-v-18b30bbd {
+    height: 600rpx;
+}
+
+.popup-container.data-v-11bd3d3f {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-container ._main.data-v-11bd3d3f {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup-container ._main .authority-container.data-v-11bd3d3f {
+    width: 630rpx;
+    background-color: #fff;
+    border-radius: 30rpx;
+    overflow: hidden;
+    font-family: FZLTZHK--GBK1-0;
+}
+
+.popup-container ._main .authority-container ._dl ._dt.data-v-11bd3d3f {
+    background: linear-gradient(90deg,#fe775d,#ff5d4e);
+    height: 112rpx;
+    font-size: 36rpx;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 112rpx;
+}
+
+.popup-container ._main .authority-container ._dl ._dd ._ul.data-v-11bd3d3f {
+    padding: 0 46rpx 76rpx 74rpx;
+}
+
+.popup-container ._main .authority-container ._dl ._dd ._ul ._li.data-v-11bd3d3f {
+    margin-top: 64rpx;
+    color: #a1a1a1;
+    font-size: 30rpx;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    algin-items: center;
+}
+
+.popup-container ._main .authority-container ._dl ._dd ._ul ._li ._button.data-v-11bd3d3f {
+    width: 154rpx;
+    height: 46rpx;
+    background-color: #fdb649;
+    border-radius: 24rpx;
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 600;
+    line-height: 46rpx;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-container ._main .authority-container ._dl ._dd ._ul ._li ._i.data-v-11bd3d3f {
+    width: 44rpx;
+    height: 44rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/success.png");
+    background-size: 100% 100%;
+}
+
+.popup-container ._main .help-success.data-v-11bd3d3f {
+    width: 438rpx;
+    height: 438rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/shareprice/popup-success2.png");
+    background-size: 100% 100%;
+}
+
+.popup-container .mask-layer.data-v-11bd3d3f {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #000;
+    opacity: .8;
+}

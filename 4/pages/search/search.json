@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "actions": "/components/actions/actions"
+    },
+    "navigationBarTitleText": ""
+}

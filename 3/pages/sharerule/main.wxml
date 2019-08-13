@@ -1,0 +1,2 @@
+<import src="../../components/sharerule$84e7d94e"></import>
+<template is="sharerule$84e7d94e" data="{{...$root['0'],$root:$root}}"></template>

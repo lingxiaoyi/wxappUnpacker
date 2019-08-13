@@ -1,0 +1,53 @@
+<template name="nbs-orderdetail$2dee3862">
+    <view class="_div data-v-5efbca3b orderdetail-box" wx:if="{{orderInfo.orderNo}}">
+        <view class="_div data-v-5efbca3b top">
+            <view class="_div data-v-5efbca3b status">
+                <image alt class="_img data-v-5efbca3b" src="{{orderInfo.status===3?'https://sr.aihuishou.com/miniapps/earth/nbs/detail-cancel.png':'https://sr.aihuishou.com/miniapps/earth/nbs/detail-success.png'}}"></image>
+      {{orderInfo.status===1?'下单成功，敬请到店':orderInfo.status===2?'订单完成':'订单取消 '}}
+      <label bindtap="handleProxy" class="_span data-v-5efbca3b" data-comkey="{{$k}}" data-eventid="{{'0'}}">联系客服</label>
+            </view>
+            <view class="_p data-v-5efbca3b" wx:if="{{orderInfo.status===1}}">
+      1. 到店维修前，请事先备份数据以防万一 <view class="_br data-v-5efbca3b"></view>
+      2. 如需使用优惠券，需在付款前告知门店工作人员 <view class="_br data-v-5efbca3b"></view>
+      3. 如需更改到店维修时间，请提前联系客服
+    </view>
+            <view class="_p data-v-5efbca3b" wx:else>
+      非常感谢您的信任，如对服务不满意请联系客服
+    </view>
+        </view>
+        <view class="_div data-v-5efbca3b product-info">
+            <view class="_p data-v-5efbca3b name">{{orderInfo.productName}}</view>
+            <view class="_div data-v-5efbca3b">
+                <view class="_div data-v-5efbca3b info" key="{{index}}" wx:for="{{orderInfo.submitMalfunctions}}" wx:key="index">
+                    <view class="_div data-v-5efbca3b desc">{{item.malfunctionSubName}}</view>
+                    <view class="_div data-v-5efbca3b detail">{{item.solutionName}}</view>
+                    <view class="_div data-v-5efbca3b price">{{item.price>0?item.price:'待检测'}}</view>
+                </view>
+            </view>
+            <view class="_div data-v-5efbca3b total">
+                <label class="_span data-v-5efbca3b desc">合计</label>
+                <label class="_span data-v-5efbca3b tip">（维修成功后支付）</label>
+                <label class="_span data-v-5efbca3b price">{{orderInfo.amount>0?orderInfo.amount:'待检测'}}</label>
+            </view>
+        </view>
+        <view class="_div data-v-5efbca3b address-info">
+            <view class="_div data-v-5efbca3b name">
+      {{orderInfo.shop.name}}
+    </view>
+            <view class="_div data-v-5efbca3b desc">
+      {{orderInfo.shop.address}}
+    </view>
+            <view bindtap="handleProxy" class="_div data-v-5efbca3b desc mobile" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+      {{mobile}}
+    </view>
+            <view class="_div data-v-5efbca3b date">
+                <label class="_span data-v-5efbca3b">预约时间：</label>
+                <label class="_span data-v-5efbca3b time">{{orderInfo.appointmentTimeStr}}</label>
+            </view>
+        </view>
+        <view class="_div data-v-5efbca3b bottom">
+            <view class="_p data-v-5efbca3b">订单编号：{{orderInfo.orderNo}} </view>
+            <view class="_p data-v-5efbca3b">下单时间：{{orderInfo.createDateStr}}</view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,107 @@
+<template name="inquiry$fda1e958">
+    <view class="_div data-v-25674868 express-container" hidden="{{!show}}">
+        <view class="_header data-v-25674868"></view>
+        <view class="_main data-v-25674868">
+            <view class="_ul data-v-25674868">
+                <view class="_li data-v-25674868" hidden="{{!isShowSfMode}}">
+                    <view class="_dl data-v-25674868">
+                        <view bindtap="handleProxy" class="_dt data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                            <view class="_div data-v-25674868 left">
+                                <view class="_i data-v-25674868 {{isShowSfItem?'icon-select':'icon-unselect'}}"></view>顺丰上门取件</view>
+                            <label bindtap="handleProxy" class="_span data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{isShowSfItem}}">运费说明</label>
+                        </view>
+                        <block wx:if="{{isShowSfItem}}">
+                            <view bindtap="handleProxy" class="_dd data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                                <view class="_div data-v-25674868 left">
+                                    <input bindinput="handleProxy" class="_input data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'2'}}" disabled="{{true}}" placeholder="请点击选择地址" type="text" value="{{sfExpressInfo.street}}"></input>
+                                    <view class="_p data-v-25674868 err-tag" wx:if="{{!sfExpressInfo.isDispatcherConditional}}">* 该地址不支持上门回收，请选择其它地址</view>
+                                </view>
+                                <label class="_span data-v-25674868">更改</label>
+                            </view>
+                            <view class="_dd data-v-25674868">
+                                <view class="_div data-v-25674868 left">
+                                    <input bindinput="handleProxy" class="_input data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'4'}}" placeholder="请输入详细楼栋和门牌号" type="text" value="{{sfExpressInfo.building}}"></input>
+                                </view>
+                            </view>
+                            <view class="_dd data-v-25674868">
+                                <view class="_div data-v-25674868 left">
+                                    <input bindinput="handleProxy" class="_input data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'5'}}" placeholder="请输入寄件人真实姓名" type="text" value="{{sfExpressInfo.nickName}}"></input>
+                                </view>
+                                <view class="_div data-v-25674868 right">
+                                    <view class="_i data-v-25674868"></view>
+                                </view>
+                            </view>
+                            <view class="_dd data-v-25674868" wx:if="{{sfondoorDateList&&sfondoorDateList.length>0}}">
+                                <picker bindchange="handleProxy" bindcolumnchange="handleProxy" class="_picker data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'6'}}" mode="multiSelector" range="{{sfondoorDateList}}" rangeKey="name" value="{{sfondoorDateIndex}}">
+                                    <view class="_p data-v-25674868">预约时间</view>
+                {{sfOnDoorDateForShow}}<label class="_span data-v-25674868">更改</label>
+                                </picker>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="_li data-v-25674868" wx:if="{{isShowCabinetMode}}">
+                    <view class="_dl data-v-25674868">
+                        <view catchtap="handleProxy" class="_dt data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'9'}}" wx:if="{{!!!customSource}}">
+                            <view class="_div data-v-25674868 left">
+                                <view class="_i data-v-25674868 {{isShowCabinetItem?'icon-select':'icon-unselect'}}"></view>快递柜</view>
+                            <view class="_div data-v-25674868 right" wx:if="{{isShowCabinetItem}}">
+                                <label catchtap="handleProxy" class="_span data-v-25674868 {{isShowFengchaoItem?'cabinet-style cabinet-choose-style':'cabinet-style'}}" data-comkey="{{$k}}" data-eventid="{{'7'}}" wx:if="{{isShowFengchaoMode}}">
+                                    <view class="_i data-v-25674868">
+                                        <view class="_u data-v-25674868"></view>
+                                    </view>丰巢柜机</label>
+                                <label catchtap="handleProxy" class="_span data-v-25674868 {{isShowSuDiYiItem?'cabinet-style cabinet-choose-style':'cabinet-style'}}" data-comkey="{{$k}}" data-eventid="{{'8'}}" wx:if="{{isShowSuDiYiMode}}">
+                                    <view class="_i data-v-25674868">
+                                        <view class="_u data-v-25674868"></view>
+                                    </view>速递易智能柜</label>
+                            </view>
+                        </view>
+                        <block wx:if="{{!!customSource}}">
+                            <view class="_dt data-v-25674868" wx:if="{{isShowSuDiYiItem}}">请使用速递易快递柜邮寄</view>
+                            <view class="_dt data-v-25674868" wx:if="{{isShowFengchaoItem}}">请使用丰巢智能柜进行邮寄</view>
+                        </block>
+                        <block wx:if="{{isShowCabinetItem}}">
+                            <block wx:if="{{!isShowNoFoundSuDiYiCabinet}}">
+                                <view class="_dd data-v-25674868" wx:if="{{isShowFengchaoItem}}">
+                                    <picker bindchange="handleProxy" bindcolumnchange="handleProxy" class="_picker data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'10'}}" mode="multiSelector" range="{{areaMultiArray}}" rangeKey="name" value="{{areaMultiIndex}}" wx:if="{{areaMultiArray&&areaMultiArray.length>0}}">{{areaPickerStr?areaPickerStr:'请选择您所在的省市区'}}
+                </picker>
+                                </view>
+                                <view class="_dd data-v-25674868" wx:if="{{!isShowSuDiYiItem||!(location&&!!location.address)}}">
+                                    <input id name bindinput="handleProxy" class="_input data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'11'}}" placeholder="请输入您的详细地址" type="text" value="{{cabinetExpressInfo.address}}"></input>
+                                </view>
+                                <view bindtap="handleProxy" class="_dd data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'12'}}">实名认证：<label class="_span data-v-25674868">{{isCheckRealName?'已认证':'未认证'}}></label>
+                                </view>
+                                <view class="_dd data-v-25674868" wx:if="{{logisticsCompanyList&&logisticsCompanyList.length>1}}">
+                                    <picker bindchange="handleProxy" class="_picker data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'13'}}" mode="selector" range="{{logisticsCompanyList}}" rangeKey="logisticsCompanyName" value="{{pickerLogisticsCompanyIndex}}">快递公司：<label class="_span data-v-25674868">{{cabinetLogisticsCompanyForShow}}</label>
+                                    </picker>
+                                </view>
+                                <view bindtap="handleProxy" class="_dd data-v-25674868 near-cabinet" data-comkey="{{$k}}" data-eventid="{{'14'}}" wx:if="{{!isShowNoFoundSuDiYiCabinet}}">
+                                    <view class="_div data-v-25674868 left">
+                                        <block wx:if="{{nearestCabinetDistance}}">最近的快递柜据您{{nearestCabinetDistance}}米</block>
+                                        <view class="_div data-v-25674868 cabinet-left-bottom">
+                                            <view class="_i data-v-25674868"></view>查看附近快递柜>></view>
+                                    </view>
+                                    <image alt class="_img data-v-25674868" src="{{nearCabinetImg}}"></image>
+                                </view>
+                                <view class="_dd data-v-25674868 fengcao-tips" wx:if="{{isShowFengchaoItem}}">丰巢智能柜将使用顺丰快递运送您的包裹</view>
+                            </block>
+                            <view class="_dd data-v-25674868 cabinet-nofound" wx:if="{{isShowNoFoundSuDiYiCabinet}}">抱歉，当前城市无法使用速递易智能柜</view>
+                        </block>
+                    </view>
+                </view>
+                <view class="_li data-v-25674868" wx:if="{{isShowOtherMode}}">
+                    <view class="_dl data-v-25674868">
+                        <view bindtap="handleProxy" class="_dt data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'16'}}">
+                            <view class="_div data-v-25674868 left">
+                                <view class="_i data-v-25674868 {{isShowOtherItem?'icon-select':'icon-unselect'}}"></view>自己联系快递
+            </view>
+                            <label bindtap="handleProxy" class="_span data-v-25674868" data-comkey="{{$k}}" data-eventid="{{'15'}}" wx:if="{{isShowOtherItem}}">运费说明</label>
+                        </view>
+                        <view class="_dd data-v-25674868 other-content" wx:if="{{isShowOtherItem}}">提交回收单后，寄件地址消息推送到您的手机</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_footer data-v-25674868"></view>
+    </view>
+</template>

@@ -1,0 +1,151 @@
+@import "../activity/private/private.wxss";
+
+.trouble-list.data-v-0f1e34da {
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    padding-bottom: 110rpx;
+}
+
+.trouble-list.isIphoneX.data-v-0f1e34da {
+    padding-bottom: 180rpx;
+}
+
+.trouble-list .trouble-item.data-v-0f1e34da {
+    padding-top: 24rpx;
+}
+
+.trouble-list .trouble-item .title.data-v-0f1e34da {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #666;
+    line-height: 44rpx;
+}
+
+.trouble-list .trouble-item .trouble-item-options.data-v-0f1e34da {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8rpx;
+}
+
+.trouble-list .trouble-item .trouble-item-options ._div.option-title.data-v-0f1e34da {
+    width: 430rpx;
+}
+
+.trouble-list .trouble-item .trouble-item-options ._li.data-v-0f1e34da {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: 84rpx;
+    border: 1rpx solid transparent;
+    border-bottom: 2rpx solid #f8f8f8;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #333;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    box-sizing: border-box;
+}
+
+.trouble-list .trouble-item .trouble-item-options ._li.checked.data-v-0f1e34da {
+    background: rgba(249,231,44,.15);
+    border: 1rpx solid #f9e72c;
+}
+
+.trouble-list .trouble-item .trouble-item-options ._li ._div.data-v-0f1e34da {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.trouble-list .trouble-item .trouble-item-options ._li ._div .price.data-v-0f1e34da {
+    font-weight: 700;
+}
+
+.trouble-list .trouble-item .trouble-item-options ._li ._div .price.data-v-0f1e34da:before {
+    content: "\FFE5";
+}
+
+.trouble-list .trouble-item .trouble-item-options ._li ._img.data-v-0f1e34da {
+    width: 36rpx;
+    height: 36rpx;
+    margin-left: 20rpx;
+}
+
+.trouble-list .footer.data-v-0f1e34da {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.trouble-list .footer.isIphoneX.data-v-0f1e34da {
+    height: 164rpx;
+    padding-bottom: 68rpx;
+}
+
+.trouble-list .footer .left.data-v-0f1e34da {
+    padding-left: 32rpx;
+    box-sizing: border-box;
+}
+
+.trouble-list .footer .left ._p.data-v-0f1e34da:first-child {
+    width: auto;
+    height: 40rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #fc6232;
+    line-height: 40rpx;
+    margin-top: 10rpx;
+}
+
+.trouble-list .footer .left ._p:first-child.price.data-v-0f1e34da {
+    font-size: 40rpx;
+}
+
+.trouble-list .footer .left ._p:first-child ._span.data-v-0f1e34da:first-child {
+    color: #333;
+    font-weight: 400;
+    font-size: 28rpx;
+}
+
+.trouble-list .footer .left ._p:first-child ._span.data-v-0f1e34da:first-child:after {
+    content: "\FFE5";
+    color: #fc6232;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.trouble-list .footer .left ._p.data-v-0f1e34da:last-child {
+    width: auto;
+    height: 36rpx;
+    font-size: 20rpx;
+    font-weight: 400;
+    color: #777;
+    line-height: 28rpx;
+}
+
+.trouble-list .footer .right.data-v-0f1e34da {
+    width: 300rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    background-color: #efefef;
+    color: #ccc;
+    font-size: 32rpx;
+    font-weight: 500;
+    text-align: center;
+}
+
+.trouble-list .footer .right.active.data-v-0f1e34da {
+    background: linear-gradient(90deg,#fff03b,#ffd629);
+    color: #111;
+}

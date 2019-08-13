@@ -1,0 +1,2582 @@
+	<!DOCTYPE html> 	<html lang="zh-CN"> 			<head> 				<meta charset="UTF-8" /> 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" /> 		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'"> 		<link rel="icon" href="data:image/ico;base64,aWNv">				<script> 			var __mainPageFrameReady__ = window.__mainPageFrameReady__ || function(){}; 			var __pageFrameStartTime__ = Date.now(); 			var __webviewId__; 			var __wxAppCode__={}; 			var __WXML_GLOBAL__={entrys:{},defines:{},modules:{},ops:[],wxs_nf_init:undefined,total_ops:0}; 			var __vd_version_info__=__vd_version_info__||{};			 
+			/*v0.5vv_20190514_syb_scopedata*/window.__wcc_version__='v0.5vv_20190514_syb_scopedata';window.__wcc_version_info__={"customComponents":true,"fixZeroRpx":true,"propValueDeepCopy":false};
+var $gwxc
+var $gaic={}
+$gwx=function(path,global){
+if(typeof global === 'undefined') global={};if(typeof __WXML_GLOBAL__ === 'undefined') {__WXML_GLOBAL__={};
+}__WXML_GLOBAL__.modules = __WXML_GLOBAL__.modules || {};
+function _(a,b){if(typeof(b)!='undefined')a.children.push(b);}
+function _v(k){if(typeof(k)!='undefined')return {tag:'virtual','wxKey':k,children:[]};return {tag:'virtual',children:[]};}
+function _n(tag){$gwxc++;if($gwxc>=16000){throw 'Dom limit exceeded, please check if there\'s any mistake you\'ve made.'};return {tag:'wx-'+tag,attr:{},children:[],n:[],raw:{},generics:{}}}
+function _p(a,b){b&&a.properities.push(b);}
+function _s(scope,env,key){return typeof(scope[key])!='undefined'?scope[key]:env[key]}
+function _wp(m){console.warn("WXMLRT_$gwx:"+m)}
+function _wl(tname,prefix){_wp(prefix+':-1:-1:-1: Template `' + tname + '` is being called recursively, will be stop.')}
+$gwn=console.warn;
+$gwl=console.log;
+function $gwh()
+{
+function x()
+{
+}
+x.prototype = 
+{
+hn: function( obj, all )
+{
+if( typeof(obj) == 'object' )
+{
+var cnt=0;
+var any1=false,any2=false;
+for(var x in obj)
+{
+any1=any1|x==='__value__';
+any2=any2|x==='__wxspec__';
+cnt++;
+if(cnt>2)break;
+}
+return cnt == 2 && any1 && any2 && ( all || obj.__wxspec__ !== 'm' || this.hn(obj.__value__) === 'h' ) ? "h" : "n";
+}
+return "n";
+},
+nh: function( obj, special )
+{
+return { __value__: obj, __wxspec__: special ? special : true }
+},
+rv: function( obj )
+{
+return this.hn(obj,true)==='n'?obj:this.rv(obj.__value__);
+},
+hm: function( obj )
+{
+if( typeof(obj) == 'object' )
+{
+var cnt=0;
+var any1=false,any2=false;
+for(var x in obj)
+{
+any1=any1|x==='__value__';
+any2=any2|x==='__wxspec__';
+cnt++;
+if(cnt>2)break;
+}
+return cnt == 2 && any1 && any2 && (obj.__wxspec__ === 'm' || this.hm(obj.__value__) );
+}
+return false;
+}
+}
+return new x;
+}
+wh=$gwh();
+function $gstack(s){
+var tmp=s.split('\n '+' '+' '+' ');
+for(var i=0;i<tmp.length;++i){
+if(0==i) continue;
+if(")"===tmp[i][tmp[i].length-1])
+tmp[i]=tmp[i].replace(/\s\(.*\)$/,"");
+else
+tmp[i]="at anonymous function";
+}
+return tmp.join('\n '+' '+' '+' ');
+}
+function $gwrt( should_pass_type_info )
+{
+function ArithmeticEv( ops, e, s, g, o )
+{
+var _f = false;
+var rop = ops[0][1];
+var _a,_b,_c,_d, _aa, _bb;
+switch( rop )
+{
+case '?:':
+_a = rev( ops[1], e, s, g, o, _f );
+_c = should_pass_type_info && ( wh.hn(_a) === 'h' );
+_d = wh.rv( _a ) ? rev( ops[2], e, s, g, o, _f ) : rev( ops[3], e, s, g, o, _f );
+_d = _c && wh.hn( _d ) === 'n' ? wh.nh( _d, 'c' ) : _d;
+return _d;
+break;
+case '&&':
+_a = rev( ops[1], e, s, g, o, _f );
+_c = should_pass_type_info && ( wh.hn(_a) === 'h' );
+_d = wh.rv( _a ) ? rev( ops[2], e, s, g, o, _f ) : wh.rv( _a );
+_d = _c && wh.hn( _d ) === 'n' ? wh.nh( _d, 'c' ) : _d;
+return _d;
+break;
+case '||':
+_a = rev( ops[1], e, s, g, o, _f );
+_c = should_pass_type_info && ( wh.hn(_a) === 'h' );
+_d = wh.rv( _a ) ? wh.rv(_a) : rev( ops[2], e, s, g, o, _f );
+_d = _c && wh.hn( _d ) === 'n' ? wh.nh( _d, 'c' ) : _d;
+return _d;
+break;
+case '+':
+case '*':
+case '/':
+case '%':
+case '|':
+case '^':
+case '&':
+case '===':
+case '==':
+case '!=':
+case '!==':
+case '>=':
+case '<=':
+case '>':
+case '<':
+case '<<':
+case '>>':
+_a = rev( ops[1], e, s, g, o, _f );
+_b = rev( ops[2], e, s, g, o, _f );
+_c = should_pass_type_info && (wh.hn( _a ) === 'h' || wh.hn( _b ) === 'h');
+switch( rop )
+{
+case '+':
+_d = wh.rv( _a ) + wh.rv( _b );
+break;
+case '*':
+_d = wh.rv( _a ) * wh.rv( _b );
+break;
+case '/':
+_d = wh.rv( _a ) / wh.rv( _b );
+break;
+case '%':
+_d = wh.rv( _a ) % wh.rv( _b );
+break;
+case '|':
+_d = wh.rv( _a ) | wh.rv( _b );
+break;
+case '^':
+_d = wh.rv( _a ) ^ wh.rv( _b );
+break;
+case '&':
+_d = wh.rv( _a ) & wh.rv( _b );
+break;
+case '===':
+_d = wh.rv( _a ) === wh.rv( _b );
+break;
+case '==':
+_d = wh.rv( _a ) == wh.rv( _b );
+break;
+case '!=':
+_d = wh.rv( _a ) != wh.rv( _b );
+break;
+case '!==':
+_d = wh.rv( _a ) !== wh.rv( _b );
+break;
+case '>=':
+_d = wh.rv( _a ) >= wh.rv( _b );
+break;
+case '<=':
+_d = wh.rv( _a ) <= wh.rv( _b );
+break;
+case '>':
+_d = wh.rv( _a ) > wh.rv( _b );
+break;
+case '<':
+_d = wh.rv( _a ) < wh.rv( _b );
+break;
+case '<<':
+_d = wh.rv( _a ) << wh.rv( _b );
+break;
+case '>>':
+_d = wh.rv( _a ) >> wh.rv( _b );
+break;
+default:
+break;
+}
+return _c ? wh.nh( _d, "c" ) : _d;
+break;
+case '-':
+_a = ops.length === 3 ? rev( ops[1], e, s, g, o, _f ) : 0;
+_b = ops.length === 3 ? rev( ops[2], e, s, g, o, _f ) : rev( ops[1], e, s, g, o, _f );
+_c = should_pass_type_info && (wh.hn( _a ) === 'h' || wh.hn( _b ) === 'h');
+_d = _c ? wh.rv( _a ) - wh.rv( _b ) : _a - _b;
+return _c ? wh.nh( _d, "c" ) : _d;
+break;
+case '!':
+_a = rev( ops[1], e, s, g, o, _f );
+_c = should_pass_type_info && (wh.hn( _a ) == 'h');
+_d = !wh.rv(_a);
+return _c ? wh.nh( _d, "c" ) : _d;
+case '~':
+_a = rev( ops[1], e, s, g, o, _f );
+_c = should_pass_type_info && (wh.hn( _a ) == 'h');
+_d = ~wh.rv(_a);
+return _c ? wh.nh( _d, "c" ) : _d;
+default:
+$gwn('unrecognized op' + rop );
+}
+}
+function rev( ops, e, s, g, o, newap )
+{
+var op = ops[0];
+var _f = false;
+if ( typeof newap !== "undefined" ) o.ap = newap;
+if( typeof(op)==='object' )
+{
+var vop=op[0];
+var _a, _aa, _b, _bb, _c, _d, _s, _e, _ta, _tb, _td;
+switch(vop)
+{
+case 2:
+return ArithmeticEv(ops,e,s,g,o);
+break;
+case 4: 
+return rev( ops[1], e, s, g, o, _f );
+break;
+case 5: 
+switch( ops.length )
+{
+case 2: 
+_a = rev( ops[1],e,s,g,o,_f );
+return should_pass_type_info?[_a]:[wh.rv(_a)];
+return [_a];
+break;
+case 1: 
+return [];
+break;
+default:
+_a = rev( ops[1],e,s,g,o,_f );
+_b = rev( ops[2],e,s,g,o,_f );
+_a.push( 
+should_pass_type_info ?
+_b :
+wh.rv( _b )
+);
+return _a;
+break;
+}
+break;
+case 6:
+_a = rev(ops[1],e,s,g,o);
+var ap = o.ap;
+_ta = wh.hn(_a)==='h';
+_aa = _ta ? wh.rv(_a) : _a;
+o.is_affected |= _ta;
+if( should_pass_type_info )
+{
+if( _aa===null || typeof(_aa) === 'undefined' )
+{
+return _ta ? wh.nh(undefined, 'e') : undefined;
+}
+_b = rev(ops[2],e,s,g,o,_f);
+_tb = wh.hn(_b) === 'h';
+_bb = _tb ? wh.rv(_b) : _b;
+o.ap = ap;
+o.is_affected |= _tb;
+if( _bb===null || typeof(_bb) === 'undefined' || 
+_bb === "__proto__" || _bb === "prototype" || _bb === "caller" ) 
+{
+return (_ta || _tb) ? wh.nh(undefined, 'e') : undefined;
+}
+_d = _aa[_bb];
+if ( typeof _d === 'function' && !ap ) _d = undefined;
+_td = wh.hn(_d)==='h';
+o.is_affected |= _td;
+return (_ta || _tb) ? (_td ? _d : wh.nh(_d, 'e')) : _d;
+}
+else
+{
+if( _aa===null || typeof(_aa) === 'undefined' )
+{
+return undefined;
+}
+_b = rev(ops[2],e,s,g,o,_f);
+_tb = wh.hn(_b) === 'h';
+_bb = _tb ? wh.rv(_b) : _b;
+o.ap = ap;
+o.is_affected |= _tb;
+if( _bb===null || typeof(_bb) === 'undefined' || 
+_bb === "__proto__" || _bb === "prototype" || _bb === "caller" ) 
+{
+return undefined;
+}
+_d = _aa[_bb];
+if ( typeof _d === 'function' && !ap ) _d = undefined;
+_td = wh.hn(_d)==='h';
+o.is_affected |= _td;
+return _td ? wh.rv(_d) : _d;
+}
+case 7: 
+switch(ops[1][0])
+{
+case 11:
+o.is_affected |= wh.hn(g)==='h';
+return g;
+case 3:
+_s = wh.rv( s );
+_e = wh.rv( e );
+_b = ops[1][1];
+if (g && g.f && g.f.hasOwnProperty(_b) )
+{
+_a = g.f;
+o.ap = true;
+}
+else
+{
+_a = _s && _s.hasOwnProperty(_b) ? 
+s : (_e && _e.hasOwnProperty(_b) ? e : undefined );
+}
+if( should_pass_type_info )
+{
+if( _a )
+{
+_ta = wh.hn(_a) === 'h';
+_aa = _ta ? wh.rv( _a ) : _a;
+_d = _aa[_b];
+_td = wh.hn(_d) === 'h';
+o.is_affected |= _ta || _td;
+_d = _ta && !_td ? wh.nh(_d,'e') : _d;
+return _d;
+}
+}
+else
+{
+if( _a )
+{
+_ta = wh.hn(_a) === 'h';
+_aa = _ta ? wh.rv( _a ) : _a;
+_d = _aa[_b];
+_td = wh.hn(_d) === 'h';
+o.is_affected |= _ta || _td;
+return wh.rv(_d);
+}
+}
+return undefined;
+}
+break;
+case 8: 
+_a = {};
+_a[ops[1]] = rev(ops[2],e,s,g,o,_f);
+return _a;
+break;
+case 9: 
+_a = rev(ops[1],e,s,g,o,_f);
+_b = rev(ops[2],e,s,g,o,_f);
+function merge( _a, _b, _ow )
+{
+var ka, _bbk;
+_ta = wh.hn(_a)==='h';
+_tb = wh.hn(_b)==='h';
+_aa = wh.rv(_a);
+_bb = wh.rv(_b);
+for(var k in _bb)
+{
+if ( _ow || !_aa.hasOwnProperty(k) )
+{
+_aa[k] = should_pass_type_info ? (_tb ? wh.nh(_bb[k],'e') : _bb[k]) : wh.rv(_bb[k]);
+}
+}
+return _a;
+}
+var _c = _a
+var _ow = true
+if ( typeof(ops[1][0]) === "object" && ops[1][0][0] === 10 ) {
+_a = _b
+_b = _c
+_ow = false
+}
+if ( typeof(ops[1][0]) === "object" && ops[1][0][0] === 10 ) {
+var _r = {}
+return merge( merge( _r, _a, _ow ), _b, _ow );
+}
+else
+return merge( _a, _b, _ow );
+break;
+case 10:
+_a = rev(ops[1],e,s,g,o,_f);
+_a = should_pass_type_info ? _a : wh.rv( _a );
+return _a ;
+break;
+case 12:
+var _r;
+_a = rev(ops[1],e,s,g,o);
+if ( !o.ap )
+{
+return should_pass_type_info && wh.hn(_a)==='h' ? wh.nh( _r, 'f' ) : _r;
+}
+var ap = o.ap;
+_b = rev(ops[2],e,s,g,o,_f);
+o.ap = ap;
+_ta = wh.hn(_a)==='h';
+_tb = _ca(_b);
+_aa = wh.rv(_a);	
+_bb = wh.rv(_b); snap_bb=$gdc(_bb,"nv_");
+try{
+_r = typeof _aa === "function" ? $gdc(_aa.apply(null, snap_bb)) : undefined;
+} catch (e){
+e.message = e.message.replace(/nv_/g,"");
+e.stack = e.stack.substring(0,e.stack.indexOf("\n", e.stack.lastIndexOf("at nv_")));
+e.stack = e.stack.replace(/\snv_/g," "); 
+e.stack = $gstack(e.stack);	
+if(g.debugInfo)
+{
+e.stack += "\n "+" "+" "+" at "+g.debugInfo[0]+":"+g.debugInfo[1]+":"+g.debugInfo[2];
+console.error(e);
+}
+_r = undefined;
+}
+return should_pass_type_info && (_tb || _ta) ? wh.nh( _r, 'f' ) : _r;
+}
+}
+else
+{
+if( op === 3 || op === 1) return ops[1];
+else if( op === 11 ) 
+{
+var _a='';
+for( var i = 1 ; i < ops.length ; i++ )
+{
+var xp = wh.rv(rev(ops[i],e,s,g,o,_f));
+_a += typeof(xp) === 'undefined' ? '' : xp;
+}
+return _a;
+}
+}
+}
+function wrapper( ops, e, s, g, o, newap )
+{
+if( ops[0] == '11182016' )
+{
+g.debugInfo = ops[2];
+return rev( ops[1], e, s, g, o, newap );
+}
+else
+{
+g.debugInfo = null;
+return rev( ops, e, s, g, o, newap );
+}
+}
+return wrapper;
+}
+gra=$gwrt(true); 
+grb=$gwrt(false); 
+function TestTest( expr, ops, e,s,g, expect_a, expect_b, expect_affected )
+{
+{
+var o = {is_affected:false};
+var a = gra( ops, e,s,g, o );
+if( JSON.stringify(a) != JSON.stringify( expect_a )
+|| o.is_affected != expect_affected )
+{
+console.warn( "A. " + expr + " get result " + JSON.stringify(a) + ", " + o.is_affected + ", but " + JSON.stringify( expect_a ) + ", " + expect_affected + " is expected" );
+}
+}
+{
+var o = {is_affected:false};
+var a = grb( ops, e,s,g, o );
+if( JSON.stringify(a) != JSON.stringify( expect_b )
+|| o.is_affected != expect_affected )
+{
+console.warn( "B. " + expr + " get result " + JSON.stringify(a) + ", " + o.is_affected + ", but " + JSON.stringify( expect_b ) + ", " + expect_affected + " is expected" );
+}
+}
+}
+
+function wfor( to_iter, func, env, _s, global, father, itemname, indexname, keyname )
+{
+var _n = wh.hn( to_iter ) === 'n'; 
+var scope = wh.rv( _s ); 
+var has_old_item = scope.hasOwnProperty(itemname);
+var has_old_index = scope.hasOwnProperty(indexname);
+var old_item = scope[itemname];
+var old_index = scope[indexname];
+var full = Object.prototype.toString.call(wh.rv(to_iter));
+var type = full[8]; 
+if( type === 'N' && full[10] === 'l' ) type = 'X'; 
+var _y;
+if( _n )
+{
+if( type === 'A' ) 
+{
+var r_iter_item;
+for( var i = 0 ; i < to_iter.length ; i++ )
+{
+scope[itemname] = to_iter[i];
+scope[indexname] = _n ? i : wh.nh(i, 'h');
+r_iter_item = wh.rv(to_iter[i]);
+var key = keyname && r_iter_item ? (keyname==="*this" ? r_iter_item : wh.rv(r_iter_item[keyname])) : undefined;
+_y = _v(key);
+_(father,_y);
+func( env, scope, _y, global );
+}
+}
+else if( type === 'O' ) 
+{
+var i = 0;
+var r_iter_item;
+for( var k in to_iter )
+{
+scope[itemname] = to_iter[k];
+scope[indexname] = _n ? k : wh.nh(k, 'h');
+r_iter_item = wh.rv(to_iter[k]);
+var key = keyname && r_iter_item ? (keyname==="*this" ? r_iter_item : wh.rv(r_iter_item[keyname])) : undefined;
+_y = _v(key);
+_(father,_y);
+func( env,scope,_y,global );
+i++;
+}
+}
+else if( type === 'S' ) 
+{
+for( var i = 0 ; i < to_iter.length ; i++ )
+{
+scope[itemname] = to_iter[i];
+scope[indexname] = _n ? i : wh.nh(i, 'h');
+_y = _v( to_iter[i] + i );
+_(father,_y);
+func( env,scope,_y,global );
+}
+}
+else if( type === 'N' ) 
+{
+for( var i = 0 ; i < to_iter ; i++ )
+{
+scope[itemname] = i;
+scope[indexname] = _n ? i : wh.nh(i, 'h');
+_y = _v( i );
+_(father,_y);
+func(env,scope,_y,global);
+}
+}
+else
+{
+}
+}
+else
+{
+var r_to_iter = wh.rv(to_iter);
+var r_iter_item, iter_item;
+if( type === 'A' ) 
+{
+for( var i = 0 ; i < r_to_iter.length ; i++ )
+{
+iter_item = r_to_iter[i];
+iter_item = wh.hn(iter_item)==='n' ? wh.nh(iter_item,'h') : iter_item;
+r_iter_item = wh.rv( iter_item );
+scope[itemname] = iter_item
+scope[indexname] = _n ? i : wh.nh(i, 'h');
+var key = keyname && r_iter_item ? (keyname==="*this" ? r_iter_item : wh.rv(r_iter_item[keyname])) : undefined;
+_y = _v(key);
+_(father,_y);
+func( env, scope, _y, global );
+}
+}
+else if( type === 'O' ) 
+{
+var i=0;
+for( var k in r_to_iter )
+{
+iter_item = r_to_iter[k];
+iter_item = wh.hn(iter_item)==='n'? wh.nh(iter_item,'h') : iter_item;
+r_iter_item = wh.rv( iter_item );
+scope[itemname] = iter_item;
+scope[indexname] = _n ? k : wh.nh(k, 'h');
+var key = keyname && r_iter_item ? (keyname==="*this" ? r_iter_item : wh.rv(r_iter_item[keyname])) : undefined;
+_y=_v(key);
+_(father,_y);
+func( env, scope, _y, global );
+i++
+}
+}
+else if( type === 'S' ) 
+{
+for( var i = 0 ; i < r_to_iter.length ; i++ )
+{
+iter_item = wh.nh(r_to_iter[i],'h');
+scope[itemname] = iter_item;
+scope[indexname] = _n ? i : wh.nh(i, 'h');
+_y = _v( to_iter[i] + i );
+_(father,_y);
+func( env, scope, _y, global );
+}
+}
+else if( type === 'N' ) 
+{
+for( var i = 0 ; i < r_to_iter ; i++ )
+{
+iter_item = wh.nh(i,'h');
+scope[itemname] = iter_item;
+scope[indexname]= _n ? i : wh.nh(i,'h');
+_y = _v( i );
+_(father,_y);
+func(env,scope,_y,global);
+}
+}
+else
+{
+}
+}
+if(has_old_item)
+{
+scope[itemname]=old_item;
+}
+else
+{
+delete scope[itemname];
+}
+if(has_old_index)
+{
+scope[indexname]=old_index;
+}
+else
+{
+delete scope[indexname];
+}
+}
+
+function _ca(o)
+{ 
+if ( wh.hn(o) == 'h' ) return true;
+if ( typeof o !== "object" ) return false;
+for(var i in o){ 
+if ( o.hasOwnProperty(i) ){
+if (_ca(o[i])) return true;
+}
+}
+return false;
+}
+function _da( node, attrname, opindex, raw, o )
+{
+var isaffected = false;
+var value = $gdc( raw, "", 2 );
+if ( o.ap && value && value.constructor===Function ) 
+{
+attrname = "$wxs:" + attrname; 
+node.attr["$gdc"] = $gdc;
+}
+if ( o.is_affected || _ca(raw) ) 
+{
+node.n.push( attrname );
+node.raw[attrname] = raw;
+}
+node.attr[attrname] = value;
+}
+function _r( node, attrname, opindex, env, scope, global ) 
+{
+global.opindex=opindex;
+var o = {}, _env;
+var a = grb( z[opindex], env, scope, global, o );
+_da( node, attrname, opindex, a, o );
+}
+function _rz( z, node, attrname, opindex, env, scope, global ) 
+{
+global.opindex=opindex;
+var o = {}, _env;
+var a = grb( z[opindex], env, scope, global, o );
+_da( node, attrname, opindex, a, o );
+}
+function _o( opindex, env, scope, global )
+{
+global.opindex=opindex;
+var nothing = {};
+var r = grb( z[opindex], env, scope, global, nothing );
+return (r&&r.constructor===Function) ? undefined : r;
+}
+function _oz( z, opindex, env, scope, global )
+{
+global.opindex=opindex;
+var nothing = {};
+var r = grb( z[opindex], env, scope, global, nothing );
+return (r&&r.constructor===Function) ? undefined : r;
+}
+function _1( opindex, env, scope, global, o )
+{
+var o = o || {};
+global.opindex=opindex;
+return gra( z[opindex], env, scope, global, o );
+}
+function _1z( z, opindex, env, scope, global, o )
+{
+var o = o || {};
+global.opindex=opindex;
+return gra( z[opindex], env, scope, global, o );
+}
+function _2( opindex, func, env, scope, global, father, itemname, indexname, keyname )
+{
+var o = {};
+var to_iter = _1( opindex, env, scope, global );
+wfor( to_iter, func, env, scope, global, father, itemname, indexname, keyname );
+}
+function _2z( z, opindex, func, env, scope, global, father, itemname, indexname, keyname )
+{
+var o = {};
+var to_iter = _1z( z, opindex, env, scope, global );
+wfor( to_iter, func, env, scope, global, father, itemname, indexname, keyname );
+}
+
+
+function _m(tag,attrs,generics,env,scope,global)
+{
+var tmp=_n(tag);
+var base=0;
+for(var i = 0 ; i < attrs.length ; i+=2 )
+{
+if(base+attrs[i+1]<0)
+{
+tmp.attr[attrs[i]]=true;
+}
+else
+{
+_r(tmp,attrs[i],base+attrs[i+1],env,scope,global);
+if(base===0)base=attrs[i+1];
+}
+}
+for(var i=0;i<generics.length;i+=2)
+{
+if(base+generics[i+1]<0)
+{
+tmp.generics[generics[i]]="";
+}
+else
+{
+var $t=grb(z[base+generics[i+1]],env,scope,global);
+if ($t!="") $t="wx-"+$t;
+tmp.generics[generics[i]]=$t;
+if(base===0)base=generics[i+1];
+}
+}
+return tmp;
+}
+function _mz(z,tag,attrs,generics,env,scope,global)
+{
+var tmp=_n(tag);
+var base=0;
+for(var i = 0 ; i < attrs.length ; i+=2 )
+{
+if(base+attrs[i+1]<0)
+{
+tmp.attr[attrs[i]]=true;
+}
+else
+{
+_rz(z, tmp,attrs[i],base+attrs[i+1],env,scope,global);
+if(base===0)base=attrs[i+1];
+}
+}
+for(var i=0;i<generics.length;i+=2)
+{
+if(base+generics[i+1]<0)
+{
+tmp.generics[generics[i]]="";
+}
+else
+{
+var $t=grb(z[base+generics[i+1]],env,scope,global);
+if ($t!="") $t="wx-"+$t;
+tmp.generics[generics[i]]=$t;
+if(base===0)base=generics[i+1];
+}
+}
+return tmp;
+}
+
+var nf_init=function(){
+if(typeof __WXML_GLOBAL__==="undefined"||undefined===__WXML_GLOBAL__.wxs_nf_init){
+nf_init_Object();nf_init_Function();nf_init_Array();nf_init_String();nf_init_Boolean();nf_init_Number();nf_init_Math();nf_init_Date();nf_init_RegExp();
+}
+if(typeof __WXML_GLOBAL__!=="undefined") __WXML_GLOBAL__.wxs_nf_init=true;
+};
+var nf_init_Object=function(){
+Object.defineProperty(Object.prototype,"nv_constructor",{writable:true,value:"Object"})
+Object.defineProperty(Object.prototype,"nv_toString",{writable:true,value:function(){return "[object Object]"}})
+}
+var nf_init_Function=function(){
+Object.defineProperty(Function.prototype,"nv_constructor",{writable:true,value:"Function"})
+Object.defineProperty(Function.prototype,"nv_length",{get:function(){return this.length;},set:function(){}});
+Object.defineProperty(Function.prototype,"nv_toString",{writable:true,value:function(){return "[function Function]"}})
+}
+var nf_init_Array=function(){
+Object.defineProperty(Array.prototype,"nv_toString",{writable:true,value:function(){return this.nv_join();}})
+Object.defineProperty(Array.prototype,"nv_join",{writable:true,value:function(s){
+s=undefined==s?',':s;
+var r="";
+for(var i=0;i<this.length;++i){
+if(0!=i) r+=s;
+if(null==this[i]||undefined==this[i]) r+='';	
+else if(typeof this[i]=='function') r+=this[i].nv_toString();
+else if(typeof this[i]=='object'&&this[i].nv_constructor==="Array") r+=this[i].nv_join();
+else r+=this[i].toString();
+}
+return r;
+}})
+Object.defineProperty(Array.prototype,"nv_constructor",{writable:true,value:"Array"})
+Object.defineProperty(Array.prototype,"nv_concat",{writable:true,value:Array.prototype.concat})
+Object.defineProperty(Array.prototype,"nv_pop",{writable:true,value:Array.prototype.pop})
+Object.defineProperty(Array.prototype,"nv_push",{writable:true,value:Array.prototype.push})
+Object.defineProperty(Array.prototype,"nv_reverse",{writable:true,value:Array.prototype.reverse})
+Object.defineProperty(Array.prototype,"nv_shift",{writable:true,value:Array.prototype.shift})
+Object.defineProperty(Array.prototype,"nv_slice",{writable:true,value:Array.prototype.slice})
+Object.defineProperty(Array.prototype,"nv_sort",{writable:true,value:Array.prototype.sort})
+Object.defineProperty(Array.prototype,"nv_splice",{writable:true,value:Array.prototype.splice})
+Object.defineProperty(Array.prototype,"nv_unshift",{writable:true,value:Array.prototype.unshift})
+Object.defineProperty(Array.prototype,"nv_indexOf",{writable:true,value:Array.prototype.indexOf})
+Object.defineProperty(Array.prototype,"nv_lastIndexOf",{writable:true,value:Array.prototype.lastIndexOf})
+Object.defineProperty(Array.prototype,"nv_every",{writable:true,value:Array.prototype.every})
+Object.defineProperty(Array.prototype,"nv_some",{writable:true,value:Array.prototype.some})
+Object.defineProperty(Array.prototype,"nv_forEach",{writable:true,value:Array.prototype.forEach})
+Object.defineProperty(Array.prototype,"nv_map",{writable:true,value:Array.prototype.map})
+Object.defineProperty(Array.prototype,"nv_filter",{writable:true,value:Array.prototype.filter})
+Object.defineProperty(Array.prototype,"nv_reduce",{writable:true,value:Array.prototype.reduce})
+Object.defineProperty(Array.prototype,"nv_reduceRight",{writable:true,value:Array.prototype.reduceRight})
+Object.defineProperty(Array.prototype,"nv_length",{get:function(){return this.length;},set:function(value){this.length=value;}});
+}
+var nf_init_String=function(){
+Object.defineProperty(String.prototype,"nv_constructor",{writable:true,value:"String"})
+Object.defineProperty(String.prototype,"nv_toString",{writable:true,value:String.prototype.toString})
+Object.defineProperty(String.prototype,"nv_valueOf",{writable:true,value:String.prototype.valueOf})
+Object.defineProperty(String.prototype,"nv_charAt",{writable:true,value:String.prototype.charAt})
+Object.defineProperty(String.prototype,"nv_charCodeAt",{writable:true,value:String.prototype.charCodeAt})
+Object.defineProperty(String.prototype,"nv_concat",{writable:true,value:String.prototype.concat})
+Object.defineProperty(String.prototype,"nv_indexOf",{writable:true,value:String.prototype.indexOf})
+Object.defineProperty(String.prototype,"nv_lastIndexOf",{writable:true,value:String.prototype.lastIndexOf})
+Object.defineProperty(String.prototype,"nv_localeCompare",{writable:true,value:String.prototype.localeCompare})
+Object.defineProperty(String.prototype,"nv_match",{writable:true,value:String.prototype.match})
+Object.defineProperty(String.prototype,"nv_replace",{writable:true,value:String.prototype.replace})
+Object.defineProperty(String.prototype,"nv_search",{writable:true,value:String.prototype.search})
+Object.defineProperty(String.prototype,"nv_slice",{writable:true,value:String.prototype.slice})
+Object.defineProperty(String.prototype,"nv_split",{writable:true,value:String.prototype.split})
+Object.defineProperty(String.prototype,"nv_substring",{writable:true,value:String.prototype.substring})
+Object.defineProperty(String.prototype,"nv_toLowerCase",{writable:true,value:String.prototype.toLowerCase})
+Object.defineProperty(String.prototype,"nv_toLocaleLowerCase",{writable:true,value:String.prototype.toLocaleLowerCase})
+Object.defineProperty(String.prototype,"nv_toUpperCase",{writable:true,value:String.prototype.toUpperCase})
+Object.defineProperty(String.prototype,"nv_toLocaleUpperCase",{writable:true,value:String.prototype.toLocaleUpperCase})
+Object.defineProperty(String.prototype,"nv_trim",{writable:true,value:String.prototype.trim})
+Object.defineProperty(String.prototype,"nv_length",{get:function(){return this.length;},set:function(value){this.length=value;}});
+}
+var nf_init_Boolean=function(){
+Object.defineProperty(Boolean.prototype,"nv_constructor",{writable:true,value:"Boolean"})
+Object.defineProperty(Boolean.prototype,"nv_toString",{writable:true,value:Boolean.prototype.toString})
+Object.defineProperty(Boolean.prototype,"nv_valueOf",{writable:true,value:Boolean.prototype.valueOf})
+}
+var nf_init_Number=function(){
+Object.defineProperty(Number,"nv_MAX_VALUE",{writable:false,value:Number.MAX_VALUE})
+Object.defineProperty(Number,"nv_MIN_VALUE",{writable:false,value:Number.MIN_VALUE})
+Object.defineProperty(Number,"nv_NEGATIVE_INFINITY",{writable:false,value:Number.NEGATIVE_INFINITY})
+Object.defineProperty(Number,"nv_POSITIVE_INFINITY",{writable:false,value:Number.POSITIVE_INFINITY})
+Object.defineProperty(Number.prototype,"nv_constructor",{writable:true,value:"Number"})
+Object.defineProperty(Number.prototype,"nv_toString",{writable:true,value:Number.prototype.toString})
+Object.defineProperty(Number.prototype,"nv_toLocaleString",{writable:true,value:Number.prototype.toLocaleString})
+Object.defineProperty(Number.prototype,"nv_valueOf",{writable:true,value:Number.prototype.valueOf})
+Object.defineProperty(Number.prototype,"nv_toFixed",{writable:true,value:Number.prototype.toFixed})
+Object.defineProperty(Number.prototype,"nv_toExponential",{writable:true,value:Number.prototype.toExponential})
+Object.defineProperty(Number.prototype,"nv_toPrecision",{writable:true,value:Number.prototype.toPrecision})
+}
+var nf_init_Math=function(){
+Object.defineProperty(Math,"nv_E",{writable:false,value:Math.E})
+Object.defineProperty(Math,"nv_LN10",{writable:false,value:Math.LN10})
+Object.defineProperty(Math,"nv_LN2",{writable:false,value:Math.LN2})
+Object.defineProperty(Math,"nv_LOG2E",{writable:false,value:Math.LOG2E})
+Object.defineProperty(Math,"nv_LOG10E",{writable:false,value:Math.LOG10E})
+Object.defineProperty(Math,"nv_PI",{writable:false,value:Math.PI})
+Object.defineProperty(Math,"nv_SQRT1_2",{writable:false,value:Math.SQRT1_2})
+Object.defineProperty(Math,"nv_SQRT2",{writable:false,value:Math.SQRT2})
+Object.defineProperty(Math,"nv_abs",{writable:false,value:Math.abs})
+Object.defineProperty(Math,"nv_acos",{writable:false,value:Math.acos})
+Object.defineProperty(Math,"nv_asin",{writable:false,value:Math.asin})
+Object.defineProperty(Math,"nv_atan",{writable:false,value:Math.atan})
+Object.defineProperty(Math,"nv_atan2",{writable:false,value:Math.atan2})
+Object.defineProperty(Math,"nv_ceil",{writable:false,value:Math.ceil})
+Object.defineProperty(Math,"nv_cos",{writable:false,value:Math.cos})
+Object.defineProperty(Math,"nv_exp",{writable:false,value:Math.exp})
+Object.defineProperty(Math,"nv_floor",{writable:false,value:Math.floor})
+Object.defineProperty(Math,"nv_log",{writable:false,value:Math.log})
+Object.defineProperty(Math,"nv_max",{writable:false,value:Math.max})
+Object.defineProperty(Math,"nv_min",{writable:false,value:Math.min})
+Object.defineProperty(Math,"nv_pow",{writable:false,value:Math.pow})
+Object.defineProperty(Math,"nv_random",{writable:false,value:Math.random})
+Object.defineProperty(Math,"nv_round",{writable:false,value:Math.round})
+Object.defineProperty(Math,"nv_sin",{writable:false,value:Math.sin})
+Object.defineProperty(Math,"nv_sqrt",{writable:false,value:Math.sqrt})
+Object.defineProperty(Math,"nv_tan",{writable:false,value:Math.tan})
+}
+var nf_init_Date=function(){
+Object.defineProperty(Date.prototype,"nv_constructor",{writable:true,value:"Date"})
+Object.defineProperty(Date,"nv_parse",{writable:true,value:Date.parse})
+Object.defineProperty(Date,"nv_UTC",{writable:true,value:Date.UTC})
+Object.defineProperty(Date,"nv_now",{writable:true,value:Date.now})
+Object.defineProperty(Date.prototype,"nv_toString",{writable:true,value:Date.prototype.toString})
+Object.defineProperty(Date.prototype,"nv_toDateString",{writable:true,value:Date.prototype.toDateString})
+Object.defineProperty(Date.prototype,"nv_toTimeString",{writable:true,value:Date.prototype.toTimeString})
+Object.defineProperty(Date.prototype,"nv_toLocaleString",{writable:true,value:Date.prototype.toLocaleString})
+Object.defineProperty(Date.prototype,"nv_toLocaleDateString",{writable:true,value:Date.prototype.toLocaleDateString})
+Object.defineProperty(Date.prototype,"nv_toLocaleTimeString",{writable:true,value:Date.prototype.toLocaleTimeString})
+Object.defineProperty(Date.prototype,"nv_valueOf",{writable:true,value:Date.prototype.valueOf})
+Object.defineProperty(Date.prototype,"nv_getTime",{writable:true,value:Date.prototype.getTime})
+Object.defineProperty(Date.prototype,"nv_getFullYear",{writable:true,value:Date.prototype.getFullYear})
+Object.defineProperty(Date.prototype,"nv_getUTCFullYear",{writable:true,value:Date.prototype.getUTCFullYear})
+Object.defineProperty(Date.prototype,"nv_getMonth",{writable:true,value:Date.prototype.getMonth})
+Object.defineProperty(Date.prototype,"nv_getUTCMonth",{writable:true,value:Date.prototype.getUTCMonth})
+Object.defineProperty(Date.prototype,"nv_getDate",{writable:true,value:Date.prototype.getDate})
+Object.defineProperty(Date.prototype,"nv_getUTCDate",{writable:true,value:Date.prototype.getUTCDate})
+Object.defineProperty(Date.prototype,"nv_getDay",{writable:true,value:Date.prototype.getDay})
+Object.defineProperty(Date.prototype,"nv_getUTCDay",{writable:true,value:Date.prototype.getUTCDay})
+Object.defineProperty(Date.prototype,"nv_getHours",{writable:true,value:Date.prototype.getHours})
+Object.defineProperty(Date.prototype,"nv_getUTCHours",{writable:true,value:Date.prototype.getUTCHours})
+Object.defineProperty(Date.prototype,"nv_getMinutes",{writable:true,value:Date.prototype.getMinutes})
+Object.defineProperty(Date.prototype,"nv_getUTCMinutes",{writable:true,value:Date.prototype.getUTCMinutes})
+Object.defineProperty(Date.prototype,"nv_getSeconds",{writable:true,value:Date.prototype.getSeconds})
+Object.defineProperty(Date.prototype,"nv_getUTCSeconds",{writable:true,value:Date.prototype.getUTCSeconds})
+Object.defineProperty(Date.prototype,"nv_getMilliseconds",{writable:true,value:Date.prototype.getMilliseconds})
+Object.defineProperty(Date.prototype,"nv_getUTCMilliseconds",{writable:true,value:Date.prototype.getUTCMilliseconds})
+Object.defineProperty(Date.prototype,"nv_getTimezoneOffset",{writable:true,value:Date.prototype.getTimezoneOffset})
+Object.defineProperty(Date.prototype,"nv_setTime",{writable:true,value:Date.prototype.setTime})
+Object.defineProperty(Date.prototype,"nv_setMilliseconds",{writable:true,value:Date.prototype.setMilliseconds})
+Object.defineProperty(Date.prototype,"nv_setUTCMilliseconds",{writable:true,value:Date.prototype.setUTCMilliseconds})
+Object.defineProperty(Date.prototype,"nv_setSeconds",{writable:true,value:Date.prototype.setSeconds})
+Object.defineProperty(Date.prototype,"nv_setUTCSeconds",{writable:true,value:Date.prototype.setUTCSeconds})
+Object.defineProperty(Date.prototype,"nv_setMinutes",{writable:true,value:Date.prototype.setMinutes})
+Object.defineProperty(Date.prototype,"nv_setUTCMinutes",{writable:true,value:Date.prototype.setUTCMinutes})
+Object.defineProperty(Date.prototype,"nv_setHours",{writable:true,value:Date.prototype.setHours})
+Object.defineProperty(Date.prototype,"nv_setUTCHours",{writable:true,value:Date.prototype.setUTCHours})
+Object.defineProperty(Date.prototype,"nv_setDate",{writable:true,value:Date.prototype.setDate})
+Object.defineProperty(Date.prototype,"nv_setUTCDate",{writable:true,value:Date.prototype.setUTCDate})
+Object.defineProperty(Date.prototype,"nv_setMonth",{writable:true,value:Date.prototype.setMonth})
+Object.defineProperty(Date.prototype,"nv_setUTCMonth",{writable:true,value:Date.prototype.setUTCMonth})
+Object.defineProperty(Date.prototype,"nv_setFullYear",{writable:true,value:Date.prototype.setFullYear})
+Object.defineProperty(Date.prototype,"nv_setUTCFullYear",{writable:true,value:Date.prototype.setUTCFullYear})
+Object.defineProperty(Date.prototype,"nv_toUTCString",{writable:true,value:Date.prototype.toUTCString})
+Object.defineProperty(Date.prototype,"nv_toISOString",{writable:true,value:Date.prototype.toISOString})
+Object.defineProperty(Date.prototype,"nv_toJSON",{writable:true,value:Date.prototype.toJSON})
+}
+var nf_init_RegExp=function(){
+Object.defineProperty(RegExp.prototype,"nv_constructor",{writable:true,value:"RegExp"})
+Object.defineProperty(RegExp.prototype,"nv_exec",{writable:true,value:RegExp.prototype.exec})
+Object.defineProperty(RegExp.prototype,"nv_test",{writable:true,value:RegExp.prototype.test})
+Object.defineProperty(RegExp.prototype,"nv_toString",{writable:true,value:RegExp.prototype.toString})
+Object.defineProperty(RegExp.prototype,"nv_source",{get:function(){return this.source;},set:function(){}});
+Object.defineProperty(RegExp.prototype,"nv_global",{get:function(){return this.global;},set:function(){}});
+Object.defineProperty(RegExp.prototype,"nv_ignoreCase",{get:function(){return this.ignoreCase;},set:function(){}});
+Object.defineProperty(RegExp.prototype,"nv_multiline",{get:function(){return this.multiline;},set:function(){}});
+Object.defineProperty(RegExp.prototype,"nv_lastIndex",{get:function(){return this.lastIndex;},set:function(v){this.lastIndex=v;}});
+}
+nf_init();
+var nv_getDate=function(){var args=Array.prototype.slice.call(arguments);args.unshift(Date);return new(Function.prototype.bind.apply(Date, args));}
+var nv_getRegExp=function(){var args=Array.prototype.slice.call(arguments);args.unshift(RegExp);return new(Function.prototype.bind.apply(RegExp, args));}
+var nv_console={}
+nv_console.nv_log=function(){var res="WXSRT:";for(var i=0;i<arguments.length;++i)res+=arguments[i]+" ";console.log(res);}
+var nv_parseInt = parseInt, nv_parseFloat = parseFloat, nv_isNaN = isNaN, nv_isFinite = isFinite, nv_decodeURI = decodeURI, nv_decodeURIComponent = decodeURIComponent, nv_encodeURI = encodeURI, nv_encodeURIComponent = encodeURIComponent;
+function $gdc(o,p,r) {
+o=wh.rv(o);
+if(o===null||o===undefined) return o;
+if(o.constructor===String||o.constructor===Boolean||o.constructor===Number) return o;
+if(o.constructor===Object){
+var copy={};
+for(var k in o)
+if(o.hasOwnProperty(k))
+if(undefined===p) copy[k.substring(3)]=$gdc(o[k],p,r);
+else copy[p+k]=$gdc(o[k],p,r);
+return copy;
+}
+if(o.constructor===Array){
+var copy=[];
+for(var i=0;i<o.length;i++) copy.push($gdc(o[i],p,r));
+return copy;
+}
+if(o.constructor===Date){
+var copy=new Date();
+copy.setTime(o.getTime());
+return copy;
+}
+if(o.constructor===RegExp){
+var f="";
+if(o.global) f+="g";
+if(o.ignoreCase) f+="i";
+if(o.multiline) f+="m";
+return (new RegExp(o.source,f));
+}
+if(r&&o.constructor===Function){
+if ( r == 1 ) return $gdc(o(),undefined, 2);
+if ( r == 2 ) return o;
+}
+return null;
+}
+var nv_JSON={}
+nv_JSON.nv_stringify=function(o){
+JSON.stringify(o);
+return JSON.stringify($gdc(o));
+}
+nv_JSON.nv_parse=function(o){
+if(o===undefined) return undefined;
+var t=JSON.parse(o);
+return $gdc(t,'nv_');
+}
+
+function _af(p, a, c){
+p.extraAttr = {"t_action": a, "t_cid": c};
+}
+
+function _gv( )
+{if( typeof( window.__webview_engine_version__) == 'undefined' ) return 0.0;
+return window.__webview_engine_version__;}
+function _ai(i,p,e,me,r,c){var x=_grp(p,e,me);if(x)i.push(x);else{i.push('');_wp(me+':import:'+r+':'+c+': Path `'+p+'` not found from `'+me+'`.')}}
+function _grp(p,e,me){if(p[0]!='/'){var mepart=me.split('/');mepart.pop();var ppart=p.split('/');for(var i=0;i<ppart.length;i++){if( ppart[i]=='..')mepart.pop();else if(!ppart[i]||ppart[i]=='.')continue;else mepart.push(ppart[i]);}p=mepart.join('/');}if(me[0]=='.'&&p[0]=='/')p='.'+p;if(e[p])return p;if(e[p+'.wxml'])return p+'.wxml';}
+function _gd(p,c,e,d){if(!c)return;if(d[p][c])return d[p][c];for(var x=e[p].i.length-1;x>=0;x--){if(e[p].i[x]&&d[e[p].i[x]][c])return d[e[p].i[x]][c]};for(var x=e[p].ti.length-1;x>=0;x--){var q=_grp(e[p].ti[x],e,p);if(q&&d[q][c])return d[q][c]}var ii=_gapi(e,p);for(var x=0;x<ii.length;x++){if(ii[x]&&d[ii[x]][c])return d[ii[x]][c]}for(var k=e[p].j.length-1;k>=0;k--)if(e[p].j[k]){for(var q=e[e[p].j[k]].ti.length-1;q>=0;q--){var pp=_grp(e[e[p].j[k]].ti[q],e,p);if(pp&&d[pp][c]){return d[pp][c]}}}}
+function _gapi(e,p){if(!p)return [];if($gaic[p]){return $gaic[p]};var ret=[],q=[],h=0,t=0,put={},visited={};q.push(p);visited[p]=true;t++;while(h<t){var a=q[h++];for(var i=0;i<e[a].ic.length;i++){var nd=e[a].ic[i];var np=_grp(nd,e,a);if(np&&!visited[np]){visited[np]=true;q.push(np);t++;}}for(var i=0;a!=p&&i<e[a].ti.length;i++){var ni=e[a].ti[i];var nm=_grp(ni,e,a);if(nm&&!put[nm]){put[nm]=true;ret.push(nm);}}}$gaic[p]=ret;return ret;}
+var $ixc={};function _ic(p,ent,me,e,s,r,gg){var x=_grp(p,ent,me);ent[me].j.push(x);if(x){if($ixc[x]){_wp('-1:include:-1:-1: `'+p+'` is being included in a loop, will be stop.');return;}$ixc[x]=true;try{ent[x].f(e,s,r,gg)}catch(e){}$ixc[x]=false;}else{_wp(me+':include:-1:-1: Included path `'+p+'` not found from `'+me+'`.')}}
+function _w(tn,f,line,c){_wp(f+':template:'+line+':'+c+': Template `'+tn+'` not found.');}function _ev(dom){var changed=false;delete dom.properities;delete dom.n;if(dom.children){do{changed=false;var newch = [];for(var i=0;i<dom.children.length;i++){var ch=dom.children[i];if( ch.tag=='virtual'){changed=true;for(var j=0;ch.children&&j<ch.children.length;j++){newch.push(ch.children[j]);}}else { newch.push(ch); } } dom.children = newch; }while(changed);for(var i=0;i<dom.children.length;i++){_ev(dom.children[i]);}} return dom; }
+function _tsd( root )
+{
+if( root.tag == "wx-wx-scope" ) 
+{
+root.tag = "virtual";
+root.wxCkey = "11";
+root['wxScopeData'] = root.attr['wx:scope-data'];
+delete root.n;
+delete root.raw;
+delete root.generics;
+delete root.attr;
+}
+for( var i = 0 ; root.children && i < root.children.length ; i++ )
+{
+_tsd( root.children[i] );
+}
+return root;
+}
+
+var e_={}
+if(typeof(global.entrys)==='undefined')global.entrys={};e_=global.entrys;
+var d_={}
+if(typeof(global.defines)==='undefined')global.defines={};d_=global.defines;
+var f_={}
+if(typeof(global.modules)==='undefined')global.modules={};f_=global.modules || {};
+var p_={}
+__WXML_GLOBAL__.ops_cached = __WXML_GLOBAL__.ops_cached || {}
+__WXML_GLOBAL__.ops_set = __WXML_GLOBAL__.ops_set || {};
+__WXML_GLOBAL__.ops_init = __WXML_GLOBAL__.ops_init || {};
+var z=__WXML_GLOBAL__.ops_set.$gwx || [];
+function gz$gwx_1(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_1)return __WXML_GLOBAL__.ops_cached.$gwx_1
+__WXML_GLOBAL__.ops_cached.$gwx_1=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([a,[3,'share'],[[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,' en'],[1,'']],[[2,'?:'],[[2,'==='],[[7],[3,'page']],[1,'index']],[1,' index'],[1,'']],[[2,'?:'],[[2,'==='],[[7],[3,'page']],[1,'test']],[1,' test'],[1,'']],[[2,'?:'],[[2,'==='],[[7],[3,'page']],[1,'search']],[1,' search'],[1,'']]])
+Z(z[0][1])
+Z([a,[3,'display: '],[[2,'?:'],[[2,'==='],[[7],[3,'page']],[1,'test']],[1,'none'],[1,'block']],[3,';']])
+Z([[7],[3,'shareIconSrc']])
+Z([a,[[6],[[6],[[7],[3,'i18n']],[[7],[3,'language']]],[3,'share']]])
+Z([a,[3,'cs'],[[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,' en'],[1,'']],z[0][3],z[0][4],z[0][5]])
+Z([3,'contact'])
+Z([[7],[3,'talkIconSrc']])
+Z([a,[[6],[[6],[[7],[3,'i18n']],[[7],[3,'language']]],[3,'feedback']]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_1);return __WXML_GLOBAL__.ops_cached.$gwx_1
+}
+function gz$gwx_2(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_2)return __WXML_GLOBAL__.ops_cached.$gwx_2
+__WXML_GLOBAL__.ops_cached.$gwx_2=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([a,[3,'fav-hint'],[[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,' en'],[1,'']]])
+Z([a,[3,'display: '],[[2,'?:'],[[7],[3,'showFavHint']],[1,'block'],[1,'none']],[3,';']])
+Z([a,[[6],[[6],[[7],[3,'i18n']],[[7],[3,'language']]],[3,'addToMyMiniPrograms']]])
+Z([3,'hideFavHint'])
+Z([3,'close-fav-hint'])
+})(__WXML_GLOBAL__.ops_cached.$gwx_2);return __WXML_GLOBAL__.ops_cached.$gwx_2
+}
+function gz$gwx_3(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_3)return __WXML_GLOBAL__.ops_cached.$gwx_3
+__WXML_GLOBAL__.ops_cached.$gwx_3=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'wrapper'])
+Z([3,'list'])
+Z([3,'true'])
+Z(z[2])
+Z(z[2])
+Z([3,'item'])
+Z([[7],[3,'menu']])
+Z([3,'tapItem'])
+Z([3,'admin-menu-item'])
+Z([[6],[[7],[3,'item']],[3,'path']])
+Z([a,[[6],[[7],[3,'item']],[3,'title']]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_3);return __WXML_GLOBAL__.ops_cached.$gwx_3
+}
+function gz$gwx_4(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_4)return __WXML_GLOBAL__.ops_cached.$gwx_4
+__WXML_GLOBAL__.ops_cached.$gwx_4=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'wrapper'])
+Z([3,'submitNewTrashForm'])
+Z([3,'success'])
+Z([a,[3,'display: '],[[2,'?:'],[[7],[3,'success']],[1,'block'],[1,'none']]])
+Z([a,[[2,'?:'],[[7],[3,'editing']],[1,'修改'],[1,'提交']],[3,'成功！']])
+Z([3,'submitNewTrash'])
+Z([3,'name'])
+Z([3,'名称'])
+Z([3,'text'])
+Z([[7],[3,'name']])
+Z([3,'initials'])
+Z([3,'首字母缩写'])
+Z(z[8])
+Z([[7],[3,'initials']])
+Z([3,'alias'])
+Z([3,'别名'])
+Z(z[8])
+Z([[7],[3,'alias']])
+Z([3,'changeCat'])
+Z([[7],[3,'cats']])
+Z([[7],[3,'cat_index']])
+Z([3,'picker'])
+Z([a,[3,'类别：'],[[6],[[7],[3,'cats']],[[7],[3,'cat_index']]]])
+Z([[7],[3,'submitting']])
+Z([3,'submit'])
+Z([3,'submitBtn'])
+Z([3,'primary'])
+Z([a,z[4][1]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_4);return __WXML_GLOBAL__.ops_cached.$gwx_4
+}
+function gz$gwx_5(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_5)return __WXML_GLOBAL__.ops_cached.$gwx_5
+__WXML_GLOBAL__.ops_cached.$gwx_5=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'wrapper'])
+Z([3,'list-wrapper'])
+Z([3,'list'])
+Z([3,'true'])
+Z(z[3])
+Z(z[3])
+Z([3,'item'])
+Z([[7],[3,'data']])
+Z(z[6])
+Z([3,'index'])
+Z([3,'check'])
+Z([a,z[10],[[2,'?:'],[[2,'=='],[[6],[[7],[3,'item']],[3,'is_finished']],[1,1]],[1,' checked'],[1,'']]])
+Z([[6],[[7],[3,'item']],[3,'id']])
+Z([[7],[3,'index']])
+Z([[2,'?:'],[[2,'=='],[[6],[[7],[3,'item']],[3,'is_finished']],[1,1]],[1,'line-through'],[1,'']])
+Z([a,[[6],[[7],[3,'item']],[3,'content']]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_5);return __WXML_GLOBAL__.ops_cached.$gwx_5
+}
+function gz$gwx_6(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_6)return __WXML_GLOBAL__.ops_cached.$gwx_6
+__WXML_GLOBAL__.ops_cached.$gwx_6=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'wrapper'])
+Z([3,'searchWrapper'])
+Z([3,'searchOnFocus'])
+Z([3,'searchOnTyping'])
+Z([[7],[3,'searchTextFocus']])
+Z([3,'search'])
+Z([3,'搜索垃圾'])
+Z([a,[3,'width: '],[[2,'?:'],[[7],[3,'searching']],[1,'620rpx'],[1,'700rpx']],[3,';']])
+Z([3,'text'])
+Z([[7],[3,'searchText']])
+Z([3,'magnifier'])
+Z([[7],[3,'magnifierSrc']])
+Z([3,'cancelSearch'])
+Z(z[12])
+Z([a,[3,'display: '],[[2,'?:'],[[7],[3,'searching']],[1,'block'],[1,'none']],z[7][3]])
+Z([3,'取消'])
+Z([3,'list-wrapper'])
+Z([a,z[14][1],[[2,'?:'],[[7],[3,'searching']],[1,'none'],[1,'block']],z[7][3]])
+Z([3,'list'])
+Z([3,'true'])
+Z(z[19])
+Z(z[19])
+Z([3,'sectionIndex'])
+Z([3,'section'])
+Z([[7],[3,'data']])
+Z(z[23])
+Z([a,z[23],[[7],[3,'sectionIndex']]])
+Z([3,'cat'])
+Z([a,[[6],[[7],[3,'cats']],[[7],[3,'sectionIndex']]]])
+Z([3,'item'])
+Z([[7],[3,'section']])
+Z([3,'showItem'])
+Z(z[29])
+Z([[6],[[7],[3,'item']],[3,'a']])
+Z([[6],[[7],[3,'item']],[3,'c']])
+Z([[6],[[7],[3,'item']],[3,'id']])
+Z([[6],[[7],[3,'item']],[3,'i']])
+Z([[6],[[7],[3,'item']],[3,'n']])
+Z([a,[[6],[[7],[3,'item']],[3,'n']]])
+Z([3,'search-list-wrapper'])
+Z([a,z[14][1],z[14][2]])
+Z(z[19])
+Z([3,'results'])
+Z(z[19])
+Z(z[19])
+Z([3,'result'])
+Z([[7],[3,'searchResults']])
+Z(z[31])
+Z(z[45])
+Z([[6],[[7],[3,'result']],[3,'a']])
+Z([[6],[[7],[3,'result']],[3,'c']])
+Z([[6],[[7],[3,'result']],[3,'id']])
+Z([[6],[[7],[3,'result']],[3,'i']])
+Z([[6],[[7],[3,'result']],[3,'n']])
+Z([a,[[6],[[7],[3,'result']],[3,'n']]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_6);return __WXML_GLOBAL__.ops_cached.$gwx_6
+}
+function gz$gwx_7(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_7)return __WXML_GLOBAL__.ops_cached.$gwx_7
+__WXML_GLOBAL__.ops_cached.$gwx_7=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([[7],[3,'language']])
+Z([3,'true'])
+Z([3,'downloads'])
+Z(z[1])
+Z(z[1])
+Z([3,'downloadIndex'])
+Z([3,'download'])
+Z([[7],[3,'downloads']])
+Z([3,'download-wrapper'])
+Z([3,'widthFix'])
+Z([[7],[3,'download']])
+Z([[2,'==='],[[7],[3,'writePhotosAlbumStatus']],[1,0]])
+Z([3,'authorizeWritePhotosAlbum'])
+Z([[7],[3,'downloadIndex']])
+Z([a,[[6],[[7],[3,'i18n']],[3,'authorizeSaveImageToAlbum']]])
+Z([[2,'==='],[[7],[3,'writePhotosAlbumStatus']],[1,1]])
+Z([3,'saveImageToAlbum'])
+Z(z[13])
+Z([a,[[6],[[7],[3,'i18n']],[3,'saveImageToAlbum']]])
+Z([[2,'==='],[[7],[3,'writePhotosAlbumStatus']],[1,2]])
+Z([3,'openSetting'])
+Z(z[13])
+Z(z[20])
+Z([a,[[6],[[7],[3,'i18n']],[3,'allowSaveImageToAlbum']]])
+Z(z[1])
+Z([a,[[6],[[7],[3,'i18n']],[3,'savedSuccessfully']]])
+Z(z[0])
+Z(z[6])
+})(__WXML_GLOBAL__.ops_cached.$gwx_7);return __WXML_GLOBAL__.ops_cached.$gwx_7
+}
+function gz$gwx_8(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_8)return __WXML_GLOBAL__.ops_cached.$gwx_8
+__WXML_GLOBAL__.ops_cached.$gwx_8=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'true'])
+Z([3,'feature'])
+Z(z[0])
+Z(z[0])
+Z([3,'index'])
+Z([3,'item'])
+Z([[7],[3,'featureData']])
+Z(z[5])
+Z([[6],[[7],[3,'item']],[3,'imageSrc']])
+Z([3,'item-title'])
+Z([a,[[6],[[6],[[7],[3,'item']],[3,'title']],[[7],[3,'language']]]])
+Z([a,[3,'item-cat'],[[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,' en'],[1,'']]])
+Z([a,[3,'color: '],[[2,'?:'],[[2,'<'],[[6],[[7],[3,'item']],[3,'cat']],[1,4]],[[2,'+'],[[2,'+'],[[2,'+'],[[2,'+'],[[2,'+'],[[2,'+'],[1,'rgb('],[[6],[[6],[[6],[[7],[3,'allCats']],[[6],[[7],[3,'cats']],[[6],[[7],[3,'item']],[3,'cat']]]],[3,'color']],[3,'r']]],[1,', ']],[[6],[[6],[[6],[[7],[3,'allCats']],[[6],[[7],[3,'cats']],[[6],[[7],[3,'item']],[3,'cat']]]],[3,'color']],[3,'g']]],[1,', ']],[[6],[[6],[[6],[[7],[3,'allCats']],[[6],[[7],[3,'cats']],[[6],[[7],[3,'item']],[3,'cat']]]],[3,'color']],[3,'b']]],[1,')']],[1,'#333333']],[3,';']])
+Z([a,[[2,'?:'],[[2,'<'],[[6],[[7],[3,'item']],[3,'cat']],[1,4]],[[6],[[6],[[6],[[7],[3,'allCats']],[[6],[[7],[3,'cats']],[[6],[[7],[3,'item']],[3,'cat']]]],[3,'name']],[[7],[3,'language']]],[[6],[[6],[[7],[3,'extraCats']],[1,4]],[[7],[3,'language']]]]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_8);return __WXML_GLOBAL__.ops_cached.$gwx_8
+}
+function gz$gwx_9(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_9)return __WXML_GLOBAL__.ops_cached.$gwx_9
+__WXML_GLOBAL__.ops_cached.$gwx_9=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([[7],[3,'language']])
+Z([3,'true'])
+Z([3,'features'])
+Z(z[1])
+Z(z[1])
+Z([3,'featureIndex'])
+Z([3,'feature'])
+Z([[7],[3,'features']])
+Z([3,'goToFeature'])
+Z(z[6])
+Z([[7],[3,'featureIndex']])
+Z([[6],[[7],[3,'feature']],[3,'imageSrc']])
+Z([a,[[6],[[6],[[7],[3,'feature']],[3,'title']],[[7],[3,'language']]]])
+Z(z[0])
+Z(z[2])
+})(__WXML_GLOBAL__.ops_cached.$gwx_9);return __WXML_GLOBAL__.ops_cached.$gwx_9
+}
+function gz$gwx_10(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_10)return __WXML_GLOBAL__.ops_cached.$gwx_10
+__WXML_GLOBAL__.ops_cached.$gwx_10=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([[7],[3,'language']])
+Z([3,'fakeSearchWrapper'])
+Z([3,'startSearch'])
+Z([3,'fakeSearch'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'searchPlaceholder']]])
+Z([3,'magnifier'])
+Z([[7],[3,'magnifierSrc']])
+Z([3,'side'])
+Z([3,'cat'])
+Z([[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']])
+Z([3,'switchSection'])
+Z([a,z[8],[[2,'?:'],[[2,'=='],[[7],[3,'activeSectionId']],[[7],[3,'index']]],[1,' active'],[1,'']],[[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,' en'],[1,'']]])
+Z([a,z[8],[[7],[3,'index']]])
+Z([3,'cat-bg'])
+Z([a,[3,'background-color: rgba('],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[7],[3,'cat']]],[3,'color']],[3,'r']],[3,', '],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[7],[3,'cat']]],[3,'color']],[3,'g']],[3,', '],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[7],[3,'cat']]],[3,'color']],[3,'b']],[3,', 1);']])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[7],[3,'cat']]],[3,'name']],[[7],[3,'language']]]])
+Z([3,'showQr'])
+Z([3,'qrCode'])
+Z([[7],[3,'qrBSrc']])
+Z([3,'showTips'])
+Z([3,'tipsBtn'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'friendlyReminder']]])
+Z([3,'list-wrapper'])
+Z([a,[3,'bottom: '],[[2,'?:'],[[7],[3,'withAd']],[1,'200rpx'],[1,'0rpx']],[3,';']])
+Z([3,'sectionIndex'])
+Z([3,'section'])
+Z([[7],[3,'data']])
+Z([3,'loadMoreItems'])
+Z([3,'list'])
+Z([3,'true'])
+Z(z[29])
+Z(z[29])
+Z([a,[3,'display: '],[[2,'?:'],[[2,'=='],[[7],[3,'activeSectionId']],[[7],[3,'sectionIndex']]],[1,'block'],[1,'none']],z[23][3]])
+Z(z[25])
+Z([a,z[25],[[7],[3,'sectionIndex']]])
+Z([3,'cat-intro-wrapper'])
+Z([a,z[14][1],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'sectionIndex']]]],[3,'color']],[3,'r']],z[14][3],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'sectionIndex']]]],[3,'color']],[3,'g']],z[14][3],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'sectionIndex']]]],[3,'color']],[3,'b']],[3,', 0.1);']])
+Z([3,'section-icon'])
+Z([[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'sectionIndex']]]],[3,'imageSrc']])
+Z([[2,'==='],[[7],[3,'sectionIndex']],[1,0]])
+Z([3,'cat-intro'])
+Z([3,'cat-description'])
+Z([3,'b'])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,0]]],[3,'name']],[[7],[3,'language']]]])
+Z([a,[3,' '],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,0]]],[3,'intro']],[[7],[3,'language']]]])
+Z([3,'throw-tips-title'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'throwingRequirements']]])
+Z([3,'item'])
+Z([[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,0]]],[3,'requirements']],[[7],[3,'language']]])
+Z([3,'throw-tip'])
+Z([a,[[7],[3,'item']]])
+Z([[2,'==='],[[7],[3,'sectionIndex']],[1,1]])
+Z(z[40])
+Z(z[41])
+Z(z[42])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,1]]],[3,'name']],[[7],[3,'language']]]])
+Z([a,z[44][1],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,1]]],[3,'intro']],[[7],[3,'language']]]])
+Z(z[45])
+Z([a,z[46][1]])
+Z(z[47])
+Z([[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,1]]],[3,'requirements']],[[7],[3,'language']]])
+Z(z[49])
+Z([a,z[50][1]])
+Z([[2,'==='],[[7],[3,'sectionIndex']],[1,2]])
+Z(z[40])
+Z(z[41])
+Z(z[42])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,2]]],[3,'name']],[[7],[3,'language']]]])
+Z([a,z[44][1],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,2]]],[3,'intro']],[[7],[3,'language']]]])
+Z(z[45])
+Z([a,z[46][1]])
+Z(z[47])
+Z([[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,2]]],[3,'requirements']],[[7],[3,'language']]])
+Z(z[49])
+Z([a,z[50][1]])
+Z(z[40])
+Z(z[41])
+Z(z[42])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,3]]],[3,'name']],[[7],[3,'language']]]])
+Z([a,z[44][1],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,3]]],[3,'intro']],[[7],[3,'language']]]])
+Z(z[45])
+Z([a,z[46][1]])
+Z(z[47])
+Z([[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[1,3]]],[3,'requirements']],[[7],[3,'language']]])
+Z(z[49])
+Z([a,z[50][1]])
+Z([3,'itemIndex'])
+Z(z[47])
+Z([[7],[3,'section']])
+Z([[2,'<'],[[7],[3,'itemIndex']],[[6],[[7],[3,'loadedItems']],[[7],[3,'sectionIndex']]]])
+Z(z[47])
+Z(z[34][2])
+Z([[6],[[7],[3,'item']],[3,'n']])
+Z([3,'item-hover'])
+Z([a,[[6],[[7],[3,'item']],[3,'n']]])
+Z([3,'hideDetail'])
+Z([3,'detailOverlay'])
+Z([a,z[32][1],[[2,'?:'],[[7],[3,'showingDetail']],[1,'block'],[1,'none']],z[23][3]])
+Z([a,[3,'detail-'],[[7],[3,'detailCatIndex']]])
+Z([3,'detail'])
+Z([a,z[32][1],z[97][2],z[23][3]])
+Z([3,'detailItemName'])
+Z([a,[[7],[3,'detailItemName']]])
+Z([3,'detailBelongToText'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'belong']]])
+Z([3,'detailCatIcon'])
+Z([[6],[[6],[[7],[3,'cats']],[[7],[3,'detailCatIndex']]],[3,'imageSrc']])
+Z([3,'hideTips'])
+Z([3,'tipsOverlay'])
+Z([a,z[32][1],[[2,'?:'],[[7],[3,'showingTips']],[1,'block'],[1,'none']],z[23][3]])
+Z([3,'tips'])
+Z([a,z[32][1],z[109][2],z[23][3]])
+Z([a,[[6],[[7],[3,'i18n']],[3,'reminder']]])
+Z(z[0])
+Z([[7],[3,'page']])
+Z([3,'hideQr'])
+Z([3,'qrDownloadOverlay'])
+Z([a,z[32][1],[[2,'?:'],[[7],[3,'showQr']],[1,'block'],[1,'none']],z[23][3]])
+Z([3,'qrDownloadWrapper'])
+Z([a,z[32][1],z[117][2],z[23][3]])
+Z([[7],[3,'wsgQrSrc']])
+Z([[2,'==='],[[7],[3,'writePhotosAlbumStatus']],[1,0]])
+Z([3,'authorizeWritePhotosAlbum'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'authorizeSaveQrCodeToAlbum']]])
+Z([[2,'==='],[[7],[3,'writePhotosAlbumStatus']],[1,1]])
+Z([3,'saveQrToAlbum'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'saveQrCodeToAlbum']]])
+Z([[2,'==='],[[7],[3,'writePhotosAlbumStatus']],[1,2]])
+Z([3,'openSetting'])
+Z(z[128])
+Z([a,[[6],[[7],[3,'i18n']],[3,'allowSaveQrCodeToAlbum']]])
+Z(z[29])
+Z([a,[[6],[[7],[3,'i18n']],[3,'savedSuccessfully']]])
+Z(z[115])
+Z(z[115])
+})(__WXML_GLOBAL__.ops_cached.$gwx_10);return __WXML_GLOBAL__.ops_cached.$gwx_10
+}
+function gz$gwx_11(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_11)return __WXML_GLOBAL__.ops_cached.$gwx_11
+__WXML_GLOBAL__.ops_cached.$gwx_11=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'wrapper'])
+Z([3,'searchWrapper'])
+Z([3,'searchOffFocus'])
+Z([3,'searchOnFocus'])
+Z([3,'searchOnTyping'])
+Z([[7],[3,'searchTextFocus']])
+Z([3,'search'])
+Z([[6],[[7],[3,'i18n']],[3,'searchPlaceholder']])
+Z([3,'text'])
+Z([[7],[3,'searchText']])
+Z([3,'magnifier'])
+Z([[7],[3,'magnifierSrc']])
+Z([3,'clearSearchText'])
+Z(z[12])
+Z([a,[3,'display: '],[[2,'?:'],[[2,'>'],[[6],[[7],[3,'searchText']],[3,'length']],[1,0]],[1,'block'],[1,'none']],[3,';']])
+Z([3,'cancelSearch'])
+Z([[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,'en'],[1,'']])
+Z(z[15])
+Z([a,[[6],[[7],[3,'i18n']],[3,'cancel']]])
+Z([3,'searchOverlay'])
+Z([3,'true'])
+Z([3,'results'])
+Z(z[20])
+Z(z[20])
+Z([3,'result'])
+Z([[7],[3,'searchResults']])
+Z(z[24])
+Z([[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]])
+Z([[6],[[7],[3,'result']],[3,'n']])
+Z([a,[3,'color: '],[[2,'?:'],[[2,'<'],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]],[1,4]],[[2,'+'],[[2,'+'],[[2,'+'],[[2,'+'],[[2,'+'],[[2,'+'],[1,'rgb('],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]]]],[3,'color']],[3,'r']]],[1,', ']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]]]],[3,'color']],[3,'g']]],[1,', ']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]]]],[3,'color']],[3,'b']]],[1,')']],[1,'#333333']],z[14][3]])
+Z([a,[[6],[[7],[3,'result']],[3,'n']],[3,' ['],[[2,'?:'],[[2,'<'],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]],[1,4]],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]]]],[3,'name']],[[7],[3,'language']]],[[6],[[6],[[7],[3,'extraCats']],[[2,'-'],[[6],[[7],[3,'result']],[3,'c']],[1,1]]],[[7],[3,'language']]]],[3,']']])
+Z([3,'searchWithNoResultsIcon'])
+Z([[7],[3,'crySrc']])
+Z([a,z[14][1],[[2,'?:'],[[7],[3,'searchWithNoResults']],[1,'block'],[1,'none']],z[14][3]])
+Z([3,'searchWithNoResultsText'])
+Z([a,z[14][1],z[33][2],z[14][3]])
+Z([3,'没有找到您要的结果'])
+Z([3,'submitKeyword'])
+Z([3,'searchWithNoResultsSubmit'])
+Z([a,z[14][1],[[2,'?:'],[[7],[3,'submittedKeyword']],[1,'none'],[[2,'?:'],[[7],[3,'searchWithNoResults']],[1,'block'],[1,'none']]],z[14][3]])
+Z([a,[3,'点击这里把 \x22'],[[7],[3,'searchText']],[3,'\x22 提交给我们吧']])
+Z([3,'submitKeywordStatus'])
+Z([a,z[14][1],[[2,'?:'],[[7],[3,'submittedKeyword']],[1,'block'],[1,'none']],z[14][3]])
+Z([a,[[7],[3,'submitKeywordStatus']]])
+Z([3,'hideDetail'])
+Z([3,'detailOverlay'])
+Z([a,z[14][1],[[2,'?:'],[[7],[3,'showingDetail']],[1,'block'],[1,'none']],z[14][3]])
+Z([a,[3,'detail-'],[[7],[3,'detailCatIndex']]])
+Z([3,'detail'])
+Z([a,z[14][1],z[46][2],z[14][3]])
+Z([3,'detailItemName'])
+Z([a,[[7],[3,'detailItemName']]])
+Z([3,'detailBelongToText'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'belong']]])
+Z([3,'detailCatIcon'])
+Z([[6],[[6],[[7],[3,'cats']],[[7],[3,'detailCatIndex']]],[3,'imageSrc']])
+Z([[7],[3,'language']])
+Z([[7],[3,'page']])
+})(__WXML_GLOBAL__.ops_cached.$gwx_11);return __WXML_GLOBAL__.ops_cached.$gwx_11
+}
+function gz$gwx_12(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_12)return __WXML_GLOBAL__.ops_cached.$gwx_12
+__WXML_GLOBAL__.ops_cached.$gwx_12=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'true'])
+Z([3,'settings'])
+Z(z[0])
+Z(z[0])
+Z([3,'cityIndex'])
+Z([3,'city'])
+Z([[7],[3,'cities']])
+Z([3,'chooseCity'])
+Z(z[5])
+Z([[7],[3,'cityIndex']])
+Z([a,[[6],[[6],[[7],[3,'city']],[3,'name']],[[7],[3,'language']]]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_12);return __WXML_GLOBAL__.ops_cached.$gwx_12
+}
+function gz$gwx_13(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_13)return __WXML_GLOBAL__.ops_cached.$gwx_13
+__WXML_GLOBAL__.ops_cached.$gwx_13=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'true'])
+Z([3,'settings'])
+Z(z[0])
+Z(z[0])
+Z([3,'setting-title'])
+Z([a,[[6],[[6],[[6],[[7],[3,'settings']],[3,'language']],[3,'title']],[[7],[3,'language']]]])
+Z([3,'setting'])
+Z([3,'item'])
+Z([[6],[[6],[[7],[3,'settings']],[3,'language']],[3,'data']])
+Z([3,'chooseLanguage'])
+Z([a,[3,'setting-item'],[[2,'?:'],[[2,'==='],[[6],[[7],[3,'item']],[3,'key']],[[7],[3,'language']]],[1,' checked'],[1,'']]])
+Z([[6],[[7],[3,'item']],[3,'key']])
+Z([a,[[6],[[7],[3,'item']],[3,'name']]])
+Z(z[4])
+Z([a,[[6],[[6],[[6],[[7],[3,'settings']],[3,'city']],[3,'title']],[[7],[3,'language']]]])
+Z(z[6])
+Z(z[7])
+Z([[7],[3,'cities']])
+Z([3,'chooseCity'])
+Z([a,z[10][1],[[2,'?:'],[[2,'==='],[[6],[[7],[3,'item']],[3,'key']],[[7],[3,'city']]],[1,' checked'],[1,'']]])
+Z(z[11])
+Z([a,[[6],[[6],[[7],[3,'item']],[3,'name']],[[7],[3,'language']]]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_13);return __WXML_GLOBAL__.ops_cached.$gwx_13
+}
+function gz$gwx_14(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_14)return __WXML_GLOBAL__.ops_cached.$gwx_14
+__WXML_GLOBAL__.ops_cached.$gwx_14=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'wrapper'])
+Z([[7],[3,'language']])
+Z([3,'quizzes'])
+Z([3,'quizIndex'])
+Z([3,'quiz'])
+Z([[7],[3,'quizzes']])
+Z([a,z[4],[[2,'?:'],[[2,'==='],[[7],[3,'currentQ']],[[7],[3,'quizIndex']]],[1,' active'],[[2,'?:'],[[2,'>'],[[7],[3,'currentQ']],[[7],[3,'quizIndex']]],[1,' out'],[1,' in']]]])
+Z([3,'quiz-index'])
+Z([a,[[2,'?:'],[[2,'<'],[[7],[3,'quizIndex']],[1,9]],[[2,'+'],[1,'0'],[[2,'+'],[[7],[3,'quizIndex']],[1,1]]],[[2,'+'],[[7],[3,'quizIndex']],[1,1]]],[3,' ']])
+Z([a,[3,'/ '],[[7],[3,'totalQuizzes']]])
+Z([3,'quiz-q'])
+Z([[6],[[7],[3,'quiz']],[3,'q']])
+Z([a,[[6],[[7],[3,'quiz']],[3,'n']]])
+Z([3,'quiz-options'])
+Z([3,'catIndex'])
+Z([3,'cat'])
+Z([3,'cats'])
+Z([3,'select'])
+Z([a,[3,'quiz-option quiz-option-'],[[4],[[5],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'catIndex']]]]],[[2,'?:'],[[2,'==='],[[6],[[7],[3,'answers']],[[7],[3,'quizIndex']]],[[7],[3,'catIndex']]],[1,' selected'],[1,'']]])
+Z([[7],[3,'catIndex']])
+Z([[7],[3,'quizIndex']])
+Z([[2,'?:'],[[2,'==='],[[7],[3,'language']],[1,'en']],[1,' en'],[1,'']])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'catIndex']]]],[3,'name']],[[7],[3,'language']]]])
+Z([[2,'?:'],[[2,'>'],[[7],[3,'currentQ']],[[2,'-'],[[7],[3,'totalQuizzes']],[1,1]]],[1,'in'],[1,'']])
+Z([3,'quizResult'])
+Z([3,'score'])
+Z([a,[[7],[3,'score']],[[6],[[7],[3,'i18n']],[3,'points']]])
+Z([3,'resultSheet'])
+Z([3,'index'])
+Z([3,'answer'])
+Z([[7],[3,'answers']])
+Z([3,'result-row'])
+Z([3,'result-quiz-name'])
+Z([a,[[6],[[6],[[7],[3,'quizzes']],[[7],[3,'index']]],[3,'n']]])
+Z([3,'result-my-answer'])
+Z([a,[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[7],[3,'answer']]]],[3,'name']],[[7],[3,'language']]]])
+Z([a,[3,'result-right-answer'],[[2,'?:'],[[2,'==='],[[7],[3,'answer']],[[2,'-'],[[6],[[6],[[7],[3,'quizzes']],[[7],[3,'index']]],[3,'c']],[1,1]]],[1,' right-answer'],[1,'']]])
+Z([a,[[2,'?:'],[[2,'==='],[[7],[3,'answer']],[[2,'-'],[[6],[[6],[[7],[3,'quizzes']],[[7],[3,'index']]],[3,'c']],[1,1]]],[1,''],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cats']],[[6],[[6],[[6],[[6],[[7],[3,'config']],[3,'cities']],[[7],[3,'city']]],[3,'cats']],[[2,'-'],[[6],[[6],[[7],[3,'quizzes']],[[7],[3,'index']]],[3,'c']],[1,1]]]],[3,'name']],[[7],[3,'language']]]]])
+Z([3,'actions'])
+Z([3,'restart'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'testAgain']]])
+Z([3,'share'])
+Z(z[41])
+Z([a,[[6],[[7],[3,'i18n']],[3,'testFriends']]])
+Z([3,'toIndex'])
+Z([3,'viewMore'])
+Z([a,[[6],[[7],[3,'i18n']],[3,'viewMore']]])
+Z(z[1])
+Z([[7],[3,'page']])
+Z([3,'adWrapper'])
+Z([3,'closeAd'])
+Z([3,'withoutAd'])
+Z([3,'withAd'])
+Z([3,'adunit-7e79fb8e9ceabea0'])
+})(__WXML_GLOBAL__.ops_cached.$gwx_14);return __WXML_GLOBAL__.ops_cached.$gwx_14
+}
+__WXML_GLOBAL__.ops_set.$gwx=z;
+__WXML_GLOBAL__.ops_init.$gwx=true;
+var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
+}}}()
+var x=['./components/actions/actions.wxml','./components/add_to_my_miniapps/add_to_my_miniapps.wxml','./pages/admin/index/index.wxml','./pages/admin/new_trash/new_trash.wxml','./pages/admin/submit_list/submit_list.wxml','./pages/admin/trash_list/trash_list.wxml','./pages/download/download.wxml','./pages/feature/feature.wxml','./pages/features/features.wxml','./pages/index/index.wxml','./pages/search/search.wxml','./pages/settings/cities/cities.wxml','./pages/settings/settings.wxml','./pages/test/test.wxml'];d_[x[0]]={}
+var m0=function(e,s,r,gg){
+var z=gz$gwx_1()
+var oB=_mz(z,'button',['class',0,'openType',1,'style',1],[],e,s,gg)
+var xC=_n('image')
+_rz(z,xC,'src',3,e,s,gg)
+_(oB,xC)
+var oD=_n('text')
+var fE=_oz(z,4,e,s,gg)
+_(oD,fE)
+_(oB,oD)
+_(r,oB)
+var cF=_mz(z,'button',['class',5,'openType',1],[],e,s,gg)
+var hG=_n('image')
+_rz(z,hG,'src',7,e,s,gg)
+_(cF,hG)
+var oH=_n('text')
+var cI=_oz(z,8,e,s,gg)
+_(oH,cI)
+_(cF,oH)
+_(r,cF)
+return r
+}
+e_[x[0]]={f:m0,j:[],i:[],ti:[],ic:[]}
+d_[x[1]]={}
+var m1=function(e,s,r,gg){
+var z=gz$gwx_2()
+var lK=_mz(z,'view',['class',0,'style',1],[],e,s,gg)
+var aL=_n('text')
+var tM=_oz(z,2,e,s,gg)
+_(aL,tM)
+_(lK,aL)
+var eN=_mz(z,'view',['bindtap',3,'class',1],[],e,s,gg)
+_(lK,eN)
+_(r,lK)
+return r
+}
+e_[x[1]]={f:m1,j:[],i:[],ti:[],ic:[]}
+d_[x[2]]={}
+var m2=function(e,s,r,gg){
+var z=gz$gwx_3()
+var oP=_n('view')
+_rz(z,oP,'id',0,e,s,gg)
+var xQ=_mz(z,'scroll-view',['class',1,'enableBackToTop',1,'scrollWithAnimation',2,'scrollY',3],[],e,s,gg)
+var oR=_v()
+_(xQ,oR)
+var fS=function(hU,cT,oV,gg){
+var oX=_mz(z,'view',['bindtap',7,'class',1,'data-path',2],[],hU,cT,gg)
+var lY=_oz(z,10,hU,cT,gg)
+_(oX,lY)
+_(oV,oX)
+return oV
+}
+oR.wxXCkey=2
+_2z(z,6,fS,e,s,gg,oR,'item','index','')
+_(oP,xQ)
+_(r,oP)
+return r
+}
+e_[x[2]]={f:m2,j:[],i:[],ti:[],ic:[]}
+d_[x[3]]={}
+var m3=function(e,s,r,gg){
+var z=gz$gwx_4()
+var t1=_n('view')
+_rz(z,t1,'id',0,e,s,gg)
+var e2=_n('view')
+_rz(z,e2,'id',1,e,s,gg)
+var b3=_mz(z,'view',['id',2,'style',1],[],e,s,gg)
+var o4=_oz(z,4,e,s,gg)
+_(b3,o4)
+_(e2,b3)
+var x5=_n('form')
+_rz(z,x5,'bindsubmit',5,e,s,gg)
+var o6=_mz(z,'input',['name',6,'placeholder',1,'type',2,'value',3],[],e,s,gg)
+_(x5,o6)
+var f7=_mz(z,'input',['name',10,'placeholder',1,'type',2,'value',3],[],e,s,gg)
+_(x5,f7)
+var c8=_mz(z,'input',['name',14,'placeholder',1,'type',2,'value',3],[],e,s,gg)
+_(x5,c8)
+var h9=_mz(z,'picker',['bindchange',18,'range',1,'value',2],[],e,s,gg)
+var o0=_n('view')
+_rz(z,o0,'class',21,e,s,gg)
+var cAB=_oz(z,22,e,s,gg)
+_(o0,cAB)
+_(h9,o0)
+_(x5,h9)
+var oBB=_mz(z,'button',['disabled',23,'formType',1,'id',2,'type',3],[],e,s,gg)
+var lCB=_oz(z,27,e,s,gg)
+_(oBB,lCB)
+_(x5,oBB)
+_(e2,x5)
+_(t1,e2)
+_(r,t1)
+return r
+}
+e_[x[3]]={f:m3,j:[],i:[],ti:[],ic:[]}
+d_[x[4]]={}
+var m4=function(e,s,r,gg){
+var z=gz$gwx_5()
+var tEB=_n('view')
+_rz(z,tEB,'id',0,e,s,gg)
+var eFB=_n('view')
+_rz(z,eFB,'class',1,e,s,gg)
+var bGB=_mz(z,'scroll-view',['class',2,'enableBackToTop',1,'scrollWithAnimation',2,'scrollY',3],[],e,s,gg)
+var oHB=_v()
+_(bGB,oHB)
+var xIB=function(fKB,oJB,cLB,gg){
+var oNB=_n('view')
+_rz(z,oNB,'class',8,fKB,oJB,gg)
+var cOB=_mz(z,'view',['bindtap',10,'class',1,'data-item-id',2,'data-message-index',3],[],fKB,oJB,gg)
+_(oNB,cOB)
+var oPB=_n('text')
+_rz(z,oPB,'class',14,fKB,oJB,gg)
+var lQB=_oz(z,15,fKB,oJB,gg)
+_(oPB,lQB)
+_(oNB,oPB)
+_(cLB,oNB)
+return cLB
+}
+oHB.wxXCkey=2
+_2z(z,7,xIB,e,s,gg,oHB,'item','index','')
+_(eFB,bGB)
+_(tEB,eFB)
+_(r,tEB)
+return r
+}
+e_[x[4]]={f:m4,j:[],i:[],ti:[],ic:[]}
+d_[x[5]]={}
+var m5=function(e,s,r,gg){
+var z=gz$gwx_6()
+var tSB=_n('view')
+_rz(z,tSB,'id',0,e,s,gg)
+var eTB=_n('view')
+_rz(z,eTB,'id',1,e,s,gg)
+var bUB=_mz(z,'input',['bindfocus',2,'bindinput',1,'focus',2,'id',3,'placeholder',4,'style',5,'type',6,'value',7],[],e,s,gg)
+_(eTB,bUB)
+var oVB=_mz(z,'image',['id',10,'src',1],[],e,s,gg)
+_(eTB,oVB)
+var xWB=_mz(z,'text',['bindtap',12,'id',1,'style',2],[],e,s,gg)
+var oXB=_oz(z,15,e,s,gg)
+_(xWB,oXB)
+_(eTB,xWB)
+_(tSB,eTB)
+var fYB=_mz(z,'view',['class',16,'style',1],[],e,s,gg)
+var cZB=_mz(z,'scroll-view',['class',18,'enableBackToTop',1,'scrollWithAnimation',2,'scrollY',3],[],e,s,gg)
+var h1B=_v()
+_(cZB,h1B)
+var o2B=function(o4B,c3B,l5B,gg){
+var t7B=_mz(z,'view',['class',25,'id',1],[],o4B,c3B,gg)
+var e8B=_n('text')
+_rz(z,e8B,'class',27,o4B,c3B,gg)
+var b9B=_oz(z,28,o4B,c3B,gg)
+_(e8B,b9B)
+_(t7B,e8B)
+var o0B=_v()
+_(t7B,o0B)
+var xAC=function(fCC,oBC,cDC,gg){
+var oFC=_mz(z,'view',['bindtap',31,'class',1,'data-item-alias',2,'data-item-cat',3,'data-item-id',4,'data-item-initials',5,'data-item-name',6],[],fCC,oBC,gg)
+var cGC=_oz(z,38,fCC,oBC,gg)
+_(oFC,cGC)
+_(cDC,oFC)
+return cDC
+}
+o0B.wxXCkey=2
+_2z(z,30,xAC,o4B,c3B,gg,o0B,'item','index','')
+_(l5B,t7B)
+return l5B
+}
+h1B.wxXCkey=2
+_2z(z,24,o2B,e,s,gg,h1B,'section','sectionIndex','')
+_(fYB,cZB)
+_(tSB,fYB)
+var oHC=_mz(z,'view',['class',39,'style',1],[],e,s,gg)
+var lIC=_mz(z,'scroll-view',['enableBackToTop',41,'id',1,'scrollWithAnimatio',2,'scrollY',3],[],e,s,gg)
+var aJC=_v()
+_(lIC,aJC)
+var tKC=function(bMC,eLC,oNC,gg){
+var oPC=_mz(z,'view',['bindtap',47,'class',1,'data-item-alias',2,'data-item-cat',3,'data-item-id',4,'data-item-initials',5,'data-item-name',6],[],bMC,eLC,gg)
+var fQC=_oz(z,54,bMC,eLC,gg)
+_(oPC,fQC)
+_(oNC,oPC)
+return oNC
+}
+aJC.wxXCkey=2
+_2z(z,46,tKC,e,s,gg,aJC,'result','index','')
+_(oHC,lIC)
+_(tSB,oHC)
+_(r,tSB)
+return r
+}
+e_[x[5]]={f:m5,j:[],i:[],ti:[],ic:[]}
+d_[x[6]]={}
+var m6=function(e,s,r,gg){
+var z=gz$gwx_7()
+var hSC=_n('add-to-my-miniapps')
+_rz(z,hSC,'language',0,e,s,gg)
+_(r,hSC)
+var oTC=_mz(z,'scroll-view',['enableBackToTop',1,'id',1,'scrollWithAnimation',2,'scrollY',3],[],e,s,gg)
+var cUC=_v()
+_(oTC,cUC)
+var oVC=function(aXC,lWC,tYC,gg){
+var b1C=_n('view')
+_rz(z,b1C,'class',8,aXC,lWC,gg)
+var x3C=_mz(z,'image',['mode',9,'src',1],[],aXC,lWC,gg)
+_(b1C,x3C)
+var o2C=_v()
+_(b1C,o2C)
+if(_oz(z,11,aXC,lWC,gg)){o2C.wxVkey=1
+var o4C=_mz(z,'button',['bindtap',12,'data-download-index',1],[],aXC,lWC,gg)
+var f5C=_oz(z,14,aXC,lWC,gg)
+_(o4C,f5C)
+_(o2C,o4C)
+}
+else if(_oz(z,15,aXC,lWC,gg)){o2C.wxVkey=2
+var c6C=_mz(z,'button',['bindtap',16,'data-download-index',1],[],aXC,lWC,gg)
+var h7C=_oz(z,18,aXC,lWC,gg)
+_(c6C,h7C)
+_(o2C,c6C)
+}
+else if(_oz(z,19,aXC,lWC,gg)){o2C.wxVkey=3
+var o8C=_mz(z,'button',['bindopensetting',20,'data-download-index',1,'openType',2],[],aXC,lWC,gg)
+var c9C=_oz(z,23,aXC,lWC,gg)
+_(o8C,c9C)
+_(o2C,o8C)
+}
+else{o2C.wxVkey=4
+var o0C=_n('button')
+_rz(z,o0C,'disabled',24,aXC,lWC,gg)
+var lAD=_oz(z,25,aXC,lWC,gg)
+_(o0C,lAD)
+_(o2C,o0C)
+}
+o2C.wxXCkey=1
+_(tYC,b1C)
+return tYC
+}
+cUC.wxXCkey=2
+_2z(z,7,oVC,e,s,gg,cUC,'download','downloadIndex','')
+_(r,oTC)
+var aBD=_mz(z,'actions',['language',26,'page',1],[],e,s,gg)
+_(r,aBD)
+return r
+}
+e_[x[6]]={f:m6,j:[],i:[],ti:[],ic:[]}
+d_[x[7]]={}
+var m7=function(e,s,r,gg){
+var z=gz$gwx_8()
+var eDD=_mz(z,'scroll-view',['enableBackToTop',0,'id',1,'scrollWithAnimation',1,'scrollY',2],[],e,s,gg)
+var bED=_v()
+_(eDD,bED)
+var oFD=function(oHD,xGD,fID,gg){
+var hKD=_n('view')
+_rz(z,hKD,'class',7,oHD,xGD,gg)
+var oLD=_n('image')
+_rz(z,oLD,'src',8,oHD,xGD,gg)
+_(hKD,oLD)
+var cMD=_n('text')
+_rz(z,cMD,'class',9,oHD,xGD,gg)
+var oND=_oz(z,10,oHD,xGD,gg)
+_(cMD,oND)
+_(hKD,cMD)
+var lOD=_mz(z,'text',['class',11,'style',1],[],oHD,xGD,gg)
+var aPD=_oz(z,13,oHD,xGD,gg)
+_(lOD,aPD)
+_(hKD,lOD)
+_(fID,hKD)
+return fID
+}
+bED.wxXCkey=2
+_2z(z,6,oFD,e,s,gg,bED,'item','index','')
+_(r,eDD)
+return r
+}
+e_[x[7]]={f:m7,j:[],i:[],ti:[],ic:[]}
+d_[x[8]]={}
+var m8=function(e,s,r,gg){
+var z=gz$gwx_9()
+var eRD=_n('add-to-my-miniapps')
+_rz(z,eRD,'language',0,e,s,gg)
+_(r,eRD)
+var bSD=_mz(z,'scroll-view',['enableBackToTop',1,'id',1,'scrollWithAnimation',2,'scrollY',3],[],e,s,gg)
+var oTD=_v()
+_(bSD,oTD)
+var xUD=function(fWD,oVD,cXD,gg){
+var oZD=_mz(z,'view',['bindtap',8,'class',1,'data-feature-index',2],[],fWD,oVD,gg)
+var c1D=_n('image')
+_rz(z,c1D,'src',11,fWD,oVD,gg)
+_(oZD,c1D)
+var o2D=_n('text')
+var l3D=_oz(z,12,fWD,oVD,gg)
+_(o2D,l3D)
+_(oZD,o2D)
+_(cXD,oZD)
+return cXD
+}
+oTD.wxXCkey=2
+_2z(z,7,xUD,e,s,gg,oTD,'feature','featureIndex','')
+_(r,bSD)
+var a4D=_mz(z,'actions',['language',13,'page',1],[],e,s,gg)
+_(r,a4D)
+return r
+}
+e_[x[8]]={f:m8,j:[],i:[],ti:[],ic:[]}
+d_[x[9]]={}
+var m9=function(e,s,r,gg){
+var z=gz$gwx_10()
+var e6D=_n('add-to-my-miniapps')
+_rz(z,e6D,'language',0,e,s,gg)
+_(r,e6D)
+var b7D=_n('view')
+_rz(z,b7D,'id',1,e,s,gg)
+var o8D=_mz(z,'view',['bindtap',2,'id',1],[],e,s,gg)
+var x9D=_n('text')
+var o0D=_oz(z,4,e,s,gg)
+_(x9D,o0D)
+_(o8D,x9D)
+_(b7D,o8D)
+var fAE=_mz(z,'image',['id',5,'src',1],[],e,s,gg)
+_(b7D,fAE)
+_(r,b7D)
+var cBE=_n('view')
+_rz(z,cBE,'id',7,e,s,gg)
+var hCE=_v()
+_(cBE,hCE)
+var oDE=function(oFE,cEE,lGE,gg){
+var tIE=_mz(z,'view',['bindtap',10,'class',1,'id',2],[],oFE,cEE,gg)
+var eJE=_mz(z,'view',['class',13,'style',1],[],oFE,cEE,gg)
+_(tIE,eJE)
+var bKE=_n('text')
+var oLE=_oz(z,15,oFE,cEE,gg)
+_(bKE,oLE)
+_(tIE,bKE)
+_(lGE,tIE)
+return lGE
+}
+hCE.wxXCkey=2
+_2z(z,9,oDE,e,s,gg,hCE,'cat','index','')
+var xME=_mz(z,'image',['bindtap',16,'id',1,'src',2],[],e,s,gg)
+_(cBE,xME)
+var oNE=_mz(z,'view',['bindtap',19,'id',1],[],e,s,gg)
+var fOE=_oz(z,21,e,s,gg)
+_(oNE,fOE)
+_(cBE,oNE)
+_(r,cBE)
+var cPE=_mz(z,'view',['class',22,'style',1],[],e,s,gg)
+var hQE=_v()
+_(cPE,hQE)
+var oRE=function(oTE,cSE,lUE,gg){
+var tWE=_mz(z,'scroll-view',['bindscrolltolower',27,'class',1,'enableBackToTop',2,'scrollWithAnimation',3,'scrollY',4,'style',5],[],oTE,cSE,gg)
+var eXE=_mz(z,'view',['class',33,'id',1],[],oTE,cSE,gg)
+var bYE=_mz(z,'view',['class',35,'style',1],[],oTE,cSE,gg)
+var x1E=_mz(z,'image',['class',37,'src',1],[],oTE,cSE,gg)
+_(bYE,x1E)
+var oZE=_v()
+_(bYE,oZE)
+if(_oz(z,39,oTE,cSE,gg)){oZE.wxVkey=1
+var o2E=_n('view')
+_rz(z,o2E,'class',40,oTE,cSE,gg)
+var f3E=_n('view')
+_rz(z,f3E,'class',41,oTE,cSE,gg)
+var c4E=_n('text')
+_rz(z,c4E,'class',42,oTE,cSE,gg)
+var h5E=_oz(z,43,oTE,cSE,gg)
+_(c4E,h5E)
+_(f3E,c4E)
+var o6E=_oz(z,44,oTE,cSE,gg)
+_(f3E,o6E)
+_(o2E,f3E)
+var c7E=_n('text')
+_rz(z,c7E,'class',45,oTE,cSE,gg)
+var o8E=_oz(z,46,oTE,cSE,gg)
+_(c7E,o8E)
+_(o2E,c7E)
+var l9E=_v()
+_(o2E,l9E)
+var a0E=function(eBF,tAF,bCF,gg){
+var xEF=_n('text')
+_rz(z,xEF,'class',49,eBF,tAF,gg)
+var oFF=_oz(z,50,eBF,tAF,gg)
+_(xEF,oFF)
+_(bCF,xEF)
+return bCF
+}
+l9E.wxXCkey=2
+_2z(z,48,a0E,oTE,cSE,gg,l9E,'item','index','')
+_(oZE,o2E)
+}
+else if(_oz(z,51,oTE,cSE,gg)){oZE.wxVkey=2
+var fGF=_n('view')
+_rz(z,fGF,'class',52,oTE,cSE,gg)
+var cHF=_n('view')
+_rz(z,cHF,'class',53,oTE,cSE,gg)
+var hIF=_n('text')
+_rz(z,hIF,'class',54,oTE,cSE,gg)
+var oJF=_oz(z,55,oTE,cSE,gg)
+_(hIF,oJF)
+_(cHF,hIF)
+var cKF=_oz(z,56,oTE,cSE,gg)
+_(cHF,cKF)
+_(fGF,cHF)
+var oLF=_n('text')
+_rz(z,oLF,'class',57,oTE,cSE,gg)
+var lMF=_oz(z,58,oTE,cSE,gg)
+_(oLF,lMF)
+_(fGF,oLF)
+var aNF=_v()
+_(fGF,aNF)
+var tOF=function(bQF,ePF,oRF,gg){
+var oTF=_n('text')
+_rz(z,oTF,'class',61,bQF,ePF,gg)
+var fUF=_oz(z,62,bQF,ePF,gg)
+_(oTF,fUF)
+_(oRF,oTF)
+return oRF
+}
+aNF.wxXCkey=2
+_2z(z,60,tOF,oTE,cSE,gg,aNF,'item','index','')
+_(oZE,fGF)
+}
+else if(_oz(z,63,oTE,cSE,gg)){oZE.wxVkey=3
+var cVF=_n('view')
+_rz(z,cVF,'class',64,oTE,cSE,gg)
+var hWF=_n('view')
+_rz(z,hWF,'class',65,oTE,cSE,gg)
+var oXF=_n('text')
+_rz(z,oXF,'class',66,oTE,cSE,gg)
+var cYF=_oz(z,67,oTE,cSE,gg)
+_(oXF,cYF)
+_(hWF,oXF)
+var oZF=_oz(z,68,oTE,cSE,gg)
+_(hWF,oZF)
+_(cVF,hWF)
+var l1F=_n('text')
+_rz(z,l1F,'class',69,oTE,cSE,gg)
+var a2F=_oz(z,70,oTE,cSE,gg)
+_(l1F,a2F)
+_(cVF,l1F)
+var t3F=_v()
+_(cVF,t3F)
+var e4F=function(o6F,b5F,x7F,gg){
+var f9F=_n('text')
+_rz(z,f9F,'class',73,o6F,b5F,gg)
+var c0F=_oz(z,74,o6F,b5F,gg)
+_(f9F,c0F)
+_(x7F,f9F)
+return x7F
+}
+t3F.wxXCkey=2
+_2z(z,72,e4F,oTE,cSE,gg,t3F,'item','index','')
+_(oZE,cVF)
+}
+else{oZE.wxVkey=4
+var hAG=_n('view')
+_rz(z,hAG,'class',75,oTE,cSE,gg)
+var oBG=_n('view')
+_rz(z,oBG,'class',76,oTE,cSE,gg)
+var cCG=_n('text')
+_rz(z,cCG,'class',77,oTE,cSE,gg)
+var oDG=_oz(z,78,oTE,cSE,gg)
+_(cCG,oDG)
+_(oBG,cCG)
+var lEG=_oz(z,79,oTE,cSE,gg)
+_(oBG,lEG)
+_(hAG,oBG)
+var aFG=_n('text')
+_rz(z,aFG,'class',80,oTE,cSE,gg)
+var tGG=_oz(z,81,oTE,cSE,gg)
+_(aFG,tGG)
+_(hAG,aFG)
+var eHG=_v()
+_(hAG,eHG)
+var bIG=function(xKG,oJG,oLG,gg){
+var cNG=_n('text')
+_rz(z,cNG,'class',84,xKG,oJG,gg)
+var hOG=_oz(z,85,xKG,oJG,gg)
+_(cNG,hOG)
+_(oLG,cNG)
+return oLG
+}
+eHG.wxXCkey=2
+_2z(z,83,bIG,oTE,cSE,gg,eHG,'item','index','')
+_(oZE,hAG)
+}
+oZE.wxXCkey=1
+_(eXE,bYE)
+var oPG=_v()
+_(eXE,oPG)
+var cQG=function(lSG,oRG,aTG,gg){
+var eVG=_v()
+_(aTG,eVG)
+if(_oz(z,89,lSG,oRG,gg)){eVG.wxVkey=1
+var bWG=_mz(z,'view',['class',90,'data-cat-index',1,'data-item-name',2,'hoverClass',3],[],lSG,oRG,gg)
+var oXG=_oz(z,94,lSG,oRG,gg)
+_(bWG,oXG)
+_(eVG,bWG)
+}
+eVG.wxXCkey=1
+return aTG
+}
+oPG.wxXCkey=2
+_2z(z,88,cQG,oTE,cSE,gg,oPG,'item','itemIndex','')
+_(tWE,eXE)
+_(lUE,tWE)
+return lUE
+}
+hQE.wxXCkey=2
+_2z(z,26,oRE,e,s,gg,hQE,'section','sectionIndex','')
+_(r,cPE)
+var xYG=_mz(z,'view',['bindtap',95,'id',1,'style',2],[],e,s,gg)
+var oZG=_mz(z,'view',['class',98,'id',1,'style',2],[],e,s,gg)
+var f1G=_n('text')
+_rz(z,f1G,'id',101,e,s,gg)
+var c2G=_oz(z,102,e,s,gg)
+_(f1G,c2G)
+_(oZG,f1G)
+var h3G=_n('text')
+_rz(z,h3G,'id',103,e,s,gg)
+var o4G=_oz(z,104,e,s,gg)
+_(h3G,o4G)
+_(oZG,h3G)
+var c5G=_mz(z,'image',['id',105,'src',1],[],e,s,gg)
+_(oZG,c5G)
+_(xYG,oZG)
+_(r,xYG)
+var o6G=_mz(z,'view',['bindtap',107,'id',1,'style',2],[],e,s,gg)
+_(r,o6G)
+var l7G=_mz(z,'view',['id',110,'style',1],[],e,s,gg)
+var a8G=_oz(z,112,e,s,gg)
+_(l7G,a8G)
+_(r,l7G)
+var t9G=_mz(z,'actions',['language',113,'page',1],[],e,s,gg)
+_(r,t9G)
+var e0G=_mz(z,'view',['bindtap',115,'id',1,'style',2],[],e,s,gg)
+_(r,e0G)
+var bAH=_mz(z,'view',['id',118,'style',1],[],e,s,gg)
+var xCH=_n('image')
+_rz(z,xCH,'src',120,e,s,gg)
+_(bAH,xCH)
+var oBH=_v()
+_(bAH,oBH)
+if(_oz(z,121,e,s,gg)){oBH.wxVkey=1
+var oDH=_n('button')
+_rz(z,oDH,'bindtap',122,e,s,gg)
+var fEH=_oz(z,123,e,s,gg)
+_(oDH,fEH)
+_(oBH,oDH)
+}
+else if(_oz(z,124,e,s,gg)){oBH.wxVkey=2
+var cFH=_n('button')
+_rz(z,cFH,'bindtap',125,e,s,gg)
+var hGH=_oz(z,126,e,s,gg)
+_(cFH,hGH)
+_(oBH,cFH)
+}
+else if(_oz(z,127,e,s,gg)){oBH.wxVkey=3
+var oHH=_mz(z,'button',['bindopensetting',128,'openType',1],[],e,s,gg)
+var cIH=_oz(z,130,e,s,gg)
+_(oHH,cIH)
+_(oBH,oHH)
+}
+else{oBH.wxVkey=4
+var oJH=_n('button')
+_rz(z,oJH,'disabled',131,e,s,gg)
+var lKH=_oz(z,132,e,s,gg)
+_(oJH,lKH)
+_(oBH,oJH)
+}
+var aLH=_mz(z,'view',['bindtap',133,'id',1],[],e,s,gg)
+_(bAH,aLH)
+oBH.wxXCkey=1
+_(r,bAH)
+return r
+}
+e_[x[9]]={f:m9,j:[],i:[],ti:[],ic:[]}
+d_[x[10]]={}
+var m10=function(e,s,r,gg){
+var z=gz$gwx_11()
+var eNH=_n('view')
+_rz(z,eNH,'id',0,e,s,gg)
+var bOH=_n('view')
+_rz(z,bOH,'id',1,e,s,gg)
+var oPH=_mz(z,'input',['bindblur',2,'bindfocus',1,'bindinput',2,'focus',3,'id',4,'placeholder',5,'type',6,'value',7],[],e,s,gg)
+_(bOH,oPH)
+var xQH=_mz(z,'image',['id',10,'src',1],[],e,s,gg)
+_(bOH,xQH)
+var oRH=_mz(z,'view',['bindtap',12,'id',1,'style',2],[],e,s,gg)
+_(bOH,oRH)
+var fSH=_mz(z,'text',['bindtap',15,'class',1,'id',2],[],e,s,gg)
+var cTH=_oz(z,18,e,s,gg)
+_(fSH,cTH)
+_(bOH,fSH)
+_(eNH,bOH)
+var hUH=_n('view')
+_rz(z,hUH,'id',19,e,s,gg)
+var oVH=_mz(z,'scroll-view',['enableBackToTop',20,'id',1,'scrollWithAnimatio',2,'scrollY',3],[],e,s,gg)
+var cWH=_v()
+_(oVH,cWH)
+var oXH=function(aZH,lYH,t1H,gg){
+var b3H=_mz(z,'view',['class',26,'data-cat-index',1,'data-item-name',2,'style',3],[],aZH,lYH,gg)
+var o4H=_oz(z,30,aZH,lYH,gg)
+_(b3H,o4H)
+_(t1H,b3H)
+return t1H
+}
+cWH.wxXCkey=2
+_2z(z,25,oXH,e,s,gg,cWH,'result','index','')
+_(hUH,oVH)
+var x5H=_mz(z,'image',['id',31,'src',1,'style',2],[],e,s,gg)
+_(hUH,x5H)
+var o6H=_mz(z,'text',['id',34,'style',1],[],e,s,gg)
+var f7H=_oz(z,36,e,s,gg)
+_(o6H,f7H)
+_(hUH,o6H)
+var c8H=_mz(z,'text',['bindtap',37,'id',1,'style',2],[],e,s,gg)
+var h9H=_oz(z,40,e,s,gg)
+_(c8H,h9H)
+_(hUH,c8H)
+var o0H=_mz(z,'text',['id',41,'style',1],[],e,s,gg)
+var cAI=_oz(z,43,e,s,gg)
+_(o0H,cAI)
+_(hUH,o0H)
+_(eNH,hUH)
+var oBI=_mz(z,'view',['bindtap',44,'id',1,'style',2],[],e,s,gg)
+var lCI=_mz(z,'view',['class',47,'id',1,'style',2],[],e,s,gg)
+var aDI=_n('text')
+_rz(z,aDI,'id',50,e,s,gg)
+var tEI=_oz(z,51,e,s,gg)
+_(aDI,tEI)
+_(lCI,aDI)
+var eFI=_n('text')
+_rz(z,eFI,'id',52,e,s,gg)
+var bGI=_oz(z,53,e,s,gg)
+_(eFI,bGI)
+_(lCI,eFI)
+var oHI=_mz(z,'image',['id',54,'src',1],[],e,s,gg)
+_(lCI,oHI)
+_(oBI,lCI)
+_(eNH,oBI)
+var xII=_mz(z,'actions',['language',56,'page',1],[],e,s,gg)
+_(eNH,xII)
+_(r,eNH)
+return r
+}
+e_[x[10]]={f:m10,j:[],i:[],ti:[],ic:[]}
+d_[x[11]]={}
+var m11=function(e,s,r,gg){
+var z=gz$gwx_12()
+var fKI=_mz(z,'scroll-view',['enableBackToTop',0,'id',1,'scrollWithAnimation',1,'scrollY',2],[],e,s,gg)
+var cLI=_v()
+_(fKI,cLI)
+var hMI=function(cOI,oNI,oPI,gg){
+var aRI=_mz(z,'view',['bindtap',7,'class',1,'data-setting-index',2],[],cOI,oNI,gg)
+var tSI=_n('text')
+var eTI=_oz(z,10,cOI,oNI,gg)
+_(tSI,eTI)
+_(aRI,tSI)
+_(oPI,aRI)
+return oPI
+}
+cLI.wxXCkey=2
+_2z(z,6,hMI,e,s,gg,cLI,'city','cityIndex','')
+_(r,fKI)
+return r
+}
+e_[x[11]]={f:m11,j:[],i:[],ti:[],ic:[]}
+d_[x[12]]={}
+var m12=function(e,s,r,gg){
+var z=gz$gwx_13()
+var oVI=_mz(z,'scroll-view',['enableBackToTop',0,'id',1,'scrollWithAnimation',1,'scrollY',2],[],e,s,gg)
+var xWI=_n('text')
+_rz(z,xWI,'class',4,e,s,gg)
+var oXI=_oz(z,5,e,s,gg)
+_(xWI,oXI)
+_(oVI,xWI)
+var fYI=_n('view')
+_rz(z,fYI,'class',6,e,s,gg)
+var cZI=_v()
+_(fYI,cZI)
+var h1I=function(c3I,o2I,o4I,gg){
+var a6I=_mz(z,'view',['bindtap',9,'class',1,'data-item-key',2],[],c3I,o2I,gg)
+var t7I=_oz(z,12,c3I,o2I,gg)
+_(a6I,t7I)
+_(o4I,a6I)
+return o4I
+}
+cZI.wxXCkey=2
+_2z(z,8,h1I,e,s,gg,cZI,'item','index','')
+_(oVI,fYI)
+var e8I=_n('text')
+_rz(z,e8I,'class',13,e,s,gg)
+var b9I=_oz(z,14,e,s,gg)
+_(e8I,b9I)
+_(oVI,e8I)
+var o0I=_n('view')
+_rz(z,o0I,'class',15,e,s,gg)
+var xAJ=_v()
+_(o0I,xAJ)
+var oBJ=function(cDJ,fCJ,hEJ,gg){
+var cGJ=_mz(z,'view',['bindtap',18,'class',1,'data-item-key',2],[],cDJ,fCJ,gg)
+var oHJ=_oz(z,21,cDJ,fCJ,gg)
+_(cGJ,oHJ)
+_(hEJ,cGJ)
+return hEJ
+}
+xAJ.wxXCkey=2
+_2z(z,17,oBJ,e,s,gg,xAJ,'item','index','')
+_(oVI,o0I)
+_(r,oVI)
+return r
+}
+e_[x[12]]={f:m12,j:[],i:[],ti:[],ic:[]}
+d_[x[13]]={}
+var m13=function(e,s,r,gg){
+var z=gz$gwx_14()
+var aJJ=_n('view')
+_rz(z,aJJ,'id',0,e,s,gg)
+var tKJ=_n('add-to-my-miniapps')
+_rz(z,tKJ,'language',1,e,s,gg)
+_(aJJ,tKJ)
+var eLJ=_n('view')
+_rz(z,eLJ,'id',2,e,s,gg)
+var bMJ=_v()
+_(eLJ,bMJ)
+var oNJ=function(oPJ,xOJ,fQJ,gg){
+var hSJ=_n('view')
+_rz(z,hSJ,'class',6,oPJ,xOJ,gg)
+var oTJ=_n('view')
+_rz(z,oTJ,'class',7,oPJ,xOJ,gg)
+var cUJ=_oz(z,8,oPJ,xOJ,gg)
+_(oTJ,cUJ)
+var oVJ=_n('text')
+var lWJ=_oz(z,9,oPJ,xOJ,gg)
+_(oVJ,lWJ)
+_(oTJ,oVJ)
+_(hSJ,oTJ)
+var aXJ=_mz(z,'text',['class',10,'src',1],[],oPJ,xOJ,gg)
+var tYJ=_oz(z,12,oPJ,xOJ,gg)
+_(aXJ,tYJ)
+_(hSJ,aXJ)
+var eZJ=_n('view')
+_rz(z,eZJ,'class',13,oPJ,xOJ,gg)
+var b1J=_v()
+_(eZJ,b1J)
+var o2J=function(o4J,x3J,f5J,gg){
+var h7J=_mz(z,'view',['bindtap',17,'class',1,'data-option-index',2,'data-quiz-index',3],[],o4J,x3J,gg)
+var o8J=_n('text')
+_rz(z,o8J,'class',21,o4J,x3J,gg)
+var c9J=_oz(z,22,o4J,x3J,gg)
+_(o8J,c9J)
+_(h7J,o8J)
+_(f5J,h7J)
+return f5J
+}
+b1J.wxXCkey=2
+_2z(z,16,o2J,oPJ,xOJ,gg,b1J,'cat','catIndex','')
+_(hSJ,eZJ)
+_(fQJ,hSJ)
+return fQJ
+}
+bMJ.wxXCkey=2
+_2z(z,5,oNJ,e,s,gg,bMJ,'quiz','quizIndex','')
+var o0J=_mz(z,'view',['class',23,'id',1],[],e,s,gg)
+var lAK=_n('text')
+_rz(z,lAK,'id',25,e,s,gg)
+var aBK=_oz(z,26,e,s,gg)
+_(lAK,aBK)
+_(o0J,lAK)
+var tCK=_n('view')
+_rz(z,tCK,'id',27,e,s,gg)
+var eDK=_v()
+_(tCK,eDK)
+var bEK=function(xGK,oFK,oHK,gg){
+var cJK=_n('view')
+_rz(z,cJK,'class',31,xGK,oFK,gg)
+var hKK=_n('view')
+_rz(z,hKK,'class',32,xGK,oFK,gg)
+var oLK=_oz(z,33,xGK,oFK,gg)
+_(hKK,oLK)
+_(cJK,hKK)
+var cMK=_n('view')
+_rz(z,cMK,'class',34,xGK,oFK,gg)
+var oNK=_oz(z,35,xGK,oFK,gg)
+_(cMK,oNK)
+_(cJK,cMK)
+var lOK=_n('view')
+_rz(z,lOK,'class',36,xGK,oFK,gg)
+var aPK=_oz(z,37,xGK,oFK,gg)
+_(lOK,aPK)
+_(cJK,lOK)
+_(oHK,cJK)
+return oHK
+}
+eDK.wxXCkey=2
+_2z(z,30,bEK,e,s,gg,eDK,'answer','index','')
+var tQK=_n('view')
+_rz(z,tQK,'id',38,e,s,gg)
+var eRK=_n('view')
+_rz(z,eRK,'bindtap',39,e,s,gg)
+var bSK=_oz(z,40,e,s,gg)
+_(eRK,bSK)
+_(tQK,eRK)
+var oTK=_mz(z,'button',['bindtap',41,'openType',1],[],e,s,gg)
+var xUK=_oz(z,43,e,s,gg)
+_(oTK,xUK)
+_(tQK,oTK)
+_(tCK,tQK)
+var oVK=_mz(z,'text',['bindtap',44,'id',1],[],e,s,gg)
+var fWK=_oz(z,46,e,s,gg)
+_(oVK,fWK)
+_(tCK,oVK)
+_(o0J,tCK)
+_(eLJ,o0J)
+_(aJJ,eLJ)
+var cXK=_mz(z,'actions',['language',47,'page',1],[],e,s,gg)
+_(aJJ,cXK)
+var hYK=_n('view')
+_rz(z,hYK,'id',49,e,s,gg)
+var oZK=_mz(z,'ad',['bindclose',50,'binderror',1,'bindload',2,'unitId',3],[],e,s,gg)
+_(hYK,oZK)
+_(aJJ,hYK)
+_(r,aJJ)
+return r
+}
+e_[x[13]]={f:m13,j:[],i:[],ti:[],ic:[]}
+if(path&&e_[path]){
+window.__wxml_comp_version__=0.02
+return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
+var main=e_[path].f
+if (typeof global==="undefined")global={};global.f=$gdc(f_[path],"",1);
+if(typeof(window.__webview_engine_version__)!='undefined'&&window.__webview_engine_version__+1e-6>=0.02+1e-6&&window.__mergeData__)
+{
+env=window.__mergeData__(env,dd);
+}
+try{
+main(env,{},root,global);
+_tsd(root)
+if(typeof(window.__webview_engine_version__)=='undefined'|| window.__webview_engine_version__+1e-6<0.01+1e-6){return _ev(root);}
+}catch(err){
+console.log(err)
+}
+return root;
+}
+}
+}
+ 
+			var BASE_DEVICE_WIDTH = 750;
+var isIOS=navigator.userAgent.match("iPhone");
+var deviceWidth = window.screen.width || 375;
+var deviceDPR = window.devicePixelRatio || 2;
+var checkDeviceWidth = window.__checkDeviceWidth__ || function() {
+var newDeviceWidth = window.screen.width || 375
+var newDeviceDPR = window.devicePixelRatio || 2
+var newDeviceHeight = window.screen.height || 375
+if (window.screen.orientation && /^landscape/.test(window.screen.orientation.type || '')) newDeviceWidth = newDeviceHeight
+if (newDeviceWidth !== deviceWidth || newDeviceDPR !== deviceDPR) {
+deviceWidth = newDeviceWidth
+deviceDPR = newDeviceDPR
+}
+}
+checkDeviceWidth()
+var eps = 1e-4;
+var transformRPX = window.__transformRpx__ || function(number, newDeviceWidth) {
+if ( number === 0 ) return 0;
+number = number / BASE_DEVICE_WIDTH * ( newDeviceWidth || deviceWidth );
+number = Math.floor(number + eps);
+if (number === 0) {
+if (deviceDPR === 1 || !isIOS) {
+return 1;
+} else {
+return 0.5;
+}
+}
+return number;
+}
+var setCssToHead = function(file, _xcInvalid, info) {
+var Ca = {};
+var css_id;
+var info = info || {};
+var _C= [];
+function makeup(file, opt) {
+var _n = typeof(file) === "number";
+if ( _n && Ca.hasOwnProperty(file)) return "";
+if ( _n ) Ca[file] = 1;
+var ex = _n ? _C[file] : file;
+var res="";
+for (var i = ex.length - 1; i >= 0; i--) {
+var content = ex[i];
+if (typeof(content) === "object")
+{
+var op = content[0];
+if ( op == 0 )
+res = transformRPX(content[1], opt.deviceWidth) + "px" + res;
+else if ( op == 1)
+res = opt.suffix + res;
+else if ( op == 2 ) 
+res = makeup(content[1], opt) + res;
+}
+else
+res = content + res
+}
+return res;
+}
+var rewritor = function(suffix, opt, style){
+opt = opt || {};
+suffix = suffix || "";
+opt.suffix = suffix;
+if ( opt.allowIllegalSelector != undefined && _xcInvalid != undefined )
+{
+if ( opt.allowIllegalSelector )
+console.warn( "For developer:" + _xcInvalid );
+else
+{
+console.error( _xcInvalid );
+}
+}
+Ca={};
+css = makeup(file, opt);
+if ( !style ) 
+{
+var head = document.head || document.getElementsByTagName('head')[0];
+window.__rpxRecalculatingFuncs__ = window.__rpxRecalculatingFuncs__ || [];
+style = document.createElement('style');
+style.type = 'text/css';
+style.setAttribute( "wxss:path", info.path );
+head.appendChild(style);
+window.__rpxRecalculatingFuncs__.push(function(size){
+opt.deviceWidth = size.width;
+rewritor(suffix, opt, style);
+});
+}
+if (style.styleSheet) {
+style.styleSheet.cssText = css;
+} else {
+if ( style.childNodes.length == 0 )
+style.appendChild(document.createTextNode(css));
+else 
+style.childNodes[0].nodeValue = css;
+}
+}
+return rewritor;
+}
+setCssToHead([])();setCssToHead([".",[1],"container { height: 100%; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-align-items: center; align-items: center; -webkit-justify-content: space-between; justify-content: space-between; padding: ",[0,200]," 0; box-sizing: border-box; }\n",],undefined,{path:"./app.wxss"})(); 
+					__wxAppCode__['components/actions/actions.wxss'] = setCssToHead([".",[1],"share, .",[1],"cs { position: fixed; right: 10px; bottom: ",[0,100],"; width: ",[0,150],"; height: ",[0,60],"; border-top-left-radius: ",[0,30],"; border-bottom-left-radius: ",[0,30],"; border-top-right-radius: ",[0,30],"; border-bottom-right-radius: ",[0,30],"; background-color: #ffffff; box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1); z-index: 1501; }\n.",[1],"en { width: ",[0,200],"; }\n.",[1],"cs { bottom: ",[0,20],"; }\n.",[1],"share.",[1],"index { bottom: ",[0,300],"; }\n.",[1],"cs.",[1],"index { bottom: ",[0,220],"; }\n.",[1],"share.",[1],"test { bottom: ",[0,350],"; }\n.",[1],"cs.",[1],"test { bottom: ",[0,270],"; }\n.",[1],"share.",[1],"search { bottom: auto; top: ",[0,140],"; }\n.",[1],"cs.",[1],"search { bottom: auto; top: ",[0,220],"; }\n.",[1],"share::after, .",[1],"cs::after { border: none; }\n.",[1],"share wx-image, .",[1],"cs wx-image { position: absolute; left: ",[0,25],"; top: ",[0,15],"; width: ",[0,30],"; height: ",[0,30],"; }\n.",[1],"share wx-text, .",[1],"cs wx-text { position: absolute; left: ",[0,65],"; top: ",[0,0],"; line-height: ",[0,60],"; color: #333333; font-size: ",[0,28],"; }\n.",[1],"en wx-text { font-size: ",[0,26],"; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./components/actions/actions.wxss:71:5)",{path:"./components/actions/actions.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['components/actions/actions.wxml'] = [ $gwx, './components/actions/actions.wxml' ];
+		else __wxAppCode__['components/actions/actions.wxml'] = $gwx( './components/actions/actions.wxml' );
+				__wxAppCode__['components/add_to_my_miniapps/add_to_my_miniapps.wxss'] = setCssToHead([".",[1],"fav-hint { position: fixed; top: ",[0,20],"; right: ",[0,25],"; padding: 0.5em 1em; width: 9.5em; border-radius: 4px; background-color: #ffffff; color: #333333; font-size: ",[0,26],"; line-height: 1.6em; text-align: left; z-index: 2001; box-shadow: 0 0 1px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.15); -webkit-animation: bounce .6s cubic-bezier(.58, .1, .58, .25) infinite alternate; animation: bounce .6s cubic-bezier(.58, .1, .58, .25) infinite alternate; }\n.",[1],"fav-hint.",[1],"en { width: 14em; }\n.",[1],"fav-hint::before { content: \x22\x22; position: absolute; right: calc(71.33px - ",[0,25],"); top: ",[0,-14],"; width: ",[0,0],"; height: ",[0,0],"; border-left: ",[0,15]," solid transparent; border-right: ",[0,15]," solid transparent; border-bottom: ",[0,15]," solid #ffffff; -webkit-transform: translateX(50%); transform: translateX(50%); z-index: 2001; }\n.",[1],"fav-hint::after { content: \x22\x22; position: absolute; right: calc(71.33px - ",[0,25],"); top: ",[0,-16],"; width: ",[0,0],"; height: ",[0,0],"; border-left: ",[0,16]," solid transparent; border-right: ",[0,16]," solid transparent; border-bottom: ",[0,16]," solid #eeeeee; -webkit-transform: translateX(50%); transform: translateX(50%); }\n.",[1],"close-fav-hint { position: absolute; right: 0.8em; top: 50%; width: 1.2em; height: 1.2em; border-radius: 50%; background-color: #eeeeee; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n.",[1],"close-fav-hint::before, .",[1],"close-fav-hint::after { content: \x22\x22; position: absolute; left: 50%; top: 50%; width: 0.7em; height: ",[0,4],"; border-radius: ",[0,2],"; background-color: #aaaaaa; }\n.",[1],"close-fav-hint::before { -webkit-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }\n.",[1],"close-fav-hint::after { -webkit-transform: translate(-50%, -50%) rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); }\n@-webkit-keyframes bounce { 0%, 5% { -webkit-transform: translate3d(0px, 2px, 0px); transform: translate3d(0px, 2px, 0px); }\n100% { -webkit-transform: translate3d(0px, -2px, 0px); transform: translate3d(0px, -2px, 0px); }\n}@keyframes bounce { 0%, 5% { -webkit-transform: translate3d(0px, 2px, 0px); transform: translate3d(0px, 2px, 0px); }\n100% { -webkit-transform: translate3d(0px, -2px, 0px); transform: translate3d(0px, -2px, 0px); }\n}",],undefined,{path:"./components/add_to_my_miniapps/add_to_my_miniapps.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['components/add_to_my_miniapps/add_to_my_miniapps.wxml'] = [ $gwx, './components/add_to_my_miniapps/add_to_my_miniapps.wxml' ];
+		else __wxAppCode__['components/add_to_my_miniapps/add_to_my_miniapps.wxml'] = $gwx( './components/add_to_my_miniapps/add_to_my_miniapps.wxml' );
+				__wxAppCode__['pages/admin/index/index.wxss'] = setCssToHead(["#wrapper { display: block; width: 100%; height: 100vh; background-color: #ffffff; }\n.",[1],"admin-menu-item { padding-left: 1em; color: #000000; font-size: ",[0,30],"; line-height: 3em; border-bottom: 1px solid #eeeeee; }\n.",[1],"admin-menu-item:first-child { border-top: 1px solid #eeeeee; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/admin/index/index.wxss:1:1)",{path:"./pages/admin/index/index.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/admin/index/index.wxml'] = [ $gwx, './pages/admin/index/index.wxml' ];
+		else __wxAppCode__['pages/admin/index/index.wxml'] = $gwx( './pages/admin/index/index.wxml' );
+				__wxAppCode__['pages/admin/new_trash/new_trash.wxss'] = setCssToHead(["#wrapper { display: block; width: 100%; height: 100vh; background-color: #ffffff; }\n#submitNewTrashForm { margin-top: ",[0,50],"; }\n#success { margin-bottom: ",[0,30],"; width: 100%; color: #55b369; font-size: ",[0,30],"; text-align: center; }\n#submitNewTrashForm wx-input[type\x3d\x22text\x22], .",[1],"picker { margin-left: 7%; margin-bottom: 1em; padding: 0px ",[0,20],"; width: 86%; height: 3em; color: #69768e; font-size: ",[0,30],"; line-height: 3em; box-sizing: border-box; border: 1px solid #d3dde6; border-radius: 3px; }\n#submitBtn { margin-left: 7%; margin-top: ",[0,50],"; width: 86%; border-radius: 3px; background-color: #55b369; font-size: ",[0,30],"; }\n#submitBtn::after { border: none; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/admin/new_trash/new_trash.wxss:43:1)",{path:"./pages/admin/new_trash/new_trash.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/admin/new_trash/new_trash.wxml'] = [ $gwx, './pages/admin/new_trash/new_trash.wxml' ];
+		else __wxAppCode__['pages/admin/new_trash/new_trash.wxml'] = $gwx( './pages/admin/new_trash/new_trash.wxml' );
+				__wxAppCode__['pages/admin/submit_list/submit_list.wxss'] = setCssToHead(["#wrapper { display: block; width: 100%; height: 100vh; background-color: #ffffff; }\n.",[1],"list-wrapper { position: absolute; left: ",[0,0],"; top: ",[0,0],"; right: ",[0,0],"; bottom: ",[0,0],"; }\n.",[1],"list { display: block; height: 100%; background-color: #ffffff; }\n.",[1],"item { position: relative; padding-left: ",[0,80],"; font-size: ",[0,30],"; line-height: 3em; }\n.",[1],"item:nth-child(even) { background-color: #f7f7f7; }\n.",[1],"item:last-child { margin-bottom: ",[0,68],"; }\n.",[1],"check { position: absolute; left: ",[0,20],"; top: ",[0,25],"; width: ",[0,40],"; height: ",[0,40],"; border: 1px solid #d3dde6; border-radius: 3px; box-sizing: border-box; }\n.",[1],"checked { border: none; background-color: #55b369; }\n.",[1],"checked::before { content: \x22\x22; position: absolute; left: 50%; top: 50%; width: ",[0,20],"; height: ",[0,10],"; border-left: 2px solid #ffffff; border-bottom: 2px solid #ffffff; -webkit-transform: translate(-50%, -70%) rotate(-45deg); transform: translate(-50%, -70%) rotate(-45deg); }\n.",[1],"line-through { text-decoration: line-through; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/admin/submit_list/submit_list.wxss:1:1)",{path:"./pages/admin/submit_list/submit_list.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/admin/submit_list/submit_list.wxml'] = [ $gwx, './pages/admin/submit_list/submit_list.wxml' ];
+		else __wxAppCode__['pages/admin/submit_list/submit_list.wxml'] = $gwx( './pages/admin/submit_list/submit_list.wxml' );
+				__wxAppCode__['pages/admin/trash_list/trash_list.wxss'] = setCssToHead(["#wrapper { display: block; width: 100%; height: 100vh; background-color: #ffffff; }\n#searchWrapper { position: fixed; width: 100%; height: ",[0,120],"; background-color: #ffffff; box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.08); z-index: 999; }\n#search { position: absolute; left: ",[0,25],"; top: ",[0,20],"; padding: 0px ",[0,72]," 0px ",[0,76],"; height: ",[0,80],"; border-radius: ",[0,40],"; background-color: #f5f5f5; box-sizing: border-box; font-size: ",[0,32],"; line-height: 1em; transition: all 200ms; }\n#magnifier { position: absolute; left: ",[0,50],"; top: ",[0,44],"; width: ",[0,32],"; height: ",[0,32],"; }\n#cancelSearch { position: absolute; left: ",[0,697.5],"; top: ",[0,60],"; width: 2em; color: #333333; font-size: ",[0,32],"; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }\n.",[1],"list-wrapper, .",[1],"search-list-wrapper { position: absolute; left: ",[0,0],"; top: ",[0,120],"; right: ",[0,0],"; bottom: ",[0,0],"; }\n.",[1],"list, #results { display: block; height: 100%; background-color: #ffffff; }\n.",[1],"cat { display: block; margin-top: ",[0,30],"; padding-left: ",[0,30],"; font-size: ",[0,50],"; font-weight: bold; line-height: 2em; }\n.",[1],"item, .",[1],"result { padding-left: ",[0,30],"; font-size: ",[0,30],"; line-height: 3em; }\n.",[1],"item:nth-child(even), .",[1],"result:nth-child(even) { background-color: #f7f7f7; }\n.",[1],"item:last-child, .",[1],"result:last-child { margin-bottom: ",[0,68],"; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/admin/trash_list/trash_list.wxss:60:8)",{path:"./pages/admin/trash_list/trash_list.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/admin/trash_list/trash_list.wxml'] = [ $gwx, './pages/admin/trash_list/trash_list.wxml' ];
+		else __wxAppCode__['pages/admin/trash_list/trash_list.wxml'] = $gwx( './pages/admin/trash_list/trash_list.wxml' );
+				__wxAppCode__['pages/download/download.wxss'] = setCssToHead(["wx-image { vertical-align: top; }\nwx-button { margin: 0px; padding: 0px; background-color: transparent; }\nwx-button::after { border: none; }\n#downloads { height: 100vh; background-color: #f0f0f0; }\n.",[1],"download-wrapper { float: left; margin: ",[0,75]," ",[0,0]," ",[0,0]," ",[0,25],"; width: ",[0,700],"; text-align: center; }\n.",[1],"download-wrapper:first-child { margin-top: ",[0,25],"; }\n.",[1],"download-wrapper:last-child { margin-bottom: ",[0,25],"; }\n.",[1],"download-wrapper wx-image { padding: ",[0,10],"; width: ",[0,700],"; border-radius: ",[0,20],"; background-color: #ffffff; box-sizing: border-box; }\n#downloads wx-button { margin-left: ",[0,125],"; margin-top: ",[0,50],"; width: ",[0,450],"; height: ",[0,80],"; border-radius: ",[0,40],"; background-color: #64a814; color: #ffffff; font-size: ",[0,28],"; line-height: ",[0,80],"; }\n#downloads wx-button::after { border: none; }\n@-webkit-keyframes pop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}@keyframes pop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/download/download.wxss:55:1)",{path:"./pages/download/download.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/download/download.wxml'] = [ $gwx, './pages/download/download.wxml' ];
+		else __wxAppCode__['pages/download/download.wxml'] = $gwx( './pages/download/download.wxml' );
+				__wxAppCode__['pages/feature/feature.wxss'] = setCssToHead(["wx-button { margin: 0px; padding: 0px; background-color: transparent; }\nwx-button::after { border: none; }\n#feature { height: 100vh; background-color: #f0f0f0; }\n.",[1],"item { position: relative; margin: 0px ",[0,30],"; height: ",[0,200],"; background-color: #ffffff; }\n.",[1],"item:not(:last-child) { padding-bottom: 1px; }\n.",[1],"item:not(:last-child)::after { content: \x22\x22; position: absolute; left: ",[0,40],"; top: ",[0,200],"; width: ",[0,610],"; height: 1px; background-color: #f0f0f0; }\n.",[1],"item:first-child { margin-top: ",[0,30],"; border-radius: ",[0,30]," ",[0,30]," ",[0,0]," ",[0,0],"; }\n.",[1],"item:last-child { margin-bottom: ",[0,30],"; border-radius: ",[0,0]," ",[0,0]," ",[0,30]," ",[0,30],"; }\n.",[1],"item wx-image { float: left; margin: ",[0,40]," ",[0,40]," ",[0,0]," ",[0,60],"; width: ",[0,120],"; height: ",[0,120],"; }\n.",[1],"item-title { position: absolute; left: ",[0,220],"; top: 50%; width: ",[0,260],"; font-size: ",[0,36],"; font-weight: bold; line-height: 1.3em; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n.",[1],"item-cat { position: absolute; right: ",[0,60],"; top: 50%; width: 4em; font-size: ",[0,36],"; font-weight: bold; line-height: 1.3em; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n.",[1],"item-cat.",[1],"en { font-size: ",[0,30],"; }\n.",[1],"item-cat-0 { color: #956c58; }\n.",[1],"item-cat-1 { color: #2d2926; }\n.",[1],"item-cat-2 { color: #003c71; }\n.",[1],"item-cat-3 { color: #f9423a; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/feature/feature.wxss:47:7)",{path:"./pages/feature/feature.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/feature/feature.wxml'] = [ $gwx, './pages/feature/feature.wxml' ];
+		else __wxAppCode__['pages/feature/feature.wxml'] = $gwx( './pages/feature/feature.wxml' );
+				__wxAppCode__['pages/features/features.wxss'] = setCssToHead(["#features { height: 100vh; background-color: #f0f0f0; }\n.",[1],"feature { position: relative; margin: ",[0,25]," auto; width: ",[0,700],"; height: ",[0,150],"; border-radius: ",[0,20],"; background-color: #ffffff; }\n.",[1],"feature::after { content: \x22\x22; position: absolute; right: ",[0,50],"; top: 50%; width: ",[0,20],"; height: ",[0,20],"; border-top: 2px solid #dddddd; border-right: 2px solid #dddddd; -webkit-transform: rotate(45deg) translateY(-50%); transform: rotate(45deg) translateY(-50%); }\n.",[1],"feature wx-image { float: left; margin: ",[0,35]," ",[0,35]," ",[0,0]," ",[0,35],"; width: ",[0,80],"; height: ",[0,80],"; }\n.",[1],"feature wx-text { float: left; font-size: ",[0,36],"; font-weight: bold; line-height: ",[0,150],"; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/features/features.wxss:35:10)",{path:"./pages/features/features.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/features/features.wxml'] = [ $gwx, './pages/features/features.wxml' ];
+		else __wxAppCode__['pages/features/features.wxml'] = $gwx( './pages/features/features.wxml' );
+				__wxAppCode__['pages/index/index.wxss'] = setCssToHead(["wx-image { vertical-align: top; }\n#wrapper { display: block; width: 100%; height: 100vh; background-color: #ffffff; }\n#fakeSearchWrapper { position: fixed; left: ",[0,0],"; top: ",[0,0],"; width: 100%; height: ",[0,120],"; background-color: #ffffff; box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.08); z-index: 999; }\n#fakeSearch { position: absolute; left: ",[0,25],"; top: ",[0,20],"; padding: 0px ",[0,72]," 0px ",[0,76],"; width: ",[0,700],"; height: ",[0,80],"; border-radius: ",[0,40],"; background-color: #f5f5f5; box-sizing: border-box; }\n#magnifier { position: absolute; left: ",[0,50],"; top: ",[0,44],"; width: ",[0,32],"; height: ",[0,32],"; }\n#fakeSearch wx-text { color: #808080; font-size: ",[0,32],"; line-height: ",[0,80],"; }\n#side { position: fixed; left: ",[0,0],"; top: ",[0,120],"; bottom: ",[0,0],"; width: ",[0,150],"; background-color: #f7f7f7; }\n.",[1],"cat { position: relative; width: 100%; margin-bottom: 1px; height: ",[0,100],"; text-align: center; box-sizing: border-box; line-height: ",[0,100],"; }\n.",[1],"cat-bg { position: absolute; left: ",[0,0],"; top: ",[0,0],"; width: ",[0,7],"; height: 100%; transition: all 150ms; }\n.",[1],"cat.",[1],"active .",[1],"cat-bg { width: 100%; }\n.",[1],"cat.",[1],"active::before { width: 100%; }\n.",[1],"cat wx-text { position: absolute; left: 50%; top: 50%; width: ",[0,138],"; color: #999999; font-size: ",[0,30],"; line-height: 1em; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); transition: all 150ms; }\n.",[1],"cat.",[1],"active wx-text { color: #ffffff; font-weight: bold; }\n.",[1],"cat.",[1],"en wx-text { font-size: ",[0,24],"; line-height: 1.2em; }\n.",[1],"cat wx-image { width: 20px; height: 20px; border-radius: 5px; }\n#qrCode { position: absolute; left: ",[0,35],"; bottom: ",[0,84],"; padding: ",[0,10],"; width: ",[0,60],"; height: ",[0,60],"; background-color: #ffffff; box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1); }\n#cnEn { position: absolute; left: ",[0,0],"; bottom: ",[0,84],"; width: 100%; color: #cccccc; font-size: ",[0,26],"; text-align: center; }\n#cnEn wx-text.",[1],"active { color: #333333; }\n#cnEn wx-text:first-child { margin-right: 0.5em; }\n#tipsBtn { position: absolute; left: 0px; bottom: ",[0,30],"; width: 100%; color: #cccccc; font-size: ",[0,24],"; line-height: 1em; text-align: center; }\n#tipsOverlay { position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0); z-index: 1000; }\n#tips { position: absolute; left: ",[0,20],"; bottom: ",[0,90],"; padding: 0.6em 1.2em; width: 15em; border-radius: 5px; background-color: #000000; color: #ffffff; font-size: ",[0,24],"; line-height: 2em; -webkit-animation: fadeIn 300ms both; animation: fadeIn 300ms both; z-index: 1001; }\n#tips::before { content: \x22\x22; position: absolute; left: ",[0,60],"; bottom: ",[0,-24],"; width: ",[0,24],"; height: ",[0,24],"; background-color: #000000; -webkit-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }\n.",[1],"list-wrapper { position: absolute; left: ",[0,150],"; top: ",[0,120],"; right: ",[0,0],"; bottom: ",[0,200],"; }\n.",[1],"list { display: block; height: 100%; background-color: #ffffff; }\n.",[1],"section { padding-top: 12px; }\n.",[1],"cat-intro-wrapper { margin: ",[0,0]," 12px; padding-top: 15px; padding-bottom: 8px; border-radius: ",[0,20],"; }\n.",[1],"cat-intro-wrapper-0 { background-color: rgba(102, 64, 53, 0.1); }\n.",[1],"cat-intro-wrapper-1 { background-color: rgba(44, 43, 39, 0.1); }\n.",[1],"cat-intro-wrapper-2 { background-color: rgba(16, 72, 131, 0.1); }\n.",[1],"cat-intro-wrapper-3 { background-color: rgba(229, 49, 34, 0.1); }\n.",[1],"section-icon { display: block; vertical-align: top; margin: 0px auto; width: ",[0,149],"; height: ",[0,149],"; border-radius: 5px; }\n.",[1],"cat-intro { margin-top: 8px; padding: 0px 15px; }\n.",[1],"cat-description { font-size: 14px; line-height: 1.8em; text-indent: 2em; }\n.",[1],"cat-description .",[1],"b { font-weight: bold; }\n.",[1],"throw-tips-title { display: block; font-size: 14px; font-weight: bold; line-height: 1.8em; }\n.",[1],"throw-tip { position: relative; display: block; padding-left: 1em; font-size: 14px; line-height: 1.8em; }\n.",[1],"throw-tip::before { content: \x22\x22; position: absolute; left: 4px; top: 1em; width: 4px; height: 4px; border-radius: 2px; background-color: #000000; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n.",[1],"item { padding-left: 1em; line-height: 3em; font-size: 15px; }\n.",[1],"item:nth-child(odd) { background-color: #fafafa; }\n.",[1],"item-hover { }\n#detailOverlay { position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0.3); z-index: 1800; }\n#detail { position: absolute; left: 50%; top: 50%; width: ",[0,400],"; height: ",[0,400],"; border-radius: 10px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; -webkit-animation: pop 200ms; animation: pop 200ms; }\n.",[1],"detail-0 { background-color: #664035; }\n.",[1],"detail-1 { background-color: #2c2b27; }\n.",[1],"detail-2 { background-color: #104883; }\n.",[1],"detail-3 { background-color: #e53122; }\n#detailItemName { position: absolute; left: ",[0,0],"; top: ",[0,77],"; width: 100%; color: #ffffff; font-size: ",[0,45],"; font-weight: bold; line-height: 1.2em; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n#detailBelongToText { position: absolute; left: ",[0,0],"; top: ",[0,150],"; width: 100%; display: block; color: #ffffff; font-size: ",[0,35],"; line-height: 1em; }\n#detailCatIcon { position: absolute; left: ",[0,100],"; top: ",[0,190],"; width: ",[0,200],"; height: ",[0,200],"; border-radius: 5px; vertical-align: top; }\n#qrDownloadOverlay, #gzhQrOverlay { position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2002; }\n#qrDownloadWrapper, #gzhQrWrapper { position: fixed; left: 50%; top: 50%; width: ",[0,600],"; height: ",[0,775],"; border-radius: 10px; background-color: #ffffff; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 2003; -webkit-animation: pop 250ms; animation: pop 250ms; }\n#qrDownloadWrapper \x3e wx-image { display: block; margin-left: ",[0,75],"; margin-top: ",[0,75],"; width: ",[0,450],"; height: ",[0,450],"; }\n#gzhQrWrapper \x3e wx-image { display: block; margin-left: ",[0,50],"; margin-top: ",[0,50],"; width: ",[0,500],"; height: ",[0,500],"; }\n#qrDownloadWrapper wx-button { margin-left: ",[0,75],"; margin-top: ",[0,75],"; width: ",[0,450],"; height: ",[0,100],"; border-radius: ",[0,50],"; background-color: #64a814; color: #ffffff; font-size: ",[0,32],"; line-height: ",[0,100],"; }\n#qrDownloadWrapper wx-button::after { border: none; }\n#hideQr { position: absolute; right: ",[0,20],"; top: ",[0,20],"; width: ",[0,40],"; height: ",[0,40],"; }\n#hideQr::before, #hideQr::after { content: \x22\x22; position: absolute; left: 50%; top: 50%; width: ",[0,40],"; height: ",[0,4],"; border-radius: ",[0,2],"; background-color: #cccccc; }\n#hideQr::before { -webkit-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }\n#hideQr::after { -webkit-transform: translate(-50%, -50%) rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); }\n#adWrapper { position: fixed; left: ",[0,150],"; bottom: ",[0,0],"; width: ",[0,600],"; height: ",[0,200],"; background-color: transparent; z-index: 200; }\n#overlay { position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0.3); z-index: 1800; }\n#helloEnglish { position: absolute; left: 50%; top: 50%; padding: ",[0,80]," ",[0,0],"; width: ",[0,600],"; border-radius: 10px; background-color: #ffffff; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }\n#helloEnglish wx-image { display: block; margin: ",[0,0]," auto; width: ",[0,402],"; height: ",[0,204],"; }\n#switchToEnglish { display: block; margin: ",[0,50]," auto ",[0,0],"; width: ",[0,400],"; height: ",[0,70],"; border-radius: ",[0,35],"; background-color: #64a814; color: #ffffff; font-size: ",[0,28],"; text-align: center; line-height: ",[0,70],"; }\n@-webkit-keyframes pop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}@keyframes pop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}@-webkit-keyframes fadeIn { 0% { opacity: 0; }\n100% { opacity: 1; }\n}@keyframes fadeIn { 0% { opacity: 0; }\n100% { opacity: 1; }\n}@-webkit-keyframes shake { 4%, 8%, 12% { -webkit-transform: rotate(-10deg); transform: rotate(-10deg); }\n2%, 6%, 10% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }\n0%, 14%, 100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n}@keyframes shake { 4%, 8%, 12% { -webkit-transform: rotate(-10deg); transform: rotate(-10deg); }\n2%, 6%, 10% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }\n0%, 14%, 100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n}",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/index/index.wxss:499:1)",{path:"./pages/index/index.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/index/index.wxml'] = [ $gwx, './pages/index/index.wxml' ];
+		else __wxAppCode__['pages/index/index.wxml'] = $gwx( './pages/index/index.wxml' );
+				__wxAppCode__['pages/search/search.wxss'] = setCssToHead(["#wrapper { display: block; width: 100%; height: 100vh; background-color: #ffffff; }\n#searchWrapper { position: fixed; width: 100%; height: ",[0,120],"; background-color: #ffffff; box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.08); z-index: 999; }\n#search { position: absolute; left: ",[0,25],"; top: ",[0,20],"; padding: 0px ",[0,72]," 0px ",[0,76],"; width: ",[0,620],"; height: ",[0,80],"; border-radius: ",[0,40],"; background-color: #f5f5f5; box-sizing: border-box; font-size: ",[0,32],"; line-height: 1em; transition: all 200ms; }\n#magnifier { position: absolute; left: ",[0,50],"; top: ",[0,44],"; width: ",[0,32],"; height: ",[0,32],"; }\n#clearSearchText { position: absolute; left: ",[0,593],"; top: ",[0,60],"; width: ",[0,32],"; height: ",[0,32],"; border-radius: 50%; background-color: #cccccc; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n#clearSearchText::before, #clearSearchText::after { content: \x22\x22; position: absolute; left: 50%; top: 50%; width: 64%; height: ",[0,4],"; border-radius: ",[0,3],"; background-color: #f5f5f5; }\n#clearSearchText::before { -webkit-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }\n#clearSearchText::after { -webkit-transform: translate(-50%, -50%) rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); }\n#cancelSearch { position: absolute; left: ",[0,697.5],"; top: ",[0,60],"; width: ",[0,100],"; color: #333333; font-size: ",[0,32],"; text-align: center; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }\n#cancelSearch.en { font-size: ",[0,24],"; }\n#searchOverlay { position: absolute; left: 0px; top: ",[0,120],"; right: 0px; bottom: ",[0,0],"; background-color: #ffffff; }\n#results { display: block; height: 100%; }\n#searchWithNoResultsIcon { position: absolute; left: 50%; top: 25%; width: ",[0,100],"; height: ",[0,100],"; -webkit-transform: translate(-50%, -100%); transform: translate(-50%, -100%); }\n#searchWithNoResultsText { position: absolute; left: 0px; top: 25%; width: 100%; color: #333333; font-size: 16px; font-weight: bold; line-height: 1em; text-align: center; -webkit-transform: translate(0%, 1em); transform: translate(0%, 1em); }\n#searchWithNoResultsSubmit, #submitKeywordStatus { position: absolute; left: 50%; top: 25%; width: 100%; color: #fabd26; font-size: 16px; line-height: 1em; text-align: center; -webkit-transform: translate(-50%, 3em); transform: translate(-50%, 3em); }\n.",[1],"result { padding-left: 1em; font-size: 15px; line-height: 3em; }\n.",[1],"result:nth-child(odd) { background-color: #fafafa; }\n.",[1],"result-cat-0 { color: #956c58; }\n.",[1],"result-cat-1 { color: #2d2926; }\n.",[1],"result-cat-2 { color: #003c71; }\n.",[1],"result-cat-3 { color: #f9423a; }\n#detailOverlay { position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0.3); z-index: 1000; }\n#detail { position: absolute; left: 50%; top: 50%; width: ",[0,400],"; height: ",[0,400],"; border-radius: 10px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; -webkit-animation: detailPop 200ms; animation: detailPop 200ms; }\n.",[1],"detail-0 { background-color: #664035; }\n.",[1],"detail-1 { background-color: #2c2b27; }\n.",[1],"detail-2 { background-color: #104883; }\n.",[1],"detail-3 { background-color: #e53122; }\n#detailItemName { display: block; margin-top: ",[0,55],"; color: #ffffff; font-size: ",[0,45],"; font-weight: bold; line-height: 1em; }\n#detailBelongToText { margin-top: ",[0,35],"; display: block; color: #ffffff; font-size: ",[0,35],"; line-height: 1em; }\n#detailCatIcon { margin-top: ",[0,20],"; width: ",[0,200],"; height: ",[0,200],"; border-radius: 5px; vertical-align: top; }\n#share, #cs, #qr { position: fixed; right: 10px; top: ",[0,140],"; width: ",[0,175],"; height: ",[0,60],"; border-top-left-radius: ",[0,30],"; border-bottom-left-radius: ",[0,30],"; border-top-right-radius: ",[0,30],"; border-bottom-right-radius: ",[0,30],"; background-color: #ffffff; box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1); z-index: 2001; }\n#cs { top: ",[0,220],"; }\n#qr { bottom: ",[0,270],"; }\n#share::after, #cs::after { border: none; }\n#share wx-image, #cs wx-image, #qr wx-image { position: absolute; left: ",[0,25],"; top: ",[0,15],"; width: ",[0,30],"; height: ",[0,30],"; }\n#share wx-text, #cs wx-text, #qr wx-text { position: absolute; left: ",[0,65],"; top: ",[0,0],"; line-height: ",[0,60],"; color: #333333; font-size: ",[0,28],"; }\n#check { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, ",[0,-110],"); transform: translate(-50%, ",[0,-110],"); width: ",[0,100],"; height: ",[0,100],"; }\n#thanksForTheFeedback { position: absolute; left: 0px; top: 50%; width: 100%; text-align: center; color: #333333; font-size: 16px; font-weight: bold; line-height: 1em; -webkit-transform: translate(0%, ",[0,20],"); transform: translate(0%, ",[0,20],"); }\n#adWrapper { position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: 200; }\n@-webkit-keyframes detailPop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}@keyframes detailPop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/search/search.wxss:301:1)",{path:"./pages/search/search.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/search/search.wxml'] = [ $gwx, './pages/search/search.wxml' ];
+		else __wxAppCode__['pages/search/search.wxml'] = $gwx( './pages/search/search.wxml' );
+				__wxAppCode__['pages/settings/cities/cities.wxss'] = setCssToHead(["#settings { height: 100vh; background-color: #f0f0f0; }\n.",[1],"setting { position: relative; padding-left: 1em; border-bottom: 1px solid #f0f0f0; background-color: #ffffff; font-size: ",[0,30],"; line-height: 3em; }\n.",[1],"setting:first-child { margin-top: ",[0,90],"; border-top: 1px solid #eeeeee; }\n.",[1],"setting:last-child { border-bottom: 1px solid #eeeeee; }\n.",[1],"setting::after { content: \x22\x22; position: absolute; right: ",[0,40],"; top: 50%; width: ",[0,20],"; height: ",[0,20],"; border-top: 2px solid #dddddd; border-right: 2px solid #dddddd; -webkit-transform: rotate(45deg) translateY(-70%); transform: rotate(45deg) translateY(-70%); }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/settings/cities/cities.wxss:1:1)",{path:"./pages/settings/cities/cities.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/settings/cities/cities.wxml'] = [ $gwx, './pages/settings/cities/cities.wxml' ];
+		else __wxAppCode__['pages/settings/cities/cities.wxml'] = $gwx( './pages/settings/cities/cities.wxml' );
+				__wxAppCode__['pages/settings/settings.wxss'] = setCssToHead(["#settings { height: 100vh; background-color: #f0f0f0; }\n.",[1],"setting-title { display: block; margin: ",[0,50]," ",[0,0]," ",[0,15]," ",[0,20],"; color: #aaaaaa; font-size: ",[0,26],"; }\n.",[1],"setting { margin-bottom: ",[0,50],"; }\n.",[1],"setting-item { position: relative; padding-left: 1em; border-bottom: 1px solid #f0f0f0; background-color: #ffffff; font-size: ",[0,30],"; line-height: 3em; }\n.",[1],"setting-item:first-child { border-top: 1px solid #eeeeee; }\n.",[1],"setting-item:last-child { border-bottom: 1px solid #eeeeee; }\n.",[1],"checked::after { content: \x22\x22; position: absolute; right: ",[0,35],"; top: ",[0,32],"; width: ",[0,30],"; height: ",[0,15],"; border-left: 2px solid #fabd26; border-bottom: 2px solid #fabd26; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/settings/settings.wxss:1:1)",{path:"./pages/settings/settings.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/settings/settings.wxml'] = [ $gwx, './pages/settings/settings.wxml' ];
+		else __wxAppCode__['pages/settings/settings.wxml'] = $gwx( './pages/settings/settings.wxml' );
+				__wxAppCode__['pages/test/test.wxss'] = setCssToHead(["wx-image { vertical-align: top; }\nwx-button { margin: 0px; padding: 0px; background-color: transparent; }\nwx-button::after { border: none; }\n#wrapper { position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; background-color: #ffffff; }\n#h1 { display: block; margin: ",[0,50]," auto ",[0,80],"; width: ",[0,609],"; height: ",[0,62],"; }\n#quizzes { position: absolute; left: ",[0,0],"; top: ",[0,0],"; right: ",[0,0],"; bottom: ",[0,0],"; }\n.",[1],"quiz { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; transition: all 320ms cubic-bezier(0.4, -0.09, 1, 1.01) 200ms; z-index: 50; }\n.",[1],"quiz.",[1],"in { -webkit-transform: translateX(50%); transform: translateX(50%); opacity: 0; z-index: 40; }\n.",[1],"quiz.",[1],"out { -webkit-transform: translateX(-50%); transform: translateX(-50%); opacity: 0; z-index: 40; }\n.",[1],"quiz-index { margin: ",[0,0]," ",[0,50],"; font-size: ",[0,30],"; font-weight: bold; text-align: left; }\n.",[1],"quiz-index wx-text { color: rgba(0, 0, 0, 0.19); }\n.",[1],"quiz-q { display: block; margin-top: ",[0,50],"; font-size: ",[0,70],"; font-weight: bold; line-height: 1.3em; text-align: center; }\n.",[1],"quiz-options { margin: ",[0,40]," auto ",[0,0],"; width: ",[0,450],"; }\n.",[1],"quiz-option { position: relative; width: 100%; height: ",[0,100],"; box-sizing: border-box; border: 1px solid #eeeeee; border-radius: ",[0,50],"; font-size: ",[0,32],"; text-align: center; }\n.",[1],"quiz-option:not(:last-child) { margin-bottom: ",[0,30],"; }\n.",[1],"quiz-option-household.",[1],"selected { border: 1px solid rgba(149, 108, 88, 0.5); background-color: rgba(149, 108, 88, 0.05); }\n.",[1],"quiz-option-residual.",[1],"selected { border: 1px solid rgba(45, 41, 38, 0.5); background-color: rgba(45, 41, 38, 0.05); }\n.",[1],"quiz-option-recyclable.",[1],"selected { border: 1px solid rgba(0, 60, 113, 0.5); background-color: rgba(0, 60, 113, 0.05); }\n.",[1],"quiz-option-hazardous.",[1],"selected { border: 1px solid rgba(249, 66, 58, 0.5); background-color: rgba(249, 66, 58, 0.05); }\n.",[1],"quiz-option-kitchen1.",[1],"selected, .",[1],"quiz-option-kitchen2.",[1],"selected { border: 1px solid rgba(0, 111, 98, 0.5); background-color: rgba(0, 111, 98, 0.05); }\n.",[1],"quiz-option-other.",[1],"selected { border: 1px solid rgba(255, 163, 0, 0.5); background-color: rgba(255, 163, 0, 0.05); }\n.",[1],"quiz-option wx-image { margin-top: ",[0,32],"; padding: ",[0,15],"; width: ",[0,60],"; height: ",[0,60],"; border-radius: ",[0,45],"; }\n.",[1],"quiz-option:nth-child(1) wx-image { background-color: #664035; }\n.",[1],"quiz-option:nth-child(2) wx-image { background-color: #2c2b27; }\n.",[1],"quiz-option:nth-child(3) wx-image { background-color: #104883; }\n.",[1],"quiz-option:nth-child(4) wx-image { background-color: #e53122; }\n.",[1],"quiz-option wx-text { position: absolute; left: ",[0,0],"; top: 50%; width: 100%; display: block; font-size: ",[0,32],"; text-align: center; -webkit-transform: translateY(-50%); transform: translateY(-50%); }\n.",[1],"quiz-option wx-text.",[1],"en { }\n#quizResult { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background-color: #ffffff; -webkit-transform: translateX(100%); transform: translateX(100%); transition: all 360ms ease-in 200ms; z-index: 190; }\n#quizResult.in { -webkit-transform: translateX(0) !important; transform: translateX(0) !important; }\n#score { display: block; margin-top: ",[0,30],"; font-size: ",[0,56],"; font-weight: bold; line-height: 1em; text-align: center; }\n#resultSheet { margin: ",[0,20]," ",[0,0]," ",[0,0],"; }\n.",[1],"result-row { font-size: ",[0,26],"; line-height: 2em; overflow: hidden; }\n.",[1],"result-row:nth-child(even) { background-color: #fafafa; }\n.",[1],"result-quiz-name { float: left; padding-left: 2em; width: ",[0,450],"; height: 2em; box-sizing: border-box; overflow: hidden; }\n.",[1],"result-my-answer, .",[1],"result-right-answer { position: relative; float: left; width: ",[0,150],"; height: 2em; text-align: center; }\n.",[1],"result-right-answer { color: #d23642; }\n.",[1],"right-answer { position: relative; }\n.",[1],"right-answer::before { content: \x22\x22; position: absolute; left: 50%; top: 50%; width: ",[0,30],"; height: ",[0,15],"; border-left: 2px solid #64a814; border-bottom: 2px solid #64a814; -webkit-transform: translate(-50%, -70%) rotate(-45deg); transform: translate(-50%, -70%) rotate(-45deg); opacity: 1; }\n#actions { position: relative; margin-top: ",[0,50],"; height: ",[0,90],"; text-align: center; }\n#actions wx-view, #actions wx-button { position: absolute; top: 50%; padding: ",[0,0],"; width: ",[0,250],"; height: ",[0,80],"; border-radius: ",[0,40],"; box-sizing: border-box; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: ",[0,36],"; line-height: ",[0,80],"; }\n#actions wx-view { left: ",[0,208],"; background-color: #eeeeee; }\n#actions wx-button { left: ",[0,542],"; background-color: #fabd26; }\n#adWrapper { position: absolute; left: 0px; bottom: 0px; width: 100%; height: ",[0,250],"; z-index: 200; }\n#viewMore { display: block; margin: ",[0,30]," auto ",[0,0],"; font-size: ",[0,36],"; text-align: center; line-height: 1em; }\n@-webkit-keyframes bounce { 0%, 5% { -webkit-transform: translate3d(0px, 2px, 0px); transform: translate3d(0px, 2px, 0px); }\n100% { -webkit-transform: translate3d(0px, -2px, 0px); transform: translate3d(0px, -2px, 0px); }\n}@keyframes bounce { 0%, 5% { -webkit-transform: translate3d(0px, 2px, 0px); transform: translate3d(0px, 2px, 0px); }\n100% { -webkit-transform: translate3d(0px, -2px, 0px); transform: translate3d(0px, -2px, 0px); }\n}@-webkit-keyframes pop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}@keyframes pop { 0% { -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); }\n80% { -webkit-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }\n100% { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }\n}@-webkit-keyframes shake { 4%, 8%, 12% { -webkit-transform: rotate(-10deg); transform: rotate(-10deg); }\n2%, 6%, 10% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }\n0%, 14%, 100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n}@keyframes shake { 4%, 8%, 12% { -webkit-transform: rotate(-10deg); transform: rotate(-10deg); }\n2%, 6%, 10% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }\n0%, 14%, 100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n}@-webkit-keyframes showing { 0%, 100% { opacity: 1; }\n}@keyframes showing { 0%, 100% { opacity: 1; }\n}",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/test/test.wxss:303:1)",{path:"./pages/test/test.wxss"});
+		if (__vd_version_info__.delayedGwx) __wxAppCode__['pages/test/test.wxml'] = [ $gwx, './pages/test/test.wxml' ];
+		else __wxAppCode__['pages/test/test.wxml'] = $gwx( './pages/test/test.wxml' );
+		 
+			;__mainPageFrameReady__()			;var __pageFrameEndTime__ = Date.now() 		</script> 	</head> 	 	<body> 		<div></div> 	</body> 	 	</html>

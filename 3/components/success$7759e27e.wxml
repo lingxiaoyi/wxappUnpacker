@@ -1,0 +1,45 @@
+<template name="success$7759e27e">
+    <view class="_div data-v-f8cdbda6 success-container">
+        <view class="_div data-v-f8cdbda6 top">
+            <image alt class="_img data-v-f8cdbda6" src="https://sr.aihuishou.com/miniapps/earth/reservation/success.png"></image>
+            <label class="_span data-v-f8cdbda6 title">预约成功</label>
+    请保持电话畅通，门店小哥回会联系您哦！
+  </view>
+        <view class="_div data-v-f8cdbda6 bottom">
+            <view class="_p data-v-f8cdbda6 title" wx:if="{{productInfo&&productInfo.name}}">回收机型</view>
+            <view class="_div data-v-f8cdbda6 info" wx:if="{{productInfo&&productInfo.name}}">
+                <image alt class="_img data-v-f8cdbda6" src="{{productInfo.imgUrl}}"></image>
+                <label class="_span data-v-f8cdbda6 name">{{productInfo.name}}</label>
+                <label class="_span data-v-f8cdbda6 price">最高回收价: <label class="_span data-v-f8cdbda6 number">{{productInfo.topPrice}}</label>
+                </label>
+            </view>
+            <view class="_div data-v-f8cdbda6 detail-box">
+                <view class="_div data-v-f8cdbda6 desc">预约门店</view>
+                <view bindtap="handleProxy" class="_div data-v-f8cdbda6 address" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{orderInfo.shop}}">
+                    <view class="_p data-v-f8cdbda6 detail">
+          {{orderInfo.shop.address}}
+        </view>
+                    <label class="_span data-v-f8cdbda6 line"></label>
+                    <label catchtap="handleProxy" class="_span data-v-f8cdbda6 call" data-comkey="{{$k}}" data-eventid="{{'0'}}"></label>
+                </view>
+            </view>
+            <view class="_div data-v-f8cdbda6 detail-box">
+                <view class="_div data-v-f8cdbda6 desc">预约信息</view>
+                <view class="_div data-v-f8cdbda6 time">
+                    <label class="_span data-v-f8cdbda6">到店时间：</label>
+        {{orderTime}}
+      </view>
+                <view class="_div data-v-f8cdbda6 time">
+                    <label class="_span data-v-f8cdbda6">预约手机：</label>
+        {{orderInfo.contactMobile}}
+      </view>
+            </view>
+            <view class="_div data-v-f8cdbda6 detail-box">
+                <view class="_div data-v-f8cdbda6 desc">温馨提示</view>
+                <view class="_p data-v-f8cdbda6 tip">前往门店前，记得带上您的身份证，满18岁才交易。</view>
+            </view>
+        </view>
+        <label bindtap="handleProxy" class="_span data-v-f8cdbda6 back" data-comkey="{{$k}}" data-eventid="{{'2'}}">返回首页</label>
+        <label bindtap="handleProxy" class="_span data-v-f8cdbda6 cancel" data-comkey="{{$k}}" data-eventid="{{'3'}}">取消订单</label>
+    </view>
+</template>

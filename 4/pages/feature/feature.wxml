@@ -1,0 +1,7 @@
+<scroll-view enableBackToTop="true" id="feature" scrollWithAnimation="true" scrollY="true">
+    <view class="item" wx:for="{{featureData}}">
+        <image src="{{item.imageSrc}}"></image>
+        <text class="item-title">{{item.title[language]}}</text>
+        <text class="item-cat{{language==='en'?' en':''}}" style="color: {{item.cat<4?'rgb('+allCats[ cats[item.cat] ].color.r+', '+allCats[ cats[item.cat] ].color.g+', '+allCats[ cats[item.cat] ].color.b+')':'#333333'}};">{{item.cat<4?allCats[ cats[item.cat] ].name[language]:extraCats[4][language]}}</text>
+    </view>
+</scroll-view>

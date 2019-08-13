@@ -1,0 +1,11 @@
+<template name="detail$65fdfb22">
+    <view class="_div data-v-adfa5a4a process-container" wx:if="{{total}}">
+        <progress active="{{true}}" activeMode="forwards" activeColor="#FFD000" backgroundColor="#FFFFFF" class="_progress data-v-adfa5a4a" color="#FFD000" percent="{{percent}}" strokeWidth="{{25}}"></progress>
+        <view class="_div data-v-adfa5a4a process-text">
+            <label class="_span data-v-adfa5a4a">选择结果和实际情况相符，将以最快速度收款</label>
+            <view class="_p data-v-adfa5a4a process-number" wx:if="{{!!total}}">
+                <label class="_span data-v-adfa5a4a current-percent">{{current}}</label> / {{total}}
+    </view>
+        </view>
+    </view>
+</template>

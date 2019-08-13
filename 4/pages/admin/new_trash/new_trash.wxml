@@ -1,0 +1,14 @@
+<view id="wrapper">
+    <view id="submitNewTrashForm">
+        <view id="success" style="display: {{success?'block':'none'}}">{{editing?'修改':'提交'}}成功！</view>
+        <form bindsubmit="submitNewTrash">
+            <input name="name" placeholder="名称" type="text" value="{{name}}"></input>
+            <input name="initials" placeholder="首字母缩写" type="text" value="{{initials}}"></input>
+            <input name="alias" placeholder="别名" type="text" value="{{alias}}"></input>
+            <picker bindchange="changeCat" range="{{cats}}" value="{{cat_index}}">
+                <view class="picker">类别：{{cats[cat_index]}}</view>
+            </picker>
+            <button disabled="{{submitting}}" formType="submit" id="submitBtn" type="primary">{{editing?'修改':'提交'}}</button>
+        </form>
+    </view>
+</view>

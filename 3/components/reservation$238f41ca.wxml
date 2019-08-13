@@ -1,0 +1,59 @@
+<template name="reservation$238f41ca">
+    <view class="_div data-v-59238394 shop-container">
+        <view class="_div data-v-59238394 top">
+            <view class="_p data-v-59238394 title">预约门店</view>
+            <view class="_div data-v-59238394 info">
+                <image alt class="_img data-v-59238394" src="{{nowSelectShop.imgUrl?nowSelectShop.imgUrl:'https://static.aihuishou.com/image?file=5aec066bb4efb26c180000e1'}}"></image>
+                <label class="_span data-v-59238394 tag" wx:if="{{isNearest}}">离你最近</label>
+                <label class="_span data-v-59238394 name">{{nowSelectShop.name}}</label>
+                <label class="_span data-v-59238394 distance" wx:if="{{nowSelectShop.disStr}}">距您{{nowSelectShop.disStr}}</label>
+                <label bindtap="handleProxy" class="_span data-v-59238394 change" data-comkey="{{$k}}" data-eventid="{{'0'}}">更换门店</label>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-59238394 address" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+                <view class="_p data-v-59238394 detail">
+        {{nowSelectShop.address}}
+      </view>
+                <label class="_span data-v-59238394 line"></label>
+                <label catchtap="handleProxy" class="_span data-v-59238394 call" data-comkey="{{$k}}" data-eventid="{{'1'}}"></label>
+            </view>
+        </view>
+        <view class="_div data-v-59238394 bottom">
+            <view class="_p data-v-59238394 title">回收机型</view>
+            <view bindtap="handleProxy" class="_div data-v-59238394 info" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                <image alt class="_img data-v-59238394" src="{{cardInfo.imgUrl?cardInfo.imgUrl:'https://sr.aihuishou.com/miniapps%2Fearth%2Freservation%2Fphone.png'}}"></image>
+                <block wx:if="{{hasCard}}">
+                    <label class="_span data-v-59238394 tag" wx:if="{{!productInfo.id&&objBasicInfo.id}}">本机机型</label>
+                    <label class="_span data-v-59238394 name">{{cardInfo.name}}</label>
+                    <label class="_span data-v-59238394 price">最高回收价: <label class="_span data-v-59238394 number">{{cardInfo.topPrice}}</label>
+                    </label>
+                    <label class="_span data-v-59238394 change">更换机型</label>
+                </block>
+                <block wx:else>
+                    <label class="_span data-v-59238394 desc">暂无回收机型</label>
+                    <label class="_span data-v-59238394 select">选择回收机型</label>
+                </block>
+            </view>
+        </view>
+        <view class="_div data-v-59238394 submit-box">
+            <view class="_div data-v-59238394 single">
+                <label class="_span data-v-59238394 desc">手机号</label>
+                <label class="_span data-v-59238394" wx:if="{{userInfo.mobile}}">{{userInfo.mobile}}</label>
+                <button bindgetphonenumber="handleProxy" class="_button data-v-59238394 no-login" data-comkey="{{$k}}" data-eventid="{{'4'}}" openType="getPhoneNumber" wx:else>
+        点击授权
+      </button>
+            </view>
+            <view class="_div data-v-59238394 single">
+                <label class="_span data-v-59238394 desc">预约时间</label>
+                <picker bindchange="handleProxy" bindcolumnchange="handleProxy" class="_picker data-v-59238394 date-select" data-comkey="{{$k}}" data-eventid="{{'5'}}" mode="multiSelector" range="{{storeDateList}}" rangeKey="name" value="{{[dateStoreColumnIndex,timeStoreColumnIndex]}}" wx:if="{{storeDateList.length}}">
+                    <label class="_span data-v-59238394" wx:if="{{formartedStoreDate&&formartedStoreDate.length}}">
+          {{formartedStoreDate[dateStoreColumnIndex].name}}-{{formartedStoreTime[dateStoreColumnIndex][timeStoreColumnIndex].name}}
+        </label>
+                </picker>
+            </view>
+        </view>
+        <image alt class="_img data-v-59238394 banner" src="{{bannerImg}}"></image>
+        <form bindsubmit="handleProxy" class="_form data-v-59238394" data-comkey="{{$k}}" data-eventid="{{'6'}}" reportSubmit="{{true}}">
+            <button class="_button data-v-59238394 submit-btn" formType="submit">立即预约</button>
+        </form>
+    </view>
+</template>

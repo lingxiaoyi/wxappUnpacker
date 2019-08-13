@@ -1,0 +1,8 @@
+<template name="SelfPhone$4eda935e">
+    <view class="_div data-v-4faffe65">
+        <template is="current-card$5307a17a" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{!selfPhoneInfo.coupon||hasEnd}}"></template>
+        <template is="extra-current-card$dd95dbc0" data="{{...$root[$kk+'1'],$root:$root}}" wx:if="{{selfPhoneInfo.coupon&&!hasEnd}}"></template>
+    </view>
+</template>
+<import src="current-card$5307a17a"></import>
+<import src="extra-current-card$dd95dbc0"></import>

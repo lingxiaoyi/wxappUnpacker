@@ -1,0 +1,112 @@
+@import "../activity/private/private.wxss";
+
+.choosecity-container.data-v-18da106e {
+    width: 100%;
+    background: #f3f2f9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.choosecity-container ._header.data-v-18da106e {
+    width: 100%;
+    background: #fff;
+}
+
+.choosecity-container ._header ._h1.data-v-18da106e {
+    padding-left: 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #5c626d;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.choosecity-container ._header ._p.data-v-18da106e {
+    padding-left: 32rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    color: #0e0e0f;
+    font-size: 30rpx;
+}
+
+.choosecity-container ._main.data-v-18da106e {
+    position: absolute;
+    top: 200rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+}
+
+.choosecity-container ._main ._p.data-v-18da106e {
+    padding-left: 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #5c626d;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.choosecity-container ._main scroll-view.data-v-18da106e {
+    height: calc(100% - 80rpx);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.choosecity-container ._main scroll-view ._dl.data-v-18da106e {
+    margin-left: 32rpx;
+}
+
+.choosecity-container ._main scroll-view ._dl ._dt.data-v-18da106e {
+    color: rgba(0,0,0,.2);
+    font-size: 50rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.choosecity-container ._main scroll-view ._dl ._dd.data-v-18da106e {
+    height: 96rpx;
+    line-height: 96rpx;
+    font-size: 30rpx;
+    color: #0e0e0f;
+    border-bottom: 1rpx solid #eee;
+}
+
+.choosecity-container ._main ._ul.data-v-18da106e {
+    position: fixed;
+    width: 40rpx;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 30rpx;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    text-align: center;
+}
+
+.choosecity-container ._main ._ul ._li.data-v-18da106e {
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.choosecity-container ._main .index-letter.data-v-18da106e {
+    height: 150rpx;
+    width: 150rpx;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    line-height: 150rpx;
+    font-size: 80rpx;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+    border-radius: 10rpx;
+}

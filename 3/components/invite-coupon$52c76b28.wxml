@@ -1,0 +1,33 @@
+<template name="invite-coupon$52c76b28">
+    <view class="_div data-v-f24e06d8">
+        <template is="header$627858a8" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <scroll-view class="_scroll-view data-v-f24e06d8 invite-coupon {{!isActive&&'old'}}" scrollY="{{isActive}}">
+            <view class="_div data-v-f24e06d8 activity {{!isActive&&'old'}}">
+                <view class="_div data-v-f24e06d8 header">
+                    <view bindtap="handleProxy" class="_div data-v-f24e06d8 tag" data-comkey="{{$k}}" data-eventid="{{'0'}}"></view>
+                </view>
+                <template is="invite-coupon$6b5f9cdc" data="{{...$root[$kk+undefined],$root:$root}}"></template>
+                <view class="_div data-v-f24e06d8" wx:if="{{isActive}}">
+                    <template is="invite-coupon$0ce121c3" data="{{...$root[$kk+'2'],$root:$root}}" wx:if="{{isMaster}}"></template>
+                    <template is="invite-coupon$602cfc4a" data="{{...$root[$kk+'1'],$root:$root}}" wx:else></template>
+                    <template is="invite-coupon$5682e6a4" data="{{...$root[$kk+'3'],$root:$root}}"></template>
+                    <view class="_p data-v-f24e06d8 hotlist">
+                        <image alt class="_img data-v-f24e06d8" src="https://sr.aihuishou.com/miniapps/earth/invitecoupon/hot.png"></image>
+                    </view>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-f24e06d8 index" data-comkey="{{$k}}" data-eventid="{{'3'}}" wx:else>
+        回到首页({{countDownNum}}s)
+      </view>
+            </view>
+            <view class="_div data-v-f24e06d8 sos" wx:if="{{isActive}}">
+                <template is="index$6efb9d41" data="{{...$root[$kk+'4'],$root:$root}}"></template>
+            </view>
+        </scroll-view>
+    </view>
+</template>
+<import src="header$627858a8"></import>
+<import src="invite-coupon$6b5f9cdc"></import>
+<import src="invite-coupon$0ce121c3"></import>
+<import src="invite-coupon$602cfc4a"></import>
+<import src="invite-coupon$5682e6a4"></import>
+<import src="index$6efb9d41"></import>

@@ -1,0 +1,32 @@
+<template name="nbs-trouble$4891e927">
+    <view class="_div data-v-0f1e34da trouble-list {{isIphoneX&&'isIphoneX'}}">
+        <view class="_div data-v-0f1e34da trouble-item" key="{{index}}" wx:for="{{trouble_list}}" wx:key="index">
+            <view class="_p data-v-0f1e34da title">{{item.name}}</view>
+            <view class="_ul data-v-0f1e34da trouble-item-options">
+                <view bindtap="handleProxy" class="_li data-v-0f1e34da {{ele.checked&&'checked'}}" data-comkey="{{$k}}" data-eventid="{{'0-'+index+'-'+i}}" key="{{i}}" wx:for="{{item.items}}" wx:for-index="i" wx:for-item="ele" wx:key="i">
+                    <view class="_div data-v-0f1e34da option-title global-line">{{ele.name}}</view>
+                    <view class="_div data-v-0f1e34da">
+                        <label class="_span data-v-0f1e34da price">{{ele.price>0?ele.price:'待检测'}}</label>
+                        <image alt class="_img data-v-0f1e34da" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/maintain/default.png" wx:if="{{!ele.checked}}"></image>
+                        <image alt class="_img data-v-0f1e34da" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/maintain/checked.png" wx:if="{{ele.checked}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-0f1e34da footer {{isIphoneX&&'isIphoneX'}}">
+            <view class="_div data-v-0f1e34da left">
+                <view class="_p data-v-0f1e34da {{canSubmit&&'price'}}">
+                    <block wx:if="{{!canSubmit}}">
+          请选择故障
+        </block>
+                    <block wx:else>
+                        <label class="_span data-v-0f1e34da">合计: </label>
+                        <label class="_span data-v-0f1e34da">{{totalPrice>0?totalPrice:'待检测'}}</label>
+                    </block>
+                </view>
+                <view class="_p data-v-0f1e34da">维修成功后支付</view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-0f1e34da right {{canSubmit&&'active'}}" data-comkey="{{$k}}" data-eventid="{{'1'}}">下一步</view>
+        </view>
+    </view>
+</template>

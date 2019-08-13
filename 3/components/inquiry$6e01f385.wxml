@@ -1,0 +1,184 @@
+<template name="inquiry$6e01f385">
+    <view class="_div data-v-2d4805f1 inquiry-container" wx:if="{{hasCityLoad}}">
+        <view class="_div data-v-2d4805f1 swiper-box">
+            <swiper autoplay circular="true" class="_swiper data-v-2d4805f1 barrage" interval="5000" vertical="true">
+                <view class="_div data-v-2d4805f1" wx:if="{{!isEnvironmentalRecycling&&inquiryInfo.priceProtectionDays}}">
+                    <swiper-item class="_swiper-item data-v-2d4805f1">
+            现在下单，当前价格最多可保持<label class="_span data-v-2d4805f1">{{inquiryInfo.priceProtectionDays}}天</label>
+                    </swiper-item>
+                </view>
+                <view class="_div data-v-2d4805f1">
+                    <swiper-item class="_swiper-item data-v-2d4805f1">
+            当您选择回收，也选择为山区孩子数码教育送去一份帮助
+          </swiper-item>
+                    <swiper-item class="_swiper-item data-v-2d4805f1">
+            旧手机含铅量<label class="_span data-v-2d4805f1">20%</label>。回收旧手机，关爱血铅儿童
+          </swiper-item>
+                </view>
+                <view class="_div data-v-2d4805f1">
+                    <swiper-item class="_swiper-item data-v-2d4805f1">
+            一块废旧手机电池，会污染<label class="_span data-v-2d4805f1">6万</label>升水
+          </swiper-item>
+                </view>
+                <view class="_div data-v-2d4805f1">
+                    <swiper-item class="_swiper-item data-v-2d4805f1">
+            回收一台旧手机，可以减少<label class="_span data-v-2d4805f1">3.6千克</label>碳排放
+          </swiper-item>
+                </view>
+                <view class="_div data-v-2d4805f1">
+                    <swiper-item class="_swiper-item data-v-2d4805f1">
+            正规回收，安全便捷，<label class="_span data-v-2d4805f1">3000万</label>用户信赖之选
+          </swiper-item>
+                </view>
+            </swiper>
+        </view>
+        <view class="_div data-v-2d4805f1 price-box" wx:if="{{inquiryInfo.inquiryKey}}">
+            <view class="_div data-v-2d4805f1 left">
+                <label class="_span data-v-2d4805f1 price-number" style=" {{'line-height:'+(isEnvironmentalRecycling?'150rpx':'84rpx')+';'}}" wx:if="{{userInfo.mobile&&isShowArea}}">
+          {{inquiryInfo.amount+areaCoupon.amount}}
+        </label>
+                <label class="_span data-v-2d4805f1 price-number" style=" {{'line-height:'+(isEnvironmentalRecycling?'150rpx':'84rpx')+';'}}" wx:else>
+          {{coupon.list&&coupon.list.length>0&&coupon.selectIndex>-1&&inquiryInfo.amount?inquiryInfo.amount+coupon.list[coupon.selectIndex].amount:inquiryInfo.amount}}
+        </label>
+                <label bindtap="handleProxy" class="_span data-v-2d4805f1 price-tips" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{isEnvironmentalRecycling&&isPpvEnvironmentalRecycling}}">
+                    <image alt class="_img data-v-2d4805f1" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/index/%E5%88%86%E7%BB%84%403x.png"></image>
+                </label>
+                <view class="_div data-v-2d4805f1 nextweek" wx:if="{{!isEnvironmentalRecycling}}">
+                    <image alt class="_img data-v-2d4805f1" src="https://sr.aihuishou.com/miniapps%2Fearth%2Finquiry%2Fnextweek.png"></image>
+                    <label class="_span data-v-2d4805f1">预计一周后下降{{inquiryInfo.downPrice}}元</label>
+                </view>
+            </view>
+            <view class="_div data-v-2d4805f1 right">
+                <label bindtap="handleProxy" class="_span data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{cityInfo}}">{{cityInfo.name}}</label>
+                <view bindtap="handleProxy" class="_div data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{!isEnvironmentalRecycling}}">重新询价</view>
+            </view>
+        </view>
+        <view class="_div data-v-2d4805f1 coupon-box">
+            <view bindtap="handleProxy" class="_div data-v-2d4805f1 single" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                <label class="_span data-v-2d4805f1 title">旧机数据安全清除</label>
+                <image alt class="_img data-v-2d4805f1" src="https://sr.aihuishou.com/miniapps/earth/inquiry/question.png"></image>
+                <label class="_span data-v-2d4805f1 static">50</label>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-2d4805f1 single" data-comkey="{{$k}}" data-eventid="{{'6'}}" wx:if="{{!isEnvironmentalRecycling&&(coupon.list&&coupon.list.length||isShowArea||!userInfo.mobile)}}">
+                <label class="_span data-v-2d4805f1 title" wx:if="{{!userInfo.mobile}}">
+          {{extraInfo.packageCode?'限时高价加价券¥'+extraInfo.promotions[0].amount+'等你领':'加价券'}}
+        </label>
+                <label class="_span data-v-2d4805f1 title" wx:elif="{{isShowArea}}">限时加价</label>
+                <label class="_span data-v-2d4805f1 title">{{isSelectedPercent?'百分比加价券':'加价券'}}</label>
+                <label class="_span data-v-2d4805f1 tips" wx:if="{{isShowArea}}">48小时内交易有效</label>
+                <image catchtap="handleProxy" class="_img data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'4'}}" src="https://sr.aihuishou.com/miniapps/earth/inquiry/question.png" wx:if="{{isShowArea||isSelectedPercent}}"></image>
+                <label class="_span data-v-2d4805f1 arrow"></label>
+                <label class="_span data-v-2d4805f1 content" wx:if="{{userInfo.mobile&&!isShowArea&&coupon.list&&coupon.selectIndex!=-1}}">
+					{{couponShowtext}}
+				</label>
+                <label class="_span data-v-2d4805f1 content active" wx:if="{{userInfo.mobile&&!isShowArea&&coupon.list&&coupon.selectIndex==-1}}">
+					{{coupon.list.length}}张可用
+				</label>
+                <button bindgetphonenumber="handleProxy" class="_button data-v-2d4805f1 content" data-comkey="{{$k}}" data-eventid="{{'5'}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">点击登录用券</button>
+            </view>
+        </view>
+        <view class="_div data-v-2d4805f1 choose-recycle-box" wx:if="{{isShowSwitchTab&&!isEnvironmentalRecycling}}">
+            <label bindtap="handleProxy" class="_span data-v-2d4805f1 {{currentRecycleType===recycleTypeJson['express']?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'7'}}" wx:if="{{isShowExpress&&isFromFengchao}}">快递回收</label>
+            <label bindtap="handleProxy" class="_span data-v-2d4805f1 {{currentRecycleType===recycleTypeJson['store']?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'8'}}" wx:if="{{isShowStore}}">门店回收</label>
+            <label bindtap="handleProxy" class="_span data-v-2d4805f1 {{currentRecycleType===recycleTypeJson['ondoor']?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'9'}}" wx:if="{{isShowOndoor}}">上门回收</label>
+            <label bindtap="handleProxy" class="_span data-v-2d4805f1 {{currentRecycleType===recycleTypeJson['express']?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'10'}}" wx:if="{{isShowExpress&&!isFromFengchao}}">快递回收</label>
+        </view>
+        <view class="_div data-v-2d4805f1 no-recycleType" wx:if="{{hasSupportrecycleTypeLoad&&!supportRecycleType.length&&!isEnvironmentalRecycling}}">
+            <image alt class="_img data-v-2d4805f1 no" src="https://sr.aihuishou.com/miniapps/earth/inquiry/noSupport.png"></image>
+            <label class="_span data-v-2d4805f1">抱歉，您的设备暂时无法回收</label>
+        </view>
+        <view class="_div data-v-2d4805f1 no-recycleType" wx:if="{{!hasSupportrecycleTypeLoad}}">
+            <image alt class="_img data-v-2d4805f1 loading" src="https://sr.aihuishou.com/miniapps/earth/inquiry/loading.png"></image>
+        </view>
+        <view class="_div data-v-2d4805f1 single-recycle-box" wx:else>
+            <template is="inquiry$6ec33745" data="{{...$root[$kk+'6'],$root:$root}}" wx:if="{{currentRecycleType===recycleTypeJson['store']||recycleTypeHasClick['store']}}"></template>
+            <template is="inquiry$fda1e958" data="{{...$root[$kk+'7'],$root:$root}}" wx:if="{{currentRecycleType===recycleTypeJson['express']||recycleTypeHasClick['express']}}"></template>
+            <template is="inquiry$1e31b359" data="{{...$root[$kk+'8'],$root:$root}}" wx:if="{{currentRecycleType===recycleTypeJson['ondoor']||recycleTypeHasClick['ondoor']}}"></template>
+        </view>
+        <view class="_div data-v-2d4805f1 environmental-recycling" wx:if="{{isEnvironmentalRecycling}}">
+            <view bindtap="handleProxy" class="_p data-v-2d4805f1 p1" data-comkey="{{$k}}" data-eventid="{{'12'}}" wx:if="{{isPpvEnvironmentalRecycling}}">
+                <image alt class="_img data-v-2d4805f1" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/index/333.png"></image>
+            </view>
+            <view class="_p data-v-2d4805f1 p2">
+                <image alt class="_img data-v-2d4805f1" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/index/111.png"></image>
+            </view>
+            <view class="_p data-v-2d4805f1 p3">
+                <image alt class="_img data-v-2d4805f1" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/index/222.png"></image>
+            </view>
+        </view>
+        <view class="_div data-v-2d4805f1 foot-tip" wx:if="{{supportRecycleType.length&&!customPageAndNoSupport}}">
+            <image alt bindtap="handleProxy" class="_img data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'13'}}" src="{{isServiesChecked?'https://sr.aihuishou.com/miniapps/earth/icon-selected.png':'https://sr.aihuishou.com/miniapps/earth/icon-unselected.png'}}"></image>
+      我已阅读并同意<label bindtap="handleProxy" class="_span data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'14'}}">用户协议</label>，并且确认机器来源合法
+    </view>
+        <form bindsubmit="handleProxy" class="_form data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'16'}}" reportSubmit="{{true}}" wx:if="{{supportRecycleType.length&&!customPageAndNoSupport}}">
+            <button class="_button data-v-2d4805f1 submit-btn {{isEnvironmentalRecycling?'environmental':''}}" formType="submit" wx:if="{{userInfo.mobile&&supportRecycleType.length}}">
+                <view class="_p data-v-2d4805f1">立即回收</view>
+                <view class="_p data-v-2d4805f1" wx:if="{{isEnvironmentalRecycling}}">环保回收后机器无法退回</view>
+            </button>
+            <button bindgetphonenumber="handleProxy" class="_button data-v-2d4805f1 submit-btn {{isEnvironmentalRecycling?'environmental':''}}" data-comkey="{{$k}}" data-eventid="{{'15'}}" formType="submit" openType="getPhoneNumber" wx:if="{{!userInfo.mobile&&supportRecycleType.length}}">
+                <view class="_p data-v-2d4805f1">立即回收</view>
+                <view class="_p data-v-2d4805f1" wx:if="{{isEnvironmentalRecycling}}">环保回收后机器无法退回</view>
+            </button>
+        </form>
+        <button class="_button data-v-2d4805f1 submit-btn ban" wx:if="{{!supportRecycleType.length&&hasSupportrecycleTypeLoad}}">当前城市暂不支持环保回收</button>
+        <view class="_div data-v-2d4805f1 {{couponShowPop?'choose-coupon active':'choose-coupon'}}">
+            <view bindtap="handleProxy" class="_div data-v-2d4805f1 mask" data-comkey="{{$k}}" data-eventid="{{'17'}}"></view>
+            <view class="_div data-v-2d4805f1 coupon-container">
+                <view class="_div data-v-2d4805f1 header">
+                    <label bindtap="handleProxy" class="_span data-v-2d4805f1 cancel" data-comkey="{{$k}}" data-eventid="{{'18'}}">取消</label>
+                    <label class="_span data-v-2d4805f1 title">选择加价券</label>
+                    <label bindtap="handleProxy" class="_span data-v-2d4805f1 confirm" data-comkey="{{$k}}" data-eventid="{{'19'}}" wx:if="{{couponShowSubmit}}">提交订单</label>
+                </view>
+                <scroll-view scrollY class="_scroll-view data-v-2d4805f1 coupon-body">
+                    <view class="_div data-v-2d4805f1 desc">可用加价券({{coupon.list&&coupon.list.length}})</view>
+                    <view class="_div data-v-2d4805f1 tips">机器质检后，满足加价券使用条件，券金额生效</view>
+                    <view bindtap="handleProxy" class="_div data-v-2d4805f1 dont-use-coupon select-icon {{!coupon.selectedId?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'20'}}">不使用优惠券
+          </view>
+                    <view bindtap="handleProxy" class="_div data-v-2d4805f1 single-coupon select-icon {{coupon.selectedId===item.couponCode?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'21-'+index}}" key="{{item.couponCode}}" wx:if="{{coupon.list&&coupon.list.length}}" wx:for="{{coupon.list}}" wx:key="item.couponCode">
+                        <view class="_div data-v-2d4805f1 coupon-price">
+                            <label class="_span data-v-2d4805f1 number {{item.isPercent?'active':''}}">{{item.isPercent?item.percent:item.amount}}</label>
+                            <label class="_span data-v-2d4805f1 condition">
+                {{item.isPercent?'当前估价加¥'+item.amount:'满'+item.minPriceLimit+'可用'}}
+              </label>
+                        </view>
+                        <view class="_div data-v-2d4805f1 coupon-desc {{item.isPercent?'active':''}}">
+                            <label class="_span data-v-2d4805f1 name">{{item.name}}</label>
+                            <label class="_span data-v-2d4805f1 desc" wx:if="{{item.isPercent}}">满¥{{item.minPriceLimit}}可用  最高加¥{{item.maxPriceLimit}}</label>
+                            <label class="_span data-v-2d4805f1 date">{{item.endTime}}到期</label>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-2d4805f1 area-mask" data-comkey="{{$k}}" data-eventid="{{'24'}}" wx:if="{{isShowAreaMask}}">
+            <view class="_div data-v-2d4805f1 area-container">
+                <view class="_div data-v-2d4805f1 title">
+          区域促销活动说明
+          <image alt catchtap="handleProxy" class="_img data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'22'}}" src="https://sr.aihuishou.com/miniapps/earth/inquiry/icon-cancel.png"></image>
+                </view>
+                <view catchtap="handleProxy" class="_div data-v-2d4805f1 area-content" data-comkey="{{$k}}" data-eventid="{{'23'}}">
+                    <view class="_p data-v-2d4805f1">提交订单后48小时内完成交易，即可获得闪电加价。回收要趁早，切忌葛优躺。</view>
+                    <view class="_p data-v-2d4805f1">活动细则：</view>
+                    <view class="_p data-v-2d4805f1">1. 活动仅限当前城市，提交订单后跨城市交易无法享受闪电加价。</view>
+                    <view class="_p data-v-2d4805f1">2. 自己联系快递无法享受闪电加价。</view>
+                    <view class="_p data-v-2d4805f1">3. 订单交易过程中，若质检后实际属性和选择的属性不符，无法获得闪电加价，按实际质检后价格成交。</view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-2d4805f1 selece-source {{showSourceSelect?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'29'}}">
+            <view class="_div data-v-2d4805f1 content">
+                <view class="_div data-v-2d4805f1 source-title">选择机器来源</view>
+                <view class="_div data-v-2d4805f1 source-tips">请确保您的机器来源合法，爱回收网保证不收取任何赃机</view>
+                <label bindtap="handleProxy" class="_span data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'25'}}">自购</label>
+                <label bindtap="handleProxy" class="_span data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'26'}}">他人赠送</label>
+                <label bindtap="handleProxy" class="_span data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'27'}}">活动获得</label>
+                <label bindtap="handleProxy" class="_span data-v-2d4805f1" data-comkey="{{$k}}" data-eventid="{{'28'}}">其他</label>
+            </view>
+        </view>
+        <template is="rule$e057634a" data="{{...$root[$kk+'9'],$root:$root}}"></template>
+    </view>
+</template>
+<import src="inquiry$6ec33745"></import>
+<import src="inquiry$fda1e958"></import>
+<import src="inquiry$1e31b359"></import>
+<import src="rule$e057634a"></import>

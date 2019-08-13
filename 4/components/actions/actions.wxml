@@ -1,0 +1,8 @@
+<button class="share{{language==='en'?' en':''}}{{page==='index'?' index':''}}{{page==='test'?' test':''}}{{page==='search'?' search':''}}" openType="share" style="display: {{page==='test'?'none':'block'}};">
+    <image src="{{shareIconSrc}}"></image>
+    <text>{{i18n[language].share}}</text>
+</button>
+<button class="cs{{language==='en'?' en':''}}{{page==='index'?' index':''}}{{page==='test'?' test':''}}{{page==='search'?' search':''}}" openType="contact">
+    <image src="{{talkIconSrc}}"></image>
+    <text>{{i18n[language].feedback}}</text>
+</button>

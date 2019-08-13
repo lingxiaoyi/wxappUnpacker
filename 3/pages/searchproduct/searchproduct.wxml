@@ -1,0 +1,2 @@
+<import src="../../components/searchproduct$5d6badc5"></import>
+<template is="searchproduct$5d6badc5" data="{{...$root['0'],$root:$root}}"></template>

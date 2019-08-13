@@ -1,0 +1,18 @@
+@import "../activity/private/private.wxss";
+
+.rules-container.data-v-90c72fd2 {
+    padding: 28rpx 30rpx 0;
+}
+
+.rules-container ._dl ._dt.data-v-90c72fd2 {
+    font-size: 28rpx;
+    color: #000;
+    font-weight: 600;
+    margin-top: 40rpx;
+}
+
+.rules-container ._dl ._dd.data-v-90c72fd2 {
+    font-size: 26rpx;
+    color: #a1a1a1;
+    line-height: 46rpx;
+}

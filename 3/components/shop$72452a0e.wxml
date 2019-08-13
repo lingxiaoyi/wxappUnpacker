@@ -1,0 +1,56 @@
+<template name="shop$72452a0e">
+    <view class="_div data-v-0da20f22 shop-list-container">
+        <view class="_div data-v-0da20f22 top-banner">
+            <scroll-view class="_scroll-view data-v-0da20f22" scrollWithAnimation="{{true}}" scrollX="{{true}}">
+                <view class="_ul data-v-0da20f22">
+                    <view bindtap="handleProxy" class="_li data-v-0da20f22 {{index===chosenIndex?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{item.id}}" wx:for="{{arr}}" wx:key="item.id">
+                        <label class="_span data-v-0da20f22">
+            {{item.name}}({{item.arrShops.length}})
+          </label>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="_div data-v-0da20f22 shops-container">
+            <scroll-view class="_scroll-view data-v-0da20f22" scrollWithAnimation="{{true}}" scrollY="{{true}}">
+                <view class="_div data-v-0da20f22 scroll-view-container">
+                    <view class="_dl data-v-0da20f22" key="{{item.id}}" wx:for="{{arrShops}}" wx:key="item.id">
+                        <view bindtap="handleProxy" class="_dt data-v-0da20f22" data-comkey="{{$k}}" data-eventid="{{'1-'+index}}">
+                            <view class="_div data-v-0da20f22">
+                                <view class="_p data-v-0da20f22 title">
+                                    <label class="_span data-v-0da20f22 shop-name">{{item.name}}</label>
+                                    <label class="_span data-v-0da20f22 icon" wx:if="{{isLocationCity&&arr&&arr.length&&item.id===arr[0].arrShops[0].id&&item._dis}}">最近</label>
+                                </view>
+                                <view class="_p data-v-0da20f22 shop-address">{{item.address}}</view>
+                                <view class="_p data-v-0da20f22 shop-service">
+                                    <label class="_span data-v-0da20f22">回收</label>
+                                    <label class="_span data-v-0da20f22" wx:if="{{item.newMachineServiceEnable}}">以旧换新</label>
+                                    <label class="_span data-v-0da20f22" wx:if="{{item.repairServiceEnable}}">维修</label>
+                                    <view class="_i data-v-0da20f22"></view>
+                                </view>
+                                <view class="_p data-v-0da20f22 shop-activity" wx:if="{{item.repairServiceEnable}}">
+                                    <label class="_span data-v-0da20f22" key="{{indexx}}" wx:for="{{repairTags}}" wx:for-index="indexx" wx:for-item="itemm" wx:key="indexx">{{itemm}}</label>
+                                </view>
+                            </view>
+                            <label class="_span data-v-0da20f22 dis" wx:if="{{isLocationCity&&!!item._dis}}">
+              {{item.dis}}
+            </label>
+                        </view>
+                        <view class="_dd data-v-0da20f22">
+                            <view bindtap="handleProxy" class="_div data-v-0da20f22" data-comkey="{{$k}}" data-eventid="{{'2-'+index}}">
+                                <view class="_i data-v-0da20f22"></view>
+                                <label class="_span data-v-0da20f22">联系{{isTab?'服务站':'门店'}}</label>
+                            </view>
+                            <view bindtap="handleProxy" class="_div data-v-0da20f22" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}">
+                                <view class="_i data-v-0da20f22"></view>
+                                <label class="_span data-v-0da20f22">查看地图</label>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <template is="nav-footer$b5e559b8" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{isTab}}"></template>
+    </view>
+</template>
+<import src="nav-footer$b5e559b8"></import>

@@ -1,0 +1,25 @@
+<view id="wrapper">
+    <view id="searchWrapper">
+        <input bindblur="searchOffFocus" bindfocus="searchOnFocus" bindinput="searchOnTyping" focus="{{searchTextFocus}}" id="search" placeholder="{{i18n.searchPlaceholder}}" type="text" value="{{searchText}}"></input>
+        <image id="magnifier" src="{{magnifierSrc}}"></image>
+        <view bindtap="clearSearchText" id="clearSearchText" style="display: {{searchText.length>0?'block':'none'}};"></view>
+        <text bindtap="cancelSearch" class="{{language==='en'?'en':''}}" id="cancelSearch">{{i18n.cancel}}</text>
+    </view>
+    <view id="searchOverlay">
+        <scroll-view enableBackToTop="true" id="results" scrollWithAnimatio="true" scrollY="true">
+            <view class="result" data-cat-index="{{result.c-1}}" data-item-name="{{result.n}}" style="color: {{result.c-1<4?'rgb('+config.cats[ config.cities[city].cats[result.c-1] ].color.r+', '+config.cats[ config.cities[city].cats[result.c-1] ].color.g+', '+config.cats[ config.cities[city].cats[result.c-1] ].color.b+')':'#333333'}};" wx:for="{{searchResults}}" wx:for-item="result">{{result.n}} [{{result.c-1<4?config.cats[ config.cities[city].cats[result.c-1] ].name[language]:extraCats[result.c-1][language]}}]</view>
+        </scroll-view>
+        <image id="searchWithNoResultsIcon" src="{{crySrc}}" style="display: {{searchWithNoResults?'block':'none'}};"></image>
+        <text id="searchWithNoResultsText" style="display: {{searchWithNoResults?'block':'none'}};">没有找到您要的结果</text>
+        <text bindtap="submitKeyword" id="searchWithNoResultsSubmit" style="display: {{submittedKeyword?'none':searchWithNoResults?'block':'none'}};">点击这里把 "{{searchText}}" 提交给我们吧</text>
+        <text id="submitKeywordStatus" style="display: {{submittedKeyword?'block':'none'}};">{{submitKeywordStatus}}</text>
+    </view>
+    <view bindtap="hideDetail" id="detailOverlay" style="display: {{showingDetail?'block':'none'}};">
+        <view class="detail-{{detailCatIndex}}" id="detail" style="display: {{showingDetail?'block':'none'}};">
+            <text id="detailItemName">{{detailItemName}}</text>
+            <text id="detailBelongToText">{{i18n.belong}}</text>
+            <image id="detailCatIcon" src="{{cats[detailCatIndex].imageSrc}}"></image>
+        </view>
+    </view>
+    <actions language="{{language}}" page="{{page}}"></actions>
+</view>

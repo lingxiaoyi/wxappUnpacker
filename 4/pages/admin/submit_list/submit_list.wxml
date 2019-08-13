@@ -1,0 +1,10 @@
+<view id="wrapper">
+    <view class="list-wrapper">
+        <scroll-view class="list" enableBackToTop="true" scrollWithAnimation="true" scrollY="true">
+            <view class="item" wx:for="{{data}}">
+                <view bindtap="check" class="check{{item.is_finished==1?' checked':''}}" data-item-id="{{item.id}}" data-message-index="{{index}}"></view>
+                <text class="{{item.is_finished==1?'line-through':''}}">{{item.content}}</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

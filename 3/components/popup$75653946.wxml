@@ -1,0 +1,8 @@
+<template name="popup$75653946">
+    <view class="_div data-v-60aa4871 popup-modal">
+        <view class="_div data-v-60aa4871 content">
+            <image alt bindtap="handleProxy" class="_img data-v-60aa4871" data-comkey="{{$k}}" data-eventid="{{'0'}}" mode="widthFix" src="{{popInfo.imageUrl}}"></image>
+            <label bindtap="handleProxy" class="_span data-v-60aa4871 close" data-comkey="{{$k}}" data-eventid="{{'1'}}"></label>
+        </view>
+    </view>
+</template>

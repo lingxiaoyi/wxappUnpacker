@@ -1,0 +1,25 @@
+<template name="nbs-success$aaba479a">
+    <view class="_div data-v-5a81d89f maintain-success {{isIphoneX&&'isIphoneX'}}">
+        <view class="_div data-v-5a81d89f header">
+            <image alt class="_img data-v-5a81d89f" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/nbs/success.png"></image>
+            <view class="_p data-v-5a81d89f text">下单成功</view>
+        </view>
+        <view class="_div data-v-5a81d89f store">
+            <view class="_p data-v-5a81d89f name">{{storeInfo.name}}</view>
+            <view class="_p data-v-5a81d89f date">预约时间: {{storeInfo.repairDate}}</view>
+            <view class="_p data-v-5a81d89f address">{{storeInfo.address}}</view>
+        </view>
+        <view class="_div data-v-5a81d89f tips">
+    注意事项：<view class="_br data-v-5a81d89f"></view>
+    1. 到店维修前，请事先备份数据以防万一<view class="_br data-v-5a81d89f"></view>
+    2. 如需使用优惠券，需在付款前告知门店工作人员<view class="_br data-v-5a81d89f"></view>
+    3. 如需更改到店维修时间，请提前联系客服<label bindtap="handleProxy" class="_span data-v-5a81d89f" data-comkey="{{$k}}" data-eventid="{{'0'}}">400-1616-365</label>
+            <view class="_br data-v-5a81d89f"></view>
+        </view>
+        <view class="_div data-v-5a81d89f footer {{isIphoneX&&'isIphoneX'}}">
+            <view bindtap="handleProxy" class="_p data-v-5a81d89f submit" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+      查看订单
+    </view>
+        </view>
+    </view>
+</template>

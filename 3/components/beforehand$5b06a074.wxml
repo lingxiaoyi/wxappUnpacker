@@ -1,0 +1,29 @@
+<template name="beforehand$5b06a074">
+    <view class="_div data-v-e453144c beforehand-page">
+        <view class="_div data-v-e453144c header"></view>
+        <scroll-view scrollY bindscrolltolower="handleProxy" class="_scroll-view data-v-e453144c list" data-comkey="{{$k}}" data-eventid="{{'1'}}" style=" {{'height:'+windowHeight+';'}}" wx:if="{{list.length}}">
+            <view bindtap="handleProxy" class="_div data-v-e453144c item" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" wx:for="{{list}}">
+                <view class="_p data-v-e453144c title">
+        我的预约{{index+1}}
+      </view>
+                <view class="_p data-v-e453144c store">
+                    <label class="_span data-v-e453144c label">预约门店</label>
+                    <label class="_span data-v-e453144c value">
+          {{item.shop.name}}
+          <image class="_img data-v-e453144c" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/Path%2038%20Copy%403x.png"></image>
+                    </label>
+                </view>
+                <view class="_p data-v-e453144c time">
+                    <label class="_span data-v-e453144c label">预约时间</label>
+                    <label class="_span data-v-e453144c value">{{item.dateStr}}</label>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="_div data-v-e453144c empty" wx:else>
+            <view class="_p data-v-e453144c img">
+                <image alt class="_img data-v-e453144c" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/beforehand/empty.png"></image>
+            </view>
+            <view class="_p data-v-e453144c text">暂无预约</view>
+        </view>
+    </view>
+</template>

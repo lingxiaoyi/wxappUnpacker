@@ -1,0 +1,51 @@
+<template name="account$29222c6b">
+    <view class="_div data-v-2f2f8252 user-center">
+        <view class="_div data-v-2f2f8252 header">
+            <view class="_div data-v-2f2f8252 content">
+                <view class="_div data-v-2f2f8252 userInfo">
+                    <view class="_div data-v-2f2f8252 user-avatar">
+                        <view class="_div data-v-2f2f8252 vip {{vipName}}"></view>
+                        <view class="_div data-v-2f2f8252 avatarBox">
+                            <view class="_div data-v-2f2f8252 avatar">
+                                <open-data class="_open-data data-v-2f2f8252 avatarImg" type="userAvatarUrl"></open-data>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-2f2f8252 userinfo">
+                        <label class="_span data-v-2f2f8252 mobile">{{userInfo.mobile}}</label>
+                    </view>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-2f2f8252 setting" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                    <image class="_img data-v-2f2f8252" mode="aspectFit" src="https://sr.aihuishou.com/miniapps/earth/public/icon_setting.png"></image>
+                </view>
+            </view>
+            <template is="nbs-vip$3d155580" data="{{...$root[$kk+'1'],$root:$root}}" wx:if="{{isShowVip}}"></template>
+            <view class="_div data-v-2f2f8252 container-view">
+                <view bindtap="handleProxy" class="_div data-v-2f2f8252 item" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                    <view class="_p data-v-2f2f8252">
+                        <image alt class="_img data-v-2f2f8252" src="https://sr.aihuishou.com/miniapps/earth/vip1.0/list.png"></image>
+                    </view>
+                    <view class="_p data-v-2f2f8252">订单</view>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-2f2f8252 item" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+                    <view class="_p data-v-2f2f8252">
+                        <image alt class="_img data-v-2f2f8252" src="https://sr.aihuishou.com/miniapps/earth/vip1.0/bag.png"></image>
+                    </view>
+                    <view class="_p data-v-2f2f8252">钱包</view>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-2f2f8252 item" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                    <view class="_p data-v-2f2f8252">
+                        <image alt class="_img data-v-2f2f8252" src="https://sr.aihuishou.com/miniapps/earth/vip1.0/card.png"></image>
+                    </view>
+                    <view class="_p data-v-2f2f8252">券包</view>
+                </view>
+            </view>
+        </view>
+        <template is="index$6efb9d41" data="{{...$root[$kk+'2'],$root:$root}}"></template>
+        <template is="nav-footer$b5e559b8" data="{{...$root[$kk+'3'],$root:$root}}"></template>
+        <image class="_image data-v-2f2f8252 piwik-image-placeholder" src="{{piwikSource}}"></image>
+    </view>
+</template>
+<import src="nbs-vip$3d155580"></import>
+<import src="index$6efb9d41"></import>
+<import src="nav-footer$b5e559b8"></import>

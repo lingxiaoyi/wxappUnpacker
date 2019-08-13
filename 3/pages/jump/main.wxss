@@ -1,0 +1,34 @@
+@import "../activity/private/private.wxss";
+
+.content.data-v-2a1a025a {
+    padding-top: 294rpx;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #f9faff;
+    text-align: center;
+}
+
+.content ._img.data-v-2a1a025a {
+    width: 370rpx;
+    height: 230rpx;
+}
+
+.content ._p.data-v-2a1a025a {
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    line-height: 40rpx;
+    margin: 122rpx 0 40rpx;
+}
+
+.content ._span.data-v-2a1a025a {
+    display: inline-block;
+    width: 540rpx;
+    height: 88rpx;
+    background: linear-gradient(247deg,#ffdf0d,#fb0) #f9e72c;
+    border-radius: 8rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+}

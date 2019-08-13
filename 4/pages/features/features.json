@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "add-to-my-miniapps": "/components/add_to_my_miniapps/add_to_my_miniapps",
+        "actions": "/components/actions/actions"
+    },
+    "navigationBarTitleText": "专题",
+    "backgroundColor": "#f0f0f0"
+}

@@ -1,0 +1,12 @@
+<template name="searchproduct$ff5d6070">
+    <view class="_div data-v-7761de34 list-container">
+        <view bindtap="handleProxy" class="_div data-v-7761de34 list-item" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{item.id}}" wx:for="{{productList}}" wx:key="item.id">
+            <view class="_p data-v-7761de34">{{item.name}}</view>
+            <label class="_span data-v-7761de34">最高：￥{{item.topPrice}}</label>
+        </view>
+        <view class="_div data-v-7761de34">
+            <template is="reservation$2db0efbd" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{cityInfo.supportShop}}"></template>
+        </view>
+    </view>
+</template>
+<import src="reservation$2db0efbd"></import>

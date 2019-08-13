@@ -1,0 +1,5 @@
+<template name="sharerule$84e7d94e">
+    <view class="_div data-v-78d18a76 share-price-rule">
+        <label bindtap="handleProxy" class="_span data-v-78d18a76 inquiry-buttton" data-comkey="{{$k}}" data-eventid="{{'0'}}">继续提交订单</label>
+    </view>
+</template>

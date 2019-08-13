@@ -1,0 +1,25 @@
+<template name="shareprice$bfa7875e">
+    <view class="_div data-v-18b30bbd friend-help-container">
+        <view class="_p data-v-18b30bbd">
+            <image alt class="_img data-v-18b30bbd" src="{{titleImg}}"></image>
+        </view>
+        <scroll-view scrollY class="_scroll-view data-v-18b30bbd {{isOwner&&friendList&&friendList.length>=10?'height300':''}}">
+            <view class="_ul data-v-18b30bbd" wx:if="{{friendList.length>0}}">
+                <view class="_li data-v-18b30bbd" key="{{index}}" wx:for="{{friendList}}" wx:key="index">
+                    <view class="_div data-v-18b30bbd" wx:if="{{!item.index}}">
+                        <view class="_i data-v-18b30bbd">{{index>=3?index+1:''}}</view>{{item.inviteeMobile?item.inviteeMobile:item.inviteeNickname}}
+        </view>
+                    <view class="_div data-v-18b30bbd" wx:if="{{item.index}}">
+                        <view class="_i data-v-18b30bbd">{{item.index}}</view>{{item.inviteeNickname}}
+        </view>
+                    <label class="_span data-v-18b30bbd amount">{{item.amount}}元</label>
+                </view>
+            </view>
+            <view class="_dl data-v-18b30bbd" wx:if="{{friendList.length===0}}">
+                <view class="_dt data-v-18b30bbd">
+        暂无好友加价，等你上榜！
+      </view>
+            </view>
+        </scroll-view>
+    </view>
+</template>

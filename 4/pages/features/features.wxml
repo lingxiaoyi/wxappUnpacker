@@ -1,0 +1,8 @@
+<add-to-my-miniapps language="{{language}}"></add-to-my-miniapps>
+<scroll-view enableBackToTop="true" id="features" scrollWithAnimation="true" scrollY="true">
+    <view bindtap="goToFeature" class="feature" data-feature-index="{{featureIndex}}" wx:for="{{features}}" wx:for-index="featureIndex" wx:for-item="feature">
+        <image src="{{feature.imageSrc}}"></image>
+        <text>{{feature.title[language]}}</text>
+    </view>
+</scroll-view>
+<actions language="{{language}}" page="features"></actions>

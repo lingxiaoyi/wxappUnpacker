@@ -1,0 +1,50 @@
+<template name="nbs-category$4d46fc64">
+    <view class="_div data-v-cd70e510 category-page">
+        <view class="_div data-v-cd70e510">
+            <view class="_div data-v-cd70e510 page-container">
+                <view class="_div data-v-cd70e510 top-scroll-view">
+                    <scroll-view scrollX class="_scroll-view data-v-cd70e510 top-container" scrollIntoView="{{intoView}}">
+                        <view bindtap="handleProxy" class="_div data-v-cd70e510 top-item {{item.id===categoryId?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" id="{{'top'+index}}" key="{{index}}" wx:for="{{categorys}}" wx:key="index">
+            {{item.alias||item.value}}
+          </view>
+                    </scroll-view>
+                </view>
+                <view class="_div data-v-cd70e510 bottom-container">
+                    <scroll-view scrollY class="_scroll-view data-v-cd70e510 left-container {{brands.length&&'light'}}">
+                        <view bindtap="handleProxy" class="_div data-v-cd70e510 left-item global-line {{item.checked?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'1-'+index}}" key="{{item.id}}" wx:for="{{brands}}" wx:key="item.id">
+            {{item.name}}
+          </view>
+                    </scroll-view>
+                    <scroll-view scrollY class="_scroll-view data-v-cd70e510 right-container" scrollTop="0">
+                        <view class="_div data-v-cd70e510 right-item" hoverClass="hover-active" key="{{index}}" wx:if="{{item.id}}" wx:for="{{products}}" wx:key="index">
+                            <label bindtap="handleProxy" class="_span data-v-cd70e510" data-comkey="{{$k}}" data-eventid="{{'2-'+index}}">
+              {{item.model}}
+            </label>
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-cd70e510 mask" data-comkey="{{$k}}" data-eventid="{{'3'}}" wx:if="{{layer}}"></view>
+        <view class="_div data-v-cd70e510 mask-box iphonex {{layer?'show':''}}">
+            <view class="_div data-v-cd70e510 header">
+                <view class="_p data-v-cd70e510">
+                    <label class="_span data-v-cd70e510">已选</label>
+        {{checkedItem.model}}
+      </view>
+                <view bindtap="handleProxy" class="_i data-v-cd70e510 close" data-comkey="{{$k}}" data-eventid="{{'4'}}"></view>
+            </view>
+            <view class="_div data-v-cd70e510 attr">
+                <view class="_p data-v-cd70e510 title">{{checkedItem.attrInfo.name}}</view>
+                <view class="_p data-v-cd70e510 options">
+                    <label bindtap="handleProxy" class="_span data-v-cd70e510 {{item.id===checkedItem.checkedOption?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'5-'+index}}" key="{{index}}" wx:for="{{checkedItem.options}}" wx:key="index">
+          {{item.attributeValue}}
+        </label>
+                </view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-cd70e510 btn" data-comkey="{{$k}}" data-eventid="{{'6'}}">
+                <button class="_button data-v-cd70e510">确认</button>
+            </view>
+        </view>
+    </view>
+</template>

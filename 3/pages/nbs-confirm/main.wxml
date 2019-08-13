@@ -1,0 +1,2 @@
+<import src="../../components/nbs-confirm$0d9efab0"></import>
+<template is="nbs-confirm$0d9efab0" data="{{...$root['0'],$root:$root}}"></template>

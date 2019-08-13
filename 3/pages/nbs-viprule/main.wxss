@@ -1,0 +1,83 @@
+@import "../activity/private/private.wxss";
+
+.viprule-page.data-v-139f5db5 {
+    width: auto;
+    height: 100vh;
+    padding: 30rpx 28rpx;
+    box-sizing: border-box;
+}
+
+.viprule-page .content.data-v-139f5db5 {
+    margin-bottom: 60rpx;
+}
+
+.viprule-page .content ._img.data-v-139f5db5 {
+    width: 694rpx;
+}
+
+.viprule-page .content .img1.data-v-139f5db5 {
+    height: 914rpx;
+}
+
+.viprule-page .content .img2.data-v-139f5db5 {
+    height: 242rpx;
+}
+
+.viprule-page .content .img3.data-v-139f5db5 {
+    height: 266rpx;
+}
+
+.viprule-page .content .img4.data-v-139f5db5,.viprule-page .content .img5.data-v-139f5db5,.viprule-page .content .img7.data-v-139f5db5,.viprule-page .content .img9.data-v-139f5db5 {
+    height: 138rpx;
+}
+
+.viprule-page .content .img6.data-v-139f5db5 {
+    height: 206rpx;
+}
+
+.viprule-page .content .img8.data-v-139f5db5 {
+    height: 856rpx;
+}
+
+.viprule-page .content .title.data-v-139f5db5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 22rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #666;
+}
+
+.viprule-page .content .title ._span.data-v-139f5db5 {
+    width: 8rpx;
+    height: 32rpx;
+    background: linear-gradient(90deg,#fff03b,#ffd629);
+    border-radius: 10rpx;
+    margin-right: 6rpx;
+}
+
+.viprule-page .content .text.data-v-139f5db5 {
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #666;
+    margin: 16rpx 0;
+}
+
+.viprule-page .content .text ._p.data-v-139f5db5 {
+    line-height: 1.5;
+}
+
+.viprule-page .content .text ._p ._span.data-v-139f5db5 {
+    font-family: PingFangSC-Medium;
+}
+
+.viprule-page .content .text1 ._p.data-v-139f5db5 {
+    margin-bottom: 40rpx;
+}
+
+.viprule-page .content .text1 ._p ._span.data-v-139f5db5 {
+    display: block;
+}

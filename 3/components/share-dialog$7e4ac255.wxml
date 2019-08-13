@@ -1,0 +1,8 @@
+<template name="share-dialog$7e4ac255">
+    <view class="_div data-v-2e29bec1 share-dialog">
+        <view class="_div data-v-2e29bec1 bg">
+            <label bindtap="handleProxy" class="_span data-v-2e29bec1 cancel" data-comkey="{{$k}}" data-eventid="{{'0'}}">残忍拒绝</label>
+            <label bindtap="handleProxy" class="_span data-v-2e29bec1 success" data-comkey="{{$k}}" data-eventid="{{'1'}}">立即领取</label>
+        </view>
+    </view>
+</template>

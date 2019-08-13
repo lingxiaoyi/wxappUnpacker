@@ -1,0 +1,2 @@
+<import src="../../components/nbs-trouble$4891e927"></import>
+<template is="nbs-trouble$4891e927" data="{{...$root['0'],$root:$root}}"></template>

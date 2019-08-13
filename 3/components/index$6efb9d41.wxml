@@ -1,0 +1,26 @@
+<template name="index$6efb9d41">
+    <view class="_div data-v-44880f55 sos-container">
+        <block wx:if="{{filterData.length}}">
+            <view class="_div data-v-44880f55 sos-item" key="{{item.type+index}}" wx:for="{{filterData}}" wx:key="item.type + index">
+                <template is="BtnRecycle$c4a80950" data="{{...$root[$kk+'0-'+index],$root:$root}}" wx:if="{{item.type==='btnRecycle'}}"></template>
+                <template is="SingleImage$0cb2cefc" data="{{...$root[$kk+'1-'+index],$root:$root}}" wx:if="{{item.type==='singleImage'}}"></template>
+                <template is="MultiImage$6902d0e3" data="{{...$root[$kk+'2-'+index],$root:$root}}" wx:if="{{item.type==='multiImage'}}"></template>
+                <template is="Slider$015ee1bc" data="{{...$root[$kk+'3-'+index],$root:$root}}" wx:if="{{item.type==='slider'}}"></template>
+                <template is="SelfPhone$4eda935e" data="{{...$root[$kk+'4-'+index],$root:$root}}" wx:if="{{item.type==='selfPhone'}}"></template>
+                <template is="StoreRecycle$4808351a" data="{{...$root[$kk+'5-'+index],$root:$root}}" wx:if="{{item.type==='storeRecycle'&&shopList.length}}"></template>
+                <template is="ofnew$8b05ed50" data="{{...$root[$kk+'6-'+index],$root:$root}}" wx:if="{{item.type==='ofNew'}}"></template>
+                <template is="newProduct$10b1ddd0" data="{{...$root[$kk+'7-'+index],$root:$root}}" wx:if="{{item.type==='newProduct'}}"></template>
+                <template is="oldProduct$3414e22e" data="{{...$root[$kk+'8-'+index],$root:$root}}" wx:if="{{item.type==='oldProduct'}}"></template>
+            </view>
+        </block>
+    </view>
+</template>
+<import src="BtnRecycle$c4a80950"></import>
+<import src="SingleImage$0cb2cefc"></import>
+<import src="MultiImage$6902d0e3"></import>
+<import src="Slider$015ee1bc"></import>
+<import src="SelfPhone$4eda935e"></import>
+<import src="StoreRecycle$4808351a"></import>
+<import src="ofnew$8b05ed50"></import>
+<import src="newProduct$10b1ddd0"></import>
+<import src="oldProduct$3414e22e"></import>

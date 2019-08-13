@@ -1,0 +1,56 @@
+<template name="extra-current-card$dd95dbc0">
+    <view class="_div data-v-56080d8c extra-container">
+        <image alt bindtap="handleProxy" class="_img data-v-56080d8c" data-comkey="{{$k}}" data-eventid="{{'0'}}" mode="widthFix" src="{{extraInfo.headImgUrl}}"></image>
+        <view class="_div data-v-56080d8c product">
+            <view class="_div data-v-56080d8c background" style=" {{'background-color:'+extraInfo.backgroudColor+';'}}"></view>
+            <view class="_div data-v-56080d8c product-box">
+                <view class="_div data-v-56080d8c line-tag">
+                    <image alt class="_img data-v-56080d8c" mode="aspectFit" src="{{lineTagImg}}"></image>
+                </view>
+                <view class="_div data-v-56080d8c top-box">
+                    <view class="_div data-v-56080d8c coupon">
+                        <label class="_span data-v-56080d8c">{{extraInfo.price}}</label>
+                        <image alt class="_img data-v-56080d8c coupon" mode="aspectFit" src="{{extraInfo.moneyImgUrl}}"></image>
+                    </view>
+                    <view class="_div data-v-56080d8c right-box {{objCurrent.recommendProductType===4?'active':''}}">
+                        <view bindtap="handleProxy" class="_div data-v-56080d8c name global-line {{objCurrent.productName?'':'empty-name'}}" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+           {{objCurrent.productName||'选择机型查看优惠'}}
+         </view>
+                        <view class="_div data-v-56080d8c desc">
+                            <block wx:if="{{objCurrent.inquiryKey}}">
+             上次估价:
+           </block>
+                            <block wx:else>
+             {{objCurrent.productName?'最高回收价':'最高加价'}}:
+           </block>
+                            <label class="_span data-v-56080d8c desc-price" style=" {{'font-size:'+'20px'+';'+'font-weight:'+'600'+';'}}">{{objCurrent.price+extraInfo.price}}</label>
+                            <view class="_i data-v-56080d8c" wx:if="{{objCurrent.recommendProductType!==4}}">￥{{objCurrent.price}}</view>
+                        </view>
+                        <view class="_div data-v-56080d8c down-price" wx:if="{{objCurrent.recommendProductType!==4}}">下周约降￥{{objCurrent.fallPrice}}
+         </view>
+                    </view>
+                </view>
+                <view class="_div data-v-56080d8c down-module">
+                    <view class="_div data-v-56080d8c time-box">
+                        <label class="_span data-v-56080d8c">{{countDown.days}}</label>  天
+          <label class="_span data-v-56080d8c">{{countDown.hours}}</label>  时
+          <label class="_span data-v-56080d8c">{{countDown.minutes}}</label>  分
+          <label class="_span data-v-56080d8c">{{countDown.seconds}}</label>  秒
+          <view bindtap="handleProxy" class="_i data-v-56080d8c rule-tips" data-comkey="{{$k}}" data-eventid="{{'2'}}"></view>
+                    </view>
+                    <label bindtap="handleProxy" class="_span data-v-56080d8c inquiry-button" data-comkey="{{$k}}" data-eventid="{{'3'}}">立即回收
+        <template is="form$7e8ea023" data="{{...$root[$kk+'2'],$root:$root}}"></template>
+                    </label>
+                </view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-56080d8c rule" data-comkey="{{$k}}" data-eventid="{{'6'}}" wx:if="{{showRule}}">
+            <scroll-view scrollY catchtap="handleProxy" class="_scroll-view data-v-56080d8c scroll-box" data-comkey="{{$k}}" data-eventid="{{'5'}}">
+                <label bindtap="handleProxy" class="_span data-v-56080d8c close" data-comkey="{{$k}}" data-eventid="{{'4'}}"></label>
+                <view class="_div data-v-56080d8c title">活动规则</view>
+                <text class="_text data-v-56080d8c">{{extraInfo.rules}}</text>
+            </scroll-view>
+        </view>
+    </view>
+</template>
+<import src="form$7e8ea023"></import>

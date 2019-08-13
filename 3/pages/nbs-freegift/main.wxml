@@ -1,0 +1,2 @@
+<import src="../../components/nbs-freegift$3a4a08fc"></import>
+<template is="nbs-freegift$3a4a08fc" data="{{...$root['0'],$root:$root}}"></template>

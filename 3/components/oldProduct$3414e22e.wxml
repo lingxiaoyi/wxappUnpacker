@@ -1,0 +1,25 @@
+<template name="oldProduct$3414e22e">
+    <view class="_div data-v-52814955 phone-list" wx:if="{{productList.length}}">
+        <view bindtap="handleProxy" class="_div data-v-52814955 phone-item {{[productList.length===1?'one':'',productList.length===2?'two':'',productList.length===3?'three':'']}}" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{index}}" wx:for="{{productList}}" wx:key="index">
+            <view class="_div data-v-52814955 tag" wx:if="{{item.isShowPromotion&&item.promotionText}}">
+                <label class="_span data-v-52814955 tag-left"></label>
+                <label class="_span data-v-52814955 tag-center global-line">{{item.promotionText}}</label>
+                <label class="_span data-v-52814955 tag-right"></label>
+            </view>
+            <view class="_div data-v-52814955 left" wx:if="{{item.oldProductInfo.productUrl}}">
+                <image class="_img data-v-52814955 cover" src="{{item.oldProductInfo.productUrl}}"></image>
+            </view>
+            <view class="_div data-v-52814955 right">
+                <view class="_div data-v-52814955 title" wx:if="{{item.oldProductInfo.productName}}">
+                    <view class="_p data-v-52814955">{{item.oldProductInfo.productName}}</view>
+                </view>
+                <view class="_p data-v-52814955 price">
+        最高回收价<label class="_span data-v-52814955">{{item.oldProductInfo.maxPrice}}</label>
+                </view>
+                <view class="_p data-v-52814955 btns">
+                    <button class="_button data-v-52814955">{{item.buttonText||'免费估价'}}</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

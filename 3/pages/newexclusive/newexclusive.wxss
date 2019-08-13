@@ -1,0 +1,295 @@
+@import "../activity/private/private.wxss";
+
+.exclusive-container.data-v-298e122a {
+    box-sizing: border-box;
+    padding: 700rpx 20rpx 90rpx;
+    background-size: 100% auto;
+    background-color: #d41c15;
+    background-repeat: no-repeat;
+}
+
+.exclusive-container .status.data-v-298e122a {
+    text-align: center;
+}
+
+.exclusive-container .status ._button.data-v-298e122a {
+    height: 84rpx;
+    background: linear-gradient(-80deg,#ff6700,#ffcb00);
+    border-radius: 42rpx;
+    color: #fff;
+    font-size: 36rpx;
+    font-family: PingFangSC-Regular;
+    line-height: 84rpx;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.exclusive-container .status .disable-click.data-v-298e122a {
+    background: #a3a3a3;
+}
+
+.exclusive-container .status ._p.data-v-298e122a {
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    color: #fff;
+    line-height: 30rpx;
+    opacity: .5;
+    margin: 30rpx 0 40rpx;
+}
+
+.exclusive-container .main .single-content.data-v-298e122a {
+    padding: 0 18rpx;
+    box-sizing: border-box;
+    margin-bottom: 30rpx;
+    background: #ffc12c;
+    border: 4rpx solid #f8e57d;
+    border-radius: 20rpx;
+    text-align: center;
+}
+
+.exclusive-container .main .single-content.active.data-v-298e122a {
+    background: #ffdec5;
+    border: 4rpx solid #fff4eb;
+}
+
+.exclusive-container .main .single-content.active .title.data-v-298e122a {
+    color: #f95d36;
+}
+
+.exclusive-container .main .single-content .title.data-v-298e122a {
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #fff;
+    line-height: 42rpx;
+    padding: 34rpx 0 24rpx;
+}
+
+.exclusive-container .main .single-content .jump.data-v-298e122a {
+    width: 676rpx;
+    height: 84rpx;
+    line-height: 84rpx;
+    margin: 8rpx auto 40rpx;
+    background: linear-gradient(180deg,#fe7a22,#f74e40);
+    border-radius: 42rpx;
+    font-size: 36rpx;
+    font-family: PingFangSC-Regular;
+    color: #fff;
+}
+
+.exclusive-container .main .single-content>._div.data-v-298e122a {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.exclusive-container .main .single-content>._div>._div.data-v-298e122a {
+    width: 214rpx;
+    height: 112rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 12rpx 16rpx 0;
+    padding-top: 20rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/newexclusive/carditem.png");
+    background-size: 100% 100%;
+    color: #ff6300;
+}
+
+.exclusive-container .main .single-content>._div>._div.active.data-v-298e122a {
+    background: url("https://sr.aihuishou.com/miniapps/earth/newexclusive/carditem2.png");
+    background-size: 100% 100%;
+}
+
+.exclusive-container .main .single-content>._div>._div.data-v-298e122a:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.exclusive-container .main .single-content>._div>._div ._p.data-v-298e122a {
+    font-family: PingFangSC-Regular;
+    font-size: 36rpx;
+    display: flex;
+    align-items: flex-start;
+}
+
+.exclusive-container .main .single-content>._div>._div ._p ._span.data-v-298e122a {
+    font-family: FZLTTHK--GBK1-0;
+    font-size: 56rpx;
+    font-weight: 800;
+}
+
+.exclusive-container .main .single-content>._div>._div ._div.data-v-298e122a {
+    font-size: 14rpx;
+    font-weight: 600;
+    font-family: FZLTZHK--GBK1-0;
+}
+
+.exclusive-container .use-tag.data-v-298e122a {
+    text-align: right;
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 400;
+    padding-bottom: 42rpx;
+}
+
+.exclusive-container .use-tag ._u.data-v-298e122a {
+    border-radius: 50%;
+    width: 32rpx;
+    height: 32rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #f13c35;
+    background: #fff;
+    font-family: PingFangSC-Regular;
+    display: inline-block;
+    text-align: center;
+    line-height: 32rpx;
+}
+
+.exclusive-container ._footer ._dl.data-v-298e122a {
+    border-radius: 20rpx;
+    overflow: hidden;
+    height: 220rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+    position: relative;
+    margin-bottom: 68rpx;
+}
+
+.exclusive-container ._footer ._dl ._dt.data-v-298e122a {
+    width: 186rpx;
+    height: 100%;
+}
+
+.exclusive-container ._footer ._dl ._dt ._img.data-v-298e122a {
+    width: 100%;
+    height: 100%;
+}
+
+.exclusive-container ._footer ._dl ._dt .padding25.data-v-298e122a {
+    padding: 50rpx;
+    box-sizing: border-box;
+    background: linear-gradient(180deg,#ffcc26,#ff9f26);
+}
+
+.exclusive-container ._footer ._dl ._dd.data-v-298e122a {
+    margin-left: 30rpx;
+}
+
+.exclusive-container ._footer ._dl ._dd ._ul ._li.data-v-298e122a {
+    color: #8e8e93;
+    font-size: 28rpx;
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+}
+
+.exclusive-container ._footer ._dl ._dd ._ul .product-title.data-v-298e122a {
+    color: #000;
+    margin-bottom: 24rpx;
+}
+
+.exclusive-container ._footer ._dl ._dd ._ul .product-price.data-v-298e122a {
+    font-size: 40rpx;
+    color: #ff3b30;
+    margin-top: 16rpx;
+}
+
+.exclusive-container ._footer ._dl ._dd ._ul .product-none.data-v-298e122a {
+    font-family: FZLTZHK--GBK1-0;
+    font-weight: 600;
+    color: #000;
+}
+
+.exclusive-container ._footer ._dl ._dd ._ul .product-none ._span.data-v-298e122a {
+    font-size: 36rpx;
+}
+
+.exclusive-container ._footer ._dl .product-valuation.data-v-298e122a {
+    position: absolute;
+    width: 172rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #fff;
+    top: 86rpx;
+    right: 30rpx;
+    font-size: 28rpx;
+    border-radius: 30rpx;
+    background: linear-gradient(180deg,#fe7a22,#f74e40);
+}
+
+.exclusive-container ._footer ._dl .product-tag.data-v-298e122a {
+    position: absolute;
+    width: 146rpx;
+    height: 40rpx;
+    color: #fff;
+    font-size: 24rpx;
+    font-weight: 200;
+    background: url("https://sr.aihuishou.com/miniapps/earth/newexclusive/changetag.png");
+    background-size: 100% 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+
+.exclusive-container ._footer .foot-banner.data-v-298e122a {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.exclusive-container ._footer .foot-banner ._img.data-v-298e122a {
+    background-color: #fff;
+    height: 192rpx;
+    width: 100%;
+    border-radius: 20rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/newexclusive/banner12.jpg");
+    background-size: 100% 100%;
+}
+
+.popup-container.data-v-fdf6ec6a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-container ._main.data-v-fdf6ec6a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup-container ._main .use-conditions.data-v-fdf6ec6a {
+    width: 600rpx;
+    height: 692rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/newexclusive/popup-use.png");
+    background-size: 100% 100%;
+    padding: 112rpx 80rpx 196rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.popup-container ._main .conditions-container.data-v-fdf6ec6a {
+    width: 100%;
+    color: #666;
+    font-size: 24rpx;
+    font-family: FZLTXHK--GBK1-0;
+    font-weight: 200;
+}
+
+.popup-container .mask-layer.data-v-fdf6ec6a {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #000;
+    opacity: .8;
+}

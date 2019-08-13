@@ -1,0 +1,92 @@
+<template name="nbs-shopdetail$38d3742d">
+    <view class="_div data-v-f217df7e shopdetail-box" wx:if="{{shopInfo.id}}">
+        <template is="header$627858a8" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <view class="_div data-v-f217df7e shop-info">
+            <image alt bindtap="handleProxy" class="_img data-v-f217df7e" data-comkey="{{$k}}" data-eventid="{{'0'}}" mode="aspectFill" src="{{shopInfo.imgUrl}}"></image>
+            <view class="_div data-v-f217df7e detail-info">
+                <view class="_p data-v-f217df7e name">{{shopInfo.name}}</view>
+                <view class="_p data-v-f217df7e time">{{showWeekend?'工作日':'营业时间'}}
+        {{shopInfo.normalBusinessStartTime}}-{{shopInfo.normalBusinessEndTime}}</view>
+                <view class="_p data-v-f217df7e time active" wx:if="{{showWeekend}}">节假日
+        {{shopInfo.weekendBusinessStartTime}}-{{shopInfo.weekendBusinessEndTime}}</view>
+                <view bindtap="handleProxy" class="_div data-v-f217df7e address-box" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                    <view class="_p data-v-f217df7e">{{shopInfo.address}}</view>
+                    <label class="_span data-v-f217df7e"></label>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-f217df7e mobile-box" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+        {{mobile}}
+      </view>
+            </view>
+        </view>
+        <view class="_div data-v-f217df7e nbs-vip" wx:if="{{shopInfo.repairServiceEnable}}">
+            <template is="nbs-vip$3d155580" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+        </view>
+        <view class="_div data-v-f217df7e sub-title" wx:if="{{shopInfo.repairServiceEnable}}">
+    优惠
+  </view>
+        <view class="_div data-v-f217df7e discount-box" wx:if="{{shopInfo.repairServiceEnable}}">
+            <view bindtap="handleProxy" class="_div data-v-f217df7e info" data-comkey="{{$k}}" data-eventid="{{'7-'+index}}" key="{{index}}" wx:for="{{coupons}}" wx:key="index">
+                <image alt class="_img data-v-f217df7e" mode="widthFix" src="https://sr.aihuishou.com/miniapps/earth/nbs/zhe.png"></image>
+                <view class="_div data-v-f217df7e">
+                    <view class="_p data-v-f217df7e">
+          {{item.title}}
+          <label class="_span data-v-f217df7e question"></label>
+                    </view>
+                    <label class="_span data-v-f217df7e desc">截止时间：{{item.endDate}}</label>
+                </view>
+                <label catchtap="handleProxy" class="_span data-v-f217df7e btn" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}" wx:if="{{item.status===1&&userInfo.mobile}}">领取</label>
+                <label catchtap="handleProxy" class="_span data-v-f217df7e btn active" data-comkey="{{$k}}" data-eventid="{{'4-'+index}}" wx:if="{{item.status===2&&userInfo.mobile}}">已领取</label>
+                <label catchtap="handleProxy" class="_span data-v-f217df7e btn active" data-comkey="{{$k}}" data-eventid="{{'5-'+index}}" wx:if="{{item.status===3}}">已领完</label>
+                <button bindgetphonenumber="handleProxy" catchtap="handleProxy" class="_button data-v-f217df7e btn" data-comkey="{{$k}}" data-eventid="{{'6-'+index}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile&&(item.status===2||item.status===1)}}">领取
+      </button>
+            </view>
+        </view>
+        <view class="_div data-v-f217df7e sub-title">
+    服务
+  </view>
+        <view class="_div data-v-f217df7e discount-box service">
+            <view bindtap="handleProxy" class="_div data-v-f217df7e info" data-comkey="{{$k}}" data-eventid="{{'8'}}">
+                <image alt class="_img data-v-f217df7e" mode="widthFix" src="https://sr.aihuishou.com/miniapps/earth/nbs/huishou.png"></image>
+                <view class="_div data-v-f217df7e">
+                    <view class="_p data-v-f217df7e">旧机回收</view>
+                    <label class="_span data-v-f217df7e desc">手机 笔记本 平板 摄影摄像 智能数码</label>
+                    <label class="_span data-v-f217df7e btn">去回收</label>
+                </view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-f217df7e info" data-comkey="{{$k}}" data-eventid="{{'9'}}" wx:if="{{shopInfo.newMachineServiceEnable}}">
+                <image alt class="_img data-v-f217df7e" mode="widthFix" src="https://sr.aihuishou.com/miniapps/earth/nbs/huanxin.png"></image>
+                <view class="_div data-v-f217df7e">
+                    <view class="_p data-v-f217df7e">以旧换新</view>
+                    <label class="_span data-v-f217df7e desc">旧机抵扣 购买新机平均6折起</label>
+                    <label class="_span data-v-f217df7e btn">去换新</label>
+                </view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-f217df7e info" data-comkey="{{$k}}" data-eventid="{{'10'}}" wx:if="{{shopInfo.repairServiceEnable}}">
+                <image alt class="_img data-v-f217df7e" mode="widthFix" src="https://sr.aihuishou.com/miniapps/earth/nbs/weixiu.png"></image>
+                <view class="_div data-v-f217df7e">
+                    <view class="_p data-v-f217df7e">数码维修</view>
+                    <label class="_span data-v-f217df7e desc">爱回收 X 极客修 限时优惠</label>
+                    <label class="_span data-v-f217df7e btn">去维修</label>
+                </view>
+            </view>
+        </view>
+        <template is="rule$e057634a" data="{{...$root[$kk+'2'],$root:$root}}"></template>
+        <view bindtap="handleProxy" class="_div data-v-f217df7e common-model" data-comkey="{{$k}}" data-eventid="{{'13'}}" hidden="{{!isShowQrcode}}">
+            <view class="_div data-v-f217df7e container-box">
+                <view catchtap="handleProxy" class="_div data-v-f217df7e title" data-comkey="{{$k}}" data-eventid="{{'11'}}">{{modelTitle||'领取成功'}}</view>
+                <label class="_span data-v-f217df7e close"></label>
+                <view class="_div data-v-f217df7e content-box">
+                    <canvas canvasId="myQrcode" class="_canvas data-v-f217df7e canvas"></canvas>
+                    <view class="_p data-v-f217df7e">
+          请向服务站工作人员出示二维码 <view class="_br data-v-f217df7e"></view>
+          或至“我的-券包-商品”下查看
+        </view>
+                    <label bindtap="handleProxy" class="_span data-v-f217df7e" data-comkey="{{$k}}" data-eventid="{{'12'}}">前往券包查看</label>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="header$627858a8"></import>
+<import src="nbs-vip$3d155580"></import>
+<import src="rule$e057634a"></import>

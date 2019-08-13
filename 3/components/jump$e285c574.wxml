@@ -1,0 +1,7 @@
+<template name="jump$e285c574">
+    <view class="_div data-v-2a1a025a content">
+        <image alt class="_img data-v-2a1a025a" src="https://sr.aihuishou.com/miniapps/earth/jump-banner.png"></image>
+        <view class="_p data-v-2a1a025a">是否去授权跳转换新机小程序</view>
+        <label bindtap="handleProxy" class="_span data-v-2a1a025a" data-comkey="{{$k}}" data-eventid="{{'0'}}">前往授权</label>
+    </view>
+</template>

@@ -1,0 +1,25 @@
+<template name="nav-footer$b5e559b8">
+    <view class="_div data-v-a9cf0ae0 nav-footer-container {{hasBottomBar?'is-iphonex':''}}" wx:if="{{hasLoad}}">
+        <view class="_ul data-v-a9cf0ae0">
+            <view bindtap="handleProxy" class="_li data-v-a9cf0ae0 {{index===0?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                <image class="_img data-v-a9cf0ae0" mode="aspectFit" src="{{index===0?footer.index_active:footer.index}}"></image>
+                <view class="_p data-v-a9cf0ae0">主页</view>
+            </view>
+            <view bindtap="handleProxy" class="_li data-v-a9cf0ae0 ofnew {{index===2?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                <image class="_img data-v-a9cf0ae0" mode="aspectFit" src="https://sr.aihuishou.com/miniapps/earth/footer/ofnewsheng.png"></image>
+            </view>
+            <view bindtap="handleProxy" class="_li data-v-a9cf0ae0 {{index===5?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{hasShops}}">
+                <image class="_img data-v-a9cf0ae0" mode="aspectFit" src="{{index===5?footer.shop_active:footer.shop}}"></image>
+                <view class="_p data-v-a9cf0ae0">服务站</view>
+            </view>
+            <view bindtap="handleProxy" class="_li data-v-a9cf0ae0 {{index===3?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'4'}}" wx:if="{{hasUserInfo}}">
+                <image class="_img data-v-a9cf0ae0" mode="aspectFit" src="{{index===3?footer.user_active:footer.user}}"></image>
+                <view class="_p data-v-a9cf0ae0">我的</view>
+            </view>
+            <button bindgetphonenumber="handleProxy" class="_button data-v-a9cf0ae0 footer-user {{index===4?'active':''}}" data-comkey="{{$k}}" data-eventid="{{'3'}}" openType="getPhoneNumber" wx:else>
+                <image class="_img data-v-a9cf0ae0" mode="aspectFit" src="{{footer.user}}"></image>
+                <view class="_p data-v-a9cf0ae0">我的</view>
+            </button>
+        </view>
+    </view>
+</template>

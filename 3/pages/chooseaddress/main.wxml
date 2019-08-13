@@ -1,0 +1,2 @@
+<import src="../../components/chooseaddress$401635fb"></import>
+<template is="chooseaddress$401635fb" data="{{...$root['0'],$root:$root}}"></template>

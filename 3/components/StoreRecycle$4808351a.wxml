@@ -1,0 +1,39 @@
+<template name="StoreRecycle$4808351a">
+    <view class="_div data-v-5482b4df shop-reservation index-box">
+        <view class="_div data-v-5482b4df title title-border">
+
+    附近门店
+    <label class="_span data-v-5482b4df tag title-desc " wx:if="{{tipsText&&tipsText.length}}">{{tipsText}}</label>
+            <view catchtap="handleProxy" class="_div data-v-5482b4df arrow" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{computedShopList.length}}"></view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-5482b4df {{computedShopList&&computedShopList.length<3&&!(computedShopList[0].dis<5&&computedShopList.length<3||computedShopList[0].dis>=5||!computedShopList[0].dis)?'content padding-scroll':'content'}}" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+            <block wx:if="{{computedShopList[0].dis<5&&computedShopList.length<3||computedShopList[0].dis>=5||!computedShopList[0].dis||!storeRecycleInfo.hasOrder}}">
+                <view class="_div data-v-5482b4df desc">
+        {{computedShopList[0].name}}
+      </view>
+                <view class="_p data-v-5482b4df" wx:if="{{computedShopList[0].dis<5}}">最近的门店距您{{computedShopList[0].disStr}}</view>
+                <view class="_p data-v-5482b4df" wx:if="{{computedShopList[0].dis>=5||!computedShopList[0].dis}}">
+        {{cityInfo.cityName||cityInfo.name}}有{{computedShopList.length}}家门店</view>
+                <image alt class="_img data-v-5482b4df" src="{{computedShopList[0].imgUrl?computedShopList[0].imgUrl:'https://static.aihuishou.com/image?file=5aec066bb4efb26c180000e1'}}"></image>
+            </block>
+            <view class="_div data-v-5482b4df has-order" wx:elif="{{storeRecycleInfo.hasOrder}}">
+                <view class="_div data-v-5482b4df desc">
+          {{storeRecycleInfo.shop.name}}
+        </view>
+                <view class="_p data-v-5482b4df date-str">{{storeRecycleInfo.dateStr}}</view>
+                <image alt class="_img data-v-5482b4df" src="{{storeRecycleInfo.shop.imgUrl||'https://static.aihuishou.com/image?file=5aec066bb4efb26c180000e1'}}"></image>
+            </view>
+            <scroll-view scrollX class="_scroll-view data-v-5482b4df" wx:elif="{{computedShopList&&computedShopList.length>=3}}">
+                <view class="_div data-v-5482b4df scroll-container">
+                    <view catchtap="handleProxy" class="_dl data-v-5482b4df" data-comkey="{{$k}}" data-eventid="{{'1-'+index}}" key="{{index}}" wx:if="{{index<5}}" wx:for="{{computedShopList}}" wx:key="index">
+                        <view class="_dt data-v-5482b4df">
+                            <image alt class="_img data-v-5482b4df" mode="aspectFill" src="{{item.imgUrl?item.imgUrl:'https://static.aihuishou.com/image?file=5aec066bb4efb26c180000e1'}}"></image>
+                        </view>
+                        <view class="_dd data-v-5482b4df">{{item.name}}</view>
+                        <view class="_dd data-v-5482b4df scroll-dis">{{item.disStr}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</template>

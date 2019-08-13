@@ -1,0 +1,206 @@
+@import "../activity/private/private.wxss";
+
+.free-gift.data-v-2edb8c96 {
+    background-color: #ed533a;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.free-gift.isLayer.data-v-2edb8c96 {
+    height: calc(100vh - 160rpx);
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.free-gift .header-img.data-v-2edb8c96 {
+    display: block;
+    width: auto;
+    height: 680rpx;
+}
+
+.free-gift .content-box.data-v-2edb8c96 {
+    position: relative;
+    width: 694rpx;
+    height: auto;
+    background: #fff;
+    border-radius: 10rpx;
+    margin: -260rpx auto 60rpx;
+    padding-top: 26rpx;
+    padding-bottom: 40rpx;
+    box-sizing: content-box;
+}
+
+.free-gift .content-box .tag.data-v-2edb8c96 {
+    position: absolute;
+    width: 630rpx;
+    height: 72rpx;
+    top: -26rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.free-gift .content-box .prize.data-v-2edb8c96 {
+    display: block;
+    width: 178rpx;
+    height: 200rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: .9;
+}
+
+.free-gift .content-box .prize-name.data-v-2edb8c96 {
+    text-align: center;
+    font-size: 34rpx;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: 700;
+    color: #424242;
+}
+
+.free-gift .content-box .prize-desc.data-v-2edb8c96 {
+    text-align: center;
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    font-family: SourceHanSansCN-Regular;
+    color: #424242;
+    opacity: .9;
+}
+
+.free-gift .content-box .button.data-v-2edb8c96 {
+    display: block;
+    width: 600rpx;
+    height: 80rpx;
+    margin: 30rpx auto 68rpx;
+    background: linear-gradient(-3deg,#ed533a,#fdaf65);
+    border-radius: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+.free-gift .content-box .rule.data-v-2edb8c96 {
+    display: block;
+    width: 400rpx;
+    height: 38rpx;
+    margin: 0 auto 28rpx;
+}
+
+.free-gift .content-box .line.data-v-2edb8c96 {
+    padding: 0 28rpx;
+    color: #666;
+    box-sizing: border-box;
+    margin-bottom: 24rpx;
+}
+
+.free-gift .content-box .line-title.data-v-2edb8c96 {
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.free-gift .content-box .line-introduce.data-v-2edb8c96 {
+    font-size: 24rpx;
+}
+
+.free-gift .bottom.data-v-2edb8c96 {
+    display: block;
+    width: 694rpx;
+    margin: 0 auto;
+}
+
+.free-gift .layer-mask.data-v-2edb8c96 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+}
+
+.free-gift .layer-content.data-v-2edb8c96 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600rpx;
+    height: auto;
+    margin-left: -300rpx;
+    min-height: 200rpx;
+    padding: 40rpx 30rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8rpx;
+    text-align: center;
+}
+
+.free-gift .layer-content .close.data-v-2edb8c96 {
+    position: absolute;
+    top: 26rpx;
+    right: 26rpx;
+    width: 36rpx;
+    height: 36rpx;
+    background: url("https://sr.aihuishou.com/miniapps/earth/freegift/close.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.free-gift .layer-content .title.data-v-2edb8c96 {
+    font-size: 36rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    line-height: 44rpx;
+    margin-bottom: 24rpx;
+}
+
+.free-gift .layer-content .introduce.data-v-2edb8c96 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    line-height: 42rpx;
+}
+
+.free-gift .layer-content .button1.data-v-2edb8c96 {
+    width: 540rpx;
+    height: 88rpx;
+    background: linear-gradient(90deg,#fff03b,#ffd629);
+    border-radius: 8rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    line-height: 88rpx;
+    padding: 0;
+    margin: 40rpx 0 0;
+}
+
+.free-gift .layer-content .tips.data-v-2edb8c96 {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #999;
+    line-height: 34rpx;
+}
+
+.free-gift .layer-content.received.data-v-2edb8c96 {
+    height: 230rpx;
+    margin-top: -115rpx;
+}
+
+.free-gift .layer-content.qrcode.data-v-2edb8c96 {
+    height: 696rpx;
+    margin-top: -348rpx;
+}
+
+.free-gift .layer-content.qrcode .qr.data-v-2edb8c96 {
+    display: flex;
+    justify-content: center;
+    padding-top: 44rpx;
+    text-align: center;
+    margin-bottom: 32rpx;
+}
+
+.free-gift .layer-content.qrcode .canvas.data-v-2edb8c96 {
+    width: 240rpx;
+    height: 240rpx;
+}

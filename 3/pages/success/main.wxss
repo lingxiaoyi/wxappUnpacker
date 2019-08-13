@@ -1,0 +1,230 @@
+@import "../activity/private/private.wxss";
+
+.success-container.data-v-f8cdbda6 {
+    background-color: #f7f6fd;
+    padding: 20rpx 0 80rpx;
+    min-height: 100vh;
+}
+
+.success-container .top.data-v-f8cdbda6 {
+    background-color: #fff;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    line-height: 38rpx;
+    padding: 40rpx 0;
+    text-align: center;
+}
+
+.success-container .top .title.data-v-f8cdbda6 {
+    display: block;
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: #333;
+    line-height: 42rpx;
+    margin: 30rpx 0 20rpx;
+}
+
+.success-container .top ._img.data-v-f8cdbda6 {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.success-container .bottom.data-v-f8cdbda6 {
+    background-color: #fff;
+    padding: 40rpx 28rpx 2rpx;
+    margin-top: 20rpx;
+}
+
+.success-container .bottom .title.data-v-f8cdbda6 {
+    font-size: 30rpx;
+    font-family: PingFangSC-Regular;
+    color: #0e0e0f;
+    line-height: 44rpx;
+    margin-bottom: 24rpx;
+}
+
+.success-container .bottom .info.data-v-f8cdbda6 {
+    position: relative;
+    padding-bottom: 30rpx;
+}
+
+.success-container .bottom .info.data-v-f8cdbda6:after {
+    content: "";
+    width: 750rpx;
+    height: 2rpx;
+    background-color: #e7e7e7;
+    position: absolute;
+    left: -28rpx;
+    bottom: 0;
+}
+
+.success-container .bottom .info ._img.data-v-f8cdbda6 {
+    width: 110rpx;
+    height: 110rpx;
+    margin-right: 20rpx;
+    float: left;
+}
+
+.success-container .bottom .info .name.data-v-f8cdbda6 {
+    display: inline-block;
+    width: 366rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #0e0e0f;
+    line-height: 44rpx;
+}
+
+.success-container .bottom .info .price.data-v-f8cdbda6 {
+    display: inline-block;
+    margin-top: 18rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    color: #777;
+    line-height: 34rpx;
+    width: 400rpx;
+}
+
+.success-container .bottom .info .price .number.data-v-f8cdbda6 {
+    font-size: 30rpx;
+    color: #fc6232;
+    font-family: PingFangSC-Semibold;
+}
+
+.success-container .bottom .info .price .number.data-v-f8cdbda6:before {
+    content: "\A5";
+    font-size: 24rpx;
+    margin-right: 4rpx;
+}
+
+.success-container .bottom .detail-box.data-v-f8cdbda6 {
+    padding: 30rpx 0;
+    position: relative;
+}
+
+.success-container .bottom .detail-box.data-v-f8cdbda6:after {
+    content: "";
+    width: 750rpx;
+    height: 2rpx;
+    background-color: #e7e7e7;
+    position: absolute;
+    left: -28rpx;
+    bottom: 0;
+}
+
+.success-container .bottom .detail-box.data-v-f8cdbda6:last-child:after {
+    content: none;
+}
+
+.success-container .bottom .detail-box .desc.data-v-f8cdbda6 {
+    font-size: 30rpx;
+    font-family: PingFangSC-Regular;
+    color: #0e0e0f;
+    line-height: 44rpx;
+}
+
+.success-container .bottom .detail-box .address.data-v-f8cdbda6 {
+    position: relative;
+    padding: 30rpx 0 0;
+}
+
+.success-container .bottom .detail-box .address .detail.data-v-f8cdbda6 {
+    width: 520rpx;
+    padding-left: 26rpx;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #111;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.success-container .bottom .detail-box .address .detail.data-v-f8cdbda6:before {
+    content: "";
+    width: 18rpx;
+    height: 24rpx;
+    position: absolute;
+    left: 0;
+    top: 8rpx;
+    background: url("https://sr.aihuishou.com/miniapps%2Fearth%2Freservation%2Flocation.png") no-repeat 50%/cover;
+}
+
+.success-container .bottom .detail-box .address .line.data-v-f8cdbda6 {
+    position: absolute;
+    right: 110rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rpx;
+    height: 60rpx;
+    background-color: #ebedf0;
+}
+
+.success-container .bottom .detail-box .address .call.data-v-f8cdbda6 {
+    position: absolute;
+    right: 20rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40rpx;
+    height: 46rpx;
+    background: url("https://sr.aihuishou.com/miniapps%2Fearth%2Freservation%2Fcall.png") no-repeat 50%/cover;
+}
+
+.success-container .bottom .detail-box .time.data-v-f8cdbda6 {
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #111;
+    line-height: 32rpx;
+    margin-top: 20rpx;
+}
+
+.success-container .bottom .detail-box .time.data-v-f8cdbda6:first-child {
+    margin-top: 28rpx;
+}
+
+.success-container .bottom .detail-box .time ._span.data-v-f8cdbda6 {
+    color: #777;
+}
+
+.success-container .bottom .detail-box .tip.data-v-f8cdbda6 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #111;
+    line-height: 40rpx;
+    margin-top: 28rpx;
+}
+
+.success-container .back.data-v-f8cdbda6 {
+    display: block;
+    height: 88rpx;
+    background: #fcdb00;
+    border-radius: 12rpx;
+    line-height: 88rpx;
+    width: 690rpx;
+    margin: 30rpx auto;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    text-align: center;
+}
+
+.success-container .cancel.data-v-f8cdbda6 {
+    display: block;
+    margin: 0 auto;
+    width: 240rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    border-radius: 44rpx;
+    border: 2rpx solid #ebedf0;
+    text-align: center;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #777;
+}

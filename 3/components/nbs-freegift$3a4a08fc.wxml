@@ -1,0 +1,88 @@
+<template name="nbs-freegift$3a4a08fc">
+    <view class="_div data-v-2edb8c96">
+        <template is="header$627858a8" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <scroll-view class="_scroll-view data-v-2edb8c96 free-gift {{isLayer&&'isLayer'}}" scrollY="{{!isLayer}}">
+            <image alt class="_img data-v-2edb8c96 header-img" mode="widthFix" src="https://sr.aihuishou.com/miniapps/earth/freegift/3.0/background.jpg"></image>
+            <view class="_div data-v-2edb8c96 content-box">
+                <image alt class="_img data-v-2edb8c96 prize" src="https://sr.aihuishou.com/miniapps/earth/freegift/3.0/gift.png"></image>
+                <view class="_p data-v-2edb8c96 prize-name">精美礼品一份</view>
+                <view class="_p data-v-2edb8c96 prize-desc">由爱回收门店提供，数量有限，先到先得</view>
+                <view alt bindtap="handleProxy" class="_div data-v-2edb8c96 button" data-comkey="{{$k}}" data-eventid="{{'0'}}" wx:if="{{userInfo.mobile&&!record.id}}">我要领取
+      </view>
+                <view bindtap="handleProxy" class="_div data-v-2edb8c96 button" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{userInfo.mobile&&record.id}}">查看兑换码
+      </view>
+                <button bindgetphonenumber="handleProxy" class="_button data-v-2edb8c96 button" data-comkey="{{$k}}" data-eventid="{{'2'}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">我要领取
+      </button>
+                <image alt class="_img data-v-2edb8c96 rule" src="https://sr.aihuishou.com/miniapps/earth/freegift/rule.png"></image>
+                <view class="_div data-v-2edb8c96 line">
+                    <view class="_p data-v-2edb8c96 line-title">
+          活动礼品:
+        </view>
+                    <view class="_p data-v-2edb8c96 line-introduce">
+          精美礼品一份 <view class="_i data-v-2edb8c96"></view>（由爱回收门店提供，数量有限，先到先得）
+        </view>
+                </view>
+                <view class="_div data-v-2edb8c96 line">
+                    <view class="_p data-v-2edb8c96 line-title">
+          活动对象:
+        </view>
+                    <view class="_p data-v-2edb8c96 line-introduce">
+          爱回收新注册用户
+        </view>
+                </view>
+                <view class="_div data-v-2edb8c96 line">
+                    <view class="_p data-v-2edb8c96 line-title">
+          活动规则:
+        </view>
+                    <view class="_p data-v-2edb8c96 line-introduce">
+          在本页面点击“我要领取”一键注册，即可获得 精美礼品1份，在爱回收门店出示二维码即可兑换。 每店每日限量100份，先到先得，可提前致电门店咨询。
+        </view>
+                </view>
+                <view class="_div data-v-2edb8c96 line">
+                    <view class="_p data-v-2edb8c96 line-title">
+          活动门店:
+        </view>
+                    <view class="_p data-v-2edb8c96 line-introduce">
+          全国所有门店
+        </view>
+                </view>
+            </view>
+            <view class="_div data-v-2edb8c96 layer" hidden="{{!isLayer}}">
+                <view bindtap="handleProxy" class="_div data-v-2edb8c96 layer-mask" data-comkey="{{$k}}" data-eventid="{{'3'}}"></view>
+                <view class="_div data-v-2edb8c96 layer-content {{layerType}}">
+                    <view bindtap="handleProxy" class="_div data-v-2edb8c96 close" data-comkey="{{$k}}" data-eventid="{{'4'}}"></view>
+                    <view class="_div data-v-2edb8c96" wx:if="{{layerType==='received'}}">
+                        <view class="_p data-v-2edb8c96 title">奖品已领取</view>
+                        <view class="_div data-v-2edb8c96 introduce">
+                            <view class="_p data-v-2edb8c96">前往关注爱回收公众号</view>
+                            <view class="_p data-v-2edb8c96">服务咨询早知道</view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-2edb8c96" wx:if="{{layerType==='error'}}">
+                        <view class="_p data-v-2edb8c96 title">领取失败</view>
+                        <view class="_div data-v-2edb8c96 introduce">
+                            <view class="_p data-v-2edb8c96">仅新注册用户可参加该活动</view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-2edb8c96" hidden="{{!(layerType==='qrcode')}}">
+                        <view class="_div data-v-2edb8c96 qr">
+                            <canvas bindlongpress="handleProxy" canvasId="myQrcode" class="_canvas data-v-2edb8c96 canvas" data-comkey="{{$k}}" data-eventid="{{'5'}}"></canvas>
+                        </view>
+                        <view class="_div data-v-2edb8c96 introduce">
+                            <view class="_p data-v-2edb8c96">凭此二维码到指定门店领取礼品</view>
+                            <view class="_p data-v-2edb8c96">可长按保存二维码</view>
+                        </view>
+                        <button bindtap="handleProxy" class="_button data-v-2edb8c96 button1" data-comkey="{{$k}}" data-eventid="{{'6'}}">
+            查看指定门店
+          </button>
+                        <view class="_div data-v-2edb8c96 tips">
+                            <view class="_p data-v-2edb8c96">友情提示：每位用户仅可领取1次</view>
+                            <view class="_p data-v-2edb8c96">门店每日库存有限，先到先得</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</template>
+<import src="header$627858a8"></import>

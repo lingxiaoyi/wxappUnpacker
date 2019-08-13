@@ -1,0 +1,18 @@
+<template name="invite-coupon$0ce121c3">
+    <view class="_div data-v-28e1d452 btns" wx:if="{{info}}">
+        <button bindgetphonenumber="handleProxy" class="_button data-v-28e1d452" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile&&!ischeckd}}">
+    邀请好友
+  </button>
+        <button class="_button data-v-28e1d452" openType="share" wx:if="{{userInfo.mobile&&!ischeckd}}">
+    邀请好友
+  </button>
+        <button class="_button data-v-28e1d452 empty" wx:if="{{ischeckd}}">
+    您已助力成功啦
+  </button>
+        <view class="_p data-v-28e1d452">
+            <label bindtap="handleProxy" class="_span data-v-28e1d452" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{userInfo.mobile}}">我的券包</label>
+            <button bindgetphonenumber="handleProxy" class="_button data-v-28e1d452" data-comkey="{{$k}}" data-eventid="{{'2'}}" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">我的券包
+    </button>
+        </view>
+    </view>
+</template>

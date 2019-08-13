@@ -1,0 +1,34 @@
+<template name="cabinetList$1d14f6d8">
+    <view class="_div data-v-bd56fe00 cabinetlist-container">
+        <view class="_header data-v-bd56fe00">
+            <view class="_dl data-v-bd56fe00">
+                <view class="_dt data-v-bd56fe00">
+                    <view class="_u data-v-bd56fe00 {{inputStr?'icon-search left50':'icon-search'}}"></view>
+                    <label bindtap="handleProxy" class="_span data-v-bd56fe00 {{inputStr?'span-justify':''}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">{{inputStr?inputStr:'输入地址，查看快递柜分布'}}</label>
+                </view>
+                <view bindtap="handleProxy" class="_i data-v-bd56fe00" data-comkey="{{$k}}" data-eventid="{{'1'}}"></view>
+            </view>
+            <view class="_p data-v-bd56fe00">当前位置：<label class="_span data-v-bd56fe00">{{location}}</label>
+                <view bindtap="handleProxy" class="_i data-v-bd56fe00" data-comkey="{{$k}}" data-eventid="{{'2'}}"></view>
+            </view>
+        </view>
+        <view class="_footer data-v-bd56fe00">
+            <view class="_ul data-v-bd56fe00">
+                <view class="_li data-v-bd56fe00" key="{{index}}" wx:for="{{cabinetList}}" wx:key="index">
+                    <view class="_div data-v-bd56fe00 item-left">
+                        <view class="_dl data-v-bd56fe00">
+                            <view class="_dd data-v-bd56fe00">{{item.boxName}}<label class="_span data-v-bd56fe00" wx:if="{{index===0}}">最近</label>
+                            </view>
+                            <view class="_dt data-v-bd56fe00">{{item.address}}</view>
+                            <view class="_dt data-v-bd56fe00 tips">剩余：小箱{{item.usableSmallBoxCount}} 中箱{{item.usableMediumBoxCount}} 大箱{{item.usableBigBoxCount}}</view>
+                        </view>
+                    </view>
+                    <view bindtap="handleProxy" class="_div data-v-bd56fe00 item-right" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}">
+                        <view class="_i data-v-bd56fe00"></view>
+                        <label class="_span data-v-bd56fe00">{{item.showDistance}}</label>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

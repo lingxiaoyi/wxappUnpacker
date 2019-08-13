@@ -1,0 +1,34 @@
+<template name="invite-coupon$602cfc4a">
+    <view class="_div data-v-0062bb47 btns">
+        <view class="_div data-v-0062bb47 line1">
+            <button bindgetphonenumber="handleProxy" class="_button data-v-0062bb47" data-comkey="{{$k}}" data-eventid="{{'0'}}" data-type="help" openType="getPhoneNumber" wx:if="{{!userInfo.mobile}}">
+      帮TA助力
+    </button>
+            <view class="_div data-v-0062bb47" wx:if="{{userInfo.mobile}}">
+                <button bindtap="handleProxy" class="_button data-v-0062bb47" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{userType===2}}">
+        帮TA助力
+      </button>
+                <button class="_button data-v-0062bb47 empty" wx:if="{{userType===3}}">
+        已助力
+      </button>
+                <button class="_button data-v-0062bb47 empty" wx:if="{{userType===4||userType===5}}">
+        新用户才可助力
+      </button>
+            </view>
+        </view>
+        <view class="_div data-v-0062bb47 line2" wx:if="{{userType!==1}}">
+            <button class="_button data-v-0062bb47 type2" openType="share">
+      帮TA分享
+    </button>
+            <button bindtap="handleProxy" class="_button data-v-0062bb47 type2" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{userInfo.mobile&&userType!==1}}">
+      我也要领神券
+    </button>
+            <button bindgetphonenumber="handleProxy" class="_button data-v-0062bb47" data-comkey="{{$k}}" data-eventid="{{'3'}}" data-type="user" openType="getPhoneNumber" wx:if="{{!userInfo.mobile&&userType!==1}}">
+      我也要领神券
+    </button>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-0062bb47 newuser" data-comkey="{{$k}}" data-eventid="{{'4'}}" wx:if="{{userType===3}}">
+            <image alt class="_img data-v-0062bb47" src="https://sr.aihuishou.com/miniapps/earth/invitecoupon/newuser.png"></image>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,2 @@
+<import src="../../components/cabinetmap$622787dc"></import>
+<template is="cabinetmap$622787dc" data="{{...$root['0'],$root:$root}}"></template>

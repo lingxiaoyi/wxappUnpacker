@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "0元领数据线",
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
+}

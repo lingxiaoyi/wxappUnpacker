@@ -1,0 +1,5 @@
+<scroll-view enableBackToTop="true" id="settings" scrollWithAnimation="true" scrollY="true">
+    <view bindtap="chooseCity" class="city" data-setting-index="{{cityIndex}}" wx:for="{{cities}}" wx:for-index="cityIndex" wx:for-item="city">
+        <text>{{city.name[language]}}</text>
+    </view>
+</scroll-view>

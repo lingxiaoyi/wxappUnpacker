@@ -1,0 +1,50 @@
+<template name="newProduct$10b1ddd0">
+    <view class="_div data-v-7d3d983c new-product-com {{productList[0].displayPosition==='Multi'?'two':''}}">
+        <view bindtap="handleProxy" class="_div data-v-7d3d983c list-item {{productList[0].displayPosition==='Right'?'reverse':''}}" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{index}}" wx:for="{{productList[0].items}}" wx:key="index">
+            <view class="_div data-v-7d3d983c item-left" wx:if="{{item}}">
+                <view class="_div data-v-7d3d983c cover">
+                    <image alt class="_img data-v-7d3d983c" src="{{item.imgUrl}}"></image>
+                </view>
+                <view class="_div data-v-7d3d983c subsidy" wx:if="{{item.isShowSubsidyTag&&item.subsidies}}">
+                    <view class="_div data-v-7d3d983c">
+                        <view class="_p data-v-7d3d983c">{{item.subsidyText}}</view>
+                        <view class="_p data-v-7d3d983c">{{item.subsidies}}</view>
+                    </view>
+                </view>
+                <view class="_div data-v-7d3d983c attr" wx:if="{{item.isShowMemoryTag}}">
+                    <view class="_div data-v-7d3d983c">
+          {{item.skuParams}}
+        </view>
+                </view>
+            </view>
+            <view class="_div data-v-7d3d983c item-right">
+                <view class="_div data-v-7d3d983c title {{item.isShowPromotion&&item.promotionText&&item.isShowOfficialPrice&&item.defaultPriceType?'title-mt0':''}}">
+                    <view class="_div data-v-7d3d983c global-line">
+          {{item.name}}
+        </view>
+                </view>
+                <view class="_div data-v-7d3d983c desc global-line">
+                    <view class="_div data-v-7d3d983c global-line" wx:if="{{item.isShowPromotion&&item.promotionText}}">
+          {{item.promotionText}}
+        </view>
+                </view>
+                <view class="_div data-v-7d3d983c official-price {{[item.defaultPriceType===1?'price-red':'price-default']}}">
+                    <view class="_div data-v-7d3d983c">
+          {{item.defaultPriceType===1?'换新到手价':'官方指导价'}}<label class="_span data-v-7d3d983c">{{item.defaultPriceType===1?item.price-item.subsidies:item.officialPrice}}</label>
+                    </view>
+                </view>
+                <view class="_div data-v-7d3d983c scribing-price">
+                    <view class="_div data-v-7d3d983c" wx:if="{{item.isShowOfficialPrice&&item.defaultPriceType!==2&&item.officialPrice}}">
+          官方指导价 <label class="_span data-v-7d3d983c">{{item.officialPrice}}</label>
+                    </view>
+                </view>
+                <view class="_div data-v-7d3d983c btns">
+                    <view class="_div data-v-7d3d983c submit global-line">{{item.buttonText||'马上买'}}</view>
+                    <view class="_div data-v-7d3d983c gif-img" wx:if="{{item.isShowGiftTag&&item.giftTagImage}}">
+                        <image alt class="_img data-v-7d3d983c" src="{{item.giftTagImage}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

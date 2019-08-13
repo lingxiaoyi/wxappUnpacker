@@ -1,0 +1,11 @@
+<template name="mtalogin$8a491532">
+    <view class="_div data-v-37509f0a login">
+        <image alt class="_img data-v-37509f0a" src="https://sr.aihuishou.com/miniapps/earth/mta.png"></image>
+        <view class="_p data-v-37509f0a">回收机登录确认</view>
+        <view bindtap="handleProxy" class="_div data-v-37509f0a confirm" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{userInfo.mobileLoginToken}}">登录</view>
+        <button bindgetphonenumber="handleProxy" class="_button data-v-37509f0a confirm" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getPhoneNumber" wx:else>
+    登录
+  </button>
+        <view bindtap="handleProxy" class="_div data-v-37509f0a tips" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{!userInfo.mobileLoginToken}}">取消登录</view>
+    </view>
+</template>

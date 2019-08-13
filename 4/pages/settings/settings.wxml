@@ -1,0 +1,10 @@
+<scroll-view enableBackToTop="true" id="settings" scrollWithAnimation="true" scrollY="true">
+    <text class="setting-title">{{settings.language.title[language]}}</text>
+    <view class="setting">
+        <view bindtap="chooseLanguage" class="setting-item{{item.key===language?' checked':''}}" data-item-key="{{item.key}}" wx:for="{{settings.language.data}}">{{item.name}}</view>
+    </view>
+    <text class="setting-title">{{settings.city.title[language]}}</text>
+    <view class="setting">
+        <view bindtap="chooseCity" class="setting-item{{item.key===city?' checked':''}}" data-item-key="{{item.key}}" wx:for="{{cities}}">{{item.name[language]}}</view>
+    </view>
+</scroll-view>

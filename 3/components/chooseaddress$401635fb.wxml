@@ -1,0 +1,16 @@
+<template name="chooseaddress$401635fb">
+    <view class="_div data-v-7427c767 choose-address-container">
+        <view class="_div data-v-7427c767 top">
+            <view class="_div data-v-7427c767 left">
+                <input autofocus bindinput="handleProxy" class="_input data-v-7427c767 input-searchbar" confirmType="search" data-comkey="{{$k}}" data-eventid="{{'0'}}" placeholder="输入关键字" type="text" value="{{userStreet}}"></input>
+                <label bindtap="handleProxy" class="_span data-v-7427c767" data-comkey="{{$k}}" data-eventid="{{'1'}}"></label>
+            </view>
+            <label bindtap="handleProxy" class="_span data-v-7427c767 cancel" data-comkey="{{$k}}" data-eventid="{{'2'}}">取消</label>
+        </view>
+        <view class="_div data-v-7427c767 content">
+            <view bindtap="handleProxy" class="_p data-v-7427c767 global-line" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}" key="{{index}}" wx:for="{{results}}" wx:key="index">
+      {{item.title}}
+    </view>
+        </view>
+    </view>
+</template>

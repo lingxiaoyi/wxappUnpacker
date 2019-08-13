@@ -1,0 +1,18 @@
+<template name="newexclusive$1478cf5f">
+    <view class="_div data-v-fdf6ec6a popup-container">
+        <view class="_main data-v-fdf6ec6a">
+            <view class="_div data-v-fdf6ec6a use-conditions">
+                <view class="_div data-v-fdf6ec6a conditions-container">
+                    <view class="_ul data-v-fdf6ec6a">
+                        <view class="_li data-v-fdf6ec6a">1、新用户专享，优惠领取后7日内有效，仅限在爱回收官网、门店使用</view>
+                        <view class="_li data-v-fdf6ec6a">2、回收订单每含一台高于券面最低回收金额的机器，即可选择回收优惠使用</view>
+                        <view class="_li data-v-fdf6ec6a">3、回收券不限品类，手机、平板、笔记本、智能数码、摄影摄像均可使用</view>
+                        <view class="_li data-v-fdf6ec6a">4、换新券指定品牌可使用</view>
+                        <view class="_li data-v-fdf6ec6a">5、若您参与活动，视为同意以上活动规则，本次活动的最终解释权归爱回收所有</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-fdf6ec6a mask-layer" data-comkey="{{$k}}" data-eventid="{{'0'}}"></view>
+    </view>
+</template>

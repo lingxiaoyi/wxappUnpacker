@@ -1,0 +1,2 @@
+<import src="../../components/cabinetList$1d14f6d8"></import>
+<template is="cabinetList$1d14f6d8" data="{{...$root['0'],$root:$root}}"></template>

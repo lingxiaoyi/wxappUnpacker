@@ -1,0 +1,68 @@
+@import "../activity/private/private.wxss";
+
+.realname-container.data-v-6b097515 {
+    width: 100%;
+    height: 1624rpx;
+    background-color: #f5f5f5;
+}
+
+.realname-container ._dl ._dd.data-v-6b097515 {
+    padding: 30rpx;
+    font-size: 26rpx;
+    color: #717171;
+}
+
+.realname-container ._dl ._dt.data-v-6b097515 {
+    padding: 16rpx 30rpx;
+    box-sizing: border-box;
+    line-height: 46rpx;
+    height: 96rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: cneter;
+    font-size: 30rpx;
+}
+
+.realname-container ._dl ._dt ._span.data-v-6b097515 {
+    line-height: 64rpx;
+    margin-right: 20rpx;
+}
+
+.realname-container ._dl ._dt ._input.data-v-6b097515 {
+    width: 520rpx;
+    height: 64rpx;
+}
+
+.realname-container ._dl .realname-tips.data-v-6b097515 {
+    color: #fc6232;
+    font-size: 26rpx;
+    padding: 16rpx 30rpx;
+    background-color: #f5f5f5;
+}
+
+.realname-container ._button.data-v-6b097515 {
+    background-color: #e6e6e6;
+    border: 1rpx solid #e6e6e6;
+    color: #333;
+    height: 76rpx;
+    line-height: 76rpx;
+    font-size: 30rpx;
+    border-radius: 8rpx;
+    margin: 30rpx;
+    margin-top: 50rpx;
+}
+
+.realname-container .btn-light.data-v-6b097515 {
+    background-color: #fcdb00;
+    border: 1rpx solid #fcdb00;
+}
+
+.realname-container .problem-tips.data-v-6b097515 {
+    font-size: 24rpx;
+    position: fixed;
+    bottom: 50rpx;
+    text-align: center;
+    width: 100%;
+}

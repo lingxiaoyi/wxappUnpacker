@@ -1,0 +1,77 @@
+@import "../activity/private/private.wxss";
+
+.choose-address-container.data-v-7427c767 {
+    background-color: #fff;
+}
+
+.choose-address-container .top.data-v-7427c767 {
+    height: 88rpx;
+    position: relative;
+}
+
+.choose-address-container .top .left.data-v-7427c767 {
+    width: 600rpx;
+    height: 64rpx;
+    background-color: #f8f8f8;
+    float: left;
+    margin: 16rpx 18rpx 16rpx 32rpx;
+    border-radius: 10rpx;
+    position: relative;
+}
+
+.choose-address-container .top .left ._input.data-v-7427c767 {
+    width: 500rpx;
+    height: 64rpx;
+    display: block;
+    float: left;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    padding-left: 60rpx;
+    position: relative;
+}
+
+.choose-address-container .top .left ._input.data-v-7427c767:before {
+    content: "";
+    position: absolute;
+    width: 32rpx;
+    height: 32rpx;
+    left: 20rpx;
+    top: 18rpx;
+    background: url("https://sr.aihuishou.com/miniapps/ofnew/submit/search.png") no-repeat 50%/cover;
+}
+
+.choose-address-container .top .left ._span.data-v-7427c767 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24rpx;
+    height: 24rpx;
+    background: url("https://sr.aihuishou.com/miniapps/ofnew/submit/delete.png") no-repeat 50%/cover;
+}
+
+.choose-address-container .top .cancel.data-v-7427c767 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    color: #333;
+    display: inline-block;
+    height: 100%;
+    line-height: 96rpx;
+    float: right;
+    margin-right: 28rpx;
+}
+
+.choose-address-container .content.data-v-7427c767 {
+    margin-top: 20rpx;
+    padding: 0 32rpx;
+}
+
+.choose-address-container .content ._p.data-v-7427c767 {
+    font-size: 30rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    background: #fff;
+    color: #0e0e0f;
+    border-bottom: 2rpx solid #e7e7e7;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

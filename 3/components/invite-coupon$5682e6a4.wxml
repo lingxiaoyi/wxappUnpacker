@@ -1,0 +1,19 @@
+<template name="invite-coupon$5682e6a4">
+    <view class="_dl data-v-4d937510">
+        <view class="_dt data-v-4d937510">
+            <image alt class="_img data-v-4d937510 {{productInfo?'':'padding25'}}" mode="aspectFit" src="{{productInfo?productInfo.imgUrl:defaultPhoneImg}}"></image>
+        </view>
+        <view class="_dd data-v-4d937510">
+            <view class="_ul data-v-4d937510" wx:if="{{productInfo}}">
+                <view class="_li data-v-4d937510 product-title">{{productInfo.name}}</view>
+                <view class="_li data-v-4d937510">最高回收价</view>
+                <view class="_li data-v-4d937510 product-price">¥{{productInfo.topPrice}}</view>
+            </view>
+            <view class="_ul data-v-4d937510" wx:if="{{!productInfo}}">
+                <view class="_li data-v-4d937510 product-none">挑选机型立即估价</view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_dd data-v-4d937510 product-valuation" data-comkey="{{$k}}" data-eventid="{{'0'}}">立即估价</view>
+        <view bindtap="handleProxy" class="_dd data-v-4d937510 product-tag" data-comkey="{{$k}}" data-eventid="{{'1'}}"></view>
+    </view>
+</template>

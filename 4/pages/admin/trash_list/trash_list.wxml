@@ -1,0 +1,20 @@
+<view id="wrapper">
+    <view id="searchWrapper">
+        <input bindfocus="searchOnFocus" bindinput="searchOnTyping" focus="{{searchTextFocus}}" id="search" placeholder="搜索垃圾" style="width: {{searching?'620rpx':'700rpx'}};" type="text" value="{{searchText}}"></input>
+        <image id="magnifier" src="{{magnifierSrc}}"></image>
+        <text bindtap="cancelSearch" id="cancelSearch" style="display: {{searching?'block':'none'}};">取消</text>
+    </view>
+    <view class="list-wrapper" style="display: {{searching?'none':'block'}};">
+        <scroll-view class="list" enableBackToTop="true" scrollWithAnimation="true" scrollY="true">
+            <view class="section" id="section{{sectionIndex}}" wx:for="{{data}}" wx:for-index="sectionIndex" wx:for-item="section">
+                <text class="cat">{{cats[sectionIndex]}}</text>
+                <view bindtap="showItem" class="item" data-item-alias="{{item.a}}" data-item-cat="{{item.c}}" data-item-id="{{item.id}}" data-item-initials="{{item.i}}" data-item-name="{{item.n}}" wx:for="{{section}}">{{item.n}}</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="search-list-wrapper" style="display: {{searching?'block':'none'}}">
+        <scroll-view enableBackToTop="true" id="results" scrollWithAnimatio="true" scrollY="true">
+            <view bindtap="showItem" class="result" data-item-alias="{{result.a}}" data-item-cat="{{result.c}}" data-item-id="{{result.id}}" data-item-initials="{{result.i}}" data-item-name="{{result.n}}" wx:for="{{searchResults}}" wx:for-item="result">{{result.n}}</view>
+        </scroll-view>
+    </view>
+</view>

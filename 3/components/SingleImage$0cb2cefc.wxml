@@ -1,0 +1,9 @@
+<template name="SingleImage$0cb2cefc">
+    <view class="_div data-v-1e922b96">
+        <view bindtap="handleProxy" class="_div data-v-1e922b96 single-image-container" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" key="{{item.id}}" wx:for="{{singleImageInfo}}" wx:key="item.id">
+            <template is="form$7e8ea023" data="{{...$root[$kk+'0-'+index],$root:$root}}"></template>
+            <image alt lazyLoad class="_img data-v-1e922b96" mode="widthFix" src="{{item.imageUrl}}"></image>
+        </view>
+    </view>
+</template>
+<import src="form$7e8ea023"></import>

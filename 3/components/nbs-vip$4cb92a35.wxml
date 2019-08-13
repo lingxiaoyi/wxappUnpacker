@@ -1,0 +1,18 @@
+<template name="nbs-vip$4cb92a35">
+    <view bindtap="handleProxy" class="_div data-v-7aa7debe model" data-comkey="{{$k}}" data-eventid="{{'3'}}" hidden="{{!show}}">
+        <view catchtap="handleProxy" class="_div data-v-7aa7debe inner_box" data-comkey="{{$k}}" data-eventid="{{'2'}}" hoverStopPropagation="{{true}}">
+            <view catchtap="handleProxy" class="_div data-v-7aa7debe close" data-comkey="{{$k}}" data-eventid="{{'0'}}"></view>
+            <view class="_div data-v-7aa7debe title">
+      会员二维码
+    </view>
+            <view class="_div data-v-7aa7debe content">
+                <view class="_div data-v-7aa7debe qr">
+                    <canvas bindlongpress="handleProxy" canvasId="myQrcode" class="_canvas data-v-7aa7debe canvas" data-comkey="{{$k}}" data-eventid="{{'1'}}"></canvas>
+                </view>
+            </view>
+            <view class="_div data-v-7aa7debe footer">
+      请向服务站工作人员出示二维码
+    </view>
+        </view>
+    </view>
+</template>

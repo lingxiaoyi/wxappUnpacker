@@ -1,0 +1,25 @@
+<template name="shareprice$2eedd7d3">
+    <view class="_div data-v-11bd3d3f popup-container">
+        <view class="_main data-v-11bd3d3f">
+            <view class="_div data-v-11bd3d3f authority-container" wx:if="{{isShowAuthority}}">
+                <view class="_dl data-v-11bd3d3f">
+                    <view class="_dt data-v-11bd3d3f">爱回收需要获取您的授权</view>
+                    <view class="_dd data-v-11bd3d3f">
+                        <view class="_ul data-v-11bd3d3f">
+                            <view class="_li data-v-11bd3d3f">
+              昵称和头像授权<button bindgetuserinfo="handleProxy" class="_button data-v-11bd3d3f" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getUserInfo" wx:if="{{!isGetUserInfo}}">立即授权</button>
+                                <view class="_i data-v-11bd3d3f" wx:if="{{isGetUserInfo}}"></view>
+                            </view>
+                            <view class="_li data-v-11bd3d3f">
+              手机号授权<button bindgetphonenumber="handleProxy" class="_button data-v-11bd3d3f" data-comkey="{{$k}}" data-eventid="{{'1'}}" openType="getPhoneNumber" wx:if="{{!isLogin}}">立即授权</button>
+                                <view class="_i data-v-11bd3d3f" wx:if="{{isLogin}}"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-11bd3d3f help-success" wx:if="{{isShowHelpSuccess}}"></view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-11bd3d3f mask-layer" data-comkey="{{$k}}" data-eventid="{{'2'}}"></view>
+    </view>
+</template>

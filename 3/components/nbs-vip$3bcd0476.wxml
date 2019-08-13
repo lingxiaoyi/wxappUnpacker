@@ -1,0 +1,17 @@
+<template name="nbs-vip$3bcd0476">
+    <view bindtap="handleProxy" class="_div data-v-90b4204e model" data-comkey="{{$k}}" data-eventid="{{'2'}}" wx:if="{{show}}">
+        <view catchtap="handleProxy" class="_div data-v-90b4204e inner_box" data-comkey="{{$k}}" data-eventid="{{'1'}}" hoverStopPropagation="{{true}}">
+            <view catchtap="handleProxy" class="_div data-v-90b4204e close" data-comkey="{{$k}}" data-eventid="{{'0'}}"></view>
+            <view class="_div data-v-90b4204e title">
+      前往服务站开通
+    </view>
+            <view class="_div data-v-90b4204e content">
+                <view class="_p data-v-90b4204e">目前仅支持前往指定服务站开通发烧友，<view class="_br data-v-90b4204e"></view> 点击下方按钮查看具体服务站信息。</view>
+                <view class="_p data-v-90b4204e">请前往指定服务站，咨询服务站 工作人员了解详情。</view>
+            </view>
+            <navigator class="_navigator data-v-90b4204e footer" url="/pages/nbs-shops/main?fromActivity=1">
+      查看指定服务站
+    </navigator>
+        </view>
+    </view>
+</template>

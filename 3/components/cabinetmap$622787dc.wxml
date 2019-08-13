@@ -1,0 +1,18 @@
+<template name="cabinetmap$622787dc">
+    <view class="_div data-v-1d814df0 map-container">
+        <view class="_header data-v-1d814df0">
+            <view class="_u data-v-1d814df0 {{inputStr?'icon-search left50':'icon-search'}}"></view>
+            <label bindtap="handleProxy" class="_span data-v-1d814df0 {{inputStr?'span-justify':''}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">{{inputStr?inputStr:'输入地址，查看快递柜分布'}}</label>
+        </view>
+        <view class="_main data-v-1d814df0">
+            <map name bindmarkertap="handleProxy" class="_map data-v-1d814df0" data-comkey="{{$k}}" data-eventid="{{'1'}}" latitude="{{location.latitude}}" longitude="{{location.longitude}}" markers="{{markers}}" scale="{{scale}}" showLocation="{{true}}" style=" {{isiPhoneX?'height: 1100rpx;':''}}" wx:if="{{location&&markers.length>0}}"></map>
+        </view>
+        <view class="_footer data-v-1d814df0" wx:if="{{cabinetList}}">
+            <view class="_dl data-v-1d814df0">
+                <view class="_dd data-v-1d814df0">{{cabinetList[cabinetChooseIndex].boxName}}</view>
+                <view class="_dt data-v-1d814df0 {{!isShowBoxCount?'padding-bottom15':''}}">{{cabinetList[cabinetChooseIndex].address}}</view>
+                <view class="_dt data-v-1d814df0 tips" wx:if="{{isShowBoxCount}}">剩余：小箱{{cabinetList[cabinetChooseIndex].usableSmallBoxCount}} 中箱{{cabinetList[cabinetChooseIndex].usableMediumBoxCount}} 大箱{{cabinetList[cabinetChooseIndex].usableBigBoxCount}}</view>
+            </view>
+        </view>
+    </view>
+</template>

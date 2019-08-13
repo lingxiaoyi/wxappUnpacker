@@ -1,0 +1,81 @@
+<template name="ofnew$8b05ed50">
+    <view class="_div data-v-dfed0928">
+        <view class="_div data-v-dfed0928 ofnew-container" wx:if="{{ofNewInfo.inquiryHomeRecord}}">
+            <view class="_div data-v-dfed0928 exchange index-box">
+                <view class="_div data-v-dfed0928 index-box-container">
+                    <view class="_div data-v-dfed0928 phone">
+                        <image class="_img data-v-dfed0928 change-arrow" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/new-index/38.png"></image>
+                        <view bindtap="handleProxy" class="_div data-v-dfed0928 old" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                            <view class="_div data-v-dfed0928 phone-type">旧机估价</view>
+                            <view class="_div data-v-dfed0928 phone-cover">
+                                <image alt class="_img data-v-dfed0928" src="{{ofNewInfo.inquiryHomeRecord.productImg}}"></image>
+                            </view>
+                            <view class="_div data-v-dfed0928 phone-title global-line">
+                                <label class="_span data-v-dfed0928">
+               {{ofNewInfo.inquiryHomeRecord.productName}}
+              </label>
+                            </view>
+                            <view class="_div data-v-dfed0928 phone-price">
+              {{ofNewInfo.inquiryHomeRecord.recommendProductType===1?'最高回收价':'预估回收价'}} <label class="_span data-v-dfed0928">{{ofNewInfo.inquiryHomeRecord.price}}</label>
+                            </view>
+                        </view>
+                        <view bindtap="handleProxy" class="_div data-v-dfed0928 new" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                            <view class="_div data-v-dfed0928 phone-type">新机原价</view>
+                            <view class="_div data-v-dfed0928 phone-cover">
+                                <image alt class="_img data-v-dfed0928" src="{{ofNewInfo.topOfNewProduct.productImg}}"></image>
+                            </view>
+                            <view class="_div data-v-dfed0928 phone-title">
+                                <label class="_span data-v-dfed0928 global-line">
+                {{ofNewInfo.topOfNewProduct.productName}}
+              </label>
+                            </view>
+                            <view class="_div data-v-dfed0928 phone-price">
+              新机原价 <label class="_span data-v-dfed0928">{{ofNewInfo.topOfNewProduct.price}}</label>
+                            </view>
+                            <view class="_div data-v-dfed0928 tips" wx:if="{{ofNewInfo.topOfNewProduct.subsidies}}">
+                                <label class="_span data-v-dfed0928 desc">换新省</label>
+                                <label class="_span data-v-dfed0928 number">{{ofNewInfo.topOfNewProduct.subsidies}}</label>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-dfed0928 buy">
+                        <view class="_div data-v-dfed0928 left">
+                            <label class="_span data-v-dfed0928 img"></label>
+                            <label class="_span data-v-dfed0928 text-type">{{ofNewInfo.finalPrice<0?'预计到店获得':'预估到手价'}}</label>
+                            <label class="_span data-v-dfed0928 text-price">{{ofNewInfo.finalPrice<0?-ofNewInfo.finalPrice:ofNewInfo.finalPrice}}</label>
+                        </view>
+                        <view class="_div data-v-dfed0928 right">
+                            <button bindtap="handleProxy" class="_button data-v-dfed0928" data-comkey="{{$k}}" data-eventid="{{'2'}}">去看看</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-dfed0928 more index-box index-box-type2">
+                <view class="_div data-v-dfed0928 title">更多火爆新机</view>
+                <view class="_div data-v-dfed0928 phone-list index-box-container">
+                    <view bindtap="handleProxy" class="_div data-v-dfed0928 phone-item" data-comkey="{{$k}}" data-eventid="{{'3-'+index}}" key="{{index}}" wx:for="{{ofNewInfo.recommendProductList}}" wx:key="index">
+                        <view class="_div data-v-dfed0928 phone-img">
+                            <image alt class="_img data-v-dfed0928" src="{{item.productImg}}"></image>
+                        </view>
+                        <view class="_div data-v-dfed0928 phone-title global-line">
+            {{item.productName}}
+          </view>
+                        <view class="_div data-v-dfed0928 phone-price">{{item.price}}</view>
+                        <view class="_div data-v-dfed0928 phone-tips" wx:if="{{item.subsidies}}">
+                            <label class="_span data-v-dfed0928 desc">最高省</label>
+                            <label class="_span data-v-dfed0928 number">{{item.subsidies}}</label>
+                        </view>
+                    </view>
+                </view>
+                <view class="_div data-v-dfed0928 point">
+                    <image alt class="_img data-v-dfed0928" src="https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/miniapps/earth/new-index/qwe%40x2.png"></image>
+                </view>
+            </view>
+            <view class="_div data-v-dfed0928 marquee-list" wx:if="{{marqueeList&&marqueeList.length}}">
+                <view class="_ul data-v-dfed0928 text-list {{[animate?'animate':'']}}">
+                    <view class="_li data-v-dfed0928 text-item" key="{{index}}" wx:for="{{marqueeList}}" wx:key="index">{{item}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
